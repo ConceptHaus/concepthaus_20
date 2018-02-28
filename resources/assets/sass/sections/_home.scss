@@ -1,0 +1,215 @@
+/******************************************************************
+
+Section Home | Slider
+
+******************************************************************/
+
+/* Variables */
+
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin position($position,$top,$bottom,$left,$right) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right; 
+}
+
+.pv-inner{
+    background-image: url("images/backgrounds/panorama-gray.jpg");
+    height: 600px;
+    background-size: cover;
+    display: block;
+    @include breakpoint(sm-max) {
+        height: 300px !important;
+    }
+}
+
+.small-gray {
+    color: #8d8e96;
+    font-size: 12px;
+}
+.c-gray {
+    color: $gray;
+}
+.c-grayLight {
+    color: $grayLight;
+}
+.c-red {
+    color: $red;
+}
+.c-green {
+    color: $green;
+}
+
+#home-slider {
+    @include cover-background('images/bg-home.jpg');
+    height: 700px;
+    .content-words {
+        @include position(relative,70px,initial,initial,initial);
+        height: 600px;
+        .word {
+            color: $white;
+            font-size: 100px; 
+            padding: 0px 50px; 
+        }
+        .p-top-left {
+            @include position(absolute,0,initial,0,initial);
+        }
+        .p-top-right {
+            @include position(absolute,0,initial,initial,0);
+        }
+        .p-bottom-left {
+            @include position(absolute,initial,0,0,initial);
+        }
+        .p-bottom-right {
+            @include position(absolute,initial,0,initial,0);
+        }
+    }
+}
+
+#panorama {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    @include breakpoint(sm-max) {
+        height: 300px !important;
+    }
+    .word{
+        color: $white;
+        @include font-size($fontSlide);
+        font-weight: 700;
+        bottom: 30px;
+        left: 40px;
+        position: absolute;
+        z-index: 2;
+        &::after {
+            content: "■";
+            font-size: 30px;
+            margin-left: -15px;
+        }
+    }
+}
+
+#home-description {
+    padding: 2% 5%;
+    .content-description {
+        p{
+            @include font-size($content-description);
+            font-weight: 100;
+        }
+        .col-md-6:nth-child(1) {
+            padding-top: 25px;
+            padding-right: 15%;
+        }
+        .col-md-6:nth-child(2) {
+            padding-top: 20px;
+            padding-left: 15%;
+            h2 {
+                font-weight: 700;
+            }
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.text-small {
+    @include font-size($content-description);
+    font-weight: 100;
+    span {
+        font-weight: 800;
+    }
+}
+#home-doors {
+    .door {
+        margin: auto;
+        width: 60%;
+        @include breakpoint(md-max) {
+            width: 35%;
+        }
+    }
+    .logo {
+        width: 250px;
+    }
+    .jumbotron {
+        background: transparent;
+        padding: 4rem;
+    }
+}
+
+#clients {
+    .client-brand {
+        margin: 20px 0;
+        width: 60%;
+        @include breakpoint(md-max) {
+            width: 40%;
+        }
+        @include breakpoint(sm-max) {
+            width: 30%;
+            margin: 30px 0;        
+        }
+    }
+    .row {
+        margin-bottom: 3%;
+        margin-top: 4%;
+        width: 100%;
+    }
+    .title-general {
+        margin-top: 40px;
+    }
+}
+
+#homeProjects {
+    .title-general {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+#plug {
+    margin-top: 55px;
+    height: 130px;
+    .plug-content {
+        position: relative;
+        // height: 130px;
+        width: 100%;
+        margin: auto;
+        float: left;
+        @extend .c-red;
+        font-weight: 600;
+        font-size: 50px;
+        img {
+            position: absolute;
+            transition: opacity .5s ease-in-out;
+            width: 85px;
+        }
+        img.top:hover {
+            opacity: 0;
+        }
+        &:before {
+            content: ']';
+            margin-right: 30px;
+            margin-top: 10px;
+            position: relative;
+            top: 10px;
+        }
+        &:after {
+            content: '[';
+            margin-left: 123px;
+            position: relative;
+            top: 10px;
+        }
+    }
+    .plug-content.plug-green {
+        @extend .c-green;
+    }
+}

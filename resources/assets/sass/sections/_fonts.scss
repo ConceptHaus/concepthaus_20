@@ -1,0 +1,70 @@
+$fontMenu: (
+  null  : 12px,
+  576px : 12px,
+  768px : 12px,
+  992px : 12px,
+  1024px: 12px
+);
+
+$fontSubMenu: (
+  null  : 14px,
+  576px : 14px,
+  768px : 13px,
+  992px : 13px,
+  1024px: 15px
+);
+
+$fontTitle: (
+  null  : 45px,
+  576px : 75px,
+  768px : 90px,
+  992px : 95px,
+  1024px: 100px,
+);
+
+$fontSlide: (
+  null  : 30px,
+  576px : 40px,
+  768px : 55px,
+  992px : 75px,
+  1024px: 90px,
+);
+
+$content-description: (
+  null  : 12px,
+  576px : 13px,
+  768px : 13px,
+  992px : 13px,
+  1024px: 13px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+
+@font-face {
+  font-family: 'AlphabetBold';
+  src: url(../fonts/NewRailAlphabetBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: AlphabetMedium;
+  src: url(../fonts/NewRailAlphabetMedium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: AlphabetMedium;
+  src: url(../fonts/NewRailAlphabetWhite.ttf) format('truetype');
+}
+
+$font-hi: AlphabetMedium;

@@ -1,0 +1,52 @@
+@mixin breakpoint($class) {
+    
+     
+    /*====== 576 =========*/
+  
+    @if $class == xs-max {
+      @media (max-width: 480px) { @content; }
+    }
+
+    @else if $class == sm-min {
+      @media (min-width: 481px) { @content; }
+    }
+    /*====== 576 =========*/
+  
+    @if $class == sm-max {
+      @media (max-width: 576px) { @content; }
+    }
+   
+    @else if $class == sm-min {
+      @media (min-width: 577px) { @content; }
+    }
+  
+    /*====== 767 ========*/    
+    @if $class == md-max {
+      @media (max-width: 767px) { @content; }
+    }
+   
+    @else if $class == md-min {
+      @media (min-width: 768px) { @content; }
+    }
+  
+    /*====== 991 =======*/
+   
+    @else if $class == lg-max {
+      @media (max-width: 991px) { @content; }
+    }
+   
+    @else if $class == lg-min {
+      @media (min-width: 992px) { @content; }
+    }
+  
+    /*====== 1200 ======*/
+    
+    @else if $class == xl-max {
+      @media (max-width: 1199px) { @content; }
+    }
+   
+    @else if $class == xl-min {
+      @media (min-width: 1200px) { @content; }
+    }
+
+  }

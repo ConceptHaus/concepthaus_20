@@ -1,0 +1,722 @@
+@charset "UTF-8";
+/* --------------------- Colores personalizados a Salvaje Tentación  --------------------- */
+/* -------------------------------------------------------------
+Estilos a tipografías Salvaje Tentación
+	1. Importar tipografías
+	2. Variables
+		2.1 Font family
+		2.2 Font Size
+  ------------------------------------------------------------- */
+@font-face {
+  font-family: 'futuraStdLight';
+  src: url(../fonts/font-NewRailAlphabet/NewRailAlphabet-White.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'futuraStdBook';
+  src: url(../fonts/font-NewRailAlphabet/NewRailAlphabet-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'futuraStdHeavy';
+  src: url(../fonts/font-futuraStd/FuturaStd-Heavy.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'futuraStdBold';
+  src: url(../fonts/font-NewRailAlphabet/NewRailAlphabet-Bold.ttf) format("truetype");
+}
+
+/* -------------------------------------------------------------
+Estilos generales del administrador Be Grand
+    1. Variables 
+    2. Estilos generales
+        2.1 Botones
+        2.2 Inputs
+        2.3 Dropdown
+        2.4 Tablas Tablesaw
+        2.5 Form Búsqueda 
+        2.6 Angular Cloak
+        2.7 Mensajes 
+        2.8 Modal
+    3. Login
+    4. Dashboard
+        4.1 Sidebar
+        4.2 Card stats
+        4.3 Solicitudes por desarrollo
+        4.4 Detalle de registro
+        4.5 Perfil usuario
+        4.6 Footer
+	5. Media Jquery´s
+  ------------------------------------------------------------- */
+/* --------------------- 1. Variables  --------------------- */
+.txt-blue {
+  color: #008fd5;
+}
+
+.txt-green {
+  color: #97ca51;
+}
+
+.txt-yellow {
+  color: #f4ce1A;
+}
+
+.txt-red {
+  color: #e73c30;
+}
+
+.txt-orange {
+  color: #f79520;
+}
+
+.txt-gray {
+  color: #87898d;
+}
+
+.txt-grayDark {
+  color: #262626 !important;
+}
+
+.facebook {
+  color: #3B5998;
+}
+
+.google {
+  color: #db3236;
+}
+
+.none-mt {
+  margin-top: 0;
+}
+
+/* ===================== 2. Estilos generales ==================== */
+/* --------------------- 2.1 Botones  --------------------- */
+.btn {
+  letter-spacing: 1.5px;
+}
+
+.btn-red {
+  background: #e73c30 !important;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(239, 64, 53, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(239, 64, 53, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(239, 64, 53, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(239, 64, 53, 0.12);
+}
+
+.btn.btn-red:focus, .btn.btn-red:active, .btn.btn-red:hover {
+  -webkit-box-shadow: 0 14px 26px -12px rgba(104, 0, 21, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(104, 0, 21, 0.2);
+          box-shadow: 0 14px 26px -12px rgba(104, 0, 21, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(104, 0, 21, 0.2);
+}
+
+.btn-blue {
+  background: #00c0ff !important;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 192, 255, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(0, 192, 255, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 192, 255, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(0, 192, 255, 0.12);
+}
+
+.btn.btn-blue:focus, .btn.btn-blue:active, .btn.btn-blue:hover {
+  -webkit-box-shadow: 0 14px 26px -12px rgba(2, 167, 222, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(2, 167, 222, 0.2);
+          box-shadow: 0 14px 26px -12px rgba(2, 167, 222, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(2, 167, 222, 0.2);
+}
+
+.btn-gray {
+  background: #f5f5f5 !important;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(235, 235, 235, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(235, 235, 235, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(235, 235, 235, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(235, 235, 235, 0.12);
+  color: #262626;
+}
+
+.btn.btn-gray:focus, .btn.btn-gray:active, .btn.btn-gray:hover {
+  -webkit-box-shadow: 0 14px 26px -12px rgba(206, 206, 206, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(206, 206, 206, 0.2);
+          box-shadow: 0 14px 26px -12px rgba(206, 206, 206, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(206, 206, 206, 0.2);
+  color: #262626;
+}
+
+.btn.btn-primary, .navbar .navbar-nav > li > a.btn.btn-primary {
+  background: #2692cf !important;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(38, 146, 207, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(38, 146, 207, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(38, 146, 207, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(38, 146, 207, 0.12);
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover, .navbar .navbar-nav > li > a.btn.btn-primary:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active, .navbar .navbar-nav > li > a.btn.btn-primary:hover {
+  -webkit-box-shadow: 0 14px 26px -12px rgba(38, 146, 207, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(38, 146, 207, 0.2);
+          box-shadow: 0 14px 26px -12px rgba(38, 146, 207, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(38, 146, 207, 0.2);
+}
+
+/* --------------------- 2.2 Inputs  --------------------- */
+.form-control, .form-group .form-control {
+  font-weight: 100;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-weight: 100 !important;
+}
+
+.form-control::-ms-input-placeholder {
+  font-weight: 100 !important;
+}
+
+.checkbox label, .radio label, label {
+  line-height: 1.5em !important;
+  font-weight: 300 !important;
+}
+
+/* --------------------- 2.3 Dropdown  --------------------- */
+.dropdown-blue {
+  min-width: 175px;
+}
+
+.dropdown-blue li a:hover,
+.dropdown-blue li a:focus {
+  background: #4a4f55 !important;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(38, 146, 207, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(38, 146, 207, 0.12) !important;
+          box-shadow: 0 2px 2px 0 rgba(38, 146, 207, 0.14), 0 3px 1px -2px rgba(138, 146, 207, 0.2), 0 1px 5px 0 rgba(38, 146, 207, 0.12) !important;
+}
+
+/* --------------------- 2.4 Tablas Tablesaw  --------------------- */
+.table-hover > tbody > tr:hover {
+  background-color: #FBFBFB;
+}
+
+.tablesaw-stack td, .tablesaw-stack th, .tablesaw-stack thead td, .tablesaw-stack thead th {
+  font-weight: 100;
+}
+
+.tablesaw-stack th {
+  border-bottom: 1px solid #ddd;
+}
+
+.tablesaw-stack tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.tablesaw-stack tr:last-child {
+  border-bottom: none;
+}
+
+.tablesaw-stack td {
+  padding: 12px 8px !important;
+}
+
+.tablesaw-stack th a,
+.tablesaw-stack th {
+  color: #262626;
+}
+
+.tablesaw-stack td a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.tablesaw-stack .td-status {
+  position: relative;
+}
+
+.tablesaw-stack .icon-percent {
+  font-size: 15px;
+}
+
+.tablesaw-stack .span-percent {
+  padding-left: 10px;
+}
+
+.tablesaw-stack i {
+  font-size: 20px;
+}
+
+/* --------------------- 2.5 Form Búsqueda  --------------------- */
+.content-filter-search {
+  margin-bottom: 0;
+  margin-right: 0px;
+  margin-top: 0;
+}
+
+.content-filter-search .form-group {
+  margin: 0;
+}
+
+.content-filter-search .btn-white {
+  margin-top: -8px;
+  padding: 10px 10px;
+}
+
+.form-control, .form-group .form-control {
+  border: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#686868), to(#686868)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2)) !important;
+  background-image: linear-gradient(#686868, #686868), linear-gradient(#D2D2D2, #D2D2D2) !important;
+}
+
+/* --------------------- 2.6 Angular Cloak  --------------------- */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/* --------------------- 2.7 Mensajes  --------------------- */
+.content-msg-empty {
+  padding: 4%;
+}
+
+.content-msg-empty h5 {
+  color: #a9afbb;
+  font-size: 16px;
+  letter-spacing: 1px !important;
+}
+
+/* --------------------- 2.8 Modals  --------------------- */
+.modal-header {
+  background: #e1e1e1;
+  padding-bottom: 20px !important;
+}
+
+.modal-header h4 {
+  font-weight: 400;
+}
+
+/* ===================== 3. Login ==================== */
+#login {
+  background: #2a2a2a !important;
+}
+
+#login h4 {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+#login .container {
+  padding-top: 8%;
+}
+
+#login .wrapper, #login .logo {
+  text-align: center;
+}
+
+#login .bg-login {
+  position: fixed;
+  opacity: .50;
+  width: 100%;
+  z-index: -1;
+}
+
+#login .form-control, #login .form-group .form-control {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e73c30), to(#e73c30)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: linear-gradient(#e73c30, #e73c30), linear-gradient(#D2D2D2, #D2D2D2);
+}
+
+#login label {
+  font-family: 'futuraStdBook';
+  font-size: 11px !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+
+#login .logo {
+  margin-top: 30px;
+}
+
+#login .panel {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 5px solid #c5c5c5;
+}
+
+#login .panel label {
+  color: #717171;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+/* ===================== 4. Dashboard  ==================== */
+/* --------------------- 4.1 Navbar  --------------------- */
+/* --------------------- 4.2 Sidebar  --------------------- */
+.sidebar .logo {
+  padding: 0;
+}
+
+.sidebar .logo a {
+  padding-top: 0 !important;
+  padding-bottom: 20px !important;
+}
+
+.sidebar[data-color="red"] .nav li.active a, .off-canvas-sidebar[data-color="red"] .nav li.active a {
+  background-color: #e73c30;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(104, 0, 21, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(104, 0, 21, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(104, 0, 21, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(104, 0, 21, 0.2);
+}
+
+.sidebar a .img-menu {
+  margin-left: 4px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.dropdown-solicitudes {
+  width: 100% !important;
+}
+
+.dropdown-solicitudes a {
+  line-height: 30px !important;
+  font-size: 14px !important;
+  font-weight: 100 !important;
+}
+
+.dropdown-user .dropdown-toggle,
+.dropdown-user .dropdown-menu a {
+  font-size: 14px !important;
+  font-weight: 100 !important;
+}
+
+.dropdown-user .dropdown-toggle {
+  text-transform: capitalize !important;
+}
+
+.icon-arrow {
+  float: right !important;
+  margin-right: 0 !important;
+}
+
+/* --------------------- 4.3 Card stats  --------------------- */
+.card [data-background-color="blue"] {
+  background: linear-gradient(60deg, #00c0ff, #01A1D6);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(0, 192, 255, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 192, 255, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(0, 192, 255, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 192, 255, 0.2);
+}
+
+.card [data-background-color="green"] {
+  background: linear-gradient(60deg, #97ca51, #6DBB02);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(151, 202, 81, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(151, 202, 81, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(151, 202, 81, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(151, 202, 81, 0.2);
+}
+
+.card [data-background-color="yellow"] {
+  background: linear-gradient(60deg, #f4ce1A, #DCB602);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(244, 206, 26, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 206, 26, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(244, 206, 26, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 206, 26, 0.2);
+}
+
+.card [data-background-color="red"] {
+  background: linear-gradient(60deg, #e73c30, #e73c30);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(104, 0, 21, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(104, 0, 21, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(104, 0, 21, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(104, 0, 21, 0.2);
+}
+
+.card [data-background-color="gray"] {
+  background: linear-gradient(60deg, #87898d, #87898d);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(135, 137, 141, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(135, 137, 141, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(135, 137, 141, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(135, 137, 141, 0.2);
+}
+
+.card [data-background-color="grayDark"] {
+  background: linear-gradient(60deg, #262626, #45494D);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(135, 137, 141, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(135, 137, 141, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(135, 137, 141, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(135, 137, 141, 0.2);
+}
+
+.card [data-background-color="white"] {
+  background: linear-gradient(60deg, #fff, #fff);
+  -webkit-box-shadow: 0 12px 20px -10px rgba(135, 137, 141, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(135, 137, 141, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(135, 137, 141, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(135, 137, 141, 0.2);
+}
+
+.card-stats .card-header {
+  height: 85px;
+  width: 100px;
+}
+
+.card-stats .card-content h3 small {
+  font-size: 45%;
+}
+
+.card-transparent {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card-title-home {
+  position: relative;
+}
+
+.card-title-home img {
+  right: 40px;
+  position: absolute;
+  top: 20px;
+  width: 27px;
+}
+
+.card-title-gral {
+  position: relative;
+  border-bottom: 2px solid #e73c30;
+}
+
+.card-title-gral h4 {
+  color: #4a4f55 !important;
+  font-weight: 400;
+}
+
+.card-title-gral p {
+  color: #797979 !important;
+}
+
+.card-title-gral img {
+  right: 40px;
+  position: absolute;
+  top: 30px;
+  width: 27px;
+}
+
+/* --------------------- 4.4 Solicitudes por desarrollo  --------------------- */
+.content-filter-date input {
+  margin-top: 20px;
+}
+
+.content-filter-date .form-group {
+  margin: 20px 0 0 0 !important;
+}
+
+.content-filter-date input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.content-filter-date .btn {
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: capitalize !important;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 48%;
+}
+
+/* --------------------- 4.5 Detalle de registro  --------------------- */
+#registro-detalle .edit-status .btn {
+  width: 200px;
+}
+
+#registro-detalle .edit-status img {
+  margin-right: 10px;
+  width: 30px;
+}
+
+#registro-detalle .historial-contacto .card-stats {
+  padding-top: 10px;
+}
+
+#registro-detalle .historial-contacto .titulo-medio {
+  color: #999999;
+  font-size: 12px;
+}
+
+#registro-detalle .comentario-contacto {
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 10px;
+}
+
+#registro-detalle .comentario-contacto .comentario {
+  text-align: left;
+}
+
+#registro-detalle .comentario-contacto .date {
+  font-size: 12px;
+  text-align: left;
+}
+
+#registro-detalle .comentario-contacto .date i {
+  position: relative;
+  top: 4px;
+  font-size: 16px;
+}
+
+.card-info-form {
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.info-registro {
+  border-bottom: 1px solid rgba(180, 180, 180, 0.3);
+  padding-bottom: 10px;
+}
+
+.info-registro,
+.label-registro {
+  padding-left: 10px;
+}
+
+.contact-media i {
+  color: #262626;
+  margin-left: 15px;
+  margin-right: 2px;
+}
+
+/* --------------------- 4.6 Perfil usuario  --------------------- */
+#profile .card form [class*="col-"] {
+  padding: 0 25px !important;
+}
+
+/* --------------------- 4.7 Footer  --------------------- */
+.main-panel > .footer {
+  padding: 0% 5%;
+}
+
+.main-panel > .footer ul li a {
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.main-panel > .footer ul li a:hover,
+.main-panel > .footer ul li a:focus {
+  color: #2692cf;
+}
+
+.editable-wrap {
+  background: #fff !important;
+  height: 30px;
+  position: absolute;
+  width: 230px;
+  top: 0;
+  right: -20px;
+}
+
+.editable-controls {
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  width: 100%;
+}
+
+.editable-controls select {
+  background: #E6E5E5 !important;
+  width: 60% !important;
+}
+
+.editable-buttons .btn {
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+
+/* ===================== 5. Media Jquery´s  ==================== */
+@media (max-width: 1485px) {
+  .cards-count-info .card-stats .card-content {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 1326px) {
+  .cards-count-info .card-stats .card-content .category {
+    margin-top: 65px;
+  }
+  .cards-count-info .card-footer {
+    min-height: 45px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #registro-detalle .btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cards-count-info .card-stats .card-content {
+    min-height: auto;
+  }
+  .cards-count-info .card-stats .card-content .category {
+    margin-top: 0;
+  }
+  .cards-count-info .card-footer {
+    min-height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .typo-line {
+    padding-left: 140px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .typo-line .category {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 50%;
+    left: 0px;
+    position: absolute;
+  }
+  .sidebar .nav > li.active-pro {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+  }
+  .sidebar .nav > li.active-pro i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-filter-date .btn,
+  .content-filter-date select {
+    width: 100% !important;
+  }
+  /* ---- Perfil usuario  ---- */
+  #profile .form-group .form-control {
+    width: 100%;
+  }
+}
+
+@media (max-width: 490px) {
+  /* ---- Perfil usuario  ---- */
+  #profile .btn {
+    width: 100%;
+  }
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 70px;
+}
+
+.places-buttons .btn {
+  margin-bottom: 30px;
+}
+
+.space-70 {
+  height: 70px;
+  display: block;
+}
+
+.tim-row {
+  margin-bottom: 20px;
+}
+
+.tim-typo {
+  padding-left: 25%;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.tim-typo .tim-note {
+  bottom: 10px;
+  color: #c0c1c2;
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  left: 0;
+  margin-left: 20px;
+  position: absolute;
+  width: 260px;
+}
+
+.tim-row {
+  padding-top: 50px;
+}
+
+.tim-row h3 {
+  margin-top: 0;
+}

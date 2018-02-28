@@ -1,0 +1,14 @@
+/* -------------------------------------------------------------
+    Mixins
+  ------------------------------------------------------------- */
+
+@mixin centerGrid($width) {
+    margin: auto;
+    width: $width;
+}
+
+@mixin configText($font, $size, $spacing) {
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $size;
+}

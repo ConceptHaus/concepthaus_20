@@ -1,0 +1,202 @@
+/******************************************************************
+
+Section Home | Slider
+
+******************************************************************/
+
+.interiorNav{
+  background-color: $red !important;
+  padding: 15px 0 !important;
+  font-size: 15px !important;
+}
+
+.acentoHome{
+  position: absolute;
+  top: -60px;
+}
+
+header{
+  // background-color: $white;
+  background-color: $red;
+  padding: 25px 0;
+  .short-description {
+    margin: -3px 0;
+    // color: #8d8e96;
+    color: $white;
+    padding-left: 50px;
+    @include font-size($fontMenu);
+    span {
+      display: block;
+    }
+  }
+  .logo {
+    width: 60px;
+    @include breakpoint(md-max) {
+        // padding-top: 30px;
+    }
+  }
+  .socialIcons{
+    padding-right: 40px;
+    font-weight: 500;
+    @include breakpoint(md-max) {
+        text-align: center !important;
+        // padding: 30px 0 0 0;
+    }  
+    a{
+      // color: #3e4249;    
+      color: $white;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+}
+#subMenu {
+  padding: 7px 0;
+  z-index: 9;
+  a{
+    // font-size: 15px;
+    @include font-size($fontSubMenu);
+    color: #4a4f55;
+    // color: #8d8e96;
+    margin: 0 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition:all .5s ease-in-out;
+    &:hover {
+      border-bottom: 2px solid #e73c30;
+    }
+  }
+}
+.sps {
+  padding: 1em .5em;
+  transition: all 0 ease;
+  width: 100%;
+}
+.sps--abv {
+  background-color: $whiteOpacity!important;
+  position: absolute;
+}
+.sps--blw {
+  background-color: $red !important;
+  position: fixed;
+  top: 0;
+  a{
+    color: #fff !important;  
+  }
+}
+.backgroundContacto{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.contactoImage1{
+  @extend .backgroundContacto;
+  background-image: url(images/home-elements/Contacto_Haus.png);
+}
+.contactoImage2{
+  @extend .backgroundContacto;  
+  background-image: url(images/home-elements/Contacto_Haus.png) !important;
+}
+
+// Responsive 
+// 1199px
+@include breakpoint(xl-max) {
+  header{
+    .short-description {
+      span {
+        display: initial!important;
+      }
+    }
+  }
+}
+//992 
+@include breakpoint(lg-max) {
+  #panorama {
+    .word {
+      bottom: 50px;
+    }
+  }
+  #home-description {
+    .content-description {
+      .col-md-6:nth-child(1) {
+          padding-right: 10%;
+      }
+      .col-md-6:nth-child(2) {
+          padding-left: 0%;
+      }
+    }
+  }
+}
+// 767px
+@include breakpoint(md-min) {
+  #subMenu {
+    a {
+      margin: 0 15px;
+    }
+  }
+  #panorama {
+    .word {
+        &::after {
+            font-size: 25px;
+            margin-left: 0px;
+        }
+    }
+  }
+}
+
+@include breakpoint(md-max) {
+  header {
+    padding: 0;
+    padding: 15px 0;
+    .short-description {
+      display: none;
+      // text-align: center;
+      // padding:0;
+    }
+    .socialIcons{
+      padding-right: 0;
+      padding-top: 10px;
+    }
+  }
+  #subMenu {
+    padding: 0!important;
+  }
+  #panorama {
+    .word {
+      left: 10px;
+        &::after {
+            font-size: 10px;
+            margin-left: 0px;
+        }
+    }
+  }
+  #home-description {
+    margin-bottom: 20px;
+    .content-description {
+      .col-md-6:nth-child(1) {
+          padding-top: 0px;
+      }
+      .col-md-6:nth-child(2) {
+        padding-left: 5%;
+      }
+    }
+  }
+  #home-doors {
+    .logo {
+      margin-bottom: 30px;
+    }
+  }
+  .acentoHome{
+        position: relative;
+        top: -30px;
+        // margin-bottom: 30px;
+        width: 70px;
+  }
+
+
+}

@@ -1,0 +1,100 @@
+$redch: #e73c30;
+$graych: #8d8e96;
+$white: #fff;
+
+header .row, footer .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.btn.disabled, .btn:disabled {
+  pointer-events: none!important;
+  cursor: no-drop!important;
+}
+
+// SweetAlert
+.swal2-modal  {
+  background: #eeee!important;
+}
+.swal2-modal .swal2-content {
+  font-size: 17px;
+}
+.swal2-modal .swal2-styled {
+  font-weight: normal!important;
+  letter-spacing: .5px!important;
+}
+.swal2-modal .swal2-image {
+  // width: inherit;
+}
+.title-general {
+  @include font-size($fontTitle);
+  color: $redch;
+  font-weight: 700;
+  padding: 0px 50px;
+  margin-top: 100px;
+  @include breakpoint(md-max) {
+    margin-top: 0;
+  }
+  &::after {
+    content: "■";
+    font-size: 22px;
+    margin-left: 5px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.subtitle-general {
+  color: $graych;
+  font-weight: 100;
+  margin-top: -16px;
+  padding: 0px 100px;
+}
+
+.accenting {
+  color: $white;
+  letter-spacing: -.5px;
+  margin-bottom: 0;
+}
+
+.accenting.first {
+  margin-bottom: 25px;
+}
+
+.hidden-sm-down {
+  @include breakpoint(md-max) {
+    display: none;
+  }
+}
+
+.hidden-sm-up {
+  @include breakpoint(md-min) {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  // background: $whiteOpacity;
+  border: none; // top: -50;
+  top: -78px;
+  right: 10px;
+  position: absolute;
+  .navbar-toggler-icon {
+    height: 1.2em;
+    width: 1.2em;
+  }
+}
+
+// .navButtom {
+//   position: absolute;
+//   top: -90px;
+//   right: 30px;
+// }
+
+.navbar {
+  padding: 0;
+  margin-top: -25px;
+  .navbar-collapse {
+    padding-top: 30px;
+  }
+}

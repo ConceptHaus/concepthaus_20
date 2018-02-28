@@ -1,0 +1,83 @@
+/* -------------------------------------------------------------
+Estilos a tipografías Salvaje Tentación
+	1. Importar tipografías
+	2. Variables
+		2.1 Font family
+		2.2 Font Size
+  ------------------------------------------------------------- */
+
+// ===================== 1. Importar tipografías ====================
+@font-face {
+  font-family: 'futuraStdLight';
+  src: url(../fonts/font-NewRailAlphabet/NewRailAlphabet-White.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'futuraStdBook';
+  src: url(../fonts/font-NewRailAlphabet/NewRailAlphabet-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'futuraStdHeavy';
+  src: url(../fonts/font-futuraStd/FuturaStd-Heavy.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'futuraStdBold';
+  src: url(../fonts/font-NewRailAlphabet/NewRailAlphabet-Bold.ttf) format("truetype");
+}
+
+// ===================== 2. Variables ====================
+
+// ===================== 2.1 Font family =================
+
+$fontLight: 'futuraStdLight';
+$fontBook: 'futuraStdBook';
+$fontHeavy: 'futuraStdHeavy';
+$fontBold: 'futuraStdBold';
+
+// ===================== 2.2 Font size ===================
+$fontMenu: (
+  null  : 14px,
+  576px : 14px,
+  768px : 13px,
+  992px : 12px,
+  1024px: 12px
+);
+
+$fontTitle: (
+  null  : 45px,
+  576px : 75px,
+  768px : 90px,
+  992px : 95px,
+  1024px: 100px,
+);
+
+$fontSlide: (
+  null  : 45px,
+  576px : 50px,
+  768px : 60px,
+  992px : 85px,
+  1024px: 90px,
+);
+
+$content-description: (
+  null  : 12px,
+  576px : 13px,
+  768px : 13px,
+  992px : 13px,
+  1024px: 13px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,764 @@
+/* -------------------------------------------------------------
+Estilos en general del sitio Salvaje Tentación
+  1.  Títulos
+  2.  Colores texto
+  3.  Generales
+  4.  Sección Menú (Header)
+  5.  Sección Slider
+  6.  Sección Video Promocional Catálogos
+  7.  Monederos
+  8.  Premios
+  9.  Registro
+  10. Footer
+  11. Responsive jQuery's
+  ------------------------------------------------------------- */
+
+// ===================== 1. Títulos ====================
+.title-xlbig {
+  @include configText($fontBold, 3.5rem, 5px);
+}
+.title-big {
+  @include configText($fontBold, 2.8rem, 5px);
+}
+.title-medium {
+  @include configText($fontBold, 2.3rem, 5px);
+}
+.title-small {
+  @include configText($fontHeavy, 2.3rem, 5px);
+}
+
+// ===================== 2. Colores texto ====================
+.txt-blue-light {
+  color: $blue-light;
+}
+.txt-blue {
+  color: $blue;
+}
+.txt-black {
+  color: $black;
+}
+.txt-gray {
+  color: $gray-base;
+}
+.txt-red {
+  color: $red;
+}
+.txt-white {
+  color: $white;
+}
+
+// ===================== 3. Generales ====================
+.msg-error {
+  @include configText($fontLight, 12px, .5px);
+  margin-bottom: 0!important;
+  margin-top: 5px!important;
+}
+.contacto-responsive {
+  background: $blue-light!important;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  display: none;
+  a {
+    color: $white;
+  }
+  img {
+    margin-top: -5px; 
+    width: 20px;
+  }
+  i {
+    font-size: 15px;
+  }
+  .bordercontacto{
+    border-right: 2px solid #fff;
+  }
+}
+// ===================== 4. Sección Menú (Header) ====================
+header{
+  // position: fixed;
+  // width: 100%;
+  // z-index: 99;
+  #navbarSupportedContent {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    padding-right: 5%;
+  }
+  .brand {
+    width: 160px;
+  }
+  .navbar{
+    background-color: $black;
+    .nav-link {
+      color: $white !important;
+      font-family: $fontLight;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      padding: 20px 30px!important;
+      &:hover, &:focus {
+        color: $blue!important;
+      }
+    }
+  }
+  .navbar-toggler {
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+    i {
+      color: $white;
+      font-size: 25px;
+    }
+  }
+}
+// ===================== 5. Sección Slider ====================
+#slide{
+  background-image: url('/img/SalvajeTentacion-fondoSlider.jpg');
+  min-height: 250px;
+  text-align: center;
+  min-height: 250px;
+  .content-item-info {
+    @include centerGrid(800px);
+    padding-top: 35px;
+    img {
+      margin-right: 20px;
+      bottom: 0;
+      width: 160px;
+    }
+  }
+  .carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .next-control, .previous-control {
+    width: 40px;
+  }
+}
+
+// ===================== 6. Sección Video Promocional Catálogos ==================== 
+#video, #testimonial {
+  background-color: $gray-base-light;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 30px;
+    left: 5%;
+  }
+  .contacto {
+    position: fixed;
+    right: -3%;
+    top: 400px;
+    width: 230px;
+    z-index: 99;
+  }
+}
+
+// ===================== 7. Monederos ==================== 
+#cupon {
+  background-color: $gray-base-light;
+  .title-medium {
+    margin-top: 35px;
+  }
+  .content-information {
+    background: $white;
+    height: 200px;
+    // margin-bottom: 9%;
+    margin-bottom: 100px;
+  }
+  .content-description {
+    padding: 50px;
+    p {
+      @include configText($fontHeavy, 20px, 1px);
+      @extend .txt-gray;
+      margin-bottom: 0;
+    }
+    .sell {
+      @include configText($fontBold, 20px, 0px);
+    }
+  }
+  .content-percent {
+    padding: 25px;
+    p {
+      @include configText($fontHeavy, 18px, 1px);
+      @extend .txt-gray;
+      margin-bottom: 0;
+    }
+    .percent {
+      @include configText($fontBold, 3rem, 1px);
+    }
+    .condicionals {
+      @include configText($fontLight, 10px, 1px);
+    }
+  }
+  // Contenido del texto alineado a la derecha
+  .content-description.p-right {
+    padding-left: 25%;
+  }
+  .content-percent.p-right {
+    padding-right: 25%;
+  }
+
+  // Contenido del texto alineado a la izquierda
+  .content-description.p-left {
+    padding-left: 20%;
+  }
+  .content-percent.p-left {
+    padding-left: 25%;
+  }
+  .img-monedero {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+  .img-animal-left {
+    position: absolute;
+    left: 0;
+    top: -20%;
+    width: 580px;
+    z-index: 1;
+  }
+  .img-animal-left.chita {
+    width: 490px;
+  }
+  .img-animal-right {
+    position: absolute;
+    right: 0;
+    top: -35%;
+    width: 400px;
+    z-index: 1;
+  }
+}
+
+#pleca{
+  height: 150px;
+  background-color: $gray-base-light;
+}
+
+#descargar{
+  background-color: $black;
+  color: $white;
+  padding: 55px 0 25px;
+  a {
+    @include configText($fontBook, 25px, 2px);
+    border: 1px solid;
+    color: $white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    transition:all .5s ease-in-out;
+    &:hover, &:focus {
+      opacity: .5;
+      text-decoration:none;
+    }
+  }
+  p{
+    @include configText($fontLight, 14px, 1px);
+    margin-top: 35px;
+  }
+}
+
+// ===================== 8. Premios ====================
+#reconocimientos{
+  background: url('/img/SalvajeTentacion-fondoSlider.jpg') center no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  .title-xlbig {
+    margin-right: 30px;
+    width: 100%;
+  }
+  .titlePremios, .containerPremios {
+    p {
+      @include configText($fontBook, 17px, 0px);
+      span {
+        @include configText($fontBold, 17px, 0px);
+      }
+    }
+  }
+  .containerPremios {
+    text-align: center;
+    h3{
+      @include configText($fontBold, 18px, .5px);
+    }
+    p {
+      @include centerGrid(90%);
+    }
+  }
+}
+// ===================== 9. Registro ====================
+#registro{
+  background-color: $black;
+  border-top: 5px solid $black-dark;
+  color: $white;
+  padding: 50px 0;
+  padding-bottom: 0;
+  .titleRegistro {
+    p {
+      @include configText($fontBook, 17px, 0px);
+      margin-bottom: 0;
+      margin-left: 15%;
+      span {
+        @include configText($fontBold, 17px, 0px);
+      }
+    }
+  }
+  form {
+    margin-top: 5%;
+    label {
+      @include configText($fontBook, 12px, 1px);
+      bottom: -13px;
+    }
+    input, select {
+      @include configText($fontBook, 14px, 1px);
+      // background-color: rgba(255, 0, 0, 0);
+     /* background-color: transparent;
+      -webkit-background-color: transparent;
+      -moz-background-color: transparent;
+       color: $white; */
+      border: 0;
+      border-bottom: 1px solid $blue-light;
+      border-radius: 0;
+      width: 100%;
+      -moz-appearance: none; 
+      -webkit-appearance: none; 
+      appearance: none;
+    }
+    .btn {
+      @include configText($fontBook, 14px, 2px);
+      background: $blue-light;
+      color: $white;
+      border-radius: 20px;
+      margin-top: 20px;
+      &:hover, &:focus {
+        transition:all .5s ease-in-out;
+      }
+    }
+  }
+}
+// ===================== 10. Footer ====================
+footer {
+  @include configText($fontBold, 10px, 1px);
+  background-color: $gray-base-light;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  a {
+    color: $black;
+    &:hover, &:focus {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+  a:nth-child(2) {
+    margin-left: 7%;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// ===================== 11. Responsive jQuery's ====================
+@include breakpoint(xl-max) {
+  // .brand {
+  //   background: red;
+  // }
+  // Títulos
+  .title-xlbig {
+    font-size: 2.5rem;
+  }
+  .title-big {
+    font-size: 2.5rem;
+  }
+  .title-medium {
+    font-size: 2rem;
+  }
+  // Sección Slider
+  #slide {
+    .content-item-info {
+      img {
+        width: 135px;
+      }
+    }
+  } 
+  // Video Promocional Catalogo
+  #video, #testimonial {
+    img {
+      width: 200px;
+    }
+  }
+  // Monederos
+  #cupon {
+    .content-information {
+      margin-bottom: 10%;
+    }
+    .content-percent.p-right {
+      padding-right: 15%;
+    }
+    .content-percent.p-left {
+      padding-left: 15%;
+    }
+    .img-animal-left {
+      top: -15%;
+      width: 550px;
+    }
+    .img-animal-left.chita {
+      width: 470px;
+    }
+    .img-animal-right {
+      top: -15%;
+      width: 350px;
+    }
+  }
+}
+@include breakpoint(lg-max) {
+  // .brand {
+  //   background: blue;
+  // }
+  // Titulos
+  .title-xlbig {
+    font-size: 2rem;
+  }
+  // Generales
+  .contacto-responsive {
+    display: block;
+  }
+  // Sección Header
+  header{
+    .brand {
+      width: 110px;
+    }
+    #navbarSupportedContent {
+      position: relative;
+      width: 100%;
+    }
+  }
+  // Sección Slider
+  .next-control, .previous-control {
+    width: 25px;
+  }
+  // Video
+  #video, #testimonial {
+    .contacto {
+      display: none;
+    }
+  }
+  // Monederos
+  #cupon {
+    .title-big {
+      margin-bottom: 35px;
+    }
+    .content-information.pantera,
+    .content-information.chita {
+      border-top-left-radius: 70px;
+    }
+    .content-information.puma,
+    .content-information.lince {
+      border-top-right-radius: 70px;
+    }
+    .content-description.p-right {
+      padding-left: 24%;
+    }
+    .content-percent.p-right {
+      padding-right: 10%;
+    }
+    .content-description.p-left {
+      padding-left: 15%;
+    }
+    .content-percent.p-left {
+      padding-left: 10%;
+    }
+    .img-animal-left {
+      width: 480px;
+    }
+    .img-animal-left.chita {
+      width: 420px;
+    }
+    .img-animal-right {
+      width: 280px;
+    }
+  }
+  // Sección Descarga catálogo 
+  #descargar {
+    // padding: 55px 0 25px;
+    a {
+      @include configText($fontBook, 20px, 2px);
+    }
+  }
+  // Footer
+  footer {
+    padding-bottom: 10%;
+  }
+}
+
+@include breakpoint(lg-min) {
+  .navbar-collapse {
+    width: inherit!important;
+  }
+}
+
+@include breakpoint(md-max) {
+  // .brand {
+  //   background: yellow;
+  // }
+  .title-big {
+    font-size: 1.9rem;
+  }
+  .title-medium {
+    font-size: 1.6rem;
+  }
+  // Generales
+  .container {
+    width: 90%;
+  }
+  // Sección Slider
+  #slide {
+    .content-item-info {
+      @include centerGrid(80%);
+      img {
+        width: 120px;
+      }
+    }
+  } 
+  // Video
+  #video, #testimonial {
+    iframe {
+      height: 325px;
+    }
+  }
+  // Monederos
+  #cupon {
+    .img-monedero {
+      width: 80%;
+      margin-top: 15px;
+    }
+    .content-information.pantera,
+    .content-information.chita {
+      border-top-left-radius: 140px;
+      height: auto;
+    }
+    .content-information.puma,
+    .content-information.lince {
+      border-top-right-radius: 140px;
+      height: auto;
+    }
+    .content-description.p-right {
+      padding: 36px;
+      padding-left: 33%;
+    }
+    .content-percent.p-right {
+      margin-top: -22%;
+      padding-right: 10%;
+    }
+    .content-description.p-left {
+      margin-top: -165px;
+      text-align: right;
+      padding-left: 5%;
+      padding-right: 30%;
+    }
+    .content-percent.p-left {
+      margin-top: 0%;
+      padding-left: 8%;
+    }
+    .img-animal-left {
+      top: -5%;
+    }
+    .img-animal-right {
+      top: -5%;
+      width: 258px;
+    }
+  }
+  // Premios - Registro
+  .titlePremios, .titleRegistro {
+    .col-sm-6 {
+      flex: 0 0 100%;
+      max-width: 100%!important;
+      text-align: center;
+      p {
+        margin-left: 0!important;
+      }
+    }
+  }
+  // Footer
+  footer {
+    .col-sm-12 {
+      text-align: center!important;
+    }
+    .col-sm-12:nth-child(2) {
+      margin-top: 10px;
+    }
+  }
+}
+@include breakpoint(sm-max) {
+  // .brand {
+  //   background: orange;
+  // }
+  // Sección Slider
+  #slide {
+    .content-item-info {
+      @include centerGrid(70%);
+      img {
+        width: 90px;
+      }
+    }
+  } 
+  // Video
+  #video, #testimonial {
+    iframe {
+      height: 280px;
+    }
+  }
+  // Monederos
+  #cupon {
+    .title-big, .title-medium {
+      text-align: center;
+    }
+    .title-big {
+      margin-bottom: 0;
+    }
+    .content-information.pantera,
+    .content-information.chita {
+      border-top-left-radius: 0;
+    }
+    .content-information.puma,
+    .content-information.lince {
+      border-top-right-radius: 0;
+    }
+    .content-percent.p-right {
+      padding-right: 6%;
+    }
+    .content-percent.p-left {
+      padding-left: 5%;
+    }
+    .img-monedero {
+      margin-bottom: 35px;
+      width: 50%;
+    }
+    .img-animal-left {
+      width: 300px;
+    }
+    .img-animal-left.chita {
+      width: 280px;
+    }
+    .img-animal-right {
+      margin-top: -50%;
+      margin-right: -15px;
+      width: 200px;
+    }
+  }
+  // Sección Descarga catálogo 
+  #descargar {
+    // padding: 55px 0 25px;
+    a {
+      @include configText($fontBook, 16px, 2px);
+    }
+  }
+  // Premios
+  .titlePremios, .containerPremios {
+    p {
+     font-size: 14px!important;
+      span {
+        font-size: 14px!important;
+      }
+    }
+  }
+  // Contact Responsive
+  .contacto-responsive {
+    a{
+      font-size: 13px;
+    }
+  }
+}
+
+@include breakpoint(xs-max) {
+  // .brand {
+  //   background: pink;
+  // }
+  // Títulos
+  .title-xlbig {
+    font-size: 1.5rem;
+  }
+  .title-big {
+    font-size: 1.7rem;
+  }
+  .title-medium {
+    font-size: 1.3rem;
+  }
+  .title-small {
+    font-size: 1.5rem;
+  }
+  // Sección Slider
+  #slide {
+    .content-item-info {
+      padding-bottom: 20px;
+    }
+  } 
+  // Video
+  #video, #testimonial {
+    iframe {
+      height: 240px;
+    }
+  }
+  // Monederos
+  #cupon {
+    .content-description {
+      p{
+        font-size: 18px;
+      }
+    }
+    .content-description.p-right {
+      padding-left: 0;
+      text-align: right;
+    }
+    .content-description.p-left {
+      margin-top: 0;
+      text-align: left;
+    }
+    .content-percent.p-right {
+      margin-top: -2%;
+      padding-right: 0!important;
+      text-align: center!important;
+    }
+    .content-percent.p-left {
+      margin-top: -2%;
+      padding-left: 0!important;
+      text-align: center!important;
+    }
+    .img-animal-left {
+      margin-top: 32px;
+      width: 220px;
+    }
+    .img-animal-left.chita {
+      margin-top: 15px;
+      width: 220px;
+    }
+    .img-animal-right {
+      margin-top: -200px;
+      margin-right: 0;
+      width: 170px;
+    }
+  }
+  // Sección Descarga catálogo 
+  #descargar {
+    a {
+      @include configText($fontBook, 12px, 2px);
+      padding: 17px 10px;
+    }
+  }
+   // Contact Responsive
+   .contacto-responsive {
+     img, i {
+       display: block;
+     }
+     i.fa-phone{
+      font-size: 18px;
+    }
+     img {
+       margin: auto;
+     }
+  }
+}
+
