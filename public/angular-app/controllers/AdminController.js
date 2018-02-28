@@ -26,6 +26,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
             $scope.statusProceso = [];
             $scope.statusCheck = [];
             $scope.statusClose = [];
+            $scope.statusCotizado = [];
 
             angular.forEach($scope.registros, function(value, key) {
                 if(value.pivot_status.id_status == 1) {
@@ -36,6 +37,9 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 } 
                 if(value.pivot_status.id_status == 3){
                     $scope.statusClose.push(value);
+                }
+                if(value.pivot_status.id_status == 4){
+                    $scope.statusCotizado.push(value);
                 }
             });
 
@@ -168,6 +172,20 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
     getGraficaSemanal();
     getGraficaMensual();
     
+
+    $scope.Valued = function(registro){
+        registro.new_status = 4;
+        console.log('funciona que cambia estatus activada');
+        AdminService.postStatus(registro)
+            .then(function(data){
+                console.log(data.data);
+                jQuery('#modalValued').modal('hide');
+                $window.location.reload();
+                
+            }, function(err){
+                console.log(err);
+            });
+    };
 
     $scope.NoViable = function(registro){
         registro.new_status = 3;

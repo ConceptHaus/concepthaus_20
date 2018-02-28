@@ -6,8 +6,8 @@
         <div class="col-md-12">
             <div class="card card-transparent">
                 <div class="card-header card-title-gral" data-background-color="white">
-                    <h4 class="title">Solicitudes / En Proceso</h4>
-                    <p class="category">En esta sección se podrán visualizar las solicitudes que se encuentran con estatus en proceso.</p>
+                    <h4 class="title">Solicitudes / Cotizadas</h4>
+                    <p class="category">En esta sección se podrán visualizar las solicitudes que se ya han sido cotizadas.</p>
                     <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
                 </div>
             </div>
@@ -34,20 +34,20 @@
             </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="card card-stats">
-                <div class="card-header" data-background-color="gray">
-                    <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="BeGrand®">
-                </div>
-                <div class="card-content">
-                    <p class="category">En proceso</p>
-                    <h3 class="title">{{count($proceso)}}</h3>
-                </div>
-                <div class="card-footer">
-                    <div class="stats">
-                        <i class="material-icons">local_offer</i>  Total en proceso.
+                <div class="card card-stats">
+                    <div class="card-header" data-background-color="orange">
+                        <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="BeGrand®">
+                    </div>
+                    <div class="card-content">
+                        <p class="category">Cotizadas</p>
+                        <h3 class="title">{{count($cotizados)}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">local_offer</i>  Total de cierres.
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="card">
@@ -60,7 +60,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="row">
         <div class="col-md-12">
@@ -115,8 +114,8 @@
             </div>
         </div>
     </div>
-
-
+    
+    
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -198,7 +197,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="registro in statusProceso | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
+                            <tr ng-repeat="registro in statusCotizado | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse | limitTo:10">
                                 <td><% registro.id_registro %></td>
                                 <td>
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
@@ -212,14 +211,13 @@
                                     <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                                     <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
-                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                    
+                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
                                 </td>
                                 <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
                             </tr> 
                         </tbody>
                     </table>
-                    <dir-pagination-controls max-size="15" boundary-links="true" ></dir-pagination-controls>
-                    @if(count($proceso) == 0)
+                    @if(count($cotizados) == 0)
                     <div class="content-msg-empty">
                         <h5 class="text-center">No hay solicitudes registradas.</h5>
                     </div>
@@ -228,6 +226,6 @@
             </div>
         </div>
     </div>
-
+  
 </div>
 @endsection

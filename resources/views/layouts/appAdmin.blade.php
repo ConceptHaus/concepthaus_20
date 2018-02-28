@@ -75,6 +75,19 @@
                             </p>
                         </a>
                     </li>
+                    
+                    @if (Request::path() === 'registros/cotizado')<li class="active">@else<li>@endif
+                        <a href="{{ url('/registros/cotizado') }}">
+                            <p>
+                                @if (Request::path() === 'registros/cotizado')
+                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-dev.svg')}}"> 
+                                @else
+                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-dev-gray.svg')}}"> 
+                                @endif
+                                Cotizado
+                            </p>
+                        </a>
+                    </li>
 
                     @if (Request::path() === 'registros/socios')<li class="active">@else<li>@endif
                         <a href="{{ url('/registros/socios') }}">
@@ -154,11 +167,11 @@
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-blue" role="menu">
-                                        {{--  <li>
+                                        <li>
                                             <a href="{{ url('/perfil') }}">
                                                 Perfil Usuario
                                             </a>
-                                        </li>  --}}
+                                        </li>
                                         <li>
                                             <a href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();

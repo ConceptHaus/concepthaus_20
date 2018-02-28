@@ -27,6 +27,10 @@
                             <div class="card-header" data-background-color="red">
                                 <img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus">
                             </div>
+                        @elseif($info_user[0]['pivot_status']['id_status'] == 4)
+                            <div class="card-header" data-background-color="orange">
+                                <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
+                            </div>
                         @endif
                     </a>
                     <div class="card-content">
@@ -41,6 +45,8 @@
                             <h4 class="title txt-blue">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 3)
                             <h4 class="title txt-red">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
+                        @elseif($info_user[0]['pivot_status']['id_status'] == 4)
+                            <h4 class="title txt-gray">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @endif
                     </div>
                 </div>
@@ -97,8 +103,17 @@
                         <p class="category txt-grayDark">Modificación de estatus</p>
                     </div>
                     <div class="card-content text-center">
-                        <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="http://192.168.33.10/admin/img/icons/contact-check.svg" alt="Concept Haus"> Cerrada</button>
                         <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="http://192.168.33.10/admin/img/icons/contact-error.svg" alt="Concept Haus"> No viable</button>
+                        <button type="button" class="btn btn-orange" data-toggle="modal" data-target=".modalCotizado"><img src="http://192.168.33.10/admin/img/icons/contact-error.svg" alt="Concept Haus"> Cotizado</button>
+                    </div>
+                </div>
+                @elseif($info_user[0]['pivot_status']['id_status'] == 4)
+                <div class="card edit-status">
+                    <div class="card-header" data-background-color="white">
+                        <p class="category txt-grayDark">Modificación de estatus</p>
+                    </div>
+                    <div class="card-content text-center">
+                        <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="http://192.168.33.10/admin/img/icons/contact-check.svg" alt="Concept Haus"> Cerrada</button>
                     </div>
                 </div>
                 @endif
@@ -265,6 +280,29 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-red" ng-click="NoViable(registro)">No viable</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Cotizado -->
+<div class="modal fade modalCotizado" id="modalValued" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" ng-init="registro.id_registro = {{$info_user[0]['id_registro']}}">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">SOLICITUD COTIZADA</h4>
+            </div>
+            <div class="modal-body">
+                {{--  <form>
+                    <div class="form-group none-mt">
+                        <label>Selecciona archivo de cotización.</label>
+                        <input type="file" ng-model="registro.archivoCotizacion" id="archivoCotizacion" name="archivoCotizacion" class="form-control">
+                    </div>
+                </form>  --}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-blue" ng-click="Valued(registro)">Aceptar</button>
             </div>
         </div>
     </div>
