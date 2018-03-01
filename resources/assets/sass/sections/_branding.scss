@@ -1,0 +1,46 @@
+#branding {
+    .btn {
+        border-bottom: 0px;
+        color: #fff;
+        cursor: pointer;
+        background: $red;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: 100px;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .btn.disabled, .btn:disabled {
+        opacity: 1;
+    }
+    .contact-branding {
+        background-image: url('../img/backgrounds/bgidentidad2.jpg');
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 5%;
+        padding-top: 8%;
+        padding-bottom: 7%;
+    }
+    .title-general {
+        color: #FFF;
+        font-size: 60px;
+        padding-left: 0;
+        &::after {
+            content: "■";
+            font-size: 15px;
+        }
+    }
+    .interiorPuerta {
+        padding-top: 5px!important;
+        padding-bottom: 40px!important;
+    }
+    .info-descripBranding {
+        p {
+            padding: 5px 25px;
+        }
+    }
+    .form-control {
+        background-color: #efefef;
+    }
+}

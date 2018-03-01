@@ -27,16 +27,18 @@
             </div>
         </a>
     </section>
-    <section id="gridInterior" class="container-fluid" ng-repeat="collection in collections | filter: { label: 'ConceptHaus' }">
+    <section id="gridInterior" class="container-fluid">
         <div class="row">
-            <div class="col-md-3" ng-repeat="project in collection.latest_projects" style="padding: 0;">
+            <div class="col-md-3" ng-repeat="project in collectionConcept" style="padding: 0;">
                 <div class="containerProject">
                     <a class="projectName" href="<% project.url %>" target="_blank">
                         <img class="card-img-top" ng-src="<% project.covers.original %>">
                         <div class="containerInfo">
-                            <h2><% project.name %></h2>
+                            <h2> <% project.name %></h2>
                             <p class="projectCliente">
-                                <span ng-repeat="field in project.fields"><% field %></span>
+                                <span ng-repeat="field in project.fields">
+                                    <% field %>
+                                </span>
                             </p>
                         </div>
                     </a>

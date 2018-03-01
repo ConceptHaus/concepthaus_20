@@ -8,6 +8,7 @@ use App\Ubicacion;
 use App\FechaRegistro;
 use App\CodigoRegistro;
 use App\Pivot_Models\PivoteStatus;
+use App\Pivot_Models\PivoteForms;
 
 use Illuminate\Http\Request;
 
@@ -90,6 +91,11 @@ class RegistroController extends Controller {
 			$codigo -> codigo_registro 	=  $no_codigo;
 			$codigo -> save();
 
+			$formulario = new PivoteForms;
+			$formulario -> id_registro =  $user['id_registro'];
+			$formulario -> tipo 	   =  $request->tipo;
+			$formulario -> save();
+	
 			$user['correo'] = $request -> correo;
 			// $user['ciudad'] = $request->ciudad;
 			// $user['estado'] = $request->estado;

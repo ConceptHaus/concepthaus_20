@@ -24,4 +24,25 @@ app.controller('ProyectosController', function ProyectosController($http, $scope
     $scope.collections = response.data.collections;
   })
 
+  // Colección ConceptHaus
+  $scope.collectionConcept = {};
+  $http.jsonp('https://www.behance.net/v2/collections/168765131/projects?api_key=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
+  .then(function (response) {
+    $scope.collectionConcept = response.data.projects;
+  })
+
+  // Colección InHaus
+  $scope.collectionInHaus = {};
+  $http.jsonp('https://www.behance.net/v2/collections/168765133/projects?api_key=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
+  .then(function (response) {
+    $scope.collectionInHaus = response.data.projects;
+  })
+
+  // Colección TreeHaus
+  $scope.collectionTreeHaus = {};
+  $http.jsonp('https://www.behance.net/v2/collections/168765137/projects?api_key=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
+  .then(function (response) {
+    $scope.collectionTreeHaus = response.data.projects;
+  })  
+
 });
