@@ -121,6 +121,13 @@
                             <p>Todas</p>
                         </a>
                     </li>
+                    
+                    @if (Request::path() === 'registroLead')<li class="active">@else<li>@endif
+                        <a href="{{ url('/registroLead') }}">
+                            <i class="material-icons">person_add</i>
+                            <p>Registrar Lead</p>
+                        </a>
+                    </li>
 
                     <li class="active-pro">
                         <a href="{{ route('logout') }}"

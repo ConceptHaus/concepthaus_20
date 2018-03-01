@@ -7,6 +7,9 @@ use App\Http\Requests;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
+
 
 use App\CodigoPromo;
 use App\Mailing;
@@ -71,6 +74,13 @@ class StatusController extends Controller
         
         if($request->new_status == 4){
             
+            // $file = $request->file('file');
+            // $file_name = str_random(16).'.'.$file->getClientOriginalExtension();
+            // dd($file_name);
+            // $file_path = public_path().'/files/';
+            // $file->move($file_path, $file_name);
+            // $file->imagen = '/files/'.$file_name;
+
             $statusActual->id_status = 4;
             $statusActual->save();
 

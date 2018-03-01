@@ -80,6 +80,11 @@ class HomeController extends Controller
         return view('admin/registro_detalle',$data);
         //return response()->json($data);
     }
+    
+    public function getUserData() {
+        // $data['info_user'] = Auth::id();
+        return view('admin/registro_lead');
+    }
 
     // ===================== Ajax get data ====================
 	public function getRegistrosAjax(){

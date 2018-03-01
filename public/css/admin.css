@@ -228,6 +228,15 @@ Estilos generales del administrador Be Grand
   font-size: 20px;
 }
 
+.fuente i {
+  text-align: center;
+  display: block;
+}
+
+.fuente p {
+  text-align: center;
+}
+
 /* --------------------- 2.5 Form Búsqueda  --------------------- */
 .content-filter-search {
   margin-bottom: 0;

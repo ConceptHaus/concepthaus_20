@@ -57,7 +57,7 @@ Route::get('/registros/cotizado', 'HomeController@getRegistrosCotizado');
 Route::get('/registros/socios', 'HomeController@getRegistrosCheck');
 Route::get('/registros/no-viables', 'HomeController@getRegistrosClose');
 Route::get('/registro/detalle/{id}', 'HomeController@getRegistroDetalle');
-
+Route::get('/registroLead', 'HomeController@getUserData');
 
 // API
 Route::get('/api/v1/registros','HomeController@getRegistrosAjax');
