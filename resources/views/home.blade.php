@@ -41,14 +41,14 @@
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="card card-stats">
-                    <a href="{{ url('/registros/proceso') }}">
-                        <div class="card-header" data-background-color="gray">
+                    <a href="{{ url('/registros/cotizado') }}">
+                        <div class="card-header" data-background-color="orange">
                             <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="Concept Haus">
                         </div>
                     </a>
                     <div class="card-content">
                         <p class="category">Cotizados</p>
-                        <h3 class="title">{{count($proceso)}}</h3>
+                        <h3 class="title">{{count($cotizados)}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
