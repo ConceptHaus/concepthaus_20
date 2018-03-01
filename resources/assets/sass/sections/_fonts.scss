@@ -31,11 +31,11 @@ $fontSlide: (
 );
 
 $content-description: (
-  null  : 12px,
-  576px : 13px,
-  768px : 13px,
-  992px : 13px,
-  1024px: 13px,
+  null  : 13px,
+  576px : 14px,
+  768px : 14px,
+  992px : 14px,
+  1024px: 14px,
 );
 
 @mixin font-size($fs-map) {

@@ -9015,31 +9015,31 @@ Section Home | Slider
 }
 
 #home-description .content-description p {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 100;
 }
 
 @media screen and (min-width: 576px) {
   #home-description .content-description p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 768px) {
   #home-description .content-description p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 992px) {
   #home-description .content-description p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #home-description .content-description p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -9062,31 +9062,31 @@ Section Home | Slider
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 100;
 }
 
 @media screen and (min-width: 576px) {
   .text-small {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .text-small {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .text-small {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .text-small {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -9639,4 +9639,54 @@ header .socialIcons a {
 
 #proyecto {
   margin-top: 100px;
+}
+
+#branding .btn {
+  border-bottom: 0px;
+  color: #fff;
+  cursor: pointer;
+  background: #e73c30;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 100px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+#branding .btn.disabled, #branding .btn:disabled {
+  opacity: 1;
+}
+
+#branding .contact-branding {
+  background-image: url("../img/backgrounds/bgidentidad2.jpg");
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5%;
+  padding-top: 8%;
+  padding-bottom: 7%;
+}
+
+#branding .title-general {
+  color: #FFF;
+  font-size: 60px;
+  padding-left: 0;
+}
+
+#branding .title-general::after {
+  content: "\25A0";
+  font-size: 15px;
+}
+
+#branding .interiorPuerta {
+  padding-top: 5px !important;
+  padding-bottom: 40px !important;
+}
+
+#branding .info-descripBranding p {
+  padding: 5px 25px;
+}
+
+#branding .form-control {
+  background-color: #efefef;
 }

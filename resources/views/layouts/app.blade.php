@@ -41,7 +41,7 @@
     <header>
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-5 col-lg-4">
-                <p class="short-description">Somos un cluster creativo especializado en la creación,
+                <p class="short-description">Somos un cluster especializado en la creación,
                     <span>desarrollo y fortalecimiento de marcas.</span>
                 </p>
             </div>
@@ -119,6 +119,8 @@
                         <form id="contactoForm" name="contactoForm">
                             {{ csrf_field() }}
                             <input type="text" class="form-control" id="fuente" name="fuente" ng-model="contacto.fuente" ng-init="contacto.fuente='Google'"
+                                hidden required>
+                            <input type="text" class="form-control" id="tipo" name="tipo" ng-model="contacto.tipo" ng-init="contacto.tipo='Home'"
                                 hidden required>
                             <div class="form-group row">
                                 <div class="col-sm-12">

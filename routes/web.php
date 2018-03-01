@@ -11,38 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home/welcome');
-});
+// Route::get('/registros', 'WelcomeController@home');
 
-Route::get('/crew', function () {
-    return view('home/crew');
-});
-
-Route::get('/conceptHaus', function () {
-    return view('home/concept');
-});
-
-Route::get('/inhaus', function () {
-    return view('home/inhaus');
-});
-
-Route::get('/treehaus', function () {
-    return view('home/treehaus');
-});
-
-Route::get('/startups', function () {
-    return view('home/startups');
-});
-
-
-
+Route::get('/', 'WelcomeController@viewHome');
+Route::get('/crew', 'WelcomeController@viewCrew');
+Route::get('/conceptHaus', 'WelcomeController@viewConceptHaus');
+Route::get('/inhaus', 'WelcomeController@viewInHaus');
+Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
+Route::get('/startups', 'WelcomeController@viewStartups');
+Route::get('/branding', 'WelcomeController@viewBranding');
 
 // Guardar datos formulario de registro
 Route::post('/saveRegistro','RegistroController@saveDataRegistro');
 
 Auth::routes();
-
 
 /* ============================================================
                         Administrador

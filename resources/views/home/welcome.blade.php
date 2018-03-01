@@ -183,7 +183,7 @@
         </div>
         <div class="col-md-3 w25">
           <!-- Harlekin &&  Portamar -->
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '62568395npm run start' || project.id == '62011497'">
+          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '62568395' || project.id == '62011497'">
             <a class="projectName" href="<% project.url %>" target="_blank">
               <img class="card-img-top" ng-src="<% project.covers.original %>">
               <div class="containerInfo">
