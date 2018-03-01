@@ -35,6 +35,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Rutas Administrador
 Route::get('/registros', 'HomeController@getRegistros');
 Route::get('/registros/proceso', 'HomeController@getRegistrosProceso');
+Route::get('/registros/cotizado', 'HomeController@getRegistrosCotizado');
 Route::get('/registros/socios', 'HomeController@getRegistrosCheck');
 Route::get('/registros/no-viables', 'HomeController@getRegistrosClose');
 Route::get('/registro/detalle/{id}', 'HomeController@getRegistroDetalle');

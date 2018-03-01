@@ -160,6 +160,12 @@ Estilos generales del administrador Be Grand
   font-weight: 300 !important;
 }
 
+.form-group input[type=file] {
+  opacity: 1;
+  margin: 30px 0 0 0;
+  position: relative;
+}
+
 /* --------------------- 2.3 Dropdown  --------------------- */
 .dropdown-blue {
   min-width: 175px;

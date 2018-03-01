@@ -36,6 +36,7 @@ class StatusController extends Controller
         $registro = Registros::where('id_registro','=',$request->id_registro)->first();
         $statusActual = PivoteStatus::where('id_registro','=',$request->id_registro)->first();
 
+
         if($request->new_status == 2){
             $statusActual->id_status = 2;
             $nosocio = new NoSocio;
@@ -63,6 +64,14 @@ class StatusController extends Controller
             $motivo->id_motivo = $request->id_motivo;
             $motivo->nota_motivo = $request->nota_motivo;
             $motivo->save();
+            $statusActual->save();
+
+            return response('success_no_viable',200);
+        }
+        
+        if($request->new_status == 4){
+            
+            $statusActual->id_status = 4;
             $statusActual->save();
 
             return response('success_no_viable',200);

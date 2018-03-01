@@ -16,7 +16,7 @@
     </div>
 
     <div class="row cards-count-info">
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{url('/registros')}}">
                     <div class="card-header" data-background-color="grayDark">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/proceso') }}">
                     <div class="card-header" data-background-color="gray">
@@ -52,7 +52,25 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <a href="{{ url('/registros/cotizado') }}">
+                    <div class="card-header" data-background-color="orange">
+                        <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="Concept Haus">
+                    </div>
+                </a>
+                <div class="card-content">
+                    <p class="category">Cotizados</p>
+                    <h3 class="title">{{count($cotizados)}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i>  Total cotizados.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/socios') }}">
                     <div class="card-header" data-background-color="blue">
@@ -70,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/no-viables') }}">
                     <div class="card-header" data-background-color="red">
@@ -238,6 +256,7 @@
                                     <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                                     <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
+                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                    
                                 </td>
                                 <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
                             </tr>

@@ -17,6 +17,7 @@ class StatusTableSeeder extends Seeder
             ['status' => 'En Proceso'],
             ['status' => 'Socio'],
             ['status' => 'No viable'],
+            ['status' => 'Cotizado'],
         ];
 
         Status::insert($status);

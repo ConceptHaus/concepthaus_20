@@ -36,6 +36,7 @@ class HomeController extends Controller
         $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
+        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
         
         return view('home', $dashboard);
     }
@@ -45,6 +46,7 @@ class HomeController extends Controller
         $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
+        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();        
         return view('admin/registros', $dashboard);
     }
 
@@ -53,6 +55,7 @@ class HomeController extends Controller
         $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
         return view('admin/registros_proceso', $dashboard);
     }
+    
 
     public function  getRegistrosCheck() {
         $dashboard['registros'] = Registros::all();
@@ -64,6 +67,12 @@ class HomeController extends Controller
         $dashboard['registros'] = Registros::all();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         return view('admin/registros_close', $dashboard);
+    }
+
+    public function  getRegistrosCotizado() {
+        $dashboard['registros'] = Registros::all();
+        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
+        return view('admin/registros_cotizado', $dashboard);
     }
 
     public function  getRegistroDetalle($id) {

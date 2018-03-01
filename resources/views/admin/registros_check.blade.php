@@ -211,6 +211,7 @@
                                     <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                                     <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
+                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                    
                                 </td>
                                 <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
                             </tr> 
