@@ -15,7 +15,7 @@
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
-    <meta property="og:image" content="{{asset('img/concepthaus-logo.svg')}}"/>
+    <meta property="og:image" content="{{asset('img/image-meta.png')}}"/>
     <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://concepthaus.mx/" />
