@@ -21,10 +21,10 @@ class RegistroController extends Controller {
     protected function validatorRegistro(array $data){
         return Validator::make($data, [
             'nombre'     => 'required',
-			'correo'     => 'required|email|unique:registros',
+						'correo'     => 'required|email|unique:registros',
             'telefono'   => 'required',
-			'empresa'     => 'required',
-			'mensaje'     => 'required',
+						'empresa'     => 'required',
+						'mensaje'     => 'required',
         ]);
 	}
 	
@@ -40,7 +40,7 @@ class RegistroController extends Controller {
 		$input = $request->all();
 		$Validator = $this->validatorRegistro($input);
 		$no_codigo = self::quickRandom();
-		
+
 		if($Validator->passes()){
 
 			// Formatos fecha
@@ -116,6 +116,9 @@ class RegistroController extends Controller {
 			$json['success'] = "Datos guardados";
 			return json_encode($json['success']);
 		}
+
+		dd($Validator->errors());
+		
 		$json['errors'] = $Validator->errors();
 		return json_encode($json['errors']);
 	}

@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('AdminController', ['app','ngMask'], function($interpolateProvider) {
+angular.module('AdminController', ['app','ngMask','angularUtils.directives.dirPagination','angularUtils.directives.dirPagination'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });

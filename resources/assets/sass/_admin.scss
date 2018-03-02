@@ -141,6 +141,18 @@ Estilos generales del administrador Be Grand
         text-align: center;
     }
 }
+
+.pagination{
+    a{
+        font-size: 15px !important;
+    }
+}
+
+.pagination > .active > a, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover{
+    background-color: $red;
+    border-color: $red;
+    font-size: 15px;
+}
 /* --------------------- 2.5 Form Búsqueda  --------------------- */
 .content-filter-search {
     margin-bottom: 0;

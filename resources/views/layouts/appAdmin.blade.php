@@ -241,11 +241,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
 {{--  <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>  --}}
 
+<script src="https://cdn.jsdelivr.net/npm/angular-utils-pagination@0.11.1/dirPagination.js"></script>
 <script src="{{asset('angular-app/angular-app.js')}}"></script>
 <script src="{{asset('angular-app/services/RegistroService.js')}}"></script>
 <script src="{{asset('angular-app/controllers/RegistroController.js')}}"></script>
 <script src="{{asset('angular-app/controllers/AdminController.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/angular-utils-pagination@0.11.1/dirPagination.js"></script>
 <script src="{{asset('js/ngMask.min.js')}}"></script>
 <!--  Charts Plugin -->
 <script src="{{asset('admin/js/chartist.min.js')}}"></script>
