@@ -228,6 +228,15 @@ Estilos generales del administrador Be Grand
   font-size: 20px;
 }
 
+.fuente i {
+  text-align: center;
+  display: block;
+}
+
+.fuente p {
+  text-align: center;
+}
+
 /* --------------------- 2.5 Form Búsqueda  --------------------- */
 .content-filter-search {
   margin-bottom: 0;
@@ -357,6 +366,10 @@ Estilos generales del administrador Be Grand
   width: 25px;
 }
 
+.card-stats .card-content {
+  height: 100px !important;
+}
+
 .dropdown-solicitudes {
   width: 100% !important;
 }
@@ -427,7 +440,7 @@ Estilos generales del administrador Be Grand
 
 .card-stats .card-header {
   height: 85px;
-  width: 100px;
+  width: 90px;
 }
 
 .card-stats .card-content h3 small {

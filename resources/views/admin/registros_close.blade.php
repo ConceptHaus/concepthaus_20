@@ -199,9 +199,10 @@
                         <tbody>
                             <tr ng-repeat="registro in statusClose | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse | limitTo:10">
                                 <td><% registro.id_registro %></td>
-                                <td>
+                                <td class="fuente">
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
                                     <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
+                                    <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>                                    
                                 </td>
                                 <td><% registro.nombre %></td>
                                 <td><% registro.correo %></td>

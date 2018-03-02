@@ -11,7 +11,6 @@ angular.module('RegistroController', ['app','ngMask'], function($interpolateProv
 app.controller('RegistroController', function RegistroController($scope, saveRegistro, countries, states) {
     $scope.contacto={}; 
     $scope.saveDataContact  = function(contacto, contactoForm){
-        // console.log(contacto);
         swal({
             // text: "Estamos registrando tus datos.",
             imageUrl: '../img/loader.gif',

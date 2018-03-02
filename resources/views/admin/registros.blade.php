@@ -11,12 +11,10 @@
                     <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
                 </div>
             </div>
-
         </div>
     </div>
-
     <div class="row cards-count-info">
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-lg-offset-1 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{url('/registros')}}">
                     <div class="card-header" data-background-color="grayDark">
@@ -107,12 +105,10 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-12">
             <div class="card card-stats">
                 <div class="card-content content-filter-date">
-
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-md-9">
                             <div class="row">
@@ -145,13 +141,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-xs-12 col-sm-3 col-md-3">
                             <button type="submit" class="btn btn-gray btn-filters" ng-click="filterTableDate(fecha)"><i class="fa fa-filter" aria-hidden="true"></i> Filtrar</button>
-                            {{--  <button type="submit" class="btn btn-white btn-filters" ng-disabled="!(fecha.inicial) || !(fecha.final) || !(fecha.selectTypeStatus == 0 || fecha.selectTypeStatus == 1 || fecha.selectTypeStatus == 2 || fecha.selectTypeStatus == '' )" ng-click="exportTableDate(fecha)"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Descargar</button>  --}}
                         </div>
                     </div>
-
                 </div>
                 <div class="card-footer">
                     <div class="stats">
@@ -244,9 +237,10 @@
                         <tbody>
                             <tr ng-repeat="registro in registros | filter:search |  filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
                                 <td><% registro.id_registro %></td>
-                                <td>
+                                <td class="fuente">
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
                                     <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
+                                    <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>                                    
                                 </td>
                                 <td><% registro.nombre %></td>
                                 <td><% registro.correo %></td>

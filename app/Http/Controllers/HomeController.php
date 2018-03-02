@@ -40,6 +40,17 @@ class HomeController extends Controller
         
         return view('home', $dashboard);
     }
+    
+    public function getUserLeads() {    
+        // $dashboard['registros'] = Registros::where('fuente','=',auth()->user()->name)->get();
+        $dashboard['registros'] = Registros::all();        
+        $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
+        $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
+        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
+        
+        return view('admin/registros_user', $dashboard);
+    }
 
     public function  getRegistros() {
         $dashboard['registros'] = Registros::all();
@@ -79,6 +90,11 @@ class HomeController extends Controller
         $data['info_user'] = Registros::GetOneRegistro($id)->get();
         return view('admin/registro_detalle',$data);
         //return response()->json($data);
+    }
+    
+    public function getUserData() {
+        // $data['info_user'] = Auth::id();
+        return view('admin/registro_lead');
     }
 
     // ===================== Ajax get data ====================

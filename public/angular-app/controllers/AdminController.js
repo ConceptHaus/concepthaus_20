@@ -175,7 +175,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
 
     $scope.Valued = function(registro){
         registro.new_status = 4;
-        console.log('funciona que cambia estatus activada');
+        console.log(registro);
         AdminService.postStatus(registro)
             .then(function(data){
                 console.log(data.data);

@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid" ng-controller="AdminController" ng-cloak>
         <div class="row cards-count-info">
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-lg-offset-1 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{url('/registros')}}">
                         <div class="card-header" data-background-color="grayDark">
@@ -211,9 +211,10 @@
                             <tbody>
                                 <tr ng-repeat="registro in registrosLastest | filter:search | orderBy:sortType:sortReverse">
                                     <td><% registro.id_registro %></td>
-                                    <td>
+                                    <td class="fuente">
                                         <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
                                         <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
+                                        <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>
                                     </td>
                                     <td><% registro.nombre %></td>
                                     <td><% registro.correo %></td>
