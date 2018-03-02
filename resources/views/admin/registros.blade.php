@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card card-transparent">
                 <div class="card-header card-title-gral" data-background-color="white">
-                    <h4 class="title">Solicitudes</h4>
+                    <h4 class="title">Leads</h4>
                     <p class="category">En esta sección se podrán visualizar todas las solicitudes recibidas.</p>
                     <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
                 </div>
@@ -14,25 +14,10 @@
         </div>
     </div>
     <div class="row cards-count-info">
-        <div class="col-lg-2 col-lg-offset-1 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <a href="{{url('/registros')}}">
-                    <div class="card-header" data-background-color="grayDark">
-                        <img src="{{asset('admin/img/icons/contact-mail.svg')}}" alt="BeGrand®">
-                    </div>
-                </a>
-                <div class="card-content">
-                    <p class="category">Total de solicitudes</p>
-                    <h3 class="title">{{count($registros)}}</h3>
-                </div>
-                <div class="card-footer">
-                    <div class="stats">
-                        <i class="material-icons">local_offer</i> Total de solicitudes.
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-12">
+            <h4 class="title-total-white">Total de leads: {{count($registros)}}</h4>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/proceso') }}">
                     <div class="card-header" data-background-color="gray">
@@ -50,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/cotizado') }}">
                     <div class="card-header" data-background-color="orange">
@@ -68,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/socios') }}">
                     <div class="card-header" data-background-color="blue">
@@ -86,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/no-viables') }}">
                     <div class="card-header" data-background-color="red">
@@ -148,7 +133,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        Si deseas filtrar tu información utiliza el rango de fechas que deseas consultar, si la opción es descargar el reporte en formato excel deberás acompletar los campos fecha inicial, fecha final y estatus.
+                        Si deseas filtrar tu información utiliza el rango de fechas que deseas consultar, por estatus o fuente.
                     </div>
                 </div>
             </div>
@@ -258,7 +243,7 @@
                     </table>
                     @if(count($registros) == 0)
                     <div class="content-msg-empty">
-                        <h5 class="text-center">No hay solicitudes registradas.</h5>
+                        <h5 class="text-center">No hay leads registrados.</h5>
                     </div>
                     @endif
                 </div>

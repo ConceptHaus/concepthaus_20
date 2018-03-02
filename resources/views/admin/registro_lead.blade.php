@@ -6,8 +6,8 @@
           <div class="col-md-12">
               <div class="card card-transparent">
                   <div class="card-header card-title-gral" data-background-color="white">
-                      <h4 class="title">Registro de leads</h4>
-                      <p class="category">En esta sección sepodra agregar leads manualmente.</p>
+                      <h4 class="title">Registro leads</h4>
+                      <p class="category">En esta sección se podrán dar de alta leads manualmente.</p>
                       <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
                   </div>
               </div>
@@ -16,7 +16,8 @@
       <div ng-controller="RegistroController as contacto">
       <form id="contactoForm" name="contactoForm">
         {{ csrf_field() }}
-        <input type="text" ng-model="contacto.fuente = '{{auth()->user()->name}}'" hidden>
+        <input type="text" ng-model="contacto.fuente = '{{auth()->user()->name}}'" hidden required>
+        <input type="text" ng-model="contacto.tipo" ng-init="contacto.tipo='Manual'" name="tipo" hidden required>
         <div class="form-group row">
             <div class="col-sm-12">
                 <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" placeholder="Nombre" required>

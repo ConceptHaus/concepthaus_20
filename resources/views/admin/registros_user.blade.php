@@ -4,8 +4,8 @@
     <div class="col-md-12">
       <div class="card card-transparent">
         <div class="card-header card-title-gral" data-background-color="white">
-          <h4 class="title">Solicitudes</h4>
-          <p class="category">En esta sección se podrán visualizar todas las solicitudes recibidas.</p>
+          <h4 class="title">Leads</h4>
+          <p class="category">En esta sección se podrán visualizar todas las solicitudes registradas por tí.</p>
           <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
         </div>
       </div>
@@ -48,8 +48,7 @@
         </div>
         <div class="card-footer">
           <div class="stats">
-            Si deseas filtrar tu información utiliza el rango de fechas que deseas consultar, si la opción es descargar el reporte en
-            formato excel deberás acompletar los campos fecha inicial, fecha final y estatus.
+            Si deseas filtrar tu información utiliza el rango de fechas que deseas consultar, por estatus o fuente.
           </div>
         </div>
       </div>
@@ -137,24 +136,12 @@
             </thead>
             <tbody>
               <tr ng-repeat="registro in registros | filter: { fuente: '{{auth()->user()->name}}' } | filter:search |  filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
-                <td>
-                  <% registro.id_registro %>
-                </td>
-                <td>
-                  <% registro.fuente %>
-                </td>
-                <td>
-                  <% registro.nombre %>
-                </td>
-                <td>
-                  <% registro.correo %>
-                </td>
-                <td>
-                  <% registro.telefono %>
-                </td>
-                <td>
-                  <% registro.fecha_registro.fecha_completa %>
-                </td>
+                <td><% registro.id_registro %></td>
+                <td><% registro.fuente %></td>
+                <td><% registro.nombre %></td>
+                <td><% registro.correo %></td>
+                <td><% registro.telefono %></td>
+                <td><% registro.fecha_registro.fecha_completa %></td>
                 <td>
                   <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                   <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
@@ -172,7 +159,7 @@
           </table>
           @if(count($registros) == 0)
           <div class="content-msg-empty">
-            <h5 class="text-center">No hay solicitudes registradas.</h5>
+            <h5 class="text-center">No hay leads registrados.</h5>
           </div>
           @endif
         </div>

@@ -70,7 +70,14 @@
                     font-weight: 700;
                     text-transform: uppercase;
                     border-bottom: 1px solid rgba(180, 180, 180, 0.3);
-                    margin: 0 20px;">Solicitudes</li>
+                    margin: 0 20px;">Leads</li>
+
+                    @if (Request::path() === 'registros')<li class="active">@else<li>@endif
+                        <a href="{{ url('/registros') }}">
+                            <i class="material-icons">contact_mail</i>
+                            <p>Todos</p>
+                        </a>
+                    </li>
 
                     @if (Request::path() === 'registros/proceso')<li class="active">@else<li>@endif
                         <a href="{{ url('/registros/proceso') }}">
@@ -121,13 +128,6 @@
                                 @endif
                                 No viables
                             </p>
-                        </a>
-                    </li>
-
-                    @if (Request::path() === 'registros')<li class="active">@else<li>@endif
-                        <a href="{{ url('/registros') }}">
-                            <i class="material-icons">contact_mail</i>
-                            <p>Todas</p>
                         </a>
                     </li>
                     

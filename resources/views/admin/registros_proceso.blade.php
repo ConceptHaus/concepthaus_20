@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card card-transparent">
                 <div class="card-header card-title-gral" data-background-color="white">
-                    <h4 class="title">Solicitudes / En Proceso</h4>
+                    <h4 class="title">Leads / En Proceso</h4>
                     <p class="category">En esta sección se podrán visualizar las solicitudes que se encuentran con estatus en proceso.</p>
                     <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
                 </div>
@@ -23,12 +23,12 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <p class="category">Total de solicitudes</p>
+                    <p class="category">Total de leads</p>
                     <h3 class="title">{{count($registros)}}</h3>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <i class="material-icons">local_offer</i> Total de solicitudes.
+                        <i class="material-icons">local_offer</i> Total de leads.
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="ct-chart" id="emailsSubscriptionChart"></div>
                 </div>
                 <div class="card-content">
-                    <p class="category">Solicitudes por mes</p>
+                    <p class="category">Leads por mes</p>
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        Si deseas filtrar tu información utiliza el rango de fechas que deseas consultar, si la opción es descargar el reporte en formato excel deberás acompletar los campos fecha inicial, fecha final y estatus.
+                        Si deseas filtrar tu información utiliza el rango de fechas que deseas consultar, por estatus o fuente.
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                     <dir-pagination-controls max-size="15" boundary-links="true" ></dir-pagination-controls>
                     @if(count($proceso) == 0)
                     <div class="content-msg-empty">
-                        <h5 class="text-center">No hay solicitudes registradas.</h5>
+                        <h5 class="text-center">No hay leads registrados.</h5>
                     </div>
                     @endif
                 </div>

@@ -3,25 +3,10 @@
 @section('content')
     <div class="container-fluid" ng-controller="AdminController" ng-cloak>
         <div class="row cards-count-info">
-            <div class="col-lg-2 col-lg-offset-1 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <a href="{{url('/registros')}}">
-                        <div class="card-header" data-background-color="grayDark">
-                            <img src="{{asset('admin/img/icons/contact-mail.svg')}}" alt="Concept Haus">
-                        </div>
-                    </a>
-                    <div class="card-content">
-                        <p class="category">Total de solicitudes</p>
-                        <h3 class="title">{{count($registros)}}</h3>
-                    </div>
-                    <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons">local_offer</i> Total de solicitudes.
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-12">
+                <h4 class="title-total-gray">Total de leads: {{count($registros)}}</h4>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/proceso') }}">
                         <div class="card-header" data-background-color="gray">
@@ -39,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/cotizado') }}">
                         <div class="card-header" data-background-color="orange">
@@ -57,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/socios') }}">
                         <div class="card-header" data-background-color="blue">
@@ -70,12 +55,12 @@
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">local_offer</i>  Total cerradas.
+                            <i class="material-icons">local_offer</i>  Total cerrados.
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/no-viables') }}">
                         <div class="card-header" data-background-color="red">
@@ -123,14 +108,14 @@
             <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-header card-title-home" data-background-color="red">
-                        <h4 class="title">Últimas solicitudes</h4>
+                        <h4 class="title">Últimos leads</h4>
                         <img src="{{asset('img/logo/conceptWhite.svg')}}" alt="Concept Haus">
                     </div>
 
                     <div class="card-content table-responsive">   
                         <div class="row">
                             <div class="col-md-8">
-                                <p class="category">Estás son las 10 solcitudes de contacto recibidas en los úlitmos días, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
+                                <p class="category">Estás son las 10 solcitudes recibidas en los úlitmos días, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
                             </div>
                             <div class="col-md-4">
                                 <form class="navbar-form navbar-right content-filter-search" role="search">
@@ -233,7 +218,7 @@
 
                         @if(count($registros) == 0)
                         <div class="content-msg-empty">
-                            <h5 class="text-center">No hay solicitudes registradas.</h5>
+                            <h5 class="text-center">No hay leads registrados.</h5>
                         </div>
                         @endif
                     </div>
