@@ -68,14 +68,15 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
         });
     }
 
-    // ===================== Gráfica Semanal ====================
-    var getGraficaSemanal = function(){
+     // ===================== Gráfica Semanal ====================
+     var getGraficaSemanal = function(){
         var graficaData = [];
         $http.get('/api/v1/graficas_semanal').then(function(res){
             $scope.hoy = res.data.hoy;
             $scope.daysbefore = res.data.DaysBefore;
             var contactosSemanal = res.data;
-            var countContactos = res.data.length;
+            var countContactos = Object.keys(res.data).length;
+            // console.log(Object.keys(res.data).length);
             var lunes =  _.filter(contactosSemanal,{'dia':'Monday'});
             var martes =  _.filter(contactosSemanal,{'dia':'Tuesday'});
             var miercoles =  _.filter(contactosSemanal,{'dia':'Wednesday'});
@@ -115,7 +116,8 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
         var graficaMes = [];
         $http.get('/api/v1/graficas_mensual').then(function(res){
             var contactos = res.data;
-            var countContactMes = (res.data.length)/2;
+            var countContacts = Object.keys(res.data).length;
+            var countContactMes = (countContacts+5);
             var enero = _.filter(contactos,{'mes':'01'});
             var febrero = _.filter(contactos,{'mes':'02'});
             var marzo = _.filter(contactos,{'mes':'03'});
