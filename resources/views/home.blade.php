@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid" ng-controller="AdminController" ng-cloak>
         <div class="row cards-count-info">
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-lg-offset-1 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{url('/registros')}}">
                         <div class="card-header" data-background-color="grayDark">

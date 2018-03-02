@@ -27,6 +27,8 @@
     <!-- Fonts and icons -->
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
+    
     <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
     <script>
         webshims.setOptions('forms-ext', {types: 'date'});
@@ -55,6 +57,13 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
+                    
+                    @if (Request::path() === 'ownLeads') <li class="active"> @else <li> @endif
+                        <a href="{{ url('/ownLeads') }}">
+                            <i class="material-icons">list</i>
+                            <p>Mis leads</p>
+                        </a>
+                    </li>
 
                     <li class="text-center" style=" color: #87898d;
                     padding: 5% 0;
@@ -67,9 +76,9 @@
                         <a href="{{ url('/registros/proceso') }}">
                             <p>
                                 @if (Request::path() === 'registros/proceso')
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-dev.svg')}}"> 
+                                    <i class="material-icons txt-gray">access_time</i>
                                 @else
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-dev-gray.svg')}}"> 
+                                    <i class="material-icons txt-gray">access_time</i>                                
                                 @endif
                                 En Proceso
                             </p>
@@ -80,9 +89,9 @@
                         <a href="{{ url('/registros/cotizado') }}">
                             <p>
                                 @if (Request::path() === 'registros/cotizado')
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-dev.svg')}}"> 
+                                    <i class="material-icons txt-orange">insert_drive_file</i>
                                 @else
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-dev-gray.svg')}}"> 
+                                    <i class="material-icons txt-orange">insert_drive_file</i>
                                 @endif
                                 Cotizado
                             </p>
@@ -93,9 +102,9 @@
                         <a href="{{ url('/registros/socios') }}">
                             <p>
                                 @if (Request::path() === 'registros/socios')
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-check.svg')}}"> 
+                                    <i class="material-icons txt-blue">check</i>
                                 @else
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-check-gray.svg')}}"> 
+                                    <i class="material-icons txt-blue">check</i>
                                 @endif
                                 Cerrados
                             </p>
@@ -106,9 +115,9 @@
                         <a href="{{ url('/registros/no-viables') }}">
                             <p>
                                 @if (Request::path() === 'registros/no-viables')
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-error.svg')}}"> 
+                                    <i class="material-icons txt-red">close</i>
                                 @else
-                                    <img class="img-menu" src="{{asset('admin/img/icons/contact-error-gray.svg')}}"> 
+                                    <i class="material-icons txt-red">close</i>
                                 @endif
                                 No viables
                             </p>
@@ -125,7 +134,7 @@
                     @if (Request::path() === 'registroLead')<li class="active">@else<li>@endif
                         <a href="{{ url('/registroLead') }}">
                             <i class="material-icons">person_add</i>
-                            <p>Registrar Lead</p>
+                            <p>Registrar lead</p>
                         </a>
                     </li>
 

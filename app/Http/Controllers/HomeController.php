@@ -40,6 +40,17 @@ class HomeController extends Controller
         
         return view('home', $dashboard);
     }
+    
+    public function getUserLeads() {    
+        // $dashboard['registros'] = Registros::where('fuente','=',auth()->user()->name)->get();
+        $dashboard['registros'] = Registros::all();        
+        $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
+        $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
+        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
+        
+        return view('admin/registros_user', $dashboard);
+    }
 
     public function  getRegistros() {
         $dashboard['registros'] = Registros::all();

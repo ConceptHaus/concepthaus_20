@@ -113,6 +113,7 @@
                         <p class="category txt-grayDark">Modificación de estatus</p>
                     </div>
                     <div class="card-content text-center">
+                        <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="http://192.168.33.10/admin/img/icons/contact-error.svg" alt="Concept Haus"> No viable</button>                            
                         <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="http://192.168.33.10/admin/img/icons/contact-check.svg" alt="Concept Haus"> Cerrada</button>
                     </div>
                 </div>
@@ -293,12 +294,12 @@
                 <h4 class="modal-title" id="exampleModalLabel">SOLICITUD COTIZADA</h4>
             </div>
             <div class="modal-body">
-                {{--  <form>
+                <form>
                     <div class="form-group none-mt">
-                        <label>Selecciona archivo de cotización.</label>
-                        <input type="file" ng-model="registro.archivoCotizacion" id="archivoCotizacion" name="archivoCotizacion" class="form-control">
+                        <p>¿Deseas actualizar el estatus a cotizado?</p>
+                        {{--  <input type="file" ng-model="registro.archivoCotizacion" id="archivoCotizacion" name="archivoCotizacion" class="form-control">  --}}
                     </div>
-                </form>  --}}
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
