@@ -6,10 +6,27 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>{{ config('app.name', 'Concept Haus') }} / Administrador</title>
-    <meta name="description" content="Somos una agencia especializada en la creación, desarrollo y fortalecimiento de marca."/>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+    <title>{{ config('app.name', 'Concept Haus') }} / Administrador</title>
+    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+
+    <!-- Facebook -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
+    <meta property="og:image" content="{{asset('img/concepthaus-logo.svg')}}"/>
+    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://concepthaus.mx/" />
+    <meta property="og:site_name" content="Concept Haus" />
+    <!-- Twitter --> 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
+    <meta name="twitter:domain" content="Concept Haus" />
+
+    <link rel="canonical" href="http://concepthaus.mx/">
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }}"/>
     <!-- Bootstrap core CSS -->

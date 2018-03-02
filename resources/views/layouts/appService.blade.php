@@ -11,23 +11,23 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="icon" href="/img/favicon.png" sizes="32x32" type="image/png">
     <title>{{ config('app.name', 'Concept Haus') }} / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
-    <meta name="description" content="Somos una agencia especializada en la creación, desarrollo y fortalecimiento de marca."
-    />
-    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <!-- Facebook -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
+    <meta property="og:image" content="{{asset('img/concepthaus-logo.svg')}}"/>
+    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"
-    />
-    <meta property="og:description" content="Somos una agencia especializada en la creación, desarrollo y fortalecimiento de marca."
-    />
     <meta property="og:url" content="http://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
+    <!-- Twitter --> 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Somos una agencia especializada en la creación, desarrollo y fortalecimiento de marca."
-    />
-    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"
-    />
+    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta name="twitter:domain" content="Concept Haus" />
 
+    <link rel="canonical" href="http://concepthaus.mx/">
+    <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
