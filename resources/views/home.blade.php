@@ -130,7 +130,7 @@
                     <div class="card-content table-responsive">   
                         <div class="row">
                             <div class="col-md-8">
-                                <p class="category">Estás son las 10 solcitudes de contacto recibidas en los úlitmos días, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
+                                <p class="category">Estás son las 15 solcitudes de contacto recibidas en los úlitmos días, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
                             </div>
                             <div class="col-md-4">
                                 <form class="navbar-form navbar-right content-filter-search" role="search">
@@ -209,7 +209,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="registro in registrosLastest | filter:search | orderBy:sortType:sortReverse">
+                                {{--  <tr ng-repeat="registro in registrosLastest | filter:search | orderBy:sortType:sortReverse">
+                                    <td><% registro.id_registro %></td>
+                                    <td class="fuente">
+                                        <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
+                                        <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
+                                        <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>
+                                    </td>
+                                    <td><% registro.nombre %></td>
+                                    <td><% registro.correo %></td>
+                                    <td><% registro.telefono %></td>
+                                    <td><% registro.fecha_registro.fecha_completa %></td>
+                                    <td>
+                                        <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
+                                        <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
+                                        <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
+                                        <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                        
+                                    </td>
+                                    <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
+                                </tr>   --}}
+                                <tr dir-paginate="registro in registrosLastest | filter:search | orderBy:sortType:sortReverse |itemsPerPage:15">
                                     <td><% registro.id_registro %></td>
                                     <td class="fuente">
                                         <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
@@ -229,6 +248,11 @@
                                     <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
                                 </tr> 
                             </tbody>
+                            <dir-pagination-controls
+                                max-size="5"
+                                direction-links="true"
+                                boundary-links="true" >
+                            </dir-pagination-controls>
                         </table>
 
                         @if(count($registros) == 0)
