@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-    <title>{{ config('app.name', 'Concept Haus') }} / Administrador</title>
+    <title>ConceptHaus / Administrador</title>
     <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
 
     <!-- Facebook -->

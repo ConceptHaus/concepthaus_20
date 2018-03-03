@@ -10,7 +10,7 @@
     <!-- Mobile Internet Explorer ClearType Technology -->
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="icon" href="/img/favicon.png" sizes="32x32" type="image/png">
-    <title>{{ config('app.name', 'Concept Haus') }} / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
+    <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
     <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
