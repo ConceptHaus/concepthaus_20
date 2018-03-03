@@ -276,8 +276,8 @@
 <script src="{{asset('admin/js/material-dashboard.js?v=1.2.0')}}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{asset('admin/js/demo.js')}}"></script>
-<!-- Pagination -->
 
+<!-- Pagination -->
 <script type="text/javascript">
     $(document).ready(function() {
         demo.initDashboardPageCharts();
