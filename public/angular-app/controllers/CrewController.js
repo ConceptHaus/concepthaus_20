@@ -59,7 +59,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/omar.jpg"
   },{
     nombre: "Michel Covarrubias",
-    puesto: "From Desk",
+    puesto: "Front Desk",
     foto: "img/crew/michel.jpg"
   },{
     nombre: "Angelo Stifano",
@@ -67,7 +67,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/angelo.jpg"
   },{
     nombre: "Armando Ortíz",
-    puesto: "Gerente en Finanzas",
+    puesto: "Financial Manager",
     foto: "img/crew/armando.jpg"
   },{
     nombre: "Michel Medel",
@@ -113,7 +113,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/antonio.jpg"
   },{
     nombre: "Alberto Langarica",
-    puesto: "Sr. Design & Montion",
+    puesto: "Sr. Design & Motion",
     foto: "img/crew/alberto.jpg"
   },{
     nombre: "Isabel Sampson",

@@ -52,8 +52,8 @@
                 </a>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
-                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">FB /</a>
-                <a href="https://www.instagram.com/concepthausmx/" target="_blank"> IG /</a>
+                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank"> <i class="fa fa-facebook"></i> /</a>
+                <a href="https://www.instagram.com/concepthausmx/" target="_blank"> <i class="fa fa-instagram"></i> /</a>
                 <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
             </div>
         </div>
@@ -105,7 +105,7 @@
                         <h5>CDMX</h5>
                         <p>01 (55) 52820707</p>
                         <p>contacto@concepthaus.mx</p>
-                        <p>Campos Elíseos Col. Polanco, México D.F.</p>
+                        <p>Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
                     </div>
                     <div class="col-sm">
                         <h5>Puebla</h5>
@@ -228,7 +228,8 @@
                     <img src="{{asset('img/conceptH.svg')}}" class="" alt="ConceptHaus" width="100">
                 </div>
                 <div class="col-sm-12">
-                    <iframe src="https://snazzymaps.com/embed/26027" width="100%" height="400px" style="border:none;"></iframe>
+                    {{--  <iframe src="https://snazzymaps.com/embed/26027" width="100%" height="400px" style="border:none;"></iframe>  --}}
+                    <iframe src="https://snazzymaps.com/embed/53068" width="100%" height="400px" style="border:none;"/></iframe>
                 </div>
             </div>
         </section>
@@ -240,13 +241,13 @@
                         <a href="">Aviso de privacidad</a>
                     </p>
                     <p class="title-footer">CDMX</p>
-                    <p>CAMPOS ELÍSEOS COL. POLANCO, MÉXICO D.F.</p>
+                    <p>PRESA RODRÍGUEZ 57, COL. IRRIGACIÓN, MIGUEL HIDALGO, CDMX</p>
                     <p class="title-footer">Puebla</p>
                     <p>SONATA TOWERS, WORK CENTER L. 21, LOMAS DE ANGELÓPOLIS</p>
                     <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>
                 <div class="col-sm-12 second">
-                    <h4 class="accenting">
+                    <h4 class="accenting">  
                         <img src="{{asset('img/accetingLogo.svg')}}" class="" alt="Accenting everything" width="20">
                         <span>Accenting</span> everything
                     </h4>

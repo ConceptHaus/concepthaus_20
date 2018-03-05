@@ -14,6 +14,17 @@ Section Home | Slider
   position: absolute;
   top: -60px;
 }
+.navbar-toggleable-md {
+  margin-top: 0;
+}
+.navbar-toggler {
+  margin-top: 15px;
+}
+
+.navbar-collapse {
+  padding: 15px 0;
+  width: 90%;
+}
 
 header{
   // background-color: $white;
@@ -32,7 +43,7 @@ header{
   .logo {
     width: 60px;
     @include breakpoint(md-max) {
-        // padding-top: 30px;
+        width: 45px;
     }
   }
   .socialIcons{
@@ -54,10 +65,9 @@ header{
   padding: 7px 0;
   z-index: 9;
   a{
-    // font-size: 15px;
     @include font-size($fontSubMenu);
+    letter-spacing: 1px;
     color: #4a4f55;
-    // color: #8d8e96;
     margin: 0 20px;
     text-decoration: none;
     cursor: pointer;
@@ -162,6 +172,9 @@ header{
       padding-right: 0;
       padding-top: 10px;
     }
+  }
+  .hidden-sm-up {
+    display: block!important;
   }
   #subMenu {
     padding: 0!important;

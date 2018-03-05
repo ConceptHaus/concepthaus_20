@@ -80,7 +80,7 @@
                         <a href="">Aviso de privacidad</a>
                     </p>
                     <p class="title-footer">CDMX</p>
-                    <p>CAMPOS ELÍSEOS COL. POLANCO, MÉXICO D.F.</p>
+                    <p>Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
                     <p class="title-footer">Puebla</p>
                     <p>SONATA TOWERS, WORK CENTER L. 21, LOMAS DE ANGELÓPOLIS</p>
                     <p class="powered">Powered & Copyright by Concepthaus</p>

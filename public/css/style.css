@@ -9209,6 +9209,19 @@ Section Home | Slider
   top: -60px;
 }
 
+.navbar-toggleable-md {
+  margin-top: 0;
+}
+
+.navbar-toggler {
+  margin-top: 15px;
+}
+
+.navbar-collapse {
+  padding: 15px 0;
+  width: 90%;
+}
+
 header {
   background-color: #e73c30;
   padding: 25px 0;
@@ -9255,6 +9268,12 @@ header .logo {
   /*==============*/
 }
 
+@media (max-width: 767px) {
+  header .logo {
+    width: 45px;
+  }
+}
+
 header .socialIcons {
   padding-right: 40px;
   font-weight: 500;
@@ -9280,7 +9299,8 @@ header .socialIcons a {
 }
 
 #subMenu a {
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 1px;
   color: #4a4f55;
   margin: 0 20px;
   text-decoration: none;
@@ -9291,25 +9311,25 @@ header .socialIcons a {
 
 @media screen and (min-width: 576px) {
   #subMenu a {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 768px) {
   #subMenu a {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 992px) {
   #subMenu a {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #subMenu a {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
@@ -9404,6 +9424,9 @@ header .socialIcons a {
   header .socialIcons {
     padding-right: 0;
     padding-top: 10px;
+  }
+  .hidden-sm-up {
+    display: block !important;
   }
   #subMenu {
     padding: 0 !important;
