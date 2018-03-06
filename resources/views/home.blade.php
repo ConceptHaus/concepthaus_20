@@ -115,7 +115,7 @@
                     <div class="card-content table-responsive">   
                         <div class="row">
                             <div class="col-md-8">
-                                <p class="category">Estás son los 10 leads recibidos en los úlitmos días, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
+                                <p class="category">Estos son los últimos 10 leads recibidos, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
                             </div>
                             <div class="col-md-4">
                                 <form class="navbar-form navbar-right content-filter-search" role="search">
@@ -192,9 +192,8 @@
                                         <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
                                         <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>
                                     </td>
-                                    <td><% registro.nombre %></td>
-                                    <td><% registro.correo %></td>
-                                    <td><% registro.telefono %></td>
+                                    <td><% registro.proyecto %></td>
+                                    <td><% registro.empresa %></td>
                                     <td><% registro.fecha_registro.fecha_completa %></td>
                                     <td>
                                         <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
