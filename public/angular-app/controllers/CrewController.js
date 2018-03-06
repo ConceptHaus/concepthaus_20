@@ -151,7 +151,7 @@ app.controller('CrewController', function CrewController($scope) {
     puesto: "Driver & Guardian Angel",
     foto: "img/crew/oscar.jpg"
   },{
-    nombre: "Alejandro Fuch",
+    nombre: "Alejandro Fuchs",
     puesto: "Post Producer",
     foto: "img/crew/fuch.jpg"
   },{

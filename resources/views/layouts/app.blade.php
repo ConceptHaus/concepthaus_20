@@ -189,7 +189,7 @@
 
                             <div class="form-group row text-center">
                                 <div class="col-sm-12">
-                                    <button class="btn" id="EnviaDatosRegistro" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
+                                    <button class="btn" id="FormHome" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
                                 </div>
                             </div>
                         </form>
