@@ -21,6 +21,14 @@
         padding: 5%;
         padding-top: 8%;
         padding-bottom: 7%;
+        p {
+            color: $white;
+            font-size: 12px;
+            margin-bottom: 7px;
+            letter-spacing: 1px;
+            position: relative;
+            top: 10px;
+        }
     }
     .title-general {
         color: #FFF;

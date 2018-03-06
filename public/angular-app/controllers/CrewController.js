@@ -19,7 +19,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/davis.jpg"
   }, {
     nombre: "Estefani Nava",
-    puesto: "Account Manager",
+    puesto: "Key Account Manager",
     foto: "img/crew/fany.jpg"
   },{
     nombre: "Eugenio Becker",
@@ -55,7 +55,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/alin.jpg"
   },{
     nombre: "Omar Castillo",
-    puesto: "Jr. Web Developer",
+    puesto: "Web Engineer",
     foto: "img/crew/omar.jpg"
   },{
     nombre: "Michel Covarrubias",
@@ -91,7 +91,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/pedro.jpg"
   },{
     nombre: "Alfredo Zaidan",
-    puesto: "Marketing Consultant",
+    puesto: "Creative",
     foto: "img/crew/alfredo2.jpg"
   },{
     nombre: "Regina Hugues",
@@ -99,8 +99,23 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/regina.jpg"
   },
   // {
+  //   nombre: "Caché",
+  //   puesto: "COO Inhaus",
+  //   foto: "img/crew/.jpg"
+  // },
+  // {
   //   nombre: "Vanessa Balboa",
   //   puesto: "PR Manager",
+  //   foto: "img/crew/.jpg"
+  // },
+  // {
+  //   nombre: "Jhovan",
+  //   puesto: "Producer",
+  //   foto: "img/crew/.jpg"
+  // },
+  // {
+  //   nombre: "Jero",
+  //   puesto: "Sr. Creative",
   //   foto: "img/crew/.jpg"
   // },
   {
@@ -109,7 +124,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/alejandra.jpg"
   },{
     nombre: "Antonio Elizaga",
-    puesto: "Junior Producer",
+    puesto: "Admin Inhaus",
     foto: "img/crew/antonio.jpg"
   },{
     nombre: "Alberto Langarica",
@@ -117,7 +132,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/alberto.jpg"
   },{
     nombre: "Isabel Sampson",
-    puesto: "Project Manager",
+    puesto: "Junior Producer",
     foto: "img/crew/isabel2.jpg"
   },{
     nombre: "Miguel Fernández",
@@ -141,7 +156,7 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/fuch.jpg"
   },{
     nombre: "Daniela García",
-    puesto: "Key Account Manager Petmail",
+    puesto: "Back Office",
     foto: "img/crew/danielaG.jpg"
   },{
     nombre: "Anita",
@@ -149,27 +164,27 @@ app.controller('CrewController', function CrewController($scope) {
     foto: "img/crew/anita.jpg"
   },{
     nombre: "Karla Jiménez",
-    puesto: "CEO",
+    puesto: "CEO Puebla",
     foto: "img/crew/karla.jpg"
   },{
     nombre: "Mariana Partida",
-    puesto: "Chief Operating Officer",
+    puesto: "COO Puebla",
     foto: "img/crew/mariana2.jpg"
   },{
     nombre: "Ana Paula Vega",
-    puesto: "Sr. Designer & Creative",
+    puesto: "Sr. Designer & Creative Puebla",
     foto: "img/crew/anapau.jpg"
   },{
     nombre: "José Miguel Quintana",
-    puesto: "Media Planner",
+    puesto: "Media Planner Puebla",
     foto: "img/crew/josemiguel.jpg"
   },{
     nombre: "José de Jesús Maldonado",
-    puesto: "Content Producer",
+    puesto: "Content Producer Puebla",
     foto: "img/crew/joseJ.jpg"
   },{
     nombre: "Hammer Garita",
-    puesto: "Web Developer",
+    puesto: "Web Developer Puebla",
     foto: "img/crew/hammer.jpg"
   }
   ];

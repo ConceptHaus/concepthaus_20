@@ -54,7 +54,7 @@
                     <form>
                         <div class="row">
                             <div class="col-md-6">
-                                <label class="label-registro">Nombre</label>
+                                <label class="label-registro">Cliente</label>
                                 <p class="info-registro">{{$info_user[0]['nombre']}}</p>
                             </div>
                             <div class="col-md-6">
@@ -74,11 +74,15 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
+                                <label class="label-registro">Proyecto</label>
+                                <p class="info-registro">{{$info_user[0]['proyecto']}}</p>
+                            </div>
+                            <div class="col-md-12">
                                 <label class="label-registro">Empresa</label>
                                 <p class="info-registro">{{$info_user[0]['empresa']}}</p>
                             </div>
                             <div class="col-md-12">
-                                <label class="label-registro">Mensaje</label>
+                                <label class="label-registro">Nota</label>
                                 <p class="info-registro">{{$info_user[0]['mensaje']}}</p>
                             </div>
                             {{--  @if($info_user[0]['pivot_status']['id_status'] == 2)

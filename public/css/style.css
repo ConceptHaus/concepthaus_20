@@ -8751,6 +8751,13 @@ header .row, footer .row {
 
 #contact .contact-info p {
   margin-bottom: 7px;
+  letter-spacing: 1px;
+  position: relative;
+  top: 10px;
+}
+
+#contact .contact-info .p-address {
+  top: 0 !important;
 }
 
 #contact form {
@@ -8758,13 +8765,13 @@ header .row, footer .row {
 }
 
 #contact form input, #contact form textarea {
-  border: none;
-  border-radius: 0px;
+  border: 1px solid #d2d2d2;
+  border-radius: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-size: 14px;
   font-weight: 100;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 #contact form .btn {
@@ -9688,6 +9695,15 @@ header .socialIcons a {
   padding: 5%;
   padding-top: 8%;
   padding-bottom: 7%;
+}
+
+#branding .contact-branding p {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+  position: relative;
+  top: 10px;
 }
 
 #branding .title-general {

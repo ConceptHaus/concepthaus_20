@@ -93,7 +93,7 @@
                 </th>
                 <th scope="col" data-tablesaw-priority="persist">
                   <a ng-click="sortType = 'nombre'; sortReverse = !sortReverse">
-                    Nombre
+                    Proyecto
                     <span ng-hide="sortType == 'nombre' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
                     <span ng-show="sortType == 'nombre' && !sortReverse" class="fa fa-sort-asc"></span>
                     <span ng-show="sortType == 'nombre' && sortReverse" class="fa fa-sort-desc"></span>
@@ -101,18 +101,10 @@
                 </th>
                 <th scope="col" data-tablesaw-priority="1">
                   <a ng-click="sortType = 'correo'; sortReverse = !sortReverse">
-                    Correo
+                    Empresa
                     <span ng-hide="sortType == 'correo' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
                     <span ng-show="sortType == 'correo' && !sortReverse" class="fa fa-sort-asc"></span>
                     <span ng-show="sortType == 'correo' && sortReverse" class="fa fa-sort-desc"></span>
-                  </a>
-                </th>
-                <th scope="col" data-tablesaw-priority="2">
-                  <a ng-click="sortType = 'telefono'; sortReverse = !sortReverse">
-                    Teléfono
-                    <span ng-hide="sortType == 'telefono' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
-                    <span ng-show="sortType == 'telefono' && !sortReverse" class="fa fa-sort-asc"></span>
-                    <span ng-show="sortType == 'telefono' && sortReverse" class="fa fa-sort-desc"></span>
                   </a>
                 </th>
                 <th scope="col" data-tablesaw-priority="6">
@@ -138,9 +130,8 @@
               <tr ng-repeat="registro in registros | filter: { fuente: '{{auth()->user()->name}}' } | filter:search |  filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
                 <td><% registro.id_registro %></td>
                 <td><% registro.fuente %></td>
-                <td><% registro.nombre %></td>
-                <td><% registro.correo %></td>
-                <td><% registro.telefono %></td>
+                <td><% registro.proyecto %></td>
+                <td><% registro.empresa %></td>
                 <td><% registro.fecha_registro.fecha_completa %></td>
                 <td>
                   <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>

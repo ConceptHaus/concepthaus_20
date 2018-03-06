@@ -122,5 +122,72 @@ class RegistroController extends Controller {
 		$json['errors'] = $Validator->errors();
 		return json_encode($json['errors']);
 	}
+
+	// ===================== Almacena datos registro ====================
+    public function saveDataRegistroLead(Request $request) {
+		date_default_timezone_set('America/Mexico_City');
+		$input = $request->all();
+		$Validator = $this->validatorRegistro($input);
+		$no_codigo = self::quickRandom();
+
+		if($Validator->passes()){
+
+			// Formatos fecha
+			$dia = new Carbon();
+			$dia = $dia->format('l');
+
+			$mes = new Carbon();
+			$mes = $mes->format('m');
+
+			$hora = new Carbon();
+			$hora = $hora->format('H:i');
+
+			$fecha = new Carbon();
+			$fecha = $fecha->format('Y/m/d');
+
+			$registro = new Registros;
+			$registro -> nombre    = $request -> nombre;
+			$registro -> correo    = $request -> correo;
+			$registro -> telefono  = $request -> telefono;
+			$registro -> empresa   = $request -> empresa;
+			$registro -> mensaje   = $request -> mensaje;
+			$registro -> fuente    = $request -> fuente;
+			$registro -> proyecto  = $request -> proyecto;
+			$registro -> save();
+
+			$user = $registro->toArray();
+
+			$fechas_registro =  new FechaRegistro;
+			$fechas_registro -> id_registro 	= $user['id_registro'];
+			$fechas_registro -> dia      		= $dia;
+			$fechas_registro -> mes      		= $mes;
+			$fechas_registro -> hora      		= $hora;
+			$fechas_registro -> fecha_completa  = $fecha;
+			$fechas_registro -> save();
+
+			$status = new PivoteStatus;
+			$status -> id_status   =  1;
+			$status -> id_registro =  $user['id_registro'];
+			$status -> save();
+
+			$codigo = new CodigoRegistro;
+			$codigo -> id_registro   	=  $user['id_registro'];
+			$codigo -> codigo_registro 	=  $no_codigo;
+			$codigo -> save();
+
+			$formulario = new PivoteForms;
+			$formulario -> id_registro =  $user['id_registro'];
+			$formulario -> tipo 	   =  $request->tipo;
+			$formulario -> save();
+			
+			$json['success'] = "Datos lead manual guardados.";
+			return json_encode($json['success']);
+		}
+
+		dd($Validator->errors());
+		
+		$json['errors'] = $Validator->errors();
+		return json_encode($json['errors']);
+	}
 	
 }

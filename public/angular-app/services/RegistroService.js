@@ -17,6 +17,18 @@ angular.module('RegistroService', [])
     }
 })
 
+.factory('saveLead', function($http, $log){
+    return {
+        post: function(contacto){
+            return $http({
+                method: 'POST',
+                url: '/saveRegistroLead',
+                data: contacto,
+            })
+        }
+    }
+})
+
 .factory('AdminService', function($http, $log){
     return {
         getSolicitudes: function(){

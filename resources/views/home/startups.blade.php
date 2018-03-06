@@ -5,7 +5,7 @@
     <h2 class="title-general c-gray">Our startups</h2>
     <div class="container-fluid gridStartups">
         <div class="row">
-            <div class="col-md-6 w50 containerProject" ng-repeat="project in projects" ng-if="project.id == '55916489' || project.id == '55918277'">
+            <div class="col-md-4 w50 containerProject" ng-repeat="project in projects" ng-if="project.id == '55917115' || project.id == '55918277' || project.id == '55916489'">
                 <img class="card-img-top" ng-src="<% project.covers.original %>">
                 <div class="containerInfo">
                     <a class="projectName" href="<% project.url %>" target="_blank">

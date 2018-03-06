@@ -23,6 +23,8 @@ Route::get('/branding', 'WelcomeController@viewBranding');
 
 // Guardar datos formulario de registro
 Route::post('/saveRegistro','RegistroController@saveDataRegistro');
+// Guardar datos formulario de registro Lead Manual
+Route::post('/saveRegistroLead','RegistroController@saveDataRegistroLead');
 
 Auth::routes();
 
