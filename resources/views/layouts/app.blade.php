@@ -127,15 +127,15 @@
                 <div class="row">
                     <div class="col-sm">
                         <h5>CDMX</h5>
-                        <p>01 (55) 52820707</p>
-                        <p>contacto@concepthaus.mx</p>
-                        <p>Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
+                        <p class="p-address">01 (55) 52820707</p>
+                        <p class="p-address">contacto@concepthaus.mx</p>
+                        <p class="p-address">Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
                     </div>
                     <div class="col-sm">
                         <h5>Puebla</h5>
-                        <p>01 (222) 2954243</p>
-                        <p>contactopuebla@concepthaus.mx</p>
-                        <p>Sonata Towers, Work Center L. 21, Lomas de Angelópolis</p>
+                        <p class="p-address">01 (222) 2954243</p>
+                        <p class="p-address">contactopuebla@concepthaus.mx</p>
+                        <p class="p-address">Sonata Towers, Work Center L. 21, Lomas de Angelópolis</p>
                     </div>
                 </div>
                 <div class="row">
@@ -189,7 +189,7 @@
 
                             <div class="form-group row text-center">
                                 <div class="col-sm-12">
-                                    <button class="btn" id="EnviaDatosRegistro" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="contactoForm.$invalid">Enviar</button>
+                                    <button class="btn" id="EnviaDatosRegistro" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
                                 </div>
                             </div>
                         </form>

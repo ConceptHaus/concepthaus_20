@@ -13,6 +13,7 @@ class Registros extends Model {
         'correo',
         'telefono',
         'empresa',
+        'proyecto',
         'mensaje',
         'fuente',
     ];
