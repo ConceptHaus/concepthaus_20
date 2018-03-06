@@ -6,13 +6,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center interiorPuerta">
-                    <img class="puerta" src="{{asset('img/home-elements/door1.png')}}">
+                    <img class="puerta" src="{{asset('img/home-elements/doors/concepthaus.png')}}">
                     <img class="logo" src="{{asset('img/logo/concepthaus.svg')}}">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">Concepthaus Creative Agency.</span>
-                        Estrategia creativa, Estrategia de marketing, Identidad corporativa, Diseño gráfico, publicidad (ATL / Digital) Compra
+                        Es una casa creativa especializada en estrategias de marketing, branding, campañas publicitarias, 
+                        creación de identidad corporativa, diseño gráfico, motion graphics,diseño de empaque, programación y 
+                        diseño de páginas web; e-commerce, desarrollo de aplicaciones, posicionamiento web SEO & SEM, así como la 
+                        implementación de estrategias de marketing digital, content management y relaciones públicas.
+                        <br><br>
+                        <span class="c-grayLight" >Amamos a los que se atreven y por eso contamos con un plan de apoyo a emprendedores.</span>
+                        {{--  Estrategia creativa, Estrategia de marketing, Identidad corporativa, Diseño gráfico, publicidad (ATL / Digital) Compra
                         de medios, Desarrollo Web, Desarrollo de aplicaciones, Marketing Digital, Producción de contenido, posicionamiento
-                        SEO, SEM, Relaciones Públicas, Influencer marketing, eventos corporativos.
+                        SEO, SEM, Relaciones Públicas, Influencer marketing, eventos corporativos.     font-weight: 800; --}}
                     </p>
                 </div>
             </div>

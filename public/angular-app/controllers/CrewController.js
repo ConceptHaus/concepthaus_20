@@ -169,7 +169,7 @@ app.controller('CrewController', function CrewController($scope) {
   },{
     nombre: "Mariana Partida",
     puesto: "COO Puebla",
-    foto: "img/crew/mariana2.jpg"
+    foto: "img/crew/mariana.jpg"
   },{
     nombre: "Ana Paula Vega",
     puesto: "Sr. Designer & Creative Puebla",

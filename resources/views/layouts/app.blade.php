@@ -36,6 +36,7 @@
 </head>
 
 <body ng-app="app">
+    <!-- Botones de contacto flotantes -->
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -52,16 +53,27 @@
             js.src = "https://connect.facebook.net/es_LA/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-        </script>
-            <div class="fb-customerchat"
-            page_id="120208024724588"
-            theme_color="#e73c30"
-            logged_in_greeting="¡Hola!, ¿cómo podemos ayudarte?"
-            logged_out_greeting="¡Hola!, ¿cómo podemos ayudarte?"
-            >
-            </div>
+    </script>
+    <div class="fb-customerchat"
+        page_id="120208024724588"
+        theme_color="#e73c30"
+        logged_in_greeting="¡Hola!, ¿cómo podemos ayudarte?"
+        logged_out_greeting="¡Hola!, ¿cómo podemos ayudarte?">
+    </div>
+    <div class="btnFloat-phone">
+        <a href="tel:+015552820707">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="btnFloat-email">
+        <a href="{{ url('/#contact') }}">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+    </div>
+    <!-- ../ Botones de contacto flotantes -->
     <!-- Header -->
     <!-- Main navigation -->
+
     <header>
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-5 col-lg-4">
@@ -127,19 +139,19 @@
                 <div class="row">
                     <div class="col-sm">
                         <h5>CDMX</h5>
-                        <p class="p-address">01 (55) 52820707</p>
+                        <a href="tel:+015552820707">01 (55) 52820707</a>
                         <p class="p-address">contacto@concepthaus.mx</p>
                         <p class="p-address">Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
                     </div>
                     <div class="col-sm">
                         <h5>Puebla</h5>
-                        <p class="p-address">01 (222) 2954243</p>
+                        <a href="tel:+012222954243">01 (222) 2954243</a>
                         <p class="p-address">contactopuebla@concepthaus.mx</p>
                         <p class="p-address">Sonata Towers, Work Center L. 21, Lomas de Angelópolis</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <form id="contactoForm" name="contactoForm">
                             {{ csrf_field() }}
                             <input type="text" class="form-control" id="fuente" name="fuente" ng-model="contacto.fuente" ng-init="contacto.fuente='Google'"
@@ -155,13 +167,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo" required>
+                                <div class="col-sm-12 col-md-6">
+                                    <input type="email" class="form-control input-ajust" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo" required>
                                     <span class="msg-error" ng-messages="contactoForm.correo.$error" ng-if="contactoForm.correo.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-12 col-md-6">
                                     <input type="text" class="form-control" id="telefono" name="telefono" mask="9999999999" ng-model="contacto.telefono" ng-minlength="8"
                                         placeholder="Teléfono" required>
                                     <span class="msg-error" ng-messages="contactoForm.telefono.$error" ng-if="contactoForm.telefono.$touched">
@@ -268,6 +280,7 @@
                     <p>PRESA RODRÍGUEZ 57, COL. IRRIGACIÓN, MIGUEL HIDALGO, CDMX</p>
                     <p class="title-footer">Puebla</p>
                     <p>SONATA TOWERS, WORK CENTER L. 21, LOMAS DE ANGELÓPOLIS</p>
+                    <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
                     <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>
                 <div class="col-sm-12 second">
@@ -302,6 +315,7 @@
     <!-- ./ Angular -->
 
     <!-- -->
+    <script type="text/javascript" src="/js/scrollPosStyler.js"></script>
     <script type="text/javascript" src="/js/changeColorMenu.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>

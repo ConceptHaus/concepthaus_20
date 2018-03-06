@@ -6,11 +6,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center interiorPuerta">
-                    <img class="puerta" src="{{asset('img/home-elements/door2.png')}}">
+                    <img class="puerta" src="{{asset('img/home-elements/doors/inhaus.png')}}">
                     <img class="logo" src="{{asset('img/logo/inhausfilms.svg')}}">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">Inhaus Films + Post.</span> 
-                        Branded Content, Producción cinematográfica, Producción audiovisual, Fotografía profesional, Postproducción.
+                        Es nuestra casa productora especializada en producción audiovisual, cine, cortometrajes, 
+                        comerciales de televisión, video marketing, videos corporativos, videos musicales, fotografía de producto 
+                        y cobertura de eventos. A su vez, realiza la postproducción de cualquier tipo de pieza audiovisual.
+                        <br><br>
+                        <span class="c-grayLight">Contamos con la más alta calidad de producción para cualquier tamaño de producción audiovisual.</span>
+                        {{--  Branded Content, Producción cinematográfica, Producción audiovisual, Fotografía profesional, Postproducción.  --}}
                     </p>
                 </div>
             </div>

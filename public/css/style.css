@@ -8726,6 +8726,51 @@ header .row, footer .row {
   padding-top: 30px;
 }
 
+.btnFloat-phone, .btnFloat-email {
+  background: #e73c30;
+  border-radius: 100%;
+  text-align: center;
+  position: fixed;
+  right: 100px;
+  bottom: 20px;
+  height: 60px;
+  width: 60px;
+  z-index: 10;
+}
+
+.btnFloat-phone a, .btnFloat-email a {
+  color: #fff !important;
+}
+
+.btnFloat-phone {
+  padding: 10px 10px;
+}
+
+.btnFloat-phone i {
+  font-size: 2.7em;
+}
+
+.btnFloat-email {
+  padding: 13px 10px;
+  right: 170px;
+}
+
+.btnFloat-email i {
+  font-size: 2.1em;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/*===============*/
+/*==============*/
+@media (max-width: 767px) {
+  form input.input-ajust {
+    margin-bottom: 1rem;
+  }
+}
+
 #contact {
   padding-top: 1px;
 }
@@ -8750,10 +8795,22 @@ header .row, footer .row {
 }
 
 #contact .contact-info p {
-  margin-bottom: 7px;
   letter-spacing: 1px;
   position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
   top: 10px;
+}
+
+#contact .contact-info a {
+  letter-spacing: 1px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+#contact .contact-info a:hover, #contact .contact-info a:focus {
+  text-decoration: none;
+  color: #e73c30;
 }
 
 #contact .contact-info .p-address {
@@ -8845,6 +8902,12 @@ header .row, footer .row {
   color: #f4a8a2;
 }
 
+#footer .partner {
+  position: absolute;
+  bottom: 30px;
+  right: 35px;
+}
+
 #footer .powered {
   margin: 30px 0;
   font-weight: 600;
@@ -8859,6 +8922,12 @@ header .row, footer .row {
   .subtitle-general {
     margin-top: 0px;
     padding: 0px 50px;
+  }
+  #footer .partner {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    top: 14px;
   }
 }
 
@@ -8889,7 +8958,7 @@ Section Home | Slider
   }
 }
 
-.small-gray, #contact .contact-info p {
+.small-gray, #contact .contact-info p, #contact .contact-info a {
   color: #8d8e96;
   font-size: 12px;
 }
@@ -9560,6 +9629,10 @@ header .socialIcons a {
   padding: 20px 25%;
 }
 
+.interiorPuerta ul {
+  padding: 0px 26.5%;
+}
+
 .interiorPuerta .puerta {
   width: 20% !important;
   /*===============*/
@@ -9593,6 +9666,9 @@ header .socialIcons a {
 @media (max-width: 991px) {
   .interiorPuerta p {
     padding: 20px 10%;
+  }
+  .interiorPuerta ul {
+    padding: 0px 12%;
   }
 }
 

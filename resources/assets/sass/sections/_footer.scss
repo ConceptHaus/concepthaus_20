@@ -17,10 +17,20 @@
         }
         p {
             @extend .small-gray;
-            margin-bottom: 7px;
             letter-spacing: 1px;
             position: relative;
+            margin-top: 5px;
+            margin-bottom: 5px;
             top: 10px;
+        }
+        a {
+            @extend .small-gray;
+            letter-spacing: 1px;
+            transition:all .5s ease-in-out;
+            &:hover, &:focus {
+                text-decoration:none; 
+                color: $red;
+            }
         }
         .p-address {
             top: 0!important;
@@ -48,6 +58,7 @@
             // background: lighten($red, 10%);
             @include box-shadow(inset 0 1px 0 lighten($red, 20%));
         }
+        
     }
 }
     .with-errors{
@@ -97,6 +108,11 @@
            }
        }
     }
+    .partner {
+        position: absolute;
+        bottom: 30px;
+        right: 35px;
+    }
     .powered {
         margin: 30px 0;
         font-weight: 600;
@@ -112,6 +128,14 @@
     .subtitle-general {
         margin-top: 0px;
         padding: 0px 50px;
+    }
+    #footer {
+        .partner {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            top: 14px;
+        }
     }
 }
 
