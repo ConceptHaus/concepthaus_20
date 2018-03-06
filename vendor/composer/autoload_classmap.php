@@ -32,6 +32,7 @@ return array(
     'App\\NoSocio' => $baseDir . '/app/NoSocio.php',
     'App\\Notas' => $baseDir . '/app/Notas.php',
     'App\\Pivot_Models\\PivoteCodPromo' => $baseDir . '/app/Pivot_Models/PivoteCodPromo.php',
+    'App\\Pivot_Models\\PivoteForms' => $baseDir . '/app/Pivot_Models/PivoteForms.php',
     'App\\Pivot_Models\\PivoteMailing' => $baseDir . '/app/Pivot_Models/PivoteMailing.php',
     'App\\Pivot_Models\\PivoteMedios' => $baseDir . '/app/Pivot_Models/PivoteMedios.php',
     'App\\Pivot_Models\\PivoteMotivo' => $baseDir . '/app/Pivot_Models/PivoteMotivo.php',
