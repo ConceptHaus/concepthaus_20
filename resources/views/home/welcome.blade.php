@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div ng-controller="WelcomeController">
+<div ng-controller="WelcomeController" ng-cloak>
 <!-- Section | Panorama -->
 <div id="panorama">
 <span class="word p-bottom-left"><% randomWords[0].word %></span>
@@ -44,19 +44,19 @@
       <div class="row">
         <div class="col-sm-12 col-md-4">
           <a href="{{ url('/conceptHaus') }}">
-            <img src="{{asset('img/home-elements/door1.png')}}" class="door img-fluid mx-auto d-block" alt="ConceptHaus" width="50%">
+            <img src="{{asset('img/home-elements/doors/concepthaus.png')}}" class="door img-fluid mx-auto d-block" alt="ConceptHaus" width="50%">
           </a>
           <img src="{{asset('img/logo/concepthaus.svg')}}" class="logo mx-auto d-block" alt="ConceptHaus">
         </div>
         <div class="col-sm-12 col-md-4">
           <a href="{{ url('/inhaus') }}">
-            <img src="{{asset('img/home-elements/door2.png')}}" class="door img-fluid mx-auto d-block" alt="InHaus Films" width="50%">
+            <img src="{{asset('img/home-elements/doors/inhaus.png')}}" class="door img-fluid mx-auto d-block" alt="InHaus Films" width="50%">
             <img src="{{asset('img/logo/inhausfilms.svg')}}" class="logo mx-auto d-block" alt="InHaus">
           </a>
         </div>
         <div class="col-sm-12 col-md-4">
           <a href="{{ url('/treehaus') }}">
-            <img src="{{asset('img/home-elements/door3.png')}}" class="door img-fluid mx-auto d-block" alt="TreeHouse" width="50%">
+            <img src="{{asset('img/home-elements/doors/treehaus.png')}}" class="door img-fluid mx-auto d-block" alt="TreeHouse" width="50%">
           </a>
           <img src="{{asset('img/logo/treehaus.svg')}}" class="logo mx-auto d-block" alt="TreeHaus">
         </div>

@@ -10,8 +10,11 @@
 .interiorPuerta{
   padding: 50px 0;
   padding-bottom: 0;
-  p{
+  p {
     padding: 20px 25%;
+  }
+  ul {
+    padding: 0px 26.5%;
   }
   img{
     @extend .centraImg;
@@ -38,8 +41,11 @@
 // Responsive
 @include breakpoint(lg-max) {
   .interiorPuerta {
-    p{
+    p {
       padding: 20px 10%;
+    }
+    ul {
+      padding: 0px 12%;
     }
   }
 }

@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <input type="email" class="form-control" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo" required>
+                            <input type="email" class="form-control input-ajust" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo" required>
                             <span class="msg-error" ng-messages="contactoForm.correo.$error" ng-if="contactoForm.correo.$touched">
                                 <div ng-messages-include="/messages_error.html"></div>
                             </span>

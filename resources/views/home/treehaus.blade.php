@@ -6,11 +6,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center interiorPuerta">
-                    <img class="puerta" src="{{asset('img/home-elements/door3.png')}}">
+                    <img class="puerta" src="{{asset('img/home-elements/doors/treehaus.png')}}">
                     <img class="logo" src="{{asset('img/logo/treehaus.svg')}}">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">Treehaus Sustainability.</span> 
-                        Campañas y proyectos de corte social y/o ecológico, Proyectos digitales en pro de la sustentabilidad. 
+                        Es una casa enfocada en el desarrollo de conceptos y estrategias que pretendan tener un impacto positivo a nivel económico, social y/o ambiental (Green Marketing).
+                        {{--  Campañas y proyectos de corte social y/o ecológico, Proyectos digitales en pro de la sustentabilidad.   --}}
+                    </p>
+                    <ul class="text-small small-gray text-left">
+                        <li class="list">Construimos plataformas digitales que favorecen al medio ambiente, la economía y a la sociedad.</li>
+                        <li class="list">Desarrollamos estrategias de Green Marketing que procuran el crecimiento de organizaciones enfocadas en 
+                        sustentabilidad ambiental y social, con la finalidad de mejorar su imagen, difusión y crecimiento económico.</li>
+                        <li class="list">Creamos campañas de Awareness en temas como: responsabilidad social, sustentabilidad empresarial, 
+                        concientización ecológica e impacto ambiental.</li>
+                        <li class="list">Desarrollamos estrategias de crowdfunding para promover causas sociales y ambientales.</li>
+                    </ul>
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">Unimos marcas con causas</span>
                     </p>
                 </div>
             </div>

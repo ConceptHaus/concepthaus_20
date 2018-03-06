@@ -83,6 +83,7 @@
                     <p>Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
                     <p class="title-footer">Puebla</p>
                     <p>SONATA TOWERS, WORK CENTER L. 21, LOMAS DE ANGELÓPOLIS</p>
+                    <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
                     <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>
                 <div class="col-sm-12 second">
@@ -116,6 +117,7 @@
     <!-- ./ Angular -->
 
     <!-- -->
+    <script type="text/javascript" src="/js/scrollPosStyler.js"></script>
     <script type="text/javascript" src="/js/changeColorMenu.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>

@@ -85,16 +85,53 @@ header .row, footer .row{
   }
 }
 
-// .navButtom {
-//   position: absolute;
-//   top: -90px;
-//   right: 30px;
-// }
-
 .navbar {
   padding: 0;
   margin-top: -25px;
   .navbar-collapse {
     padding-top: 30px;
+  }
+}
+
+// Btn Float
+.btnFloat-phone, .btnFloat-email {
+  background: $red;
+  border-radius: 100%;
+  text-align: center;
+  position: fixed;
+  right: 100px;
+  bottom: 20px;
+  height: 60px;
+  width: 60px;
+  z-index: 10;
+  a {
+    color: $white!important;
+  }
+}
+.btnFloat-phone {
+  padding: 10px 10px;
+  i {
+    font-size: 2.7em;
+  }
+}
+.btnFloat-email {
+  padding: 13px 10px;
+  right: 170px;
+    i {
+      font-size: 2.1em;
+    }
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+// Responsive
+@include breakpoint(md-max) {
+  // Form
+  form {
+    input.input-ajust {
+        margin-bottom: 1rem;
+    }
   }
 }
