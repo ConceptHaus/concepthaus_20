@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/panorama_viewer.min.css">
+    {{--  <link rel="stylesheet" href="/css/bootstrap-select.min.css">  --}}
 </head>
 
 <body ng-app="app">
@@ -183,13 +184,24 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
+                                    {{--  <select class="form-control">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Barbecue</option>
+                                    </select>  --}}
+                                    <span class="msg-error" ng-messages="contactoForm.servicios.$error" ng-if="contactoForm.servicios.$touched">
+                                        <div ng-messages-include="/messages_error.html"></div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
                                     <input type="text" class="form-control" id="empresa" name="empresa" ng-model="contacto.empresa" placeholder="Empresa" required>
                                     <span class="msg-error" ng-messages="contactoForm.empresa.$error" ng-if="contactoForm.empresa.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <textarea class="form-control" id="mensaje" name="mensaje" ng-model="contacto.mensaje" placeholder="Mensaje" rows="4" required></textarea>
@@ -295,15 +307,19 @@
     <!-- ./ Footer -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    {{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>  --}}
+
     {{--
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> --}}
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    {{--  <script src="/js/bootstrap-select.js"></script>  --}}
 
     <!-- Angular -->
     <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.3.15/angular-resource.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.js"></script>
+
     <script src="/js/ngMask.min.js"></script>
     <script src="/angular-app/angular-app.js"></script>
     <script src="/angular-app/services/RegistroService.js"></script>
@@ -319,6 +335,11 @@
     <script type="text/javascript" src="/js/changeColorMenu.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>
+
+    <script>
+        $('.selectpicker').selectpicker();
+        // $('select').selectpicker();
+    </script>
 
 </body>
 
