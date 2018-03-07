@@ -107,8 +107,8 @@
                         <p class="category txt-grayDark">Modificación de estatus</p>
                     </div>
                     <div class="card-content text-center">
-                        <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="http://192.168.33.10/admin/img/icons/contact-error.svg" alt="Concept Haus"> No viable</button>
-                        <button type="button" class="btn btn-orange" data-toggle="modal" data-target=".modalCotizado"><img src="http://192.168.33.10/admin/img/icons/contact-error.svg" alt="Concept Haus"> Cotizado</button>
+                        <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> No viable</button>
+                        <button type="button" class="btn btn-orange" data-toggle="modal" data-target=".modalCotizado"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> Cotizado</button>
                     </div>
                 </div>
                 @elseif($info_user[0]['pivot_status']['id_status'] == 4)
@@ -117,8 +117,8 @@
                         <p class="category txt-grayDark">Modificación de estatus</p>
                     </div>
                     <div class="card-content text-center">
-                        <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="http://192.168.33.10/admin/img/icons/contact-error.svg" alt="Concept Haus"> No viable</button>                            
-                        <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="http://192.168.33.10/admin/img/icons/contact-check.svg" alt="Concept Haus"> Cerrada</button>
+                        <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> No viable</button>                            
+                        <button type="button" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus"> Cerrada</button>
                     </div>
                 </div>
                 @endif
