@@ -11,19 +11,24 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="icon" href="/img/favicon.png" sizes="32x32" type="image/png">
     <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
-    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
+    />
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
-    <meta property="og:image" content="{{asset('img/image-meta.png')}}"/>
-    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"
+    />
+    <meta property="og:image" content="{{asset('img/image-meta.png')}}" />
+    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
-    <!-- Twitter --> 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
-    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
+    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
+    />
+    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"
+    />
     <meta name="twitter:domain" content="Concept Haus" />
 
     <link rel="canonical" href="http://concepthaus.mx/">
@@ -32,33 +37,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/panorama_viewer.min.css">
-    {{--  <link rel="stylesheet" href="/css/bootstrap-select.min.css">  --}}
+    <link rel="stylesheet" href="/css/panorama_viewer.min.css"> {{--
+    <link rel="stylesheet" href="/css/bootstrap-select.min.css"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body ng-app="app">
     <!-- Botones de contacto flotantes -->
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
-            appId            : 'your-app-id',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v2.12'
+                appId: 'your-app-id',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.12'
             });
         };
-        (function(d, s, id){
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "https://connect.facebook.net/es_LA/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="fb-customerchat"
-        page_id="120208024724588"
-        theme_color="#e73c30"
-        logged_in_greeting="¡Hola!, ¿cómo podemos ayudarte?"
+    <div class="fb-customerchat" page_id="120208024724588" theme_color="#e73c30" logged_in_greeting="¡Hola!, ¿cómo podemos ayudarte?"
         logged_out_greeting="¡Hola!, ¿cómo podemos ayudarte?">
     </div>
     <div class="btnFloat-phone">
@@ -89,8 +95,10 @@
                 </a>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
-                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank"> <i class="fa fa-facebook"></i> /</a>
-                <a href="https://www.instagram.com/concepthausmx/" target="_blank"> <i class="fa fa-instagram"></i> /</a>
+                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
+                    <i class="fa fa-facebook"></i> /</a>
+                <a href="https://www.instagram.com/concepthausmx/" target="_blank">
+                    <i class="fa fa-instagram"></i> /</a>
                 <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
             </div>
         </div>
@@ -157,8 +165,8 @@
                             {{ csrf_field() }}
                             <input type="text" class="form-control" id="fuente" name="fuente" ng-model="contacto.fuente" ng-init="contacto.fuente='Google'"
                                 hidden required>
-                            <input type="text" class="form-control" id="tipo" name="tipo" ng-model="contacto.tipo" ng-init="contacto.tipo='Home'"
-                                hidden required>
+                            <input type="text" class="form-control" id="tipo" name="tipo" ng-model="contacto.tipo" ng-init="contacto.tipo='Home'" hidden
+                                required>
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" placeholder="Nombre" required>
@@ -169,7 +177,8 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 col-md-6">
-                                    <input type="email" class="form-control input-ajust" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo" required>
+                                    <input type="email" class="form-control input-ajust" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo"
+                                        required>
                                     <span class="msg-error" ng-messages="contactoForm.correo.$error" ng-if="contactoForm.correo.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
@@ -184,11 +193,29 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    {{--  <select class="form-control">
+                                    {{--
+                                    <select class="form-control">
                                         <option>Mustard</option>
                                         <option>Ketchup</option>
                                         <option>Barbecue</option>
-                                    </select>  --}}
+                                    </select> --}}
+                                    <select class="js-example-theme-multiple" multiple="multiple" ng-model="contacto.option" style="width: 100%;">
+                                        <option value="BRANDING">BRANDING</option>
+                                        <option value="DISEÑO">DISEÑO</option>
+                                        <option value="WEB">WEB</option>
+                                        <option value="MARKETING DIGITAL">MARKETING DIGITAL</option>
+                                        <option value="MARKETING ATL">MARKETING ATL</option>
+                                        <option value="MARKETIING BTL">MARKETIING BTL</option>
+                                        <option value="EVENTO">EVENTO</option>
+                                        <option value="RELACIONES PÚBLICAS">RELACIONES PÚBLICAS</option>
+                                        <option value="INTERIORISMO">INTERIORISMO</option>
+                                        <option value="PRODUCCIÓN AUDIOVISUAL">PRODUCCIÓN AUDIOVISUAL</option>
+                                        <option value="FOTOGRAFÍA">FOTOGRAFÍA</option>
+                                        <option value="ALGUNAS  DE LAS ANTERIORES">ALGUNAS  DE LAS ANTERIORES</option>
+                                        <option value="OTRA">OTRA</option>
+                                    </select>
+
+
                                     <span class="msg-error" ng-messages="contactoForm.servicios.$error" ng-if="contactoForm.servicios.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
@@ -217,9 +244,11 @@
                                 </div>
                             </div>
                         </form>
-                        
 
-                        {{--  <form id="FormDatosContacto" name="formContact" role="form" method="post" data-toggle="validator" novalidate="true">
+
+                        {{--
+                        <form id="FormDatosContacto" name="formContact" role="form" method="post" data-toggle="validator"
+                            novalidate="true">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
@@ -265,7 +294,7 @@
                             </div>
                             <div class="form-group text-center">
                                 <button class="btn btn-default" ng-click="saveDataContact(contacto)" ng-disabled="!formContact.$valid">Enviar</button>
-                            </div>  
+                            </div>
                         </form> --}}
                     </div>
                     <div class="col-sm"></div>
@@ -276,8 +305,9 @@
                     <img src="{{asset('img/conceptH.svg')}}" class="" alt="ConceptHaus" width="100">
                 </div>
                 <div class="col-sm-12">
-                    {{--  <iframe src="https://snazzymaps.com/embed/26027" width="100%" height="400px" style="border:none;"></iframe>  --}}
-                    <iframe src="https://snazzymaps.com/embed/53068" width="100%" height="400px" style="border:none;"/></iframe>
+                    {{--
+                    <iframe src="https://snazzymaps.com/embed/26027" width="100%" height="400px" style="border:none;"></iframe> --}}
+                    <iframe src="https://snazzymaps.com/embed/53068" width="100%" height="400px" style="border:none;" /></iframe>
                 </div>
             </div>
         </section>
@@ -296,7 +326,7 @@
                     <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>
                 <div class="col-sm-12 second">
-                    <h4 class="accenting">  
+                    <h4 class="accenting">
                         <img src="{{asset('img/accetingLogo.svg')}}" class="" alt="Accenting everything" width="20">
                         <span>Accenting</span> everything
                     </h4>
@@ -307,12 +337,12 @@
     <!-- ./ Footer -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    {{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>  --}}
-
     {{--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script> --}} {{--
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> --}}
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    {{--  <script src="/js/bootstrap-select.js"></script>  --}}
+    {{--
+    <script src="/js/bootstrap-select.js"></script> --}}
 
     <!-- Angular -->
     <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
@@ -339,6 +369,14 @@
     <script>
         $('.selectpicker').selectpicker();
         // $('select').selectpicker();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $(".js-example-theme-multiple").select2({
+            theme: "classic",
+            placeholder: "Selecciona area de interes",
+            allowClear: true
+        });
     </script>
 
 </body>

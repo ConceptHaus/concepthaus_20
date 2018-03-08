@@ -8763,6 +8763,11 @@ header .row, footer .row {
   display: none !important;
 }
 
+.select2-container--classic .select2-selection--multiple .select2-selection__choice {
+  background-color: #e83c30d6 !important;
+  color: white !important;
+}
+
 /*===============*/
 /*==============*/
 @media (max-width: 767px) {
