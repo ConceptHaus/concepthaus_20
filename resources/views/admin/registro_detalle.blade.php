@@ -53,34 +53,46 @@
                 <div class="card card-stats card-info-form">
                     <form>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label class="label-registro">Cliente</label>
                                 <p class="info-registro">{{$info_user[0]['nombre']}}</p>
                             </div>
+                            <div class="col-md-12">
+                                <label class="label-registro">Empresa</label>
+                                <p class="info-registro">{{$info_user[0]['empresa']}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
+                                <label class="label-registro">Proyecto</label>
+                                @if($info_user[0]['proyecto'] !== null)
+                                    <p class="info-registro">{{$info_user[0]['proyecto']}}</p>
+                                @else
+                                    <p class="info-registro" style="color: white;">S/P</p>
+                                @endif
+                            </div>
+                            <div class="col-md-6">
+                                <label class="label-registro">Teléfono</label>
+                                <p class="info-registro">{{$info_user[0]['telefono']}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <label class="label-registro">Correo</label>
                                 <p class="info-registro">{{$info_user[0]['correo']}}</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label class="label-registro">Teléfono</label>
-                                <p class="info-registro">{{$info_user[0]['telefono']}}</p>
-                            </div>
-                            <div class="col-md-6">
                                 <label class="label-registro">Fuente de registro</label>
                                 <p class="info-registro">{{$info_user[0]['fuente']}}</p>
                             </div>
+                            <div class="col-md-6">
+                                <label class="label-registro">Formulario de registro</label>
+                                <p class="info-registro">{{$info_user[0]['pivot_forms']['tipo']}}</p>
+                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <label class="label-registro">Proyecto</label>
-                                <p class="info-registro">{{$info_user[0]['proyecto']}}</p>
-                            </div>
-                            <div class="col-md-12">
-                                <label class="label-registro">Empresa</label>
-                                <p class="info-registro">{{$info_user[0]['empresa']}}</p>
-                            </div>
                             <div class="col-md-12">
                                 <label class="label-registro">Nota</label>
                                 <p class="info-registro">{{$info_user[0]['mensaje']}}</p>

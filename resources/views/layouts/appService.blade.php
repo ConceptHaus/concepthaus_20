@@ -18,7 +18,7 @@
     <meta property="og:image" content="{{asset('img/image-meta.png')}}"/>
     <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://concepthaus.mx/" />
+    <meta property="og:url" content="https://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
     <!-- Twitter --> 
     <meta name="twitter:card" content="summary" />
@@ -26,13 +26,22 @@
     <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta name="twitter:domain" content="Concept Haus" />
 
-    <link rel="canonical" href="http://concepthaus.mx/">
+    <link rel="canonical" href="https://concepthaus.mx/">
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/panorama_viewer.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TLGCBXH');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body ng-app="app">
@@ -54,7 +63,7 @@
             <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
                 <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">FB /</a>
                 <a href="https://www.instagram.com/concepthausmx/" target="_blank"> IG /</a>
-                <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
+                <a href="https://concepthaus.mx/blog/" target="_blank">BLOG</a>
             </div>
         </div>
     </header>
@@ -121,6 +130,20 @@
     <script type="text/javascript" src="/js/changeColorMenu.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $(".js-theme-multiple").select2({
+            theme: "classic",
+            placeholder: "Selecciona los servicios de interés",
+            allowClear: true
+        });
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLGCBXH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 </body>
 

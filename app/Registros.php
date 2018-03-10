@@ -36,6 +36,12 @@ class Registros extends Model {
     public function pivot_status(){
         return $this->hasOne('App\Pivot_Models\PivoteStatus','id_registro','id_registro');
     }
+    public function pivot_forms(){
+        return $this->hasOne('App\Pivot_Models\PivoteForms','id_registro','id_registro');
+    }
+    public function pivot_servicios(){
+        return $this->hasOne('App\Pivot_Models\PivoteServicios','id_registro','id_registro');
+    }
 
     public function ubicacion(){
         return $this->hasOne('App\Ubicacion','id_registro','id_registro');
@@ -100,6 +106,7 @@ class Registros extends Model {
         ->with('pivot_mailing.mailing')
         ->with('pivot_medios.medios_contacto')
         ->with('pivot_status.status')
+        ->with('pivot_forms')
         ->where('id_registro','=',$id);
     }
 

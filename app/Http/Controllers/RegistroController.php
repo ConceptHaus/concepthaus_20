@@ -9,6 +9,7 @@ use App\FechaRegistro;
 use App\CodigoRegistro;
 use App\Pivot_Models\PivoteStatus;
 use App\Pivot_Models\PivoteForms;
+use App\Pivot_Models\PivoteServicios;
 
 use Illuminate\Http\Request;
 
@@ -60,18 +61,12 @@ class RegistroController extends Controller {
 			$registro -> nombre     = $request -> nombre;
 			$registro -> correo     = $request -> correo;
 			$registro -> telefono   = $request -> telefono;
-			$registro -> empresa   = $request -> empresa;
+			$registro -> empresa    = $request -> empresa;
 			$registro -> mensaje   	= $request -> mensaje;
 			$registro -> fuente   	= $request -> fuente;
 			$registro -> save();
 
 			$user = $registro->toArray();
-
-			// $ubicacion = new Ubicacion;
-			// $ubicacion -> id_registro = $user['id_registro'];
-			// $ubicacion -> ciudad      =  $request->ciudad;
-			// $ubicacion -> estado      =  $request->estado;
-			// $ubicacion -> save();
 
 			$fechas_registro =  new FechaRegistro;
 			$fechas_registro -> id_registro 	= $user['id_registro'];
@@ -95,6 +90,14 @@ class RegistroController extends Controller {
 			$formulario -> id_registro =  $user['id_registro'];
 			$formulario -> tipo 	   =  $request->tipo;
 			$formulario -> save();
+
+			$serviciosArray = $request->servicios;
+			foreach ($serviciosArray as $servicio) {
+				$servicios = new PivoteServicios;
+				$servicios -> id_registro =  $user['id_registro'];
+				$servicios -> servicio    =  $servicio;
+				$servicios -> save();
+			}
 	
 			$user['correo'] = $request -> correo;
 			// $user['ciudad'] = $request->ciudad;
@@ -117,8 +120,7 @@ class RegistroController extends Controller {
 			return json_encode($json['success']);
 		}
 
-		dd($Validator->errors());
-		
+		// dd($Validator->errors());
 		$json['errors'] = $Validator->errors();
 		return json_encode($json['errors']);
 	}

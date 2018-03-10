@@ -21,7 +21,7 @@
     <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://concepthaus.mx/" />
+    <meta property="og:url" content="https://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
@@ -31,7 +31,7 @@
     />
     <meta name="twitter:domain" content="Concept Haus" />
 
-    <link rel="canonical" href="http://concepthaus.mx/">
+    <link rel="canonical" href="https://concepthaus.mx/">
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
@@ -40,6 +40,14 @@
     <link rel="stylesheet" href="/css/panorama_viewer.min.css"> {{--
     <link rel="stylesheet" href="/css/bootstrap-select.min.css"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TLGCBXH');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body ng-app="app">
@@ -193,29 +201,20 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    {{--
-                                    <select class="form-control">
-                                        <option>Mustard</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
-                                    </select> --}}
-                                    <select class="js-example-theme-multiple" multiple="multiple" ng-model="contacto.option" style="width: 100%;">
-                                        <option value="BRANDING">BRANDING</option>
-                                        <option value="DISEÑO">DISEÑO</option>
-                                        <option value="WEB">WEB</option>
-                                        <option value="MARKETING DIGITAL">MARKETING DIGITAL</option>
-                                        <option value="MARKETING ATL">MARKETING ATL</option>
-                                        <option value="MARKETIING BTL">MARKETIING BTL</option>
-                                        <option value="EVENTO">EVENTO</option>
-                                        <option value="RELACIONES PÚBLICAS">RELACIONES PÚBLICAS</option>
-                                        <option value="INTERIORISMO">INTERIORISMO</option>
-                                        <option value="PRODUCCIÓN AUDIOVISUAL">PRODUCCIÓN AUDIOVISUAL</option>
-                                        <option value="FOTOGRAFÍA">FOTOGRAFÍA</option>
-                                        <option value="ALGUNAS  DE LAS ANTERIORES">ALGUNAS  DE LAS ANTERIORES</option>
-                                        <option value="OTRA">OTRA</option>
+                                    <select class="js-theme-multiple" multiple="multiple" ng-model="contacto.servicios">
+                                        <option value="Branding">Branding</option>
+                                        <option value="Diseño">Diseño</option>
+                                        <option value="Web">Web</option>
+                                        <option value="Marketing Digital">Marketing Digital</option>
+                                        <option value="Marketing ATL">Marketing ATL</option>
+                                        <option value="Marketing BTL">Marketing BTL</option>
+                                        <option value="Evento">Evento</option>
+                                        <option value="Relaciones Públicas">Relaciones Públicas</option>
+                                        <option value="Interiorismo">Interiorismo</option>
+                                        <option value="Producción Audiovisual">Producción Audiovisual</option>
+                                        <option value="Fotografía">Fotografía</option>
+                                        <option value="Otra">Otra</option>
                                     </select>
-
-
                                     <span class="msg-error" ng-messages="contactoForm.servicios.$error" ng-if="contactoForm.servicios.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
@@ -240,62 +239,10 @@
 
                             <div class="form-group row text-center">
                                 <div class="col-sm-12">
-                                    <button class="btn" id="FormHome" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
+                                    <button class="btn" id="FormHome" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.servicios) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
                                 </div>
                             </div>
                         </form>
-
-
-                        {{--
-                        <form id="FormDatosContacto" name="formContact" role="form" method="post" data-toggle="validator"
-                            novalidate="true">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input ng-model="contacto.name" type="text" class="form-control" name="name" id="name" placeholder="Nombre" data-error="Escribe tu nombre completo."
-                                            required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="email" ng-model="contacto.email" class="form-control" name="email" id="email" placeholder="Correo" data-error="Lo sentimos, email no válido."
-                                            required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" id="phone" name="phone" class="form-control" ng-model="contacto.phone" mask="(99) 9?9999-9999" placeholder="Teléfono"
-                                            required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text" ng-model="contacto.empresa" class="form-control" name="empresa" id="empresa" placeholder="Empresa" data-error="Escribe tu empresa."
-                                            required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <textarea ng-model="contacto.message" class="form-control" name="message" id="message" placeholder="Mensaje" data-error="¡Dejanos tu mensaje!"
-                                            rows="4" required></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group text-center">
-                                <button class="btn btn-default" ng-click="saveDataContact(contacto)" ng-disabled="!formContact.$valid">Enviar</button>
-                            </div>
-                        </form> --}}
                     </div>
                     <div class="col-sm"></div>
                 </div>
@@ -366,18 +313,19 @@
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>
 
-    <script>
-        $('.selectpicker').selectpicker();
-        // $('select').selectpicker();
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script>
-        $(".js-example-theme-multiple").select2({
+        $(".js-theme-multiple").select2({
             theme: "classic",
-            placeholder: "Selecciona area de interes",
+            placeholder: "Selecciona los servicios de interés",
             allowClear: true
         });
     </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLGCBXH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 </body>
 
