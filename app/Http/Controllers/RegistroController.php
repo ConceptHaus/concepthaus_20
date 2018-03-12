@@ -32,7 +32,7 @@ class RegistroController extends Controller {
 	protected function validatorRegistroLead(array $data){
         return Validator::make($data, [
             'nombre'     => 'required',
-			'correo'     => 'email|unique:registros',
+			'correo'     => 'email',
 			'empresa'    => 'required',
 			'mensaje'    => 'required',
         ]);
