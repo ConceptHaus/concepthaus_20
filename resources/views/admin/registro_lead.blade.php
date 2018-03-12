@@ -67,6 +67,7 @@
                                         <option value="Branding">Branding</option>
                                         <option value="Diseño">Diseño</option>
                                         <option value="Web">Web</option>
+                                        <option value="3D">3D</option>
                                         <option value="Marketing Digital">Marketing Digital</option>
                                         <option value="SEO">SEO</option>
                                         <option value="Marketing ATL">Marketing ATL</option>
