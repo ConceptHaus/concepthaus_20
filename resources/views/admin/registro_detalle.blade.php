@@ -46,57 +46,69 @@
                         @elseif($info_user[0]['pivot_status']['id_status'] == 3)
                             <h4 class="title txt-red">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 4)
-                            <h4 class="title txt-gray">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
+                            <h4 class="title txt-orange">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @endif
                     </div>
                 </div>
                 <div class="card card-stats card-info-form">
                     <form>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label class="label-registro">Cliente</label>
                                 <p class="info-registro">{{$info_user[0]['nombre']}}</p>
                             </div>
+                            <div class="col-md-12">
+                                <label class="label-registro">Empresa</label>
+                                <p class="info-registro">{{$info_user[0]['empresa']}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
+                                <label class="label-registro">Proyecto</label>
+                                @if($info_user[0]['proyecto'] !== null)
+                                    <p class="info-registro">{{$info_user[0]['proyecto']}}</p>
+                                @else
+                                    <p class="info-registro" style="color: white;">S/P</p>
+                                @endif
+                            </div>
+                            <div class="col-md-6">
+                                <label class="label-registro">Teléfono</label>
+                                <p class="info-registro">{{$info_user[0]['telefono']}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <label class="label-registro">Correo</label>
                                 <p class="info-registro">{{$info_user[0]['correo']}}</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label class="label-registro">Teléfono</label>
-                                <p class="info-registro">{{$info_user[0]['telefono']}}</p>
-                            </div>
-                            <div class="col-md-6">
                                 <label class="label-registro">Fuente de registro</label>
                                 <p class="info-registro">{{$info_user[0]['fuente']}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="label-registro">Formulario de registro</label>
+                                <p class="info-registro">{{$info_user[0]['pivot_forms']['tipo']}}</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <label class="label-registro">Proyecto</label>
-                                <p class="info-registro">{{$info_user[0]['proyecto']}}</p>
-                            </div>
-                            <div class="col-md-12">
-                                <label class="label-registro">Empresa</label>
-                                <p class="info-registro">{{$info_user[0]['empresa']}}</p>
-                            </div>
-                            <div class="col-md-12">
                                 <label class="label-registro">Nota</label>
                                 <p class="info-registro">{{$info_user[0]['mensaje']}}</p>
                             </div>
-                            {{--  @if($info_user[0]['pivot_status']['id_status'] == 2)
-                            <div class="col-md-4">
-                                <label class="label-registro">Compra</label> 
-                                <div class="form-group none-mt">
-                                    <select class="form-control" id="select-compra" name="select-compra" ng-model="compra" ng-init="compra = {{$info_user[0]['no_socio']['compra']}}" ng-blur ="getdetails({{$info_user[0]['no_socio']['id_nosocio']}}, compra)">
-                                        <option disabled ng-selected="compra != 0 || compra != 1">Selecciona una opción</option>
-                                        <option value="0" ng-selected="compra == 0">No</option>
-                                        <option value="1" ng-selected="compra == 1">Sí</option>
-                                    </select> 
+                        </div>
+                        <div class="row content-servicios">
+                            <div class="col-md-12">
+                                <label class="label-registro">Servicios</label>
+                                <div class="row">
+                                    @foreach ($info_user[0]['pivot_servicios'] as $servicio)
+                                        <div class="col-md-4">
+                                            <p><img src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus"> {{ $servicio->servicio }}</p>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
-                            @endif  --}}
                         </div>
                     </form>
                 </div>

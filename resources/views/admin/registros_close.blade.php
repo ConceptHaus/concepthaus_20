@@ -74,8 +74,9 @@
                                         <select class="form-control" id="select-type" name="select-type" ng-model="fecha.selectTypeStatus">
                                             <option value="" disabled selected>Estatus</option>
                                             <option value="1">En Proceso</option>
-                                            <option value="2">Socios</option>
-                                            <option value="3">No viable</option>
+                                            <option value="2">Cotizados</option>
+                                            <option value="3">Cerrados</option>
+                                            <option value="4">No viables</option>
                                             <option value="">Todos</option>
                                         </select>
                                     </div> 
@@ -86,6 +87,7 @@
                                             <option value="" disabled selected>Fuente</option>
                                             <option value="Google">Google</option>
                                             <option value="Facebook">Facebook</option>
+                                            <option value="Facebook">Manual</option>
                                             <option value="">Todos</option>
                                         </select>
                                     </div> 
@@ -154,19 +156,19 @@
                                     </a>
                                 </th>
                                 <th scope="col" data-tablesaw-sortable-default-col data-tablesaw-priority="3">
-                                    <a ng-click="sortType = 'nombre'; sortReverse = !sortReverse">
+                                    <a ng-click="sortType = 'proyecto'; sortReverse = !sortReverse">
                                         Proyecto
-                                        <span ng-hide="sortType == 'nombre' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
-                                        <span ng-show="sortType == 'nombre' && !sortReverse" class="fa fa-sort-asc"></span>
-                                        <span ng-show="sortType == 'nombre' && sortReverse" class="fa fa-sort-desc"></span>
+                                        <span ng-hide="sortType == 'proyecto' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
+                                        <span ng-show="sortType == 'proyecto' && !sortReverse" class="fa fa-sort-asc"></span>
+                                        <span ng-show="sortType == 'proyecto' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a>
                                 </th>
                                 <th scope="col" data-tablesaw-priority="1">
-                                    <a ng-click="sortType = 'correo'; sortReverse = !sortReverse">
+                                    <a ng-click="sortType = 'empresa'; sortReverse = !sortReverse">
                                         Empresa
-                                        <span ng-hide="sortType == 'correo' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
-                                        <span ng-show="sortType == 'correo' && !sortReverse" class="fa fa-sort-asc"></span>
-                                        <span ng-show="sortType == 'correo' && sortReverse" class="fa fa-sort-desc"></span>
+                                        <span ng-hide="sortType == 'empresa' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
+                                        <span ng-show="sortType == 'empresa' && !sortReverse" class="fa fa-sort-asc"></span>
+                                        <span ng-show="sortType == 'empresa' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a>
                                 </th>
                                 <th scope="col" data-tablesaw-priority="6">
@@ -191,7 +193,7 @@
                         <tbody>
                             <tr ng-repeat="registro in statusClose | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse | limitTo:10">
                                 <td><% registro.id_registro %></td>
-                                <td class="fuente">
+                                <td>
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
                                     <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
                                     <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>                                    

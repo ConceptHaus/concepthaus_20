@@ -126,6 +126,37 @@ header .row, footer .row{
   display: none !important;
 }
 
+.js-theme-multiple {
+  width: 100%!important;
+}
+.select2-container--classic {
+  width: 100%;
+  .select2-selection--multiple {
+    border-color: #d2d2d2!important;
+    .select2-selection__choice {
+      background-color: #e8e8e8!important;
+      border: none!important;
+      color: #6a6e75!important;
+      font-size: 14px;
+    }
+    .select2-selection__rendered {
+      width: 100%!important;
+      .select2-search__field {
+        border: none!important;
+        padding: 3px!important;
+      }
+    }
+  }
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: $red!important;
+    
+  }
+}
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: #d2d2d2!important;
+}
+
+
 // Responsive
 @include breakpoint(md-max) {
   // Form

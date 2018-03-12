@@ -45,7 +45,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css" rel="stylesheet" >
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
     <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
     <script>
         webshims.setOptions('forms-ext', {types: 'date'});
@@ -109,23 +109,23 @@
                         </a>
                     </li>
                     
-                    @if (Request::path() === 'registros/cotizado')<li class="active">@else<li>@endif
-                        <a href="{{ url('/registros/cotizado') }}">
+                    @if (Request::path() === 'registros/cotizados')<li class="active">@else<li>@endif
+                        <a href="{{ url('/registros/cotizados') }}">
                             <p>
-                                @if (Request::path() === 'registros/cotizado')
+                                @if (Request::path() === 'registros/cotizados')
                                     <i class="material-icons txt-orange">insert_drive_file</i>
                                 @else
                                     <i class="material-icons txt-orange">insert_drive_file</i>
                                 @endif
-                                Cotizado
+                                Cotizados
                             </p>
                         </a>
                     </li>
 
-                    @if (Request::path() === 'registros/socios')<li class="active">@else<li>@endif
-                        <a href="{{ url('/registros/socios') }}">
+                    @if (Request::path() === 'registros/cerrados')<li class="active">@else<li>@endif
+                        <a href="{{ url('/registros/cerrados') }}">
                             <p>
-                                @if (Request::path() === 'registros/socios')
+                                @if (Request::path() === 'registros/cerrados')
                                     <i class="material-icons txt-blue">check</i>
                                 @else
                                     <i class="material-icons txt-blue">check</i>
@@ -276,6 +276,16 @@
 <script src="{{asset('admin/js/material-dashboard.js?v=1.2.0')}}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{asset('admin/js/demo.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script>
+    $(".js-theme-multiple").select2({
+        theme: "classic",
+        placeholder: "Selecciona los servicios de interés",
+        allowClear: true
+    });  
+</script>
+
 
 <!-- Pagination -->
 <script type="text/javascript">

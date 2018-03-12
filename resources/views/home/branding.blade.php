@@ -38,6 +38,27 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
+                            <select class="js-theme-multiple" multiple="multiple" ng-model="contacto.servicios">
+                                <option value="Branding">Branding</option>
+                                <option value="Diseño">Diseño</option>
+                                <option value="Web">Web</option>
+                                <option value="Marketing Digital">Marketing Digital</option>
+                                <option value="Marketing ATL">Marketing ATL</option>
+                                <option value="Marketing BTL">Marketing BTL</option>
+                                <option value="Evento">Evento</option>
+                                <option value="Relaciones Públicas">Relaciones Públicas</option>
+                                <option value="Interiorismo">Interiorismo</option>
+                                <option value="Producción Audiovisual">Producción Audiovisual</option>
+                                <option value="Fotografía">Fotografía</option>
+                                <option value="Otra">Otra</option>
+                            </select>
+                            <span class="msg-error" ng-messages="contactoForm.servicios.$error" ng-if="contactoForm.servicios.$touched">
+                                <div ng-messages-include="/messages_error.html"></div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
                             <input type="text" class="form-control" id="empresa" name="empresa" ng-model="contacto.empresa" placeholder="Empresa" required>
                             <span class="msg-error" ng-messages="contactoForm.empresa.$error" ng-if="contactoForm.empresa.$touched">
                                 <div ng-messages-include="/messages_error.html"></div>

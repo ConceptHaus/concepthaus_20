@@ -150,19 +150,19 @@
                                         </a>
                                     </th>
                                     <th scope="col" data-tablesaw-sortable-default-col data-tablesaw-priority="3">
-                                        <a ng-click="sortType = 'nombre'; sortReverse = !sortReverse">
+                                        <a ng-click="sortType = 'proyecto'; sortReverse = !sortReverse">
                                             Proyecto
-                                            <span ng-hide="sortType == 'nombre' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
-                                            <span ng-show="sortType == 'nombre' && !sortReverse" class="fa fa-sort-asc"></span>
-                                            <span ng-show="sortType == 'nombre' && sortReverse" class="fa fa-sort-desc"></span>
+                                            <span ng-hide="sortType == 'proyecto' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
+                                            <span ng-show="sortType == 'proyecto' && !sortReverse" class="fa fa-sort-asc"></span>
+                                            <span ng-show="sortType == 'proyecto' && sortReverse" class="fa fa-sort-desc"></span>
                                         </a>
                                     </th>
                                     <th scope="col" data-tablesaw-priority="1">
-                                        <a ng-click="sortType = 'correo'; sortReverse = !sortReverse">
+                                        <a ng-click="sortType = 'empresa'; sortReverse = !sortReverse">
                                             Empresa
-                                            <span ng-hide="sortType == 'correo' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
-                                            <span ng-show="sortType == 'correo' && !sortReverse" class="fa fa-sort-asc"></span>
-                                            <span ng-show="sortType == 'correo' && sortReverse" class="fa fa-sort-desc"></span>
+                                            <span ng-hide="sortType == 'empresa' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
+                                            <span ng-show="sortType == 'empresa' && !sortReverse" class="fa fa-sort-asc"></span>
+                                            <span ng-show="sortType == 'empresa' && sortReverse" class="fa fa-sort-desc"></span>
                                         </a>
                                     </th>
                                     <th scope="col" data-tablesaw-priority="6">
@@ -187,7 +187,8 @@
                             <tbody>
                                 <tr ng-repeat="registro in registrosLastest | filter:search | orderBy:sortType:sortReverse">
                                     <td><% registro.id_registro %></td>
-                                    <td class="fuente">
+                                    <td>
+                                        {{--  class="fuente"  --}}
                                         <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
                                         <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
                                         <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>
