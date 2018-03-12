@@ -206,10 +206,12 @@
                                         <option value="Diseño">Diseño</option>
                                         <option value="Web">Web</option>
                                         <option value="Marketing Digital">Marketing Digital</option>
+                                        <option value="SEO">SEO</option>
                                         <option value="Marketing ATL">Marketing ATL</option>
                                         <option value="Marketing BTL">Marketing BTL</option>
                                         <option value="Evento">Evento</option>
                                         <option value="Relaciones Públicas">Relaciones Públicas</option>
+                                        <option value="Responsabilidad Social">Responsabilidad Social</option>
                                         <option value="Interiorismo">Interiorismo</option>
                                         <option value="Producción Audiovisual">Producción Audiovisual</option>
                                         <option value="Fotografía">Fotografía</option>
