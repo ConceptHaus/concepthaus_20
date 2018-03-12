@@ -130,6 +130,7 @@ header .row, footer .row{
   width: 100%!important;
 }
 .select2-container--classic {
+  width: 100%;
   .select2-selection--multiple {
     border-color: #d2d2d2!important;
     .select2-selection__choice {
@@ -139,7 +140,7 @@ header .row, footer .row{
       font-size: 14px;
     }
     .select2-selection__rendered {
-      width: 100%;
+      width: 100%!important;
       .select2-search__field {
         border: none!important;
         padding: 3px!important;

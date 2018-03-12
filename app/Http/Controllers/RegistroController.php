@@ -181,6 +181,14 @@ class RegistroController extends Controller {
 			$formulario -> id_registro =  $user['id_registro'];
 			$formulario -> tipo 	   =  $request->tipo;
 			$formulario -> save();
+
+			$serviciosArray = $request->servicios;
+			foreach ($serviciosArray as $servicio) {
+				$servicios = new PivoteServicios;
+				$servicios -> id_registro =  $user['id_registro'];
+				$servicios -> servicio    =  $servicio;
+				$servicios -> save();
+			}
 			
 			$json['success'] = "Datos lead manual guardados.";
 			return json_encode($json['success']);
