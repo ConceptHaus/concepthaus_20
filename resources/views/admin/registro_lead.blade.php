@@ -33,14 +33,14 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo" required>
+                                    <input type="email" class="form-control" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo">
                                     <span class="msg-error" ng-messages="contactoForm.correo.$error" ng-if="contactoForm.correo.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="telefono" name="telefono" mask="9999999999" ng-model="contacto.telefono" ng-minlength="8" ng-maxlength="10"
-                                        placeholder="Teléfono" required>
+                                    <input type="text" class="form-control" id="telefono" name="telefono" mask="99999999999999999999" ng-model="contacto.telefono" ng-minlength="8"
+                                        placeholder="Teléfono">
                                     <span class="msg-error" ng-messages="contactoForm.telefono.$error" ng-if="contactoForm.telefono.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
@@ -94,7 +94,7 @@
 
                             <div class="form-group row text-center">
                                 <div class="col-sm-12">
-                                    <button class="btn btn-red" id="EnviaDatosRegistro" ng-click="saveDataLead(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.proyecto) || !(contacto.mensaje)">Agregar</button>
+                                    <button class="btn btn-red" id="EnviaDatosRegistro" ng-click="saveDataLead(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.empresa) || !(contacto.proyecto) || !(contacto.mensaje)">Agregar</button>
                                 </div>
                             </div>
                         </form>

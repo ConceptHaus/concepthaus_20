@@ -22,10 +22,19 @@ class RegistroController extends Controller {
     protected function validatorRegistro(array $data){
         return Validator::make($data, [
             'nombre'     => 'required',
-						'correo'     => 'required|email|unique:registros',
+			'correo'     => 'required|email|unique:registros',
             'telefono'   => 'required',
-						'empresa'     => 'required',
-						'mensaje'     => 'required',
+			'empresa'     => 'required',
+			'mensaje'     => 'required',
+        ]);
+	}
+
+	protected function validatorRegistroLead(array $data){
+        return Validator::make($data, [
+            'nombre'     => 'required',
+			'correo'     => 'email|unique:registros',
+			'empresa'    => 'required',
+			'mensaje'    => 'required',
         ]);
 	}
 	
@@ -129,7 +138,7 @@ class RegistroController extends Controller {
     public function saveDataRegistroLead(Request $request) {
 		date_default_timezone_set('America/Mexico_City');
 		$input = $request->all();
-		$Validator = $this->validatorRegistro($input);
+		$Validator = $this->validatorRegistroLead($input);
 		$no_codigo = self::quickRandom();
 
 		if($Validator->passes()){

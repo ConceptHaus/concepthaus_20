@@ -37,7 +37,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
-                <a href="{{ url('/registros/cotizado') }}">
+                <a href="{{ url('/registros/cotizados') }}">
                     <div class="card-header" data-background-color="orange">
                         <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="Concept Haus">
                     </div>
@@ -55,7 +55,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
-                <a href="{{ url('/registros/socios') }}">
+                <a href="{{ url('/registros/cerrados') }}">
                     <div class="card-header" data-background-color="blue">
                         <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="BeGrand®">
                     </div>
