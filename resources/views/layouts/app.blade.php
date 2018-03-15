@@ -158,13 +158,13 @@
                         <h5>CDMX</h5>
                         <a href="tel:+015552820707">01 (55) 52820707</a>
                         <p class="p-address">contacto@concepthaus.mx</p>
-                        <p class="p-address">Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
+                        <p class="p-address">Miguel Hidalgo, CDMX</p>
                     </div>
                     <div class="col-sm">
                         <h5>Puebla</h5>
                         <a href="tel:+012222954243">01 (222) 2954243</a>
                         <p class="p-address">contactopuebla@concepthaus.mx</p>
-                        <p class="p-address">Sonata Towers, Work Center L. 21, Lomas de Angelópolis</p>
+                        <p class="p-address">Sonata Towers, Work Center L.21, Lomas de Angelópolis</p>
                     </div>
                 </div>
                 <div class="row">
@@ -269,9 +269,9 @@
                         <a href="">Aviso de privacidad</a>
                     </p>
                     <p class="title-footer">CDMX</p>
-                    <p>PRESA RODRÍGUEZ 57, COL. IRRIGACIÓN, MIGUEL HIDALGO, CDMX</p>
+                    <p>MIGUEL HIDALGO, CDMX</p>
                     <p class="title-footer">Puebla</p>
-                    <p>SONATA TOWERS, WORK CENTER L. 21, LOMAS DE ANGELÓPOLIS</p>
+                    <p>SONATA TOWERS, WORK CENTER L.21, LOMAS DE ANGELÓPOLIS</p>
                     <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
                     <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>

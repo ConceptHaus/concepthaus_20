@@ -89,9 +89,9 @@
                         <a href="">Aviso de privacidad</a>
                     </p>
                     <p class="title-footer">CDMX</p>
-                    <p>Presa Rodríguez 57, Col. Irrigación, Miguel Hidalgo, CDMX</p>
+                    <p>MIGUEL HIDALGO, CDMX</p>
                     <p class="title-footer">Puebla</p>
-                    <p>SONATA TOWERS, WORK CENTER L. 21, LOMAS DE ANGELÓPOLIS</p>
+                    <p>SONATA TOWERS, WORK CENTER L.21, LOMAS DE ANGELÓPOLIS</p>
                     <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
                     <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>
