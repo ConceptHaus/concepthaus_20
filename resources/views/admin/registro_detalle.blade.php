@@ -56,6 +56,11 @@
                             <div class="col-md-12">
                                 <label class="label-registro">Cliente</label>
                                 <p class="info-registro">{{$info_user[0]['nombre']}}</p>
+                                {{--  {{$info_user[0]['nombre']}}
+                                <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" ng-init="contacto.nombre == 'Prueba'" placeholder="Cliente" required>
+                                <span class="msg-error" ng-messages="contactoForm.nombre.$error" ng-if="contactoForm.nombre.$touched">
+                                    <div ng-messages-include="/messages_error.html"></div>
+                                </span>  --}}
                             </div>
                             <div class="col-md-12">
                                 <label class="label-registro">Empresa</label>
