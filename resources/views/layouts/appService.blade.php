@@ -26,6 +26,8 @@
     <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta name="twitter:domain" content="Concept Haus" />
 
+    <meta name="google-site-verification" content="Jjq4yB7AU7iMqXWs12A8VPnopI3ubrcNKQ-6oLRAZ0s" />
+
     <link rel="canonical" href="https://concepthaus.mx/">
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
