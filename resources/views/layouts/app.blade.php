@@ -109,6 +109,8 @@
                     <i class="fa fa-facebook"></i> /</a>
                 <a href="https://www.instagram.com/concepthausmx/" target="_blank">
                     <i class="fa fa-instagram"></i> /</a>
+                <a href="https://www.behance.net/concepthausmx" target="_blank">
+                    <i class="fa fa-behance"></i> /</a>
                 <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
             </div>
         </div>
