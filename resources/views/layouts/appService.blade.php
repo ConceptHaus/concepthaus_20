@@ -63,9 +63,13 @@
                 </a>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
-                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">FB /</a>
-                <a href="https://www.instagram.com/concepthausmx/" target="_blank"> IG /</a>
-                <a href="https://concepthaus.mx/blog/" target="_blank">BLOG</a>
+                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
+                    <i class="fa fa-facebook"></i> /</a>
+                <a href="https://www.instagram.com/concepthausmx/" target="_blank">
+                    <i class="fa fa-instagram"></i> /</a>
+                <a href="https://www.behance.net/concepthausmx" target="_blank">
+                    <i class="fa fa-behance"></i> /</a>
+                <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
             </div>
         </div>
     </header>

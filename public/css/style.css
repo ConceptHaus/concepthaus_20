@@ -8768,7 +8768,7 @@ header .row, footer .row {
 }
 
 .select2-container--classic {
-  width: 100%;
+  width: 100% !important;
 }
 
 .select2-container--classic .select2-selection--multiple {
@@ -9840,4 +9840,21 @@ header .socialIcons a {
 
 #branding .form-control {
   background-color: #efefef;
+}
+
+/*===============*/
+/*==============*/
+@media (max-width: 991px) {
+  #branding .title-general {
+    font-size: 45px;
+  }
+}
+
+/*===============*/
+/*==============*/
+@media (max-width: 767px) {
+  #branding .title-general {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
 }
