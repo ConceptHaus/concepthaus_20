@@ -46,12 +46,20 @@ $fontMenu: (
 );
 
 $fontTitle: (
-  null  : 45px,
-  576px : 75px,
-  768px : 90px,
-  992px : 95px,
-  1024px: 100px,
+  null  : 35px,
+  576px : 35px,
+  768px : 35px,
+  992px : 40px,
+  1024px: 40px,
 );
+
+// $fontTitle: (
+//   null  : 45px,
+//   576px : 75px,
+//   768px : 90px,
+//   992px : 95px,
+//   1024px: 100px,
+// );
 
 $fontSlide: (
   null  : 45px,

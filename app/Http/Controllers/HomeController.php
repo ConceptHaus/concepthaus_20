@@ -7,14 +7,17 @@ use App\Registros;
 use App\FechaRegistro;
 use App\Ubicacion;
 use App\NoSocio;
+use App\CodigoRegistro;
 use App\Pivot_Models\PivoteStatus;
+use App\Pivot_Models\PivoteForms;
+use App\Pivot_Models\PivoteServicios;
 
 use Illuminate\Http\Request;
 
+use Validator;
 use Mail;
 
-class HomeController extends Controller
-{
+class HomeController extends Controller {
     /**
      * Create a new controller instance.
      *
@@ -25,6 +28,16 @@ class HomeController extends Controller
         date_default_timezone_set('America/Mexico_City');
         $this->middleware('auth');
     }
+
+    // ===================== Validadores ====================
+	protected function validatorEditLead(array $data){
+        return Validator::make($data, [
+            'nombre'     => 'required',
+			'correo'     => 'email',
+			'empresa'    => 'required',
+			'mensaje'    => 'required',
+        ]);
+	}
 
     /**
      * Show the application dashboard.
@@ -196,7 +209,101 @@ class HomeController extends Controller
     } 
 
 
+    // ===================== Elimina datos registro ====================
+    public function deleteDataRegistroLead(Request $data) {
+		try {
+			$registro = Registros::find($data['id_registro']);
+			$registro -> delete();
 
+			$registroCodigo = CodigoRegistro::where('id_registro','=',$data['id_registro'])->first();
+			$registroCodigo -> delete();
+
+			$registroForm = PivoteForms::where('id_registro','=',$data['id_registro'])->first();
+			$registroForm -> delete();
+
+			$registroServicios = PivoteServicios::where('id_registro','=',$data['id_registro'])->get();
+			foreach ($registroServicios as $servicio) {
+				$servicio -> delete();
+			}
+
+			$json['success'] = "Datos lead eliminados";
+			return json_encode($json['success']);
+		}
+		catch (\Exception $e) {
+			$json['errors'] = "Datos no eliminados";
+			return json_encode($json['errors']);
+		}
+    }
+    
+    // ===================== Editar datos registro ====================
+    public function editDataRegistroLead(Request $data) {
+		$input = $data->all();
+		$Validator = $this->validatorEditLead($input);
+
+		if($Validator->passes()){
+
+            $lead = Registros::where('id_registro','=',$data['id_registro'])->first();
+			$lead -> nombre    = $data -> nombre;
+			$lead -> correo    = $data -> correo;
+			$lead -> telefono  = $data -> telefono;
+			$lead -> empresa   = $data -> empresa;
+			$lead -> mensaje   = $data -> mensaje;
+			$lead -> proyecto  = $data -> proyecto;
+            $lead -> save();
+
+            $servicios = PivoteServicios::where('id_registro','=',$data['id_registro'])->get();
+            foreach ($servicios as $servicio) {
+                $arraySave[] = $servicio->servicio;
+            }
+            $arrayRefresh = $data->servicies;
+
+            // echo("ELEMENTO A BORRAR BD=");
+            // $resultados = array_diff($arraySave, $arrayRefresh);
+            // foreach ($resultados as $resultado) {
+            //     $deleteServicie = PivoteServicios::where('servicio','=',$resultado)->get();
+			//     $deleteServicie -> delete();
+            // }
+
+            // echo("<br>");
+            // echo("ELEMENTOS AGREGAR BD =");
+            foreach ($arrayRefresh as $value1) {
+                $encontrado=false;
+                foreach ($arraySave as $value2) {
+                    if ($value1 == $value2){
+                        $encontrado=true;
+                        $break;
+                    }
+                }
+                if ($encontrado == false){
+                    $servicios = new PivoteServicios;
+			        $servicios -> id_registro =  $data['id_registro'];
+			        $servicios -> servicio    =  $value1;
+		            $servicios -> save();
+                }
+            }
+			
+			$json['success'] = "Datos guardados";
+			return json_encode($json['success']);
+		}
+
+		$json['errors'] = $Validator->errors();
+		return json_encode($json['errors']);
+    }
+
+    // ===================== Elimina servicios del registro ====================
+    public function deleteServicieRegistroLead(Request $data) {
+		try {
+            $eliminarServicios = PivoteServicios::where('id_pivot_servicio','=',$data['id_pivot_servicio'])->first();
+			$eliminarServicios -> delete();
+
+			$json['success'] = "Datos lead eliminados";
+			return json_encode($json['success']);
+		}
+		catch (\Exception $e) {
+			$json['errors'] = "Datos no eliminados";
+			return json_encode($json['errors']);
+		}
+    }
     
 
     

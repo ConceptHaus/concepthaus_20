@@ -63,37 +63,21 @@
 
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <select class="js-theme-multiple form-control" multiple="multiple" ng-model="contacto.servicios" style="width: 100%;">
-                                        <option value="Branding">Branding</option>
-                                        <option value="Diseño">Diseño</option>
-                                        <option value="Web">Web</option>
-                                        <option value="3D">3D</option>
-                                        <option value="Marketing Digital">Marketing Digital</option>
-                                        <option value="SEO">SEO</option>
-                                        <option value="Marketing ATL">Marketing ATL</option>
-                                        <option value="Marketing BTL">Marketing BTL</option>
-                                        <option value="Evento">Evento</option>
-                                        <option value="Relaciones Públicas">Relaciones Públicas</option>
-                                        <option value="Responsabilidad Social">Responsabilidad Social</option>
-                                        <option value="Interiorismo">Interiorismo</option>
-                                        <option value="Producción Audiovisual">Producción Audiovisual</option>
-                                        <option value="Fotografía">Fotografía</option>
-                                        <option value="Varios">Varios</option>
-                                    </select>
-                                    <span class="msg-error" ng-messages="contactoForm.servicios.$error" ng-if="contactoForm.servicios.$touched">
+                                    <label>Servicios</label>
+                                    <div isteven-multi-select
+                                        input-model="listServicies"
+                                        output-model="contacto.outputServicies"
+                                        button-label="icon name"
+                                        item-label="icon name maker"
+                                        tick-property="ticked"
+                                        class="formNewSelect">
+                                    </div>
+                                    <span class="msg-error" ng-messages="contactoForm.outputServicies.$error" ng-if="contactoForm.outputServicies.$touched">
                                         <div ng-messages-include="/messages_error.html"></div>
                                     </span>
                                 </div>
                             </div>
-
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <textarea class="form-control" id="mensaje" name="mensaje" ng-model="contacto.mensaje" placeholder="Nota" rows="4" required></textarea>
-                                    <span class="msg-error" ng-messages="contactoForm.mensaje.$error" ng-if="contactoForm.mensaje.$touched">
-                                        <div ng-messages-include="/messages_error.html"></div>
-                                    </span>
-                                </div>
-                            </div>
+                            
 
                             <div class="form-group row text-center">
                                 <div class="col-sm-12">

@@ -99,14 +99,32 @@ Section Home | Slider
 }
 
 #home-description {
-    padding: 2% 5%;
+    margin-top: 58px;
+    margin-bottom: 55px;
+    padding: 2% 7%;
+    .word {
+        color: #4a4f55;
+        @include font-size($fontWord);
+        font-weight: 700;
+        &::after {
+            content: "■";
+            font-size: 8px;
+            margin-left: 5px;
+        }
+    }
+    .accenting {
+        @include font-size($fontWord);
+    }
+    .description-p {
+        margin-top: 15px;
+    }
     .content-description {
         p{
             @include font-size($content-description);
             font-weight: 100;
         }
         .col-md-6:nth-child(1) {
-            padding-top: 25px;
+            padding-top: 20px;
             padding-right: 15%;
         }
         .col-md-6:nth-child(2) {
@@ -150,13 +168,19 @@ Section Home | Slider
     .client-brand {
         margin: 20px 0;
         width: 60%;
-        @include breakpoint(md-max) {
-            width: 40%;
-        }
-        @include breakpoint(sm-max) {
-            width: 30%;
-            margin: 30px 0;        
-        }
+        margin: 30px 0;        
+    }
+    .client-brand.brand3 {
+        width:55%;
+    }
+    .client-brand.brand4 {
+        width:40%;
+    }
+    .client-brand.brand7 {
+        width:50%;
+    }
+    .client-brand.brand12 {
+        width:80%;
     }
     .row {
         margin-bottom: 3%;
@@ -173,10 +197,26 @@ Section Home | Slider
         margin-top: 40px;
         margin-bottom: 40px;
     }
+    .projectCliente {
+        color: $grayLight;
+        font-size: 10px;  
+        letter-spacing: 1px; 
+        padding-left: 20px;
+    }
+    .titleProjectCliente {
+        color: $grayDark;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .5px;
+        margin-bottom: 0;
+        margin-top: 20px;
+        padding-left: 20px;
+        text-transform: uppercase;
+    }
 }
 
 #plug {
-    margin-top: 55px;
+    margin-top: 85px;
     height: 130px;
     .plug-content {
         position: relative;
@@ -197,19 +237,69 @@ Section Home | Slider
         }
         &:before {
             content: ']';
+            font-size: 35px;
             margin-right: 30px;
             margin-top: 10px;
             position: relative;
-            top: 10px;
+            top: 15px;
         }
         &:after {
             content: '[';
+            font-size: 35px;
             margin-left: 123px;
             position: relative;
-            top: 10px;
+            top: 15px;
         }
     }
     .plug-content.plug-green {
         @extend .c-green;
+    }
+}
+
+// Responsive Media jQuery´s
+@include breakpoint(lg-max) {
+    #plug {
+        margin-top: 40px;
+    }
+} 
+
+@include breakpoint(md-max) {
+    #plug {
+        margin-bottom: 20px;
+    }
+    #clients {
+        .client-brand {
+            width: 40%!important;
+        }
+        .client-brand.brand3 {
+            width:140px!important;
+        }
+        .client-brand.brand4 {
+            width: 90px!important;
+        }
+        .client-brand.brand7 {
+            width:110px!important;
+        }
+        .client-brand.brand12 {
+            width:180px!important;
+        }
+    }
+} 
+
+@include breakpoint(sm-max) {
+    #plug {
+        margin-top: 30px;
+    }
+    #home-doors {
+        .logo {
+            width: 200px;
+        }
+    }
+    #clients {
+        .client-brand {
+            margin: 30px 0;   
+            // width: 30%!important;
+            width: 120px!important;
+        }
     }
 }

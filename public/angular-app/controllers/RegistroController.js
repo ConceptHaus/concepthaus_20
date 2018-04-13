@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('RegistroController', ['app','ngMask'], function($interpolateProvider) {
+angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
@@ -20,7 +20,11 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
         })
         // $scope.contacto.ciudad = $scope.contacto.ciudad.name;
         // $scope.contacto.estado = $scope.contacto.estado.name;
-        console.log($scope.contacto);
+        // console.log($scope.contacto);
+        $scope.contacto.servicios = [];
+        angular.forEach(contacto.outputServicies, function(value, key) {
+            $scope.contacto.servicios.push(value.name);
+        })
         saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
     var successRegister = function(res){
@@ -70,6 +74,12 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
             imageAlt: 'Concept Haus',
             showConfirmButton: false
         })
+
+        $scope.contacto.servicios = [];
+        angular.forEach(contacto.outputServicies, function(value, key) {
+            $scope.contacto.servicios.push(value.name);
+        })
+        
         saveLead.post($scope.contacto).then(successRegisterLead, errorRegisterLead);
     }
     var successRegisterLead = function(res){
@@ -95,8 +105,8 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
                 closeOnConfirm:false
             })
             $scope.contacto = {};
+            $scope.contacto.outputServicies = {};
             $scope.contactoForm.$setUntouched();
-            $scope.contactoForm.$setPristine();
         }
     }
     var errorRegisterLead = function(errors){
@@ -111,4 +121,21 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
         })
     }
 
+    // Multiple Select
+    $scope.listServicies = [
+        { icon: "<img src=../../img/concept.png />", name: "Branding", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Diseño", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "3D", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Marketing Digital", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "SEO", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Marketing ATL", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "Marketing BTL", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Evento", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Relaciones Públicas", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "Responsabilidad Social", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Interiorismo", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Producción Audiovisual", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Fotografía", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Varios", ticked: false  }
+    ]; 
 });

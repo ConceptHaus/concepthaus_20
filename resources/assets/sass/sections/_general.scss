@@ -2,6 +2,58 @@ $redch: #e73c30;
 $graych: #8d8e96;
 $white: #fff;
 
+/* Loader */
+#page {
+  display: none;
+}
+#page.visible {
+  display: block;
+}
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  text-align: center;
+  img {
+      width: 350px; 
+      @include breakpoint(md-max) {
+          width: 230px;
+      }   
+  }
+  .content-img {
+      display: table-cell;
+      text-align:center;  
+      vertical-align: middle;
+  }
+  .content-gif {
+      display: table; 
+      height: 100vh;
+      position: absolute;
+      width: 99%;
+      z-index: -1;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  -webkit-transition: all 1s 1s ease-out; 
+  transition: all 1s 1s ease-out;
+}
+.loaded-img {
+  opacity: 0;
+  -webkit-transition: all 1.5s 1.5s ease-out; 
+  transition: all 1.5s 1.5s ease-out;
+}
+
+body {
+  background: $white!important;
+  margin: 0;
+}
+
 header .row, footer .row{
   margin-left: 0;
   margin-right: 0;
@@ -28,17 +80,23 @@ header .row, footer .row{
 }
 .title-general {
   @include font-size($fontTitle);
-  color: $redch;
+  // font-size: 40px;
   font-weight: 700;
+  color: $grayDark;
   padding: 0px 50px;
   margin-top: 100px;
   @include breakpoint(md-max) {
     margin-top: 0;
   }
+  .img-icon-title{
+    margin-right: 10px;
+    margin-top: -10px;
+    width: 25px;
+  }
   &::after {
     content: "■";
-    font-size: 22px;
-    margin-left: 5px;
+    font-size: 10px;
+    // margin-left: 0px;
     height: 50px;
     width: 50px;
   }
@@ -94,33 +152,35 @@ header .row, footer .row{
 }
 
 // Btn Float
-.btnFloat-phone, .btnFloat-email {
-  background: $red;
-  border-radius: 100%;
-  text-align: center;
-  position: fixed;
-  right: 93px;
-  bottom: 25px;
-  height: 56px;
-  width: 56px;
-  z-index: 10;
-  a {
-    color: $white!important;
-  }
-}
-.btnFloat-phone {
-  padding: 10px 10px;
-  i {
-    font-size: 2.6em;
-  }
-}
-.btnFloat-email {
-  padding: 13px 10px;
-  right: 159px;
-    i {
-      font-size: 2em;
-    }
-}
+// .btnFloat-phone, .btnFloat-email {
+//   background: $red;
+//   border-radius: 100%;
+//   text-align: center;
+//   height: 40px;
+//   width: 40px;
+//   position: fixed;
+//   right: 93px;
+//   bottom: 25px;
+//   height: 56px;
+//   width: 56px;
+//   z-index: 10;
+//   a {
+//     color: $white!important;
+//   }
+// }
+// .btnFloat-phone {
+//   padding: 10px 10px;
+//   i {
+//     font-size: 2.6em;
+//   }
+// }
+// .btnFloat-email {
+//   padding: 13px 10px;
+//   right: 159px;
+//     i {
+//       font-size: 2em;
+//     }
+// }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;

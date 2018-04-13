@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    {{-- <link rel="icon" type="image/png" href="../assets/img/favicon.png" /> --}}
+    <link rel="shortcut icon" href="../assets/img/faviconanimation.gif" type="image/gif">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -45,7 +46,10 @@
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css" rel="stylesheet" >
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/> --}}
+
+    <link href="{{asset('css/isteven-multi-select.css')}}" rel="stylesheet" />
+    
     <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
     <script>
         webshims.setOptions('forms-ext', {types: 'date'});
@@ -81,6 +85,13 @@
                             <p>Mis leads</p>
                         </a>
                     </li>
+
+                    @if (Request::path() === 'registroLead')<li class="active">@else<li>@endif
+                            <a href="{{ url('/registroLead') }}">
+                                <i class="material-icons">person_add</i>
+                                <p>Registrar lead</p>
+                            </a>
+                        </li>
 
                     <li class="text-center" style=" color: #87898d;
                     padding: 5% 0;
@@ -145,13 +156,6 @@
                                 @endif
                                 No viables
                             </p>
-                        </a>
-                    </li>
-                    
-                    @if (Request::path() === 'registroLead')<li class="active">@else<li>@endif
-                        <a href="{{ url('/registroLead') }}">
-                            <i class="material-icons">person_add</i>
-                            <p>Registrar lead</p>
                         </a>
                     </li>
 
@@ -277,14 +281,16 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{asset('admin/js/demo.js')}}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<script>
+<script src="{{asset('js/isteven-multi-select.js')}}"></script>
+
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> --}}
+{{-- <script>
     $(".js-theme-multiple").select2({
         theme: "classic",
         placeholder: "Selecciona los servicios de interés",
         allowClear: true
     });  
-</script>
+</script> --}}
 
 
 <!-- Pagination -->

@@ -207,7 +207,10 @@
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
                                     <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                    
                                 </td>
-                                <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
+                                <td>
+                                    <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>             
+                                    <button type="button" class="btn btn-gray" ng-click="deleteLead(registro)" style="padding: 12px 20px; margin: 0;"><i class="material-icons">delete_sweep</i></button>
+                                </td>
                             </tr> 
                         </tbody>
                     </table>

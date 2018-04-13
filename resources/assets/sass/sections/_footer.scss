@@ -1,6 +1,7 @@
 #contact {
     padding-top: 1px;
     .title-general {
+        @include font-size($fontTitle);
         margin-top: 50px;
         margin-bottom: 15px;
     }
@@ -124,6 +125,15 @@
 @include breakpoint(md-max) {
     #contact {
         padding-top: 50px;
+        .content-form-contact { 
+            padding: 0;
+        }
+        .container-iconH {
+            padding: 3% 8% 5% 0%;
+            img {
+                width: 55px;
+            }
+        }
     }
     .subtitle-general {
         margin-top: 0px;
@@ -140,7 +150,7 @@
 }
 
 footer .title-general{
-    @media (max-width: 400px){
-        font-size: 40px;
-    }
+    // @media (max-width: 400px){
+    //     font-size: 40px;
+    // }
 }

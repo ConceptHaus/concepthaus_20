@@ -3,7 +3,7 @@
 *
 * Description: Random Words Home
 */
-angular.module('WelcomeController', ['app','ngMask'], function($interpolateProvider) {
+angular.module('WelcomeController', ['app','ngMask', 'isteven-multi-select'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
