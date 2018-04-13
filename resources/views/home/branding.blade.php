@@ -38,24 +38,15 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <select class="js-theme-multiple" multiple="multiple" ng-model="contacto.servicios">
-                                <option value="Branding">Branding</option>
-                                <option value="Diseño">Diseño</option>
-                                <option value="Web">Web</option>
-                                <option value="3D">3D</option>
-                                <option value="Marketing Digital">Marketing Digital</option>
-                                <option value="SEO">SEO</option>
-                                <option value="Marketing ATL">Marketing ATL</option>
-                                <option value="Marketing BTL">Marketing BTL</option>
-                                <option value="Evento">Evento</option>
-                                <option value="Relaciones Públicas">Relaciones Públicas</option>
-                                <option value="Responsabilidad Social">Responsabilidad Social</option>
-                                <option value="Interiorismo">Interiorismo</option>
-                                <option value="Producción Audiovisual">Producción Audiovisual</option>
-                                <option value="Fotografía">Fotografía</option>
-                                <option value="Otra">Otra</option>
-                            </select>
-                            <span class="msg-error" ng-messages="contactoForm.servicios.$error" ng-if="contactoForm.servicios.$touched">
+                            <div isteven-multi-select
+                                input-model="listServicies"
+                                output-model="contacto.outputServicies"
+                                button-label="icon name"
+                                item-label="icon name maker"
+                                tick-property="ticked"
+                                class="formNewSelectServicio">
+                            </div>
+                            <span class="msg-error" ng-messages="contactoForm.outputServicies.$error" ng-if="contactoForm.outputServicies.$touched">
                                 <div ng-messages-include="/messages_error.html"></div>
                             </span>
                         </div>
@@ -80,7 +71,7 @@
 
                     <div class="form-group row text-center">
                         <div class="col-sm-12">
-                            <button class="btn" id="FormBranding" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
+                            <button class="btn" id="FormBranding" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.outputServicies) || !(contacto.mensaje)">Enviar</button>
                         </div>
                     </div>
                 </form>

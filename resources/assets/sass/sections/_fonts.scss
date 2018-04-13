@@ -15,11 +15,11 @@ $fontSubMenu: (
 );
 
 $fontTitle: (
-  null  : 45px,
-  576px : 75px,
-  768px : 90px,
-  992px : 95px,
-  1024px: 100px,
+  null  : 25px,
+  576px : 35px,
+  768px : 40px,
+  992px : 40px,
+  1024px: 40px,
 );
 
 $fontSlide: (
@@ -28,6 +28,14 @@ $fontSlide: (
   768px : 55px,
   992px : 75px,
   1024px: 90px,
+);
+
+$fontWord: (
+  null  : 25px,
+  576px : 30px,
+  768px : 25px,
+  992px : 30px,
+  1024px: 30px,
 );
 
 $content-description: (

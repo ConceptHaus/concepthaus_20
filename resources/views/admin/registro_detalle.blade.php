@@ -51,40 +51,55 @@
                     </div>
                 </div>
                 <div class="card card-stats card-info-form">
-                    <form>
+                    <form id="editarRegistro" name="contactoForm">
+                        <input type="hidden" ng-model="contacto.id_registro" ng-init="contacto.id_registro = '{{$info_user[0]['id_registro']}}'">
                         <div class="row">
                             <div class="col-md-12">
                                 <label class="label-registro">Cliente</label>
-                                <p class="info-registro">{{$info_user[0]['nombre']}}</p>
-                                {{--  {{$info_user[0]['nombre']}}
-                                <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" ng-init="contacto.nombre == 'Prueba'" placeholder="Cliente" required>
+                                <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" ng-init="contacto.nombre = '{{$info_user[0]['nombre']}}'" placeholder="Cliente" required>
                                 <span class="msg-error" ng-messages="contactoForm.nombre.$error" ng-if="contactoForm.nombre.$touched">
                                     <div ng-messages-include="/messages_error.html"></div>
-                                </span>  --}}
+                                </span>
                             </div>
                             <div class="col-md-12">
                                 <label class="label-registro">Empresa</label>
-                                <p class="info-registro">{{$info_user[0]['empresa']}}</p>
+                                <input type="text" class="form-control" id="empresa" name="empresa" ng-model="contacto.empresa" ng-init="contacto.empresa = '{{$info_user[0]['empresa']}}'" placeholder="Empresa" required>
+                                <span class="msg-error" ng-messages="contactoForm.empresa.$error" ng-if="contactoForm.empresa.$touched">
+                                    <div ng-messages-include="/messages_error.html"></div>
+                                </span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="label-registro">Proyecto</label>
-                                @if($info_user[0]['proyecto'] !== null)
+                                {{-- @if($info_user[0]['proyecto'] !== null)
                                     <p class="info-registro">{{$info_user[0]['proyecto']}}</p>
                                 @else
                                     <p class="info-registro" style="color: white;">S/P</p>
-                                @endif
+                                @endif --}}
+                                <input type="text" class="form-control" id="proyecto" name="proyecto" ng-model="contacto.proyecto" ng-init="contacto.proyecto = '{{$info_user[0]['proyecto']}}'" placeholder="Proyecto" required>
+                                <span class="msg-error" ng-messages="contactoForm.proyecto.$error" ng-if="contactoForm.proyecto.$touched">
+                                    <div ng-messages-include="/messages_error.html"></div>
+                                </span>
                             </div>
                             <div class="col-md-6">
                                 <label class="label-registro">Teléfono</label>
-                                <p class="info-registro">{{$info_user[0]['telefono']}}</p>
+                                {{-- <p class="info-registro">{{$info_user[0]['telefono']}}</p> --}}
+                                <input type="text" class="form-control" id="telefono" name="telefono" mask="99999999999999999999" ng-model="contacto.telefono" ng-init="contacto.telefono = '{{$info_user[0]['telefono']}}'" ng-minlength="8"
+                                placeholder="Teléfono">
+                                <span class="msg-error" ng-messages="contactoForm.telefono.$error" ng-if="contactoForm.telefono.$touched">
+                                    <div ng-messages-include="/messages_error.html"></div>
+                                </span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <label class="label-registro">Correo</label>
-                                <p class="info-registro">{{$info_user[0]['correo']}}</p>
+                                {{-- <p class="info-registro">{{$info_user[0]['correo']}}</p> --}}
+                                <input type="email" class="form-control" id="correo" name="correo" ng-model="contacto.correo" ng-init="contacto.correo = '{{$info_user[0]['correo']}}'" placeholder="Correo">
+                                <span class="msg-error" ng-messages="contactoForm.correo.$error" ng-if="contactoForm.correo.$touched">
+                                    <div ng-messages-include="/messages_error.html"></div>
+                                </span>
                             </div>
                         </div>
                         <div class="row">
@@ -100,19 +115,45 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label class="label-registro">Nota</label>
-                                <p class="info-registro">{{$info_user[0]['mensaje']}}</p>
+                                {{-- <p class="info-registro">{{$info_user[0]['mensaje']}}</p> --}}
+                                <textarea class="form-control" id="mensaje" name="mensaje" ng-model="contacto.mensaje" placeholder="Nota" rows="4" ng-init="contacto.mensaje = '{{$info_user[0]['mensaje']}}'" required></textarea>
+                                <span class="msg-error" ng-messages="contactoForm.mensaje.$error" ng-if="contactoForm.mensaje.$touched">
+                                    <div ng-messages-include="/messages_error.html"></div>
+                                </span>
                             </div>
                         </div>
                         <div class="row content-servicios">
                             <div class="col-md-12">
                                 <label class="label-registro">Servicios</label>
                                 <div class="row">
+                                    {{-- {{$info_user[0]['pivot_servicios']}} --}}
                                     @foreach ($info_user[0]['pivot_servicios'] as $servicio)
-                                        <div class="col-md-4">
-                                            <p><img src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus"> {{ $servicio->servicio }}</p>
+                                        <div class="col-md-6">
+                                            <p>
+                                                <img src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus"> {{ $servicio->servicio }}
+                                                <button class="btn btn-delete" ng-click="deleteServicie({{ $servicio }})">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </p>
                                         </div>
                                     @endforeach
                                 </div>
+                                <div class="row select-servicies">
+                                    <div     
+                                    isteven-multi-select
+                                    input-model="listServicies"
+                                    output-model="contacto.outputServicies"
+                                    button-label="icon name"
+                                    item-label="icon name maker"
+                                    tick-property="ticked">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row text-center">
+                            <div class="col-sm-12">
+                                <button class="btn btn-gray" id="EditDatosRegistro" ng-click="editDataLead(contacto, contactoForm)" style="margin-top: 30px;">ACtualizar</button>
                             </div>
                         </div>
                     </form>
@@ -330,4 +371,5 @@
     </div>
 </div>
 </div>
+
 @endsection

@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('AdminController', ['app','ngMask','angularUtils.directives.dirPagination','angularUtils.directives.dirPagination'], function($interpolateProvider) {
+angular.module('AdminController', ['app','ngMask','angularUtils.directives.dirPagination','angularUtils.directives.dirPagination','isteven-multi-select'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
@@ -209,7 +209,6 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 console.log(data.data);
                 jQuery('#modalCheckStatus').modal('hide');
                 $window.location.reload();
-                
             }, function(err){
                 console.log(err);
             });
@@ -224,5 +223,123 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 console.log(err);
             });
     }
+
+    // Eliminar lead
+    $scope.deleteLead  = function(registro){
+        $scope.id = registro.id_registro;
+        console.log($scope.id);
+        swal({
+            title: '¿Deseas eliminar el lead No.' + $scope.id +'?',
+            text: "Una vez borrado no podrá recuperar la información.",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: "Cancelar",
+            confirmButtonText: 'Sí, eliminar'
+        }).then((result) => {
+            if (result) {
+                AdminService.postDelete(registro).then(successRegister, errorRegister);
+            }
+        })
+    }
+    var successRegister = function(data){
+        swal({
+            text:'Gracias, tu lead ha sido eliminado.',
+            imageUrl: '../img/logo/concepthaus.svg',
+            imageWidth: 210,
+            imageAlt: 'Concept Haus',
+            icon: "success",
+            confirmButtonText:'Cerrar',
+            confirmButtonColor: '#4a4f55',
+            closeOnConfirm:false
+        })
+        setTimeout(function(){
+            window.location.reload();
+        }, 2500);
+    }
+    var errorRegister = function(errors){
+        swal({
+            text:'Algo salió mal al intentar eliminar la información del lead.',
+            imageUrl: '../img/logo/concepthaus.svg',
+            imageWidth: 210,
+            imageAlt: 'Concept Haus',
+            confirmButtonText:'Cerrar',
+            confirmButtonColor: '#4a4f55',
+            closeOnConfirm:false
+        })
+    }
+
+    // Editar Lead
+    $scope.editDataLead  = function(contacto){
+        swal({
+            imageUrl: '../../img/loader.gif',
+            imageWidth: 150,
+            imageAlt: 'Concept Haus',
+            showConfirmButton: false
+        })
+
+        $scope.contacto.servicies = [];
+        angular.forEach(contacto.outputServicies, function(value, key) {
+            $scope.contacto.servicies.push(value.name);
+        })
+
+        AdminService.postEdit(contacto).then(successEditLead, errorEditLead);
+    }
+    var successEditLead = function(res){
+        swal({
+            text:'Lead actualizado.',
+            imageUrl: '../../img/logo/concepthaus.svg',
+            imageWidth: 210,
+            imageAlt: 'Concept Haus',
+            icon: "success",
+            confirmButtonText:'Cerrar',
+            confirmButtonColor: '#4a4f55',
+            closeOnConfirm:false
+        })
+        setTimeout(function(){
+            window.location.reload();
+        }, 2500);
+    }
+    var errorEditLead = function(errors){
+        swal({
+            text:'Algo salió mal en la actualización del Lead, vuelve a intentarlo.',
+            imageUrl: '../../img/logo/concepthaus.svg',
+            imageWidth: 210,
+            imageAlt: 'Concept Haus',
+            confirmButtonText:'Cerrar',
+            confirmButtonColor: '#4a4f55',
+            closeOnConfirm:false
+        })
+    }
+
+    // Delete Servicies
+    $scope.deleteServicie = function(servicio){
+        console.log(servicio);
+        AdminService.postDeleteServicie(servicio)
+        .then(function(data){
+            $window.location.reload();
+        }, function(errors){
+            console.log(errors);
+        });
+    };
+
+    // Multiple Select
+    $scope.listServicies = [
+        { icon: "<img src=../../img/concept.png />", name: "Branding", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Diseño", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "3D", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Marketing Digital", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "SEO", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Marketing ATL", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "Marketing BTL", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Evento", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Relaciones Públicas", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "Responsabilidad Social", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Interiorismo", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Producción Audiovisual", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Fotografía", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Varios", ticked: false  }
+    ]; 
 
 });

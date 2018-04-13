@@ -70,6 +70,27 @@ angular.module('RegistroService', [])
                 url:'/api/v1/registro/medio_contacto',
                 data:data,
             })
+        },
+        postDelete : function(data){
+            return $http({
+                method:'POST',
+                url:'/api/v1/registro/delete',
+                data:data,
+            })
+        },
+        postEdit : function(data){
+            return $http({
+                method:'POST',
+                url:'/api/v1/registro/edit',
+                data:data,
+            })
+        },
+        postDeleteServicie : function(data){
+            return $http({
+                method:'POST',
+                url:'/api/v1/registro/deleteServicie',
+                data:data,
+            })
         }
     }
 })

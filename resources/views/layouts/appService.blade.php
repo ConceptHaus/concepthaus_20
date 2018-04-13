@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Mobile Internet Explorer ClearType Technology -->
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
-    <link rel="icon" href="/img/favicon.png" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
     <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
     <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <!-- Facebook -->
@@ -35,7 +35,9 @@
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/panorama_viewer.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> --}}
+
+    <link href="{{asset('css/isteven-multi-select.css')}}" rel="stylesheet" />
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -47,70 +49,84 @@
 </head>
 
 <body ng-app="app">
-    <!-- Header -->
-    <!-- Main navigation -->
-    <header>
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-md-5 col-lg-4">
-                <p class="short-description">Somos un cluster especializado en la creación,
-                    <span>desarrollo y fortalecimiento de marcas.</span>
-                </p>
-            </div>
-
-            <div class="col-sm-12 col-md-2 col-lg-4 text-center">
-                <a href="{{ url('/') }}">
-                    <img class="logo" src="{{asset('img/conceptLlogoWhite.svg')}}" alt="Concept Haus">
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
-                <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
-                    <i class="fa fa-facebook"></i> /</a>
-                <a href="https://www.instagram.com/concepthausmx/" target="_blank">
-                    <i class="fa fa-instagram"></i> /</a>
-                <a href="https://www.behance.net/concepthausmx" target="_blank">
-                    <i class="fa fa-behance"></i> /</a>
-                <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
+    <!-- Particles | Loader -->
+    <div id="particles-js">
+        <div class="content-gif">
+            <div class="content-img">
+                <img src="{{asset('img/concepthaus.gif')}}" src="img/concepthaus.gif">
             </div>
         </div>
-    </header>
-    <!-- ./ Header -->
+    </div>
 
-    <!-- Content -->
-    @yield('content')
-    <!-- ./ Content -->
+    <!-- View Home -->
+    <div id="page">
 
-    <!-- Footer -->
-    <footer>
-        {{--  <section id="contact" ng-controller="RegistroController as contacto">
-            <h2 class="title-general c-gray">Contáctanos</h2>
-            <p class="subtitle-general">¿Tienes un proyecto en mente?</p>
-            <div class="contact-info">
-            </div>
-        </section>  --}}
-
-        <section id="footer">
-            <div class="row text-center">
-                <div class="col-sm-12 first">
-                    <p class="privacity">
-                        <a href="">Aviso de privacidad</a>
+        <!-- Header -->
+        <!-- Main navigation -->
+        <header>
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 col-lg-4">
+                    <p class="short-description">Somos un cluster especializado en la creación,
+                        <span>desarrollo y fortalecimiento de marcas.</span>
                     </p>
-                    <p class="title-footer">CDMX</p>
-                    <p>MIGUEL HIDALGO, CDMX</p>
-                    <p class="title-footer">Puebla</p>
-                    <p>SONATA TOWERS, WORK CENTER L.21, LOMAS DE ANGELÓPOLIS</p>
-                    <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
-                    <p class="powered">Powered & Copyright by Concepthaus</p>
                 </div>
-                <div class="col-sm-12 second">
-                    <h4 class="accenting">
-                        <img src="{{asset('img/accetingLogo.svg')}}" class="" alt="Accenting everything" width="20">
-                        <span>Accenting</span> everything
-                    </h4>
+
+                <div class="col-sm-12 col-md-2 col-lg-4 text-center">
+                    <a href="{{ url('/') }}">
+                        <img class="logo" src="{{asset('img/conceptLlogoWhite.svg')}}" alt="Concept Haus">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
+                    <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
+                        <i class="fa fa-facebook"></i> /</a>
+                    <a href="https://www.instagram.com/concepthausmx/" target="_blank">
+                        <i class="fa fa-instagram"></i> /</a>
+                    <a href="https://www.behance.net/concepthausmx" target="_blank">
+                        <i class="fa fa-behance"></i> /</a>
+                    <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
                 </div>
             </div>
-        </section>
-    </footer>
-    <!-- ./ Footer -->
+        </header>
+        <!-- ./ Header -->
+
+        <!-- Content -->
+        @yield('content')
+        <!-- ./ Content -->
+
+        <!-- Footer -->
+        <footer>
+            {{--  <section id="contact" ng-controller="RegistroController as contacto">
+                <h2 class="title-general c-gray">Contáctanos</h2>
+                <p class="subtitle-general">¿Tienes un proyecto en mente?</p>
+                <div class="contact-info">
+                </div>
+            </section>  --}}
+
+            <section id="footer">
+                <div class="row text-center">
+                    <div class="col-sm-12 first">
+                        <p class="privacity">
+                            <a href="">Aviso de privacidad</a>
+                        </p>
+                        <p class="title-footer">CDMX</p>
+                        <p>MIGUEL HIDALGO, CDMX</p>
+                        <p class="title-footer">Puebla</p>
+                        <p>SONATA TOWERS, WORK CENTER L.21, LOMAS DE ANGELÓPOLIS</p>
+                        <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
+                        <p class="powered">Powered & Copyright by Concepthaus</p>
+                    </div>
+                    <div class="col-sm-12 second">
+                        <h4 class="accenting">
+                            <img src="{{asset('img/accetingLogo.svg')}}" class="" alt="Accenting everything" width="20">
+                            <span>Accenting</span> everything
+                        </h4>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <!-- ./ Footer -->
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     {{--
@@ -137,19 +153,27 @@
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script>
-        $(".js-theme-multiple").select2({
-            theme: "classic",
-            placeholder: "Selecciona los servicios de interés",
-            allowClear: true
-        });
-    </script>
+    <script src="{{asset('js/isteven-multi-select.js')}}"></script>
+
+    <!-- Scripts Particles.js -->
+    <script src="{{asset('js/particles.js')}}"></script> 
+    <script src="{{asset('js/app-particle.js')}}"></script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLGCBXH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Script loading page -->
+    <script type="text/javascript">
+        $(window).load(function() {
+            $("#particles-js").fadeOut( 500, function() {
+                $(".content-gif").addClass("loaded");
+                $(".content-img").addClass("loaded-img");
+                $("#page").addClass("visible");
+            });
+        });
+    </script>
 
 </body>
 

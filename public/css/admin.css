@@ -142,6 +142,31 @@ Estilos generales del administrador Be Grand
           box-shadow: 0 14px 26px -12px rgba(38, 146, 207, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(38, 146, 207, 0.2);
 }
 
+.btn-delete {
+  background: transparent !important;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 0px;
+  padding: 5px 20px;
+  position: absolute;
+  right: 0;
+}
+
+.btn-delete i {
+  color: #999;
+  font-size: 18px;
+}
+
+.btn-card-header {
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  top: 11px;
+  right: 110px;
+  text-transform: inherit;
+}
+
 /* --------------------- 2.2 Inputs  --------------------- */
 .form-control, .form-group .form-control {
   font-weight: 100;
@@ -513,6 +538,7 @@ Estilos generales del administrador Be Grand
 .card-title-gral {
   position: relative;
   border-bottom: 2px solid #e73c30;
+  margin: -20px 0 0 !important;
 }
 
 .card-title-gral h4 {
@@ -610,6 +636,38 @@ Estilos generales del administrador Be Grand
   font-size: 16px;
 }
 
+#editarRegistro .form-group {
+  margin-top: 0;
+}
+
+#editarRegistro .form-control {
+  padding-left: 10px;
+}
+
+#editarRegistro .content-servicios .row {
+  padding-left: 15px;
+}
+
+#editarRegistro .content-servicios p {
+  padding-left: 0 !important;
+}
+
+.content-li-servicies li {
+  list-style-image: url("/img/concept-bullet.png");
+}
+
+.content-li-servicies li::after {
+  content: "\F014";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #cecdcd;
+  position: absolute;
+  right: 40px;
+  text-decoration: inherit;
+}
+
 .card-info-form {
   margin-top: 10px;
   padding: 20px;
@@ -639,6 +697,10 @@ Estilos generales del administrador Be Grand
   position: relative;
   top: -1px;
   width: 15px;
+}
+
+.select-servicies {
+  margin-top: 20px;
 }
 
 /* --------------------- 4.6 Perfil usuario  --------------------- */
@@ -720,6 +782,11 @@ Estilos generales del administrador Be Grand
   .cards-count-info .card-footer {
     min-height: auto;
   }
+  .btn-card-header {
+    position: relative;
+    top: 6px;
+    right: 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -755,6 +822,9 @@ Estilos generales del administrador Be Grand
   }
   /* ---- Perfil usuario  ---- */
   #profile .form-group .form-control {
+    width: 100%;
+  }
+  .form-control, .form-group .form-control {
     width: 100%;
   }
 }
