@@ -83,7 +83,13 @@
                         <i class="fa fa-instagram"></i> /</a>
                     <a href="https://www.behance.net/concepthausmx" target="_blank">
                         <i class="fa fa-behance"></i> /</a>
-                    <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a>
+                    {{-- <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a> --}}
+                    <a href="{{ url('/#contact') }}">
+                        <img class="" src="{{asset('img/elementos/mail.svg')}}" alt="ConceptHaus" width="18"> /
+                    </a>
+                    <a href="tel:+015552820707">
+                        <img class="" src="{{asset('img/elementos/phone.svg')}}" alt="ConceptHaus" width="17">
+                    </a>
                 </div>
             </div>
         </header>

@@ -89,8 +89,8 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         </script>
-        <div class="fb-customerchat" page_id="120208024724588" theme_color="#e73c30" logged_in_greeting="¡Hola!, ¿cómo podemos ayudarte?"
-            logged_out_greeting="¡Hola!, ¿cómo podemos ayudarte?">
+        <div class="fb-customerchat" page_id="120208024724588" theme_color="#e73c30" logged_in_greeting="¡Hola! ¿cómo podemos ayudarte?"
+            logged_out_greeting="¡Hola! ¿cómo podemos ayudarte?">
         </div>
         <!-- ../ Botones de contacto flotantes -->
         <!-- Header -->
@@ -116,8 +116,7 @@
                         <i class="fa fa-instagram"></i> /</a>
                     <a href="https://www.behance.net/concepthausmx" target="_blank">
                         <i class="fa fa-behance"></i> /</a>
-                    <a href="http://concepthaus.mx/blog/" target="_blank">BLOG /</a>
-
+                    {{-- <a href="http://concepthaus.mx/blog/" target="_blank">BLOG /</a> --}}
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail.svg')}}" alt="ConceptHaus" width="18"> /
                     </a>
