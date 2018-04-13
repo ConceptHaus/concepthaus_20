@@ -62,10 +62,6 @@ app.controller('CrewController', function CrewController($scope) {
     puesto: "Front Desk",
     foto: "img/crew/michel.jpg"
   },{
-    nombre: "Angelo Stifano",
-    puesto: "Sr. Designer & Space Plannig",
-    foto: "img/crew/angelo.jpg"
-  },{
     nombre: "Armando Ortíz",
     puesto: "Financial Manager",
     foto: "img/crew/armando.jpg"
@@ -142,10 +138,6 @@ app.controller('CrewController', function CrewController($scope) {
     nombre: "Caren Galindo",
     puesto: "Junior Producer",
     foto: "img/crew/caren.jpg"
-  },{
-    nombre: "Rosy",
-    puesto: "Haus Keeper",
-    foto: "img/crew/rosy.jpg"
   },{
     nombre: "Oscar Maravilla",
     puesto: "Driver & Guardian Angel",
