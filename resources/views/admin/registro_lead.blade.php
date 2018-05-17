@@ -63,6 +63,15 @@
 
                             <div class="form-group row">
                                 <div class="col-sm-12">
+                                    <textarea class="form-control" id="mensaje" name="mensaje" ng-model="contacto.mensaje" placeholder="Nota" rows="4" required></textarea>
+                                    <span class="msg-error" ng-messages="contactoForm.mensaje.$error" ng-if="contactoForm.mensaje.$touched">
+                                        <div ng-messages-include="/messages_error.html"></div>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-12">
                                     <label>Servicios</label>
                                     <div isteven-multi-select
                                         input-model="listServicies"
@@ -77,11 +86,10 @@
                                     </span>
                                 </div>
                             </div>
-                            
 
                             <div class="form-group row text-center">
                                 <div class="col-sm-12">
-                                    <button class="btn btn-red" id="EnviaDatosRegistro" ng-click="saveDataLead(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.empresa) || !(contacto.proyecto) || !(contacto.mensaje)">Agregar</button>
+                                    <button class="btn btn-red" id="EnviaDatosRegistro" ng-click="saveDataLead(contacto, contactoForm)">Agregar</button>
                                 </div>
                             </div>
                         </form>
