@@ -30,6 +30,57 @@
             top: 10px;
         }
     }
+    .contact-web {
+        background-image: url('../img/backgrounds/bgweb1.jpg');
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 5%;
+        padding-top: 8%;
+        padding-bottom: 7%;
+        p {
+            color: $white;
+            font-size: 12px;
+            margin-bottom: 7px;
+            letter-spacing: 1px;
+            position: relative;
+            top: 10px;
+        }
+    }
+    .contact-seo {
+        background-image: url('../img/backgrounds/bg2.jpg');
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 5%;
+        padding-top: 8%;
+        padding-bottom: 7%;
+        p {
+            color: $white;
+            font-size: 12px;
+            margin-bottom: 7px;
+            letter-spacing: 1px;
+            position: relative;
+            top: 10px;
+        }
+    }
+     .contact-sem {
+         background-image: url('../img/backgrounds/bg3.jpg');
+         background-position: center right;
+         background-size: cover;
+         background-repeat: no-repeat;
+         padding: 5%;
+         padding-top: 8%;
+         padding-bottom: 7%;
+         p {
+             color: $white;
+             font-size: 12px;
+             margin-bottom: 7px;
+             letter-spacing: 1px;
+             position: relative;
+             top: 10px;
+         }
+     }
     .title-general {
         color: #FFF;
         font-size: 60px;

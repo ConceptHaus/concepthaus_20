@@ -31,4 +31,16 @@ class WelcomeController extends Controller {
     public function viewBranding() {
         return view('home/branding');
     } 
+
+    public function viewWeb(){
+        return view('home/web');
+    }
+
+    public function viewSeo(){
+        return view('home/seo');
+    }
+
+    public function viewAds(){
+        return view('home/socialads');
+    }
 }

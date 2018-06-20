@@ -20,6 +20,11 @@ Route::get('/inhaus', 'WelcomeController@viewInHaus');
 Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
 Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
+Route::get('/web', 'WelcomeController@viewWeb');
+Route::get('/seo', 'WelcomeController@viewSeo');
+Route::get('/social-ads', 'WelcomeController@viewAds');
+
+
 
 // Guardar datos formulario de registro
 Route::post('/saveRegistro','RegistroController@saveDataRegistro');
