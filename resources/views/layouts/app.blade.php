@@ -61,7 +61,7 @@
     <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
-                <img src="{{asset('img/concepthaus.gif')}}" src="img/concepthaus.gif">
+                <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
     </div>

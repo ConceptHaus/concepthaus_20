@@ -19,9 +19,9 @@ $white: #fff;
   background-repeat: no-repeat;
   text-align: center;
   img {
-      width: 350px; 
+      width: 200px;
       @include breakpoint(md-max) {
-          width: 230px;
+          width: 200px;
       }   
   }
   .content-img {
