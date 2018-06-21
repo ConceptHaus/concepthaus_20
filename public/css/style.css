@@ -8616,14 +8616,14 @@ Variables | Generales
 }
 
 #particles-js img {
-  width: 350px;
+  width: 200px;
   /*===============*/
   /*==============*/
 }
 
 @media (max-width: 767px) {
   #particles-js img {
-    width: 230px;
+    width: 200px;
   }
 }
 
