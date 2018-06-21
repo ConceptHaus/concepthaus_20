@@ -85,7 +85,7 @@
                 <div class="col-md-12 text-center interiorPuerta">
                     <img class="logo" src="{{asset('img/logo/concepthaus.svg')}}">
                 </div>
-                <div class="col-md-4 offset-md-4 text-center info-descripBranding">
+                <div class="col-md-6 offset-md-3 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">+ SEO.</span>
                         Realizamos estrategias profundas de posicionamiento web orgánico en buscadores a través del estudio de palabras clave y la implementación de los más de 200 criterios del algoritmo Paloma de Google. De esta manera, acercamos la oferta de determinada empresa a sus clientes potenciales ante una búsqueda dada sin necesidad de inversión de pauta online, generando leads y por consecuencia, ventas.
@@ -106,7 +106,50 @@
             </div>
         </a>
     </section>
-    <section id="gridInterior" class="container-fluid">
+    <section id="clients">
+    <h2 class="seo-title-general">
+      <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Clientes
+    </h2>
+    <div class="row text-center align-items-center">
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/citibanamex.svg')}}" class="client-brand brand1" alt="Concept Haus / Citibanamex">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/baco.svg')}}" class="client-brand brand2" alt="Concept Haus / Baco">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/soulcore.svg')}}" class="client-brand brand3" alt="Concept Haus / Soulcore">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/fox.svg')}}" class="client-brand brand4" alt="Concept Haus / Fox">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/nationalgeo.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/walkingdead.svg')}}" class="client-brand brand6" alt="Concept Haus / The Walking Dead">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/foxSports.svg')}}" class="client-brand brand7" alt="Concept Haus / Fox Sports">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/discovery.svg')}}" class="client-brand brand8" alt="Concept Haus / Discovery">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/hidalgo.svg')}}" class="client-brand brand9" alt="Concept Haus / Hidalgo">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/roberts.svg')}}" class="client-brand brand10" alt="Concept Haus / Roberts">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/clarasol.svg')}}" class="client-brand brand11" alt="Concept Haus / Clarasol">
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <img src="{{asset('img/clients/chilimbalam.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+    </div>
+  </section>
+    {{-- <section id="gridInterior" class="container-fluid">
         <div class="row">
             <div class="col-md-3" ng-repeat="project in collectionConcept | filter:{ fields: 'Branding' }" style="padding: 0;">
                 <div class="containerProject">
@@ -124,6 +167,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 </div>
 @endsection
