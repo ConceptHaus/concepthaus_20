@@ -111,22 +111,22 @@
       <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Clientes
     </h2>
     <div class="row text-center align-items-center">
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-2">
         <img src="{{asset('img/clients/citibanamex.svg')}}" class="client-brand brand1" alt="Concept Haus / Citibanamex">
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-2">
         <img src="{{asset('img/clients/apolo.svg')}}" class="client-brand brand2" alt="Concept Haus / Baco">
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-2">
         <img src="{{asset('img/clients/tracker.svg')}}" class="client-brand brand4" alt="Concept Haus / Fox">
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-2">
         <img src="{{asset('img/clients/autoefectivo.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-2">
         <img src="{{asset('img/clients/indeporte.png')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-2">
         <img src="{{asset('img/clients/quality.svg')}}" class="client-brand brand3" alt="Concept Haus / Soulcore">
       </div>
       
