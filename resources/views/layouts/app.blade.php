@@ -362,7 +362,7 @@
     <!-- Script loading page -->
     <script type="text/javascript">
         $(window).load(function() {
-            $("#particles-js").fadeOut( 500, function() {
+            $("#particles-js").fadeOut( 400, function() {
                 $(".content-gif").addClass("loaded");
                 $(".content-img").addClass("loaded-img");
                 $("#page").addClass("visible");
