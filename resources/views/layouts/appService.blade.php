@@ -53,7 +53,7 @@
     <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
-                <img src="{{asset('img/concepthaus.gif')}}" src="img/concepthaus.gif">
+                <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
     </div>
@@ -173,7 +173,7 @@
     <!-- Script loading page -->
     <script type="text/javascript">
         $(window).load(function() {
-            $("#particles-js").fadeOut( 500, function() {
+            $("#particles-js").fadeOut( 400, function() {
                 $(".content-gif").addClass("loaded");
                 $(".content-img").addClass("loaded-img");
                 $("#page").addClass("visible");

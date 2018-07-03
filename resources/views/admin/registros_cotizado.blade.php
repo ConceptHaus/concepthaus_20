@@ -206,8 +206,10 @@
                                     <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
                                 </td>
                                 <td>
-                                    <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>             
-                                    <button type="button" class="btn btn-gray" ng-click="deleteLead(registro)" style="padding: 12px 20px; margin: 0;"><i class="material-icons">delete_sweep</i></button>
+                                    <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>             
+                                    <button type="button" class="btn btn-gray btn-table-action" ng-click="deleteLead(registro)" style="padding: 12px 20px; margin: 0;"><i class="material-icons">delete_sweep</i></button>
+                                    <a href="mailto:<% registro.correo %>?&subject=ConceptHaus&body=Hola,%20gracias%20por%20contactarnos,%20hemos%20recibido%20tu%20solicitud%20de%20información.%20En%20breve%20nuestro%20equipo%20de%20ventas%20se%20pondrá%20en%20contacto%20contigo.%20ConceptHaus…%20#AccentingEverything."><button type="button" class="btn btn-gray btn-table-action btn-mail"><i class="far fa-envelope" aria-hidden="true"></i></button></a>  
+                                    <a id="whatsapp-message" href="https://api.whatsapp.com/send?phone=521<% registro.telefono %>&amp;text=Hola, gracias por contactarnos, hemos recibido tu solicitud de información. En breve nuestro equipo de ventas se pondrá en contacto contigo. ConceptHaus… #AccentingEverything." target="_blank"><button type="button" class="btn btn-gray btn-table-action btn-whatsapp"><i class="fab fa-whatsapp"></i></button></a>         
                                 </td>
                             </tr> 
                         </tbody>

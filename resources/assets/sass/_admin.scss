@@ -90,6 +90,23 @@ Estilos generales del administrador Be Grand
     right: 110px;
     text-transform: inherit;
 }
+.btn-table-action {
+    padding: 7px 8px !important;
+}
+.btn-mail, .btn-whatsapp {
+    margin-right: 5px;
+    padding: 12px 20px; 
+}
+.btn-mail {
+    i {
+        font-size: 16px!important;
+    }
+}
+.btn-whatsapp {
+    i {
+        font-size: 18px!important;
+    }
+}
 /* --------------------- 2.2 Inputs  --------------------- */
 .form-control, .form-group .form-control {
     font-weight: 100;
