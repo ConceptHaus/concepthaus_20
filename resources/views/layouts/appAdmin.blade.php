@@ -258,8 +258,8 @@
 {{-- Pagination --}}
 <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
 <script src="{{asset('angular-app/angular-app.js')}}"></script>
-<script src="{{asset('admin/js/dirPagination.js')}}" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.4.0/angular-sanitize.js"></script>
+{{-- <script src="{{asset('admin/js/dirPagination.js')}}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.4.0/angular-sanitize.js"></script> --}}
 {{-- Pagination --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.3.15/angular-resource.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
