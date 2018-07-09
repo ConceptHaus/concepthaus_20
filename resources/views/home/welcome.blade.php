@@ -14,8 +14,8 @@
       <div class="col-sm-12 col-md-6" style="padding-top: 9px;">
         {{-- <img class="acentoHome" src="{{asset('img/concept.svg')}}" alt="" width="100"> --}}
         <span class="word p-bottom-left"><% randomWords[0].word %></span>
-        <p class="description-p c-gray">Somos un cluster creativo especializado en la creación, desarrollo y fortalecimiento de marca compuesto 
-          por tres empresas hermanas. ConceptHaus: <b>agencia de publicidad</b> y <b>marketing digital</b>, InHaus Films: <b>casa productora</b> y TreeHaus: 
+        <p class="description-p c-gray">Somos un cluster creativo especializado en la creación, desarrollo y fortalecimiento de marca compuesto
+          por tres empresas hermanas. ConceptHaus: <b>agencia de publicidad</b> y <b>marketing digital</b>, InHaus Films: <b>casa productora</b> y TreeHaus:
           empresa de responsabilidad social y empresarial a favor de la <b>sustentabilidad</b>.</p>
       </div>
       <div class="col-sm-12 col-md-6 text-right c-gray">

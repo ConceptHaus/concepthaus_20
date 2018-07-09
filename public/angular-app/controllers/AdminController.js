@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('AdminController', ['app','ngMask','ngSanitize' ,'isteven-multi-select'], function($interpolateProvider) {
+angular.module('AdminController', ['app','ngMask','isteven-multi-select'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
