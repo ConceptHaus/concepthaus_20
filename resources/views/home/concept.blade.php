@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 @section('content')
 
 <div ng-controller="ProyectosController">
@@ -10,9 +10,9 @@
                     <img class="logo" src="{{asset('img/logo/concepthaus.svg')}}">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">Concepthaus Creative Agency.</span>
-                        Es una casa creativa especializada en estrategias de marketing, branding, campañas publicitarias, 
-                        creación de identidad corporativa, diseño gráfico, motion graphics,diseño de empaque, programación y 
-                        diseño de páginas web; e-commerce, desarrollo de aplicaciones, posicionamiento web SEO & SEM, así como la 
+                        Es una casa creativa especializada en estrategias de marketing, branding, campañas publicitarias,
+                        creación de identidad corporativa, diseño gráfico, motion graphics,diseño de empaque, programación y
+                        diseño de páginas web; e-commerce, desarrollo de aplicaciones, posicionamiento web SEO & SEM, así como la
                         implementación de estrategias de marketing digital, content management y relaciones públicas.
                         <br><br>
                         <span class="c-grayLight" >Amamos a los que se atreven y por eso contamos con un plan de apoyo a emprendedores.</span>
@@ -40,7 +40,7 @@
                     <a class="projectName" href="<% project.url %>" target="_blank">
                         <img class="card-img-top" ng-src="<% project.covers.original %>">
                         <div class="containerInfo">
-                            <h2> <% project.name %></h2>
+                            <h2> <% project.name %> </h2>
                             <p class="projectCliente">
                                 <span ng-repeat="field in project.fields">
                                     <% field %>
