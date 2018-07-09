@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Registros extends Model {
     public $table = 'registros';
-    
+
     protected $primaryKey = 'id_registro';
     protected $fillable = [
         'nombre',
@@ -75,6 +75,7 @@ class Registros extends Model {
         ->with('pivot_mailing.mailing')
         ->with('pivot_medios.medios_contacto')
         ->with('pivot_status.status')
+        ->with('pivot_forms')
         ->selectRaw('registros.*, pivot_status.id_status')
         ->get();
     }
@@ -125,6 +126,6 @@ class Registros extends Model {
         ->with('pivot_medios.medios_contacto')
         ->with('pivot_status.status')
         ->orderBy('registros.id_registro')
-        ->get(); 
+        ->get();
     }
 }

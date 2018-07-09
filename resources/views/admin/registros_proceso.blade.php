@@ -1,5 +1,11 @@
 @extends('layouts.appAdmin')
-
+<style media="screen">
+  .loading-img{
+    width: 80px !important;
+    height: 80px !important;
+    margin-top: 10px !important;
+  }
+</style>
 @section('content')
     <div class="container-fluid" ng-controller="AdminController" ng-cloak>
     <div class="row">
@@ -79,7 +85,7 @@
                                             <option value="3">No viable</option>
                                             <option value="">Todos</option>
                                         </select>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-3 col-md-3">
                                     <div class="form-group">
@@ -89,7 +95,7 @@
                                             <option value="Facebook">Facebook</option>
                                             <option value="">Todos</option>
                                         </select>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-3 col-md-3">
                                     <input class="form-control" type="date" id="fechaInicial" name="fechaInicial" ng-model="fecha.inicial" placeholder="yyyy-MM-dd" required/>
@@ -190,32 +196,44 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="registro in statusProceso | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
+                            <tr dir-paginate="registro in statusProceso | itemsPerPage: 15 | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
                                 <td><% registro.id_registro %></td>
                                 <td>
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
                                     <i ng-if="registro.fuente == 'Facebook'" class="fab fa-facebook-f facebook" aria-hidden="true"></i>
-                                    <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>                                    
+                                    <p ng-if="registro.fuente != 'Facebook' && registro.fuente != 'Google'"><% registro.fuente %></p>
                                 </td>
-                                <td><% registro.proyecto %></td>
+                                <td>
+                                  <span ng-if="registro.proyecto != null">
+                                      <% registro.proyecto %>
+                                  </span>
+                                  <span ng-if="registro.proyecto == null">
+                                        <% registro.pivot_forms.tipo %>
+                                  </span>
+                                </td>
                                 <td><% registro.empresa %></td>
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
                                     <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                                     <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
-                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                    
+                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
                                 </td>
                                 <td>
-                                    <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>             
+                                    <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
                                     <button type="button" class="btn btn-gray btn-table-action" ng-click="deleteLead(registro)" style="padding: 12px 20px; margin: 0;"><i class="material-icons">delete_sweep</i></button>
-                                    <a href="mailto:<% registro.correo %>?&subject=ConceptHaus&body=Hola,%20gracias%20por%20contactarnos,%20hemos%20recibido%20tu%20solicitud%20de%20información.%20En%20breve%20nuestro%20equipo%20de%20ventas%20se%20pondrá%20en%20contacto%20contigo.%20ConceptHaus…%20#AccentingEverything."><button type="button" class="btn btn-gray btn-table-action btn-mail"><i class="far fa-envelope" aria-hidden="true"></i></button></a>  
-                                    <a id="whatsapp-message" href="https://api.whatsapp.com/send?phone=521<% registro.telefono %>&amp;text=Hola, gracias por contactarnos, hemos recibido tu solicitud de información. En breve nuestro equipo de ventas se pondrá en contacto contigo. ConceptHaus… #AccentingEverything." target="_blank"><button type="button" class="btn btn-gray btn-table-action btn-whatsapp"><i class="fab fa-whatsapp"></i></button></a>         
+                                    <a href="mailto:<% registro.correo %>?&subject=ConceptHaus&body=Hola,%20gracias%20por%20contactarnos,%20hemos%20recibido%20tu%20solicitud%20de%20información.%20En%20breve%20nuestro%20equipo%20de%20ventas%20se%20pondrá%20en%20contacto%20contigo.%20ConceptHaus…%20#AccentingEverything."><button type="button" class="btn btn-gray btn-table-action btn-mail"><i class="far fa-envelope" aria-hidden="true"></i></button></a>
+                                    <a id="whatsapp-message" href="https://api.whatsapp.com/send?phone=521<% registro.telefono %>&amp;text=Hola, gracias por contactarnos, hemos recibido tu solicitud de información. En breve nuestro equipo de ventas se pondrá en contacto contigo. ConceptHaus… #AccentingEverything." target="_blank"><button type="button" class="btn btn-gray btn-table-action btn-whatsapp"><i class="fab fa-whatsapp"></i></button></a>
                                 </td>
-                            </tr> 
+                            </tr>
                         </tbody>
                     </table>
-                    <dir-pagination-controls max-size="15" boundary-links="true" ></dir-pagination-controls>
+                    <div ng-show='show'>
+                      <center>
+                        <img class="loading-img" src="{{asset('img/loading_concept.gif')}}" alt="loader">
+                      </center>
+                    </div>
+                    <dir-pagination-controls></dir-pagination-controls>
                     @if(count($proceso) == 0)
                     <div class="content-msg-empty">
                         <h5 class="text-center">No hay leads registrados.</h5>
