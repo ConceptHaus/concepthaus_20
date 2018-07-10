@@ -53,16 +53,16 @@
 <body ng-app="app">
 
     <!-- Particles | Loader -->
-    {{-- <div id="particles-js">
+    <!-- <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
                 <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
-    </div> --}}
+    </div> -->
 
     <!-- View Home -->
-    {{-- id="page" --}}
+    <!-- id="page" -->
     <div>
         <!-- Botones de contacto flotantes -->
         <script>
@@ -227,13 +227,13 @@
                     <div class="row">
                         <div class="col-sm">
                             <h5>CDMX</h5>
-                            <a href="tel:+015552820707">01 (55) 52820707</a>
+                            <a href="tel:+015552820707">(55) 52820707</a>
                             <p class="p-address">contacto@concepthaus.mx</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
                         </div>
                         <div class="col-sm">
                             <h5>Puebla</h5>
-                            <a href="tel:+012222954243">01 (222) 2954243</a>
+                            <a href="tel:+012222954243">(222) 2954243</a>
                             <p class="p-address">contactopuebla@concepthaus.mx</p>
                             <p class="p-address">Sonata Towers, Work Center L.21, Lomas de Angelópolis</p>
                         </div>

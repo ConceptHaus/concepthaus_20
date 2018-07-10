@@ -9,7 +9,7 @@
             {{-- project-animate --}}
             <div class="col-md-4 w25" ng-repeat="project in projects" ng-if="project.id == '55917115' || project.id == '55918277' || project.id == '55916489'">
                 <div class="containerProject project-effect">
-                    <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                    <a class="projectName" href="<% project.url %>" target="_blank">
                         <figure class="effect-goliath">
                             <img ng-src="<% project.covers.original %>" />
                             <figcaption>
