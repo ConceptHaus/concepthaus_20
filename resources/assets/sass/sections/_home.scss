@@ -99,7 +99,7 @@ Section Home | Slider
 }
 
 #home-description {
-    margin-top: 58px;
+    margin-top: 100px;
     margin-bottom: 55px;
     padding: 2% 7%;
     .word {
@@ -150,7 +150,7 @@ Section Home | Slider
 #home-doors {
     .door {
         margin: auto;
-        width: 60%;
+        width: 50%;
         @include breakpoint(md-max) {
             width: 35%;
         }
@@ -197,22 +197,6 @@ Section Home | Slider
         margin-top: 40px;
         margin-bottom: 40px;
     }
-    .projectCliente {
-        color: $grayLight;
-        font-size: 10px;  
-        letter-spacing: 1px; 
-        padding-left: 20px;
-    }
-    .titleProjectCliente {
-        color: $grayDark;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: .5px;
-        margin-bottom: 0;
-        margin-top: 20px;
-        padding-left: 20px;
-        text-transform: uppercase;
-    }
 }
 
 #plug {
@@ -220,7 +204,6 @@ Section Home | Slider
     height: 130px;
     .plug-content {
         position: relative;
-        // height: 130px;
         width: 100%;
         margin: auto;
         float: left;
@@ -230,26 +213,28 @@ Section Home | Slider
         img {
             position: absolute;
             transition: opacity .5s ease-in-out;
-            width: 85px;
+            width: 75px;
         }
         img.top:hover {
             opacity: 0;
         }
-        &:before {
-            content: ']';
-            font-size: 35px;
-            margin-right: 30px;
-            margin-top: 10px;
-            position: relative;
-            top: 15px;
-        }
-        &:after {
-            content: '[';
-            font-size: 35px;
-            margin-left: 123px;
-            position: relative;
-            top: 15px;
-        }
+
+        // Corchetes contacto
+        // &:before {
+        //     content: ']';
+        //     font-size: 35px;
+        //     margin-right: 30px;
+        //     margin-top: 10px;
+        //     position: relative;
+        //     top: 15px;
+        // }
+        // &:after {
+        //     content: '[';
+        //     font-size: 35px;
+        //     margin-left: 123px;
+        //     position: relative;
+        //     top: 15px;
+        // }
     }
     .plug-content.plug-green {
         @extend .c-green;

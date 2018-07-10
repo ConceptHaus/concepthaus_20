@@ -65,6 +65,31 @@ class KernelTest extends TestCase
         $this->assertNull($clone->getContainer());
     }
 
+    public function testInitializeContainerClearsOldContainers()
+    {
+        $fs = new Filesystem();
+        $legacyContainerDir = __DIR__.'/Fixtures/cache/custom/ContainerA123456';
+        $fs->mkdir($legacyContainerDir);
+        touch($legacyContainerDir.'.legacy');
+
+        $kernel = new CustomProjectDirKernel();
+        $kernel->boot();
+
+        $containerDir = __DIR__.'/Fixtures/cache/custom/'.substr(get_class($kernel->getContainer()), 0, 16);
+        $this->assertTrue(unlink(__DIR__.'/Fixtures/cache/custom/FixturesCustomDebugProjectContainer.php.meta'));
+        $this->assertFileExists($containerDir);
+        $this->assertFileNotExists($containerDir.'.legacy');
+
+        $kernel = new CustomProjectDirKernel(function ($container) { $container->register('foo', 'stdClass')->setPublic(true); });
+        $kernel->boot();
+
+        $this->assertFileExists($containerDir);
+        $this->assertFileExists($containerDir.'.legacy');
+
+        $this->assertFileNotExists($legacyContainerDir);
+        $this->assertFileNotExists($legacyContainerDir.'.legacy');
+    }
+
     public function testBootInitializesBundlesAndContainer()
     {
         $kernel = $this->getKernel(array('initializeBundles', 'initializeContainer'));
@@ -824,16 +849,16 @@ EOF;
         $kernel = new CustomProjectDirKernel();
         $kernel->boot();
 
-        $this->assertSame($containerClass, get_class($kernel->getContainer()));
+        $this->assertInstanceOf($containerClass, $kernel->getContainer());
         $this->assertFileExists($containerFile);
         unlink(__DIR__.'/Fixtures/cache/custom/FixturesCustomDebugProjectContainer.php.meta');
 
         $kernel = new CustomProjectDirKernel(function ($container) { $container->register('foo', 'stdClass')->setPublic(true); });
         $kernel->boot();
 
-        $this->assertTrue(get_class($kernel->getContainer()) !== $containerClass);
+        $this->assertNotInstanceOf($containerClass, $kernel->getContainer());
         $this->assertFileExists($containerFile);
-        $this->assertFileExists(dirname($containerFile).'.legacyContainer');
+        $this->assertFileExists(dirname($containerFile).'.legacy');
     }
 
     public function testKernelPass()
@@ -874,6 +899,21 @@ EOF;
         $kernel->handle($request);
 
         $this->assertEquals(1, ResettableService::$counter);
+    }
+
+    /**
+     * @group time-sensitive
+     */
+    public function testKernelStartTimeIsResetWhileBootingAlreadyBootedKernel()
+    {
+        $kernel = $this->getKernelForTest(array('initializeBundles'), true);
+        $kernel->boot();
+        $preReBoot = $kernel->getStartTime();
+
+        sleep(3600); //Intentionally large value to detect if ClockMock ever breaks
+        $kernel->reboot(null);
+
+        $this->assertGreaterThan($preReBoot, $kernel->getStartTime());
     }
 
     /**
@@ -945,10 +985,10 @@ EOF;
         return $kernel;
     }
 
-    protected function getKernelForTest(array $methods = array())
+    protected function getKernelForTest(array $methods = array(), $debug = false)
     {
         $kernel = $this->getMockBuilder('Symfony\Component\HttpKernel\Tests\Fixtures\KernelForTest')
-            ->setConstructorArgs(array('test', false))
+            ->setConstructorArgs(array('test', $debug))
             ->setMethods($methods)
             ->getMock();
         $p = new \ReflectionProperty($kernel, 'rootDir');
@@ -1022,7 +1062,7 @@ class CustomProjectDirKernel extends Kernel
 
 class PassKernel extends CustomProjectDirKernel implements CompilerPassInterface
 {
-    public function __construct(\Closure $buildContainer = null)
+    public function __construct()
     {
         parent::__construct();
         Kernel::__construct('pass', true);

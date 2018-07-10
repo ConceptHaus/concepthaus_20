@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
+
+// require 'vendor/autoload.php';
+use GuzzleHttp\Client;
+// use GuzzleHttp\Exception\RequestException;
+// use GuzzleHttp\Psr7\Response;
+
+
 class WelcomeController extends Controller {
     public function viewHome() {
         return view('home/welcome');
@@ -42,5 +49,39 @@ class WelcomeController extends Controller {
 
     public function viewAds(){
         return view('home/socialads');
+    }
+
+    // Detalle proyecto
+    public function viewDetailProject($id){
+
+        // $client = new \GuzzleHttp\Client(); 
+        // $result = $client->request('GET', 'https://www.behance.net/v2/projects/'.$id,  [
+        //     'query' => [
+        //         'client_id' => 'aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg'
+        //     ],
+        //     'headers' => [
+        //         // 'Accept' => 'application/json',
+        //         // 'Content-type' => 'application/json'
+        //         'Content-type' => 'application/json; charset=utf-8',
+        //         'Accept' => 'application/json',
+        //     ]
+        // ]);
+
+        // $data['details'] = $result->getBody();
+
+        $client = new Client();
+        $res = $client->request('GET', 'https://www.behance.net/v2/projects/'.$id, [
+            'query' => [
+                'client_id' => 'aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg'
+            ]
+        ]);
+        // echo $res->getStatusCode();
+        // "200"
+        // echo $res->getHeader('content-type');
+        // 'application/json; charset=utf8'
+        // echo $res->getBody();
+        // {"type":"User"...'
+        $data['details'] = $res->getBody();
+        return view('home/project',$data);
     }
 }

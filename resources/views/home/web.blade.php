@@ -128,7 +128,7 @@
         <div class="row">
             <div class="col-md-3" ng-repeat="project in collectionConcept | filter:{ fields: 'Web' }" style="padding: 0;">
                 <div class="containerProject">
-                    <a class="projectName" href="<% project.url %>" target="_blank">
+                    <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
                         <img class="card-img-top" ng-src="<% project.covers.original %>">
                         <div class="containerInfo">
                             <h2> <% project.name %></h2>

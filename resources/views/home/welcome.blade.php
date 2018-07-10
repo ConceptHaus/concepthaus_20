@@ -64,6 +64,7 @@
       </div>
     </div>
   </section>
+
   <!-- Section | Home Plug -->
   <section id="plug">
     <a href="{{ url('/#contact') }}">
@@ -82,138 +83,206 @@
       </h2>
       </div>
     </div>
-    <div class="row">
+
+    <div class="row">          
       <!-- ChilimBalam -->
-      <div class="col-md-6 w50">
-        <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '60761857'">
-          <a class="projectName" href="<% project.url %>" target="_blank">
-            <img class="card-img-top" ng-src="<% project.covers.original %>">
+      <div class="col-md-6 w50 project-animate">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'">
+          <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+            <figure class="effect-goliath">
+              <img ng-src="<% project.covers.original %>"/>
+              <figcaption>
+                <p class="projectCliente">
+                  <span class="title"><% project.name %></span> <br>
+                  <span ng-repeat="field in project.fields"><% field %></span>
+                </p>
+              </figcaption>			
+            </figure>
           </a>
-          <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-          <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
-          {{-- <div class="containerInfo">
-            <h2><% project.name %></h2>
-            <p class="projectCliente"><span ng-repeat="field in project.fields"><% field %></span></p>
-          </div> --}}
         </div>
       </div>
+
       <!-- Discovery Kids && Sistema Eco -->
-      <div class="col-md-3 w25">
-        <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '61179187' || project.id == '56727549'">
-          <a class="projectName" href="<% project.url %>" target="_blank">
-            <img class="card-img-top" ng-src="<% project.covers.original %>">
-          </a>
-          <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-          <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+      <div class="col-md-3 w25 project-animate-2">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' || project.id == '56727549'">
+            <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>			
+              </figure>
+            </a>
         </div>
       </div>
       <!-- Clarasol && Fox/Latinoamérica -->
-      <div class="col-md-3 w25">
-        <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '55916489' || project.id == '56050953'">
-          <a class="projectName" href="<% project.url %>" target="_blank">
-            <img class="card-img-top" ng-src="<% project.covers.original %>">
-          </a>
-          <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-          <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+      <div class="col-md-3 w25 project-animate-3">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489' || project.id == '56050953'">
+            <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>			
+              </figure>
+            </a>
         </div>
       </div>
     </div>
     <div class="row">
       <!-- Zaxic && El Encanto -->
-      <div class="col-md-3 w25">
-        <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '55917115' || project.id == '55916457'">
-          <a class="projectName" href="<% project.url %>" target="_blank">
-            <img class="card-img-top" ng-src="<% project.covers.original %>">
-          </a>
-          <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-          <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
-          </a>
+      <div class="col-md-3 w25 project-animate-3">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115' || project.id == '55916457'">
+            <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>			
+              </figure>
+            </a>
         </div>
       </div>
       <!-- The Walking Dead && Zayrik -->
-      <div class="col-md-3 w25">
-        <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '60762011' || project.id == '56725201'">
-          <a class="projectName" href="<% project.url %>" target="_blank">
-            <img class="card-img-top" ng-src="<% project.covers.original %>">
-          </a>
-          <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-          <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
-          </a>
+      <div class="col-md-3 w25 project-animate-2">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60762011' || project.id == '56725201'">
+            <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>			
+              </figure>
+            </a>
         </div>
       </div>
       <!-- Petmail -->
-      <div class="col-md-6 w50">
-        <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '55918277'">
-          <a class="projectName" href="<% project.url %>" target="_blank">
-            <img class="card-img-top" ng-src="<% project.covers.original %>">
-          </a>
-          <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-          <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+      <div class="col-md-6 w50 project-animate">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55918277'">
+            <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>			
+              </figure>
+            </a>
         </div>
       </div>
     </div>
 
     <div class="row">
         <!-- Myst -->
-        <div class="col-md-6 w50">
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '55917031'">
-            <a class="projectName" href="<% project.url %>" target="_blank">
-              <img class="card-img-top" ng-src="<% project.covers.original %>">
-            </a>
-            <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-            <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+        <div class="col-md-6 w50 project-animate">
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917031'">
+              <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>			
+                </figure>
+              </a>
           </div>
         </div>
-        <div class="col-md-3 w25">
+        <div class="col-md-3 w25 project-animate-2">
           <!-- La aldea &&  Orígenes Orgánicos -->
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '62011457' || project.id == '61222067'">
-            <a class="projectName" href="<% project.url %>" target="_blank">
-              <img class="card-img-top" ng-src="<% project.covers.original %>">
-            </a>
-            <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-            <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011457' || project.id == '61222067'">
+              <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>			
+                </figure>
+              </a>
           </div>
         </div>
-        <div class="col-md-3 w25">
+        <div class="col-md-3 w25 project-animate-3">
           <!-- Harlekin &&  Portamar -->
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '62568395' || project.id == '62011497'">
-            <a class="projectName" href="<% project.url %>" target="_blank">
-              <img class="card-img-top" ng-src="<% project.covers.original %>">
-            </a>
-            <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-            <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568395' || project.id == '62011497'">
+              <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>			
+                </figure>
+              </a>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 w25">
+        <div class="col-md-3 w25 project-animate-3">
           <!-- Fox Life && Querametik -->
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '56049371' || project.id == '62568375'">
-            <a class="projectName" href="<% project.url %>" target="_blank">
-              <img class="card-img-top" ng-src="<% project.covers.original %>">
-            </a>
-            <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-            <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56049371' || project.id == '62568375'">
+              <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>			
+                </figure>
+              </a>
           </div>
         </div>
-        <div class="col-md-3 w25">
+        <div class="col-md-3 w25 project-animate-2">
           <!-- Equo && NFL -->
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '62011409' || project.id == '56724979'">
-            <a class="projectName" href="<% project.url %>" target="_blank">
-              <img class="card-img-top" ng-src="<% project.covers.original %>">
-            </a>
-            <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-            <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011409' || project.id == '56724979'">
+              <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>			
+                </figure>
+              </a>
           </div>
         </div>
-        <div class="col-md-6 w50">
+        <div class="col-md-6 w50 project-animate">
           <!-- Baco -->
-          <div class="containerProject" ng-repeat="project in projects" ng-if="project.id == '61179151'">
-            <a class="projectName" href="<% project.url %>" target="_blank">
-              <img class="card-img-top" ng-src="<% project.covers.original %>">
-            </a>
-            <h2 class="titleProjectCliente c-gray"><% project.name %></h2>
-            <p class="projectCliente c-gray"><span ng-repeat="field in project.fields"><% field %></span></p>
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179151'">
+              <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>			
+                </figure>
+              </a>
           </div>
         </div>
       </div>
