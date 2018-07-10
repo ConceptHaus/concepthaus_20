@@ -9,7 +9,8 @@ angular.module('ProyectosController', ['app','ngMask'], function($interpolatePro
 });
 
 app.controller('ProyectosController', function ProyectosController($http, $scope) {
-  // $routeParams
+
+  // Detalle Proyecto
   // $scope.proyecto = {};
   // $http.jsonp('https://api.behance.net/v2/projects/' + $routeParams.id + '?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
   //   .then(function (response) {

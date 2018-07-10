@@ -50,16 +50,17 @@
 
 <body ng-app="app">
     <!-- Particles | Loader -->
-    <div id="particles-js">
+    <!-- <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
                 <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- View Home -->
-    <div id="page">
+    <!-- id="page" -->
+    <div>
 
         <!-- Header -->
         <!-- Main navigation -->

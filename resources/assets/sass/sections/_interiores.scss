@@ -20,9 +20,10 @@
     @extend .centraImg;
   }
   .puerta{
-    width: 20% !important;
+    width: 15%;
     @include breakpoint(md-max) {
-      width: 40% !important;
+      margin-top: 30px;
+      width: 25%;
     }
   }
   .logo{

@@ -11,26 +11,21 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
     <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
-    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
-    />
+    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"
-    />
+    <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta property="og:image" content="{{asset('img/image-meta.png')}}" />
-    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
-    />
+    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."
-    />
-    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"
-    />
+    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta name="twitter:domain" content="Concept Haus" />
-
+    <!-- SEO -->
     <meta name="google-site-verification" content="Jjq4yB7AU7iMqXWs12A8VPnopI3ubrcNKQ-6oLRAZ0s" />
 
     <link rel="canonical" href="https://concepthaus.mx/">
@@ -39,7 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/panorama_viewer.min.css"> 
+    {{-- <link rel="stylesheet" href="/css/panorama_viewer.min.css">  --}}
 
     <link href="{{asset('css/isteven-multi-select.css')}}" rel="stylesheet" />
     {{--
@@ -58,16 +53,17 @@
 <body ng-app="app">
 
     <!-- Particles | Loader -->
-    <div id="particles-js">
+    <!-- <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
                 <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- View Home -->
-    <div id="page">
+    <!-- id="page" -->
+    <div>
         <!-- Botones de contacto flotantes -->
         <script>
             window.fbAsyncInit = function () {
@@ -93,20 +89,77 @@
             logged_out_greeting="¡Hola! ¿cómo podemos ayudarte?">
         </div>
         <!-- ../ Botones de contacto flotantes -->
+
         <!-- Header -->
         <!-- Main navigation -->
-
-        <header>
+        <header class="nav-down">
             <div class="row align-items-center">
-                <div class="col-sm-12 col-md-5 col-lg-4">
-                    <p class="short-description">Somos un cluster especializado en la creación,
-                        <span>desarrollo y fortalecimiento de marcas.</span>
-                    </p>
+                <div class="col-sm-12 col-md-1 col-lg-1 content-logo">
+                    <a href="{{ url('/') }}">
+                        <img class="logo" src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus">
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-9 col-lg-9 navbarTop text-center pd-none">
+
+                    <div class="container hidden-sm-down pd-none">
+                        <div class="row mr-none">
+                            <div class="col align-self-center text-center pd-none">
+                                <a href="{{ url('/crew') }}">CREW</a>
+                                <a href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
+                                <a href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
+                                <a href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
+                                <a href="{{ url('/startups') }}">STARTUPS</a>
+                                <a href="{{ url('/#contact') }}">CONTACTO</a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-sm-up">
+                        <button class="navButtom navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link active" href="{{ url('/crew') }}">CREW</a>
+                                <a class="nav-item nav-link" href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
+                                <a class="nav-item nav-link" href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
+                                <a class="nav-item nav-link disabled" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
+                                <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
+                                <a class="nav-item nav-link disabled" href="{{ url('/#contact') }}">CONTACTO</a>
+                            </div>
+                        </div>
+                    </nav>
+                
+                </div>
+                <div class="col-sm-12 col-md-2 col-lg-2 socialIcons text-right">
+                    <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
+                        <i class="fa fa-facebook"></i> /</a>
+                    <a href="https://www.instagram.com/concepthausmx/" target="_blank">
+                        <i class="fa fa-instagram"></i> /</a>
+                    <a href="https://www.behance.net/concepthausmx" target="_blank">
+                        <i class="fa fa-behance"></i> /</a>
+                    <a href="{{ url('/#contact') }}">
+                        <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
+                    </a>
+                    <a href="tel:+015552820707">
+                        <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        {{-- <header>
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 col-lg-4 text-center">
+                    <a href="{{ url('/') }}">
+                        <img class="logo" src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus">
+                    </a>
                 </div>
 
                 <div class="col-sm-12 col-md-2 col-lg-4 text-center">
                     <a href="{{ url('/') }}">
-                        <img class="logo" src="{{asset('img/conceptLlogoWhite.svg')}}" alt="Concept Haus">
+                        <img class="logo" src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus">
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
@@ -116,29 +169,18 @@
                         <i class="fa fa-instagram"></i> /</a>
                     <a href="https://www.behance.net/concepthausmx" target="_blank">
                         <i class="fa fa-behance"></i> /</a>
-                    {{-- <a href="http://concepthaus.mx/blog/" target="_blank">BLOG /</a> --}}
                     <a href="{{ url('/#contact') }}">
-                        <img class="" src="{{asset('img/elementos/mail.svg')}}" alt="ConceptHaus" width="18"> /
+                        <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="18"> /
                     </a>
 
                     <a href="tel:+015552820707">
-                        <img class="" src="{{asset('img/elementos/phone.svg')}}" alt="ConceptHaus" width="17">
+                        <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="16">
                     </a>
                 </div>
             </div>
-        </header>
+        </header> --}}
 
-        {{-- <div class="btnFloat-phone">
-            <a href="tel:+015552820707">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-            </a>
-        </div>
-        <div class="btnFloat-email">
-            <a href="{{ url('/#contact') }}">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-            </a>
-        </div> --}}
-        <section id="subMenu" class="sps sps--abv">
+        {{-- <section id="subMenu" class="sps sps--abv">
             <div class="container hidden-sm-down">
                 <div class="row">
                     <div class="col align-self-center text-center">
@@ -167,7 +209,7 @@
                     </div>
                 </div>
             </nav>
-        </section>
+        </section> --}}
         <!-- ./ Header -->
 
         <!-- Content -->
@@ -185,13 +227,13 @@
                     <div class="row">
                         <div class="col-sm">
                             <h5>CDMX</h5>
-                            <a href="tel:+015552820707">01 (55) 52820707</a>
+                            <a href="tel:+015552820707">(55) 52820707</a>
                             <p class="p-address">contacto@concepthaus.mx</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
                         </div>
                         <div class="col-sm">
                             <h5>Puebla</h5>
-                            <a href="tel:+012222954243">01 (222) 2954243</a>
+                            <a href="tel:+012222954243">(222) 2954243</a>
                             <p class="p-address">contactopuebla@concepthaus.mx</p>
                             <p class="p-address">Sonata Towers, Work Center L.21, Lomas de Angelópolis</p>
                         </div>
@@ -309,7 +351,7 @@
 
     <!-- ./ Footer -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script> --}}
     {{--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script> --}} {{--
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> --}}
@@ -335,7 +377,11 @@
 
     <!-- -->
     <script type="text/javascript" src="/js/scrollPosStyler.js"></script>
-    <script type="text/javascript" src="/js/changeColorMenu.js"></script>
+    {{-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> --}}
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    {{-- Ya no  --}}
+    {{-- <script type="text/javascript" src="/js/changeColorMenu.js"></script> --}}
     <script type="text/javascript" src="/js/panorama_viewer/jquery.panorama_viewer.js"></script>
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>
 
@@ -344,6 +390,10 @@
     <!-- Scripts Particles.js -->
     <script src="{{asset('js/particles.js')}}"></script> 
     <script src="{{asset('js/app-particle.js')}}"></script>
+
+    <script src="{{asset('js/scrollreveal.js')}}"></script>
+    
+    {{-- <script src="{{asset('plugins/tilt/tilt.jquery.min.js')}}"></script> --}}
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> --}}
     {{-- <script>
@@ -360,7 +410,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Script loading page -->
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(window).load(function() {
             $("#particles-js").fadeOut( 400, function() {
                 $(".content-gif").addClass("loaded");
@@ -368,6 +418,48 @@
                 $("#page").addClass("visible");
             });
         });
+    </script> --}}
+
+
+    <script>
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+                // Scroll Down
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
     </script>
    
 </body>

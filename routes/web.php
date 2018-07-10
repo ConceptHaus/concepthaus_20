@@ -22,9 +22,8 @@ Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/desarrollo-web', 'WelcomeController@viewWeb');
 Route::get('/posicionamiento-seo', 'WelcomeController@viewSeo');
-Route::get('/social-ads', 'WelcomeController@viewAds');
-
-
+Route::get('/googleadwords-publicidadenfacebook', 'WelcomeController@viewAds');
+Route::get('/proyecto/{id}', 'WelcomeController@viewDetailProject');
 
 // Guardar datos formulario de registro
 Route::post('/saveRegistro','RegistroController@saveDataRegistro');

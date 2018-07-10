@@ -63,7 +63,12 @@ header .row, footer .row{
   pointer-events: none!important;
   cursor: no-drop!important;
 }
-
+.pd-none {
+  padding: 0!important;
+}
+.mr-none {
+  margin: 0!important;
+}
 // SweetAlert
 .swal2-modal  {
   background: #eeee!important;
@@ -74,9 +79,6 @@ header .row, footer .row{
 .swal2-modal .swal2-styled {
   font-weight: normal!important;
   letter-spacing: .5px!important;
-}
-.swal2-modal .swal2-image {
-  // width: inherit;
 }
 .title-general {
   @include font-size($fontTitle);
@@ -216,6 +218,22 @@ header .row, footer .row{
   border-color: #d2d2d2!important;
 }
 
+.projectCliente {
+  color: $grayLight;
+  font-size: 10px!important;  
+  letter-spacing: 1px; 
+  padding-left: 20px;
+}
+.titleProjectCliente {
+  color: $grayDark;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
 
 // Responsive
 @include breakpoint(md-max) {
