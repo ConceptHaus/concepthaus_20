@@ -121,7 +121,7 @@
     </section>
 
     <section id="plug">
-        <a href="{{ url('/branding/#contact') }}">
+        <a href="{{ url('/social-ads/#contact') }}">
             <div class="plug-content text-center">
                 <img src="{{asset('img/home-elements/Contacto_Haus.png')}}" />
                 <img class="top" src="{{asset('img/home-elements/Contacto_Haus2.png')}}" />
