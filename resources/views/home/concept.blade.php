@@ -16,9 +16,9 @@
                         implementación de estrategias de marketing digital, content management y relaciones públicas.
                         <br><br>
                         <span class="c-grayLight" >Amamos a los que se atreven y por eso contamos con un plan de apoyo a emprendedores.</span>
-                        {{--  Estrategia creativa, Estrategia de marketing, Identidad corporativa, Diseño gráfico, publicidad (ATL / Digital) Compra
+                        <!-- Estrategia creativa, Estrategia de marketing, Identidad corporativa, Diseño gráfico, publicidad (ATL / Digital) Compra
                         de medios, Desarrollo Web, Desarrollo de aplicaciones, Marketing Digital, Producción de contenido, posicionamiento
-                        SEO, SEM, Relaciones Públicas, Influencer marketing, eventos corporativos.     font-weight: 800; --}}
+                        SEO, SEM, Relaciones Públicas, Influencer marketing, eventos corporativos.     font-weight: 800; -->
                     </p>
                 </div>
             </div>
@@ -28,29 +28,37 @@
     <section id="plug">
         <a href="{{ url('/#contact') }}">
             <div class="plug-content text-center">
-                <img src="{{asset('img/home-elements/Contacto_Haus.png')}}"/>
-                <img class="top" src="{{asset('img/home-elements/Contacto_Haus2.png')}}"/>
+                <img src="{{asset('img/home-elements/Contacto_Haus.png')}}" />
+                <img class="top" src="{{asset('img/home-elements/Contacto_Haus2.png')}}" />
             </div>
         </a>
     </section>
     <section id="gridInterior" class="container-fluid">
+
         <div class="row">
-            <div class="col-md-3" ng-repeat="project in collectionConcept" style="padding: 0;">
-                <div class="containerProject">
+             <!-- project-animate -->
+            <div class="col-md-3 w25" ng-repeat="project in collectionConcept">
+                <div class="containerProject project-effect">
                     <a class="projectName" href="<% project.url %>" target="_blank">
-                        <img class="card-img-top" ng-src="<% project.covers.original %>">
-                        <div class="containerInfo">
-                            <h2> <% project.name %> </h2>
-                            <p class="projectCliente">
-                                <span ng-repeat="field in project.fields">
-                                    <% field %>
-                                </span>
-                            </p>
-                        </div>
+                        <figure class="effect-goliath">
+                            <img ng-src="<% project.covers.original %>" />
+                            <figcaption>
+                                <p class="projectCliente">
+                                    <span class="title">
+                                        <% project.name %>
+                                    </span>
+                                    <br>
+                                    <span ng-repeat="field in project.fields">
+                                        <% field %>
+                                    </span>
+                                </p>
+                            </figcaption>
+                        </figure>
                     </a>
                 </div>
             </div>
         </div>
+        
     </section>
 </div>
 @endsection

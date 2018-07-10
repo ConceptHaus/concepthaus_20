@@ -8,7 +8,7 @@ angular.module('WelcomeController', ['app','ngMask', 'isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('WelcomeController', function WelcomeController($http, $scope,$interval) {
+app.controller('WelcomeController', function WelcomeController($http, $scope, $interval, $window) {
     // Projects 
     $scope.projects = {};
     $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
@@ -124,5 +124,5 @@ app.controller('WelcomeController', function WelcomeController($http, $scope,$in
       ];
     };
     $interval(getRandomWords,500);
-    
+
 });
