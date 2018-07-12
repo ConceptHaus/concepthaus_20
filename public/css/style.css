@@ -10274,8 +10274,8 @@ figure.effect-goliath:hover p {
 /*===============*/
 /*==============*/
 @media (max-width: 767px) {
-  #branding .contact-sem {
-    padding-top: 30%;
+  #branding .contact-branding, #branding .contact-web, #branding .contact-seo, #branding .contact-sem {
+    padding-top: 150px;
   }
   #branding .title-general {
     font-size: 40px;
