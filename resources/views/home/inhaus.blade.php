@@ -34,7 +34,7 @@
         {{-- <div class="row">
             <div class="col-md-3" ng-repeat="project in collectionInHaus" style="padding: 0;">
                 <div class="containerProject">
-                    <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                    <a class="projectName" href="<% project.url %>" target="_blank">
                         <img class="card-img-top" ng-src="<% project.covers.original %>">
                         <div class="containerInfo">
                             <h2> <% project.name %></h2>
@@ -52,7 +52,7 @@
                 {{-- project-animate --}}
                 <div class="col-md-3 w25" ng-repeat="project in collectionInHaus">
                     <div class="containerProject project-effect">
-                        <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                        <a class="projectName" href="<% project.url %>" target="_blank">
                             <figure class="effect-goliath">
                                 <img ng-src="<% project.covers.original %>" />
                                 <figcaption>

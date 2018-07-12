@@ -50,16 +50,16 @@
 
 <body ng-app="app">
     <!-- Particles | Loader -->
-    {{-- <div id="particles-js">
+    <!-- <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
                 <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
-    </div> --}}
+    </div> -->
 
     <!-- View Home -->
-    {{-- id="page" --}}
+    <!-- id="page" -->
     <div>
         <!-- Header -->
         <!-- Main navigation -->
@@ -113,7 +113,7 @@
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
-                    <a href="tel:+015552820707">
+                    <a href="tel:+5552820707">
                         <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
                     </a>
                 </div>

@@ -20,7 +20,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
-    <!-- Twitter --> 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
@@ -49,7 +49,7 @@
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/> --}}
 
     <link href="{{asset('css/isteven-multi-select.css')}}" rel="stylesheet" />
-    
+
     <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
     <script>
         webshims.setOptions('forms-ext', {types: 'date'});
@@ -66,7 +66,7 @@
         -->
             <div class="logo" style="padding-top: 20px;">
                 <a href="{{ url('/home') }}" class="simple-text">
-                    <img src="{{asset('img/logo/concepthaus.svg')}}" alt="Concept Haus" width="180"> 
+                    <img src="{{asset('img/logo/concepthaus.svg')}}" alt="Concept Haus" width="180">
                 </a>
             </div>
 
@@ -78,7 +78,7 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    
+
                     @if (Request::path() === 'ownLeads') <li class="active"> @else <li> @endif
                         <a href="{{ url('/ownLeads') }}">
                             <i class="material-icons">list</i>
@@ -113,13 +113,13 @@
                                 @if (Request::path() === 'registros/proceso')
                                     <i class="material-icons txt-gray">access_time</i>
                                 @else
-                                    <i class="material-icons txt-gray">access_time</i>                                
+                                    <i class="material-icons txt-gray">access_time</i>
                                 @endif
                                 En Proceso
                             </p>
                         </a>
                     </li>
-                    
+
                     @if (Request::path() === 'registros/cotizados')<li class="active">@else<li>@endif
                         <a href="{{ url('/registros/cotizados') }}">
                             <p>
@@ -230,7 +230,7 @@
             <div class="content">
 
                 @yield('content')
-            
+
             </div>
             <footer class="footer">
                 <div class="container-fluid">
@@ -251,11 +251,16 @@
         </div>
     </div>
 </body>
-<!--   Core JS Files   -->
+{{-- Core JS Files   --}}
 <script src="{{asset('admin/js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('admin/js/material.min.js')}}" type="text/javascript"></script>
+{{-- Pagination --}}
 <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
+<script src="{{asset('angular-app/angular-app.js')}}"></script>
+{{-- <script src="{{asset('admin/js/dirPagination.js')}}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.4.0/angular-sanitize.js"></script> --}}
+{{-- Pagination --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.3.15/angular-resource.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.js"></script>
@@ -263,7 +268,6 @@
 {{--  <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>  --}}
 
 <script src="https://cdn.jsdelivr.net/npm/angular-utils-pagination@0.11.1/dirPagination.js"></script>
-<script src="{{asset('angular-app/angular-app.js')}}"></script>
 <script src="{{asset('angular-app/services/RegistroService.js')}}"></script>
 <script src="{{asset('angular-app/controllers/RegistroController.js')}}"></script>
 <script src="{{asset('angular-app/controllers/AdminController.js')}}"></script>
@@ -289,7 +293,7 @@
         theme: "classic",
         placeholder: "Selecciona los servicios de interés",
         allowClear: true
-    });  
+    });
 </script> --}}
 
 

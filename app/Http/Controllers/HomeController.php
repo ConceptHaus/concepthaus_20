@@ -11,6 +11,9 @@ use App\CodigoRegistro;
 use App\Pivot_Models\PivoteStatus;
 use App\Pivot_Models\PivoteForms;
 use App\Pivot_Models\PivoteServicios;
+use Telegram\Bot\FileUpload\InputFile;
+use Telegram\Bot\Laravel\Facades\Telegram;
+use Emoji;
 
 use Illuminate\Http\Request;
 
@@ -50,7 +53,10 @@ class HomeController extends Controller {
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
+ 
+					
         
+            
         return view('home', $dashboard);
     }
     

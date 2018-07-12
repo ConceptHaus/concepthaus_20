@@ -3,38 +3,40 @@
 *
 * Description
 */
-angular.module('AdminController', ['app','ngMask','angularUtils.directives.dirPagination','angularUtils.directives.dirPagination','isteven-multi-select'], function($interpolateProvider) {
+
+angular.module('AdminController', ['app','ngMask','isteven-multi-select'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
 
 app.controller('AdminController', function AdminController($window, $scope, $filter, $http, AdminService) {
     $scope.sortType     = 'id_registro';
-    $scope.sortReverse  = true; 
-
+    $scope.sortReverse  = true;
+		$scope.show = true;
     $scope.getdetails = function (id_socio, compra) {
         data = {'id_socio':id_socio,'status_compra':compra}
         // console.log(data);
-        AdminService.postUpdateStatusCompra(id_socio, data).then(function(response){ 
+        AdminService.postUpdateStatusCompra(id_socio, data).then(function(response){
             console.log(response);
         });
     }
 
     var getSolicitudes = function(){
         AdminService.getSolicitudes().then(function(res){
+					$scope.show = false;
             $scope.registros = res.data;
             $scope.statusProceso = [];
             $scope.statusCheck = [];
             $scope.statusClose = [];
             $scope.statusCotizado = [];
-
+						  // console.log(res);
             angular.forEach($scope.registros, function(value, key) {
                 if(value.pivot_status.id_status == 1) {
                     $scope.statusProceso.push(value);
-                } 
+                }
                 if(value.pivot_status.id_status == 2){
                     $scope.statusCheck.push(value);
-                } 
+                }
                 if(value.pivot_status.id_status == 3){
                     $scope.statusClose.push(value);
                 }
@@ -90,7 +92,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
                 series: [
                     graficaData
-                    
+
                 ]
             };
             optionsDailySalesChart = {
@@ -139,7 +141,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 series: [
                     graficaMes
-    
+
                 ]
             };
             var optionsEmailsSubscriptionChart = {
@@ -173,7 +175,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
     }
     getGraficaSemanal();
     getGraficaMensual();
-    
+
 
     $scope.Valued = function(registro){
         registro.new_status = 4;
@@ -183,7 +185,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 console.log(data.data);
                 jQuery('#modalValued').modal('hide');
                 $window.location.reload();
-                
+
             }, function(err){
                 console.log(err);
             });
@@ -196,7 +198,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 console.log(data.data);
                 jQuery('#modalErrorStatus').modal('hide');
                 $window.location.reload();
-                
+
             }, function(err){
                 console.log(err);
             });
@@ -217,7 +219,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
     $scope.saveMedioComment = function(medio){
         console.log(medio);
         AdminService.postMedio(medio)
-            .then(function(data){   
+            .then(function(data){
                 $window.location.reload();
             }, function(err){
                 console.log(err);
@@ -340,6 +342,6 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
         { icon: "<img src=../../img/concept.png />", name: "Producción Audiovisual", ticked: false  },
         { icon: "<img src=../../img/concept.png />", name: "Fotografía", ticked: false  },
         { icon: "<img src=../../img/concept.png />", name: "Varios", ticked: false  }
-    ]; 
+    ];
 
 });

@@ -130,12 +130,12 @@
         </a>
     </section>
     <section id="gridInterior" class="container-fluid">
-        
+
         <div class="row">
-            {{-- project-animate --}}
+            <!-- project-animate -->
             <div class="col-md-3 w25" ng-repeat="project in collectionConcept | filter:{ fields: 'Branding' }">
                 <div class="containerProject project-effect">
-                    <a class="projectName" href="{{ url('/proyecto/<%project.id%>') }}" target="_blank">
+                    <a class="projectName" href="<% project.url %>" target="_blank">
                         <figure class="effect-goliath">
                             <img ng-src="<% project.covers.original %>" />
                             <figcaption>
