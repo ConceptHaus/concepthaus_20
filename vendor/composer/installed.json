@@ -494,6 +494,79 @@
         ]
     },
     {
+        "name": "irazasyed/telegram-bot-sdk",
+        "version": "v3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/irazasyed/telegram-bot-sdk.git",
+            "reference": "fc452f11a6509616f26e279ad36339e1b9032472"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/irazasyed/telegram-bot-sdk/zipball/fc452f11a6509616f26e279ad36339e1b9032472",
+            "reference": "fc452f11a6509616f26e279ad36339e1b9032472",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "~6.1",
+            "guzzlehttp/psr7": "~1.3",
+            "illuminate/support": "~5.1",
+            "league/event": "^2.1",
+            "php": "^7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.1"
+        },
+        "suggest": {
+            "illuminate/container": "Hold dependencies to be injected in commands constructors",
+            "irazasyed/larasupport": "Allows you to use any Laravel Package in Lumen by adding support!"
+        },
+        "time": "2018-01-19T13:51:25+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Telegram\\Bot\\Laravel\\TelegramServiceProvider"
+                ],
+                "aliases": {
+                    "Telegram": "Telegram\\Bot\\Laravel\\Facades\\Telegram"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Telegram\\Bot\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Syed Irfaq R.",
+                "email": "syed+gh@lukonet.com",
+                "homepage": "https://github.com/irazasyed"
+            }
+        ],
+        "description": "The Unofficial Telegram Bot API PHP SDK",
+        "homepage": "https://github.com/irazasyed/telegram-bot-sdk",
+        "keywords": [
+            "laravel",
+            "laravel telegram",
+            "telegram",
+            "telegram bot",
+            "telegram bot api",
+            "telegram php",
+            "telegram sdk"
+        ]
+    },
+    {
         "name": "jakub-onderka/php-console-color",
         "version": "0.1",
         "version_normalized": "0.1.0.0",
@@ -582,6 +655,69 @@
                 "email": "acci@acci.cz",
                 "homepage": "http://www.acci.cz/"
             }
+        ]
+    },
+    {
+        "name": "laravel-notification-channels/telegram",
+        "version": "0.0.4",
+        "version_normalized": "0.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel-notification-channels/telegram.git",
+            "reference": "165f9b92a4224a3c7e0883dbd42f532d795ab31d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel-notification-channels/telegram/zipball/165f9b92a4224a3c7e0883dbd42f532d795ab31d",
+            "reference": "165f9b92a4224a3c7e0883dbd42f532d795ab31d",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.2",
+            "illuminate/notifications": "5.3.* || 5.4.* || 5.5.* || 5.6.*",
+            "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.*",
+            "php": ">=5.6.4"
+        },
+        "require-dev": {
+            "mockery/mockery": "^0.9.5",
+            "orchestra/testbench": "3.4.x-dev",
+            "phpunit/phpunit": "5.*"
+        },
+        "time": "2018-02-08T18:09:00+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "NotificationChannels\\Telegram\\TelegramServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "NotificationChannels\\Telegram\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Syed Irfaq R.",
+                "email": "syed@lukonet.com",
+                "homepage": "https://lukonet.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Telegram Notifications Driver",
+        "homepage": "https://github.com/laravel-notification-channels/telegram",
+        "keywords": [
+            "laravel",
+            "notification",
+            "telegram",
+            "telegram notification",
+            "telegram notifications channel"
         ]
     },
     {
@@ -778,6 +914,58 @@
             "Tinker",
             "laravel",
             "psysh"
+        ]
+    },
+    {
+        "name": "league/event",
+        "version": "2.1.2",
+        "version_normalized": "2.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/event.git",
+            "reference": "e4bfc88dbcb60c8d8a2939a71f9813e141bbe4cd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/event/zipball/e4bfc88dbcb60c8d8a2939a71f9813e141bbe4cd",
+            "reference": "e4bfc88dbcb60c8d8a2939a71f9813e141bbe4cd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+            "phpspec/phpspec": "~2.0.0"
+        },
+        "time": "2015-05-21T12:24:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "League\\Event\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Frank de Jonge",
+                "email": "info@frenky.net"
+            }
+        ],
+        "description": "Event package",
+        "keywords": [
+            "emitter",
+            "event",
+            "listener"
         ]
     },
     {
@@ -3750,6 +3938,60 @@
         ],
         "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
+    },
+    {
+        "name": "unicodeveloper/laravel-emoji",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/unicodeveloper/laravel-emoji.git",
+            "reference": "df5ce0b221521cf5a3850382c9487f3b80328105"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/unicodeveloper/laravel-emoji/zipball/df5ce0b221521cf5a3850382c9487f3b80328105",
+            "reference": "df5ce0b221521cf5a3850382c9487f3b80328105",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.*",
+            "php": "^7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*",
+            "satooshi/php-coveralls": "^0.7.0",
+            "scrutinizer/ocular": "~1.1"
+        },
+        "time": "2016-02-08T06:28:24+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Unicodeveloper\\Emoji\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "unicodeveloper",
+                "email": "prosperotemuyiwa@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A Laravel 5 Package for Using & Working With Emojis",
+        "keywords": [
+            "emoji",
+            "github",
+            "laravel",
+            "laravel 5",
+            "open source",
+            "php",
+            "unicode"
+        ]
     },
     {
         "name": "vlucas/phpdotenv",

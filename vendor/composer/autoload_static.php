@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
+class ComposerStaticInita9d0ef40fef67e34c540d6f7b5b16d18
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -13,12 +13,12 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
@@ -36,10 +36,15 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         array (
             'Webmozart\\Assert\\' => 17,
         ),
+        'U' => 
+        array (
+            'Unicodeveloper\\Emoji\\' => 21,
+        ),
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
+            'Telegram\\Bot\\' => 13,
         ),
         'S' => 
         array (
@@ -70,6 +75,10 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
             'Psr\\Http\\Message\\' => 17,
             'PhpParser\\' => 10,
         ),
+        'N' => 
+        array (
+            'NotificationChannels\\Telegram\\' => 30,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -77,6 +86,7 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'League\\Event\\' => 13,
             'Laravel\\Tinker\\' => 15,
         ),
         'I' => 
@@ -125,6 +135,10 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
+        'Unicodeveloper\\Emoji\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src',
+        ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
@@ -132,6 +146,10 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'Telegram\\Bot\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src',
         ),
         'Symfony\\Polyfill\\Php70\\' => 
         array (
@@ -213,6 +231,10 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'NotificationChannels\\Telegram\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-notification-channels/telegram/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -220,6 +242,10 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'League\\Event\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/event/src',
         ),
         'Laravel\\Tinker\\' => 
         array (
@@ -322,6 +348,7 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'App\\Http\\Controllers\\MediosController' => __DIR__ . '/../..' . '/app/Http/Controllers/MediosController.php',
         'App\\Http\\Controllers\\RegistroController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegistroController.php',
         'App\\Http\\Controllers\\StatusController' => __DIR__ . '/../..' . '/app/Http/Controllers/StatusController.php',
+        'App\\Http\\Controllers\\TelegramBotController' => __DIR__ . '/../..' . '/app/Http/Controllers/TelegramBotController.php',
         'App\\Http\\Controllers\\WelcomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/WelcomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -1713,6 +1740,24 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'League\\Event\\AbstractEvent' => __DIR__ . '/..' . '/league/event/src/AbstractEvent.php',
+        'League\\Event\\AbstractListener' => __DIR__ . '/..' . '/league/event/src/AbstractListener.php',
+        'League\\Event\\CallbackListener' => __DIR__ . '/..' . '/league/event/src/CallbackListener.php',
+        'League\\Event\\Emitter' => __DIR__ . '/..' . '/league/event/src/Emitter.php',
+        'League\\Event\\EmitterAwareInterface' => __DIR__ . '/..' . '/league/event/src/EmitterAwareInterface.php',
+        'League\\Event\\EmitterAwareTrait' => __DIR__ . '/..' . '/league/event/src/EmitterAwareTrait.php',
+        'League\\Event\\EmitterInterface' => __DIR__ . '/..' . '/league/event/src/EmitterInterface.php',
+        'League\\Event\\EmitterTrait' => __DIR__ . '/..' . '/league/event/src/EmitterTrait.php',
+        'League\\Event\\Event' => __DIR__ . '/..' . '/league/event/src/Event.php',
+        'League\\Event\\EventInterface' => __DIR__ . '/..' . '/league/event/src/EventInterface.php',
+        'League\\Event\\Generator' => __DIR__ . '/..' . '/league/event/src/Generator.php',
+        'League\\Event\\GeneratorInterface' => __DIR__ . '/..' . '/league/event/src/GeneratorInterface.php',
+        'League\\Event\\GeneratorTrait' => __DIR__ . '/..' . '/league/event/src/GeneratorTrait.php',
+        'League\\Event\\ListenerAcceptor' => __DIR__ . '/..' . '/league/event/src/ListenerAcceptor.php',
+        'League\\Event\\ListenerAcceptorInterface' => __DIR__ . '/..' . '/league/event/src/ListenerAcceptorInterface.php',
+        'League\\Event\\ListenerInterface' => __DIR__ . '/..' . '/league/event/src/ListenerInterface.php',
+        'League\\Event\\ListenerProviderInterface' => __DIR__ . '/..' . '/league/event/src/ListenerProviderInterface.php',
+        'League\\Event\\OneTimeListener' => __DIR__ . '/..' . '/league/event/src/OneTimeListener.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -1914,6 +1959,11 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'NotificationChannels\\Telegram\\Exceptions\\CouldNotSendNotification' => __DIR__ . '/..' . '/laravel-notification-channels/telegram/src/Exceptions/CouldNotSendNotification.php',
+        'NotificationChannels\\Telegram\\Telegram' => __DIR__ . '/..' . '/laravel-notification-channels/telegram/src/Telegram.php',
+        'NotificationChannels\\Telegram\\TelegramChannel' => __DIR__ . '/..' . '/laravel-notification-channels/telegram/src/TelegramChannel.php',
+        'NotificationChannels\\Telegram\\TelegramMessage' => __DIR__ . '/..' . '/laravel-notification-channels/telegram/src/TelegramMessage.php',
+        'NotificationChannels\\Telegram\\TelegramServiceProvider' => __DIR__ . '/..' . '/laravel-notification-channels/telegram/src/TelegramServiceProvider.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -3450,6 +3500,118 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php70\\Php70' => __DIR__ . '/..' . '/symfony/polyfill-php70/Php70.php',
+        'Telegram\\Bot\\Actions' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Actions.php',
+        'Telegram\\Bot\\Answers\\AnswerBus' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Answers/AnswerBus.php',
+        'Telegram\\Bot\\Answers\\Answerable' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Answers/Answerable.php',
+        'Telegram\\Bot\\Api' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Api.php',
+        'Telegram\\Bot\\BotsManager' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/BotsManager.php',
+        'Telegram\\Bot\\Commands\\Command' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Commands/Command.php',
+        'Telegram\\Bot\\Commands\\CommandBus' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Commands/CommandBus.php',
+        'Telegram\\Bot\\Commands\\CommandInterface' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Commands/CommandInterface.php',
+        'Telegram\\Bot\\Commands\\HelpCommand' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Commands/HelpCommand.php',
+        'Telegram\\Bot\\Events\\EmitsEvents' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Events/EmitsEvents.php',
+        'Telegram\\Bot\\Events\\UpdateWasReceived' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Events/UpdateWasReceived.php',
+        'Telegram\\Bot\\Exceptions\\CouldNotUploadInputFile' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/CouldNotUploadInputFile.php',
+        'Telegram\\Bot\\Exceptions\\TelegramEmojiMapFileNotFoundException' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/TelegramEmojiMapFileNotFoundException.php',
+        'Telegram\\Bot\\Exceptions\\TelegramOtherException' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/TelegramOtherException.php',
+        'Telegram\\Bot\\Exceptions\\TelegramResponseException' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/TelegramResponseException.php',
+        'Telegram\\Bot\\Exceptions\\TelegramSDKException' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/TelegramSDKException.php',
+        'Telegram\\Bot\\Exceptions\\TelegramUndefinedPropertyException' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/TelegramUndefinedPropertyException.php',
+        'Telegram\\Bot\\FileUpload\\InputFile' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/FileUpload/InputFile.php',
+        'Telegram\\Bot\\Helpers\\Emojify' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Helpers/Emojify.php',
+        'Telegram\\Bot\\HttpClients\\GuzzleHttpClient' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/HttpClients/GuzzleHttpClient.php',
+        'Telegram\\Bot\\HttpClients\\HttpClientInterface' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/HttpClients/HttpClientInterface.php',
+        'Telegram\\Bot\\Keyboard\\Base' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Keyboard/Base.php',
+        'Telegram\\Bot\\Keyboard\\Button' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Keyboard/Button.php',
+        'Telegram\\Bot\\Keyboard\\Keyboard' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Keyboard/Keyboard.php',
+        'Telegram\\Bot\\Laravel\\Artisan\\WebhookCommand' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Laravel/Artisan/WebhookCommand.php',
+        'Telegram\\Bot\\Laravel\\Facades\\Telegram' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Laravel/Facades/Telegram.php',
+        'Telegram\\Bot\\Laravel\\TelegramServiceProvider' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Laravel/TelegramServiceProvider.php',
+        'Telegram\\Bot\\Methods\\Chat' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Chat.php',
+        'Telegram\\Bot\\Methods\\EditMessage' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/EditMessage.php',
+        'Telegram\\Bot\\Methods\\Game' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Game.php',
+        'Telegram\\Bot\\Methods\\Get' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Get.php',
+        'Telegram\\Bot\\Methods\\Location' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Location.php',
+        'Telegram\\Bot\\Methods\\Message' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Message.php',
+        'Telegram\\Bot\\Methods\\Payments' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Payments.php',
+        'Telegram\\Bot\\Methods\\Query' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Query.php',
+        'Telegram\\Bot\\Methods\\Stickers' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Stickers.php',
+        'Telegram\\Bot\\Methods\\Update' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Methods/Update.php',
+        'Telegram\\Bot\\Objects\\Animation' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Animation.php',
+        'Telegram\\Bot\\Objects\\Audio' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Audio.php',
+        'Telegram\\Bot\\Objects\\BaseObject' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/BaseObject.php',
+        'Telegram\\Bot\\Objects\\CallbackQuery' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/CallbackQuery.php',
+        'Telegram\\Bot\\Objects\\Chat' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Chat.php',
+        'Telegram\\Bot\\Objects\\ChatMember' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/ChatMember.php',
+        'Telegram\\Bot\\Objects\\ChatPhoto' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/ChatPhoto.php',
+        'Telegram\\Bot\\Objects\\ChosenInlineResult' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/ChosenInlineResult.php',
+        'Telegram\\Bot\\Objects\\Contact' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Contact.php',
+        'Telegram\\Bot\\Objects\\Document' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Document.php',
+        'Telegram\\Bot\\Objects\\EditedMessage' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/EditedMessage.php',
+        'Telegram\\Bot\\Objects\\File' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/File.php',
+        'Telegram\\Bot\\Objects\\Game' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Game.php',
+        'Telegram\\Bot\\Objects\\GameHighScore' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/GameHighScore.php',
+        'Telegram\\Bot\\Objects\\InlineQuery' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineBaseObject' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineBaseObject.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultArticle' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultArticle.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultAudio' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultAudio.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedAudio' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedAudio.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedDocument' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedDocument.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedGif' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedGif.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedMpeg4Gif' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedMpeg4Gif.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedPhoto' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedPhoto.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedSticker' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedSticker.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedVideo' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedVideo.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultCachedVoice' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultCachedVoice.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultContact' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultContact.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultDocument' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultDocument.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultGame' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultGame.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultGif' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultGif.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultLocation' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultLocation.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultMpeg4Gif' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultMpeg4Gif.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultPhoto' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultPhoto.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultVenue' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultVenue.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultVideo' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultVideo.php',
+        'Telegram\\Bot\\Objects\\InlineQuery\\InlineQueryResultVoice' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InlineQuery/InlineQueryResultVoice.php',
+        'Telegram\\Bot\\Objects\\InputContent\\InputContactMessageContent' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InputContent/InputContactMessageContent.php',
+        'Telegram\\Bot\\Objects\\InputContent\\InputLocationMessageContent' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InputContent/InputLocationMessageContent.php',
+        'Telegram\\Bot\\Objects\\InputContent\\InputTextMessageContent' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InputContent/InputTextMessageContent.php',
+        'Telegram\\Bot\\Objects\\InputContent\\InputVenueMessageContent' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/InputContent/InputVenueMessageContent.php',
+        'Telegram\\Bot\\Objects\\Location' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Location.php',
+        'Telegram\\Bot\\Objects\\MaskPosition' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/MaskPosition.php',
+        'Telegram\\Bot\\Objects\\Message' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Message.php',
+        'Telegram\\Bot\\Objects\\MessageEntity' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/MessageEntity.php',
+        'Telegram\\Bot\\Objects\\Payments\\Invoice' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/Invoice.php',
+        'Telegram\\Bot\\Objects\\Payments\\LabeledPrice' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/LabeledPrice.php',
+        'Telegram\\Bot\\Objects\\Payments\\OrderInfo' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/OrderInfo.php',
+        'Telegram\\Bot\\Objects\\Payments\\PreCheckoutQuery' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/PreCheckoutQuery.php',
+        'Telegram\\Bot\\Objects\\Payments\\ShippingAddress' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/ShippingAddress.php',
+        'Telegram\\Bot\\Objects\\Payments\\ShippingOption' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/ShippingOption.php',
+        'Telegram\\Bot\\Objects\\Payments\\ShippingQuery' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/ShippingQuery.php',
+        'Telegram\\Bot\\Objects\\Payments\\SuccessfulPayment' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Payments/SuccessfulPayment.php',
+        'Telegram\\Bot\\Objects\\PhotoSize' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/PhotoSize.php',
+        'Telegram\\Bot\\Objects\\ResponseParameters' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Exceptions/ResponseParameters.php',
+        'Telegram\\Bot\\Objects\\Sticker' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Sticker.php',
+        'Telegram\\Bot\\Objects\\StickerSet' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/StickerSet.php',
+        'Telegram\\Bot\\Objects\\TelegramObject' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/TelegramObject.php',
+        'Telegram\\Bot\\Objects\\UnknownObject' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/UnknownObject.php',
+        'Telegram\\Bot\\Objects\\Update' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Update.php',
+        'Telegram\\Bot\\Objects\\User' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/User.php',
+        'Telegram\\Bot\\Objects\\UserProfilePhotos' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/UserProfilePhotos.php',
+        'Telegram\\Bot\\Objects\\Venue' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Venue.php',
+        'Telegram\\Bot\\Objects\\Video' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Video.php',
+        'Telegram\\Bot\\Objects\\VideoNote' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/VideoNote.php',
+        'Telegram\\Bot\\Objects\\Voice' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/Voice.php',
+        'Telegram\\Bot\\Objects\\WebhookInfo' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Objects/WebhookInfo.php',
+        'Telegram\\Bot\\TelegramClient' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/TelegramClient.php',
+        'Telegram\\Bot\\TelegramRequest' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/TelegramRequest.php',
+        'Telegram\\Bot\\TelegramResponse' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/TelegramResponse.php',
+        'Telegram\\Bot\\Traits\\CommandsHandler' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Traits/CommandsHandler.php',
+        'Telegram\\Bot\\Traits\\HasContainer' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Traits/HasContainer.php',
+        'Telegram\\Bot\\Traits\\Http' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Traits/Http.php',
+        'Telegram\\Bot\\Traits\\Singleton' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Traits/Singleton.php',
+        'Telegram\\Bot\\Traits\\Telegram' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Traits/Telegram.php',
+        'Telegram\\Bot\\Traits\\Validator' => __DIR__ . '/..' . '/irazasyed/telegram-bot-sdk/src/Traits/Validator.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
@@ -3462,6 +3624,13 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+        'Unicodeveloper\\Emoji\\Emoji' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Emoji.php',
+        'Unicodeveloper\\Emoji\\EmojiServiceProvider' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/EmojiServiceProvider.php',
+        'Unicodeveloper\\Emoji\\Exceptions\\IsNull' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Exceptions/IsNull.php',
+        'Unicodeveloper\\Emoji\\Exceptions\\UnknownEmoji' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownEmoji.php',
+        'Unicodeveloper\\Emoji\\Exceptions\\UnknownMethod' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownMethod.php',
+        'Unicodeveloper\\Emoji\\Exceptions\\UnknownUnicode' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownUnicode.php',
+        'Unicodeveloper\\Emoji\\Facades\\Emoji' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Facades/Emoji.php',
         'UpdateTablePivotMotivos' => __DIR__ . '/../..' . '/database/migrations/2018_01_29_224904_update_table_pivot_motivos.php',
         'UpdateTableRegistros' => __DIR__ . '/../..' . '/database/migrations/2018_03_05_230858_update_table_registros.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
@@ -3539,11 +3708,11 @@ class ComposerStaticInit816484e4b5a8dcefb851b96b9f540632
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit816484e4b5a8dcefb851b96b9f540632::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit816484e4b5a8dcefb851b96b9f540632::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit816484e4b5a8dcefb851b96b9f540632::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit816484e4b5a8dcefb851b96b9f540632::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit816484e4b5a8dcefb851b96b9f540632::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita9d0ef40fef67e34c540d6f7b5b16d18::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita9d0ef40fef67e34c540d6f7b5b16d18::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInita9d0ef40fef67e34c540d6f7b5b16d18::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita9d0ef40fef67e34c540d6f7b5b16d18::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita9d0ef40fef67e34c540d6f7b5b16d18::$classMap;
 
         }, null, ClassLoader::class);
     }

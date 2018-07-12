@@ -10,6 +10,8 @@ use App\CodigoRegistro;
 use App\Pivot_Models\PivoteStatus;
 use App\Pivot_Models\PivoteForms;
 use App\Pivot_Models\PivoteServicios;
+use Telegram\Bot\FileUpload\InputFile;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 use Illuminate\Http\Request;
 
@@ -118,14 +120,43 @@ class RegistroController extends Controller {
 				$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 				$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 			});
+			$chatsid =  array('-275252761','5711355','217972718');
+			foreach($chatsid as $id){
+                Telegram::sendMessage([
+						'chat_id' => $id,
+						'parse_mode' => 'HTML',
+                        'text' =>'<b>Nuevo lead '. $formulario -> tipo.'</b> '.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
 
+<b>Nombre: </b>'.$registro -> nombre.'
+<b>Empresa: </b>'.$registro -> empresa.'
+<b>Correo: </b>'.$registro -> correo.'
+<b>Tel: </b>'.$registro -> telefono.'
+<b>Formulario: </b>'.$formulario -> tipo .'
+<b>Nota: </b>'.$registro -> mensaje,
+						'reply_markup'=>json_encode([
+                                'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))), 
+                                'resize_keyboard' => true, 
+                                'one_time_keyboard' => true
+                            ]),
+                        
+							
+					]);
+
+            }
+			
 			// Mailing Administrador nuevo registro
-			Mail::send('emails.registro.admin', $user, function($contact) use ($user){
-				$contact->from('contacto@concepthaus.mx','Concept Haus');
-				$contact->to('contacto@concepthaus.mx','Concept Haus')->subject('Nuevo Concept Haus');
-			});
+			// Mail::send('emails.registro.admin', $user, function($contact) use ($user){
+			// 	$contact->from('contacto@concepthaus.mx','Concept Haus');
+			// 	$contact->to('contacto@concepthaus.mx','Concept Haus')->subject('Nuevo Concept Haus');
+			// });
+
 			
 			$json['success'] = "Datos guardados";
+				Telegram::sendMessage([
+				'chat_id' => env('TELEGRAM_CHANNEL_ID', ''),
+				'parse_mode' => 'HTML',
+				'text' => 'Ha llegado un nuevo lead a Hauskeeper'
+			]);
 			return json_encode($json['success']);
 		}
 
