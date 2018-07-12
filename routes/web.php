@@ -69,3 +69,6 @@ Route::post('/api/v1/registro/update/{id_socio}','HomeController@saveUpdateStatu
 
 // Función que acompleta los datos de Facebook (Relación con tablas)
 // Route::get('/api/v1/saveDatosFacebook','HomeController@saveDataFacebook');
+
+//BOT
+Route::get('/updated-activity', 'TelegramBotController@updatedActivity');

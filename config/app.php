@@ -176,6 +176,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        NotificationChannels\Telegram\TelegramServiceProvider::class,
+        Telegram\Bot\Laravel\TelegramServiceProvider::class,
+        Unicodeveloper\Emoji\EmojiServiceProvider::class
+
+
 
     ],
 
@@ -225,6 +230,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Telegram'  => Telegram\Bot\Laravel\Facades\Telegram::class,
+        'Emoji' => Unicodeveloper\Emoji\Facades\Emoji::class,
+
+
+
 
     ],
 
