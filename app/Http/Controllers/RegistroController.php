@@ -123,6 +123,7 @@ class RegistroController extends Controller {
 				$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 			});
 			$chatsid =  array('-275252761','5711355','217972718');
+			//$chatsid = array('5711355');
 			foreach($chatsid as $id){
                 Telegram::sendMessage([
 						'chat_id' => $id,
@@ -154,11 +155,6 @@ class RegistroController extends Controller {
 
 			
 			$json['success'] = "Datos guardados";
-				Telegram::sendMessage([
-				'chat_id' => env('TELEGRAM_CHANNEL_ID', ''),
-				'parse_mode' => 'HTML',
-				'text' => 'Ha llegado un nuevo lead a Hauskeeper'
-			]);
 			return json_encode($json['success']);
 		}
 
