@@ -9751,8 +9751,9 @@ header .socialIcons a {
     display: none;
   }
   header .socialIcons {
+    margin-top: -10px;
+    padding-top: 0px;
     padding-right: 0;
-    padding-top: 10px;
   }
   .hidden-sm-up {
     display: block !important;
@@ -10273,8 +10274,34 @@ figure.effect-goliath:hover p {
 /*===============*/
 /*==============*/
 @media (max-width: 767px) {
+  #branding .contact-sem {
+    padding-top: 30%;
+  }
   #branding .title-general {
     font-size: 40px;
     margin-bottom: 35px;
   }
+}
+
+#clients .client-brand-servicie {
+  margin: 20px 0;
+  width: 50%;
+}
+
+#clients .client-brand-servicie.brand5,
+#clients .client-brand-servicie.brand7,
+#clients .client-brand-servicie.brand8 {
+  width: 40%;
+}
+
+#clients .client-brand-servicie.brand12 {
+  width: 55%;
+}
+
+#clients .client-brand-servicie.brand5-2 {
+  width: 35%;
+}
+
+#clients .client-brand-servicie.brand6-2 {
+  width: 30%;
 }

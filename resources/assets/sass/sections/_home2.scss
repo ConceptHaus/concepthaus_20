@@ -279,12 +279,11 @@ header {
     padding: 15px 0;
     .short-description {
       display: none;
-      // text-align: center;
-      // padding:0;
     }
     .socialIcons{
-      padding-right: 0;
-      padding-top: 10px;
+        margin-top: -10px;
+        padding-top: 0px;
+        padding-right: 0;
     }
   }
   .hidden-sm-up {

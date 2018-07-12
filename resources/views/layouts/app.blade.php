@@ -142,7 +142,7 @@
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
-                    <a href="tel:+015552820707">
+                    <a href="tel:+5552820707">
                         <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
                     </a>
                 </div>
@@ -173,7 +173,7 @@
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="18"> /
                     </a>
 
-                    <a href="tel:+015552820707">
+                    <a href="tel:+5552820707">
                         <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="16">
                     </a>
                 </div>
@@ -227,13 +227,13 @@
                     <div class="row">
                         <div class="col-sm">
                             <h5>CDMX</h5>
-                            <a href="tel:+015552820707">(55) 52820707</a>
+                            <a href="tel:+5552820707">(55) 52820707</a>
                             <p class="p-address">contacto@concepthaus.mx</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
                         </div>
                         <div class="col-sm">
                             <h5>Puebla</h5>
-                            <a href="tel:+012222954243">(222) 2954243</a>
+                            <a href="tel:+2222954243">(222) 2954243</a>
                             <p class="p-address">contactopuebla@concepthaus.mx</p>
                             <p class="p-address">Sonata Towers, Work Center L.21, Lomas de Angelópolis</p>
                         </div>

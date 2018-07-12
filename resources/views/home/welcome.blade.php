@@ -288,7 +288,7 @@
         </div>
       </div>
   </section>
-  <section id="clients">
+  <section id="clientsServicies">
     <h2 class="title-general">
       <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Clientes
     </h2>

@@ -112,46 +112,25 @@
     </h2>
     <div class="row text-center align-items-center">
       <div class="col-sm-6 col-md-4">
-        <img src="{{asset('img/clients/citibanamex.svg')}}" class="client-brand brand1" alt="Concept Haus / Citibanamex">
+        <img src="{{asset('img/clients/citibanamex.svg')}}" class="client-brand-servicie brand1" alt="Concept Haus / Citibanamex">
       </div>
       <div class="col-sm-6 col-md-4">
-        <img src="{{asset('img/clients/apolo.svg')}}" class="client-brand brand2" alt="Concept Haus / Baco">
+        <img src="{{asset('img/clients/apolo.svg')}}" class="client-brand-servicie brand2" alt="Concept Haus / Baco">
       </div>
       <div class="col-sm-6 col-md-4">
-        <img src="{{asset('img/clients/tracker.svg')}}" class="client-brand brand4" alt="Concept Haus / Fox">
+        <img src="{{asset('img/clients/tracker.svg')}}" class="client-brand-servicie brand3" alt="Concept Haus / Fox">
       </div>
       <div class="col-sm-6 col-md-4">
-        <img src="{{asset('img/clients/autoefectivo.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+        <img src="{{asset('img/clients/autoefectivo.svg')}}" class="client-brand-servicie brand4" alt="Concept Haus / National Geography">
       </div>
       <div class="col-sm-6 col-md-4">
-        <img src="{{asset('img/clients/indeporte.png')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+        <img src="{{asset('img/clients/indeporte.png')}}" class="client-brand-servicie brand5-2" alt="Concept Haus / National Geography">
       </div>
       <div class="col-sm-6 col-md-4">
-        <img src="{{asset('img/clients/quality.svg')}}" class="client-brand brand3" alt="Concept Haus / Soulcore">
+        <img src="{{asset('img/clients/quality.svg')}}" class="client-brand-servicie brand6-2" alt="Concept Haus / Soulcore">
       </div>
-      
-     
       
     </div>
   </section>
-    {{-- <section id="gridInterior" class="container-fluid">
-        <div class="row">
-            <div class="col-md-3" ng-repeat="project in collectionConcept | filter:{ fields: 'Branding' }" style="padding: 0;">
-                <div class="containerProject">
-                    <a class="projectName" href="<% project.url %>" target="_blank">
-                        <img class="card-img-top" ng-src="<% project.covers.original %>">
-                        <div class="containerInfo">
-                            <h2> <% project.name %></h2>
-                            <p class="projectCliente">
-                                <span ng-repeat="field in project.fields">
-                                    <% field %>
-                                </span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 </div>
 @endsection
