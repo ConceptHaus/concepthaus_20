@@ -50,51 +50,76 @@
 
 <body ng-app="app">
     <!-- Particles | Loader -->
-    <div id="particles-js">
+    {{-- <div id="particles-js">
         <div class="content-gif">
             <div class="content-img">
                 <img src="{{asset('img/loader.gif')}}" src="img/loader.gif">
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- View Home -->
-    <div id="page">
-
+    {{-- id="page" --}}
+    <div>
         <!-- Header -->
         <!-- Main navigation -->
-        <header>
+        <header class="nav-down">
             <div class="row align-items-center">
-                <div class="col-sm-12 col-md-5 col-lg-4">
-                    <p class="short-description">Somos un cluster especializado en la creación,
-                        <span>desarrollo y fortalecimiento de marcas.</span>
-                    </p>
-                </div>
-
-                <div class="col-sm-12 col-md-2 col-lg-4 text-center">
+                <div class="col-sm-12 col-md-1 col-lg-1 content-logo">
                     <a href="{{ url('/') }}">
-                        <img class="logo" src="{{asset('img/conceptLlogoWhite.svg')}}" alt="Concept Haus">
+                        <img class="logo" src="{{asset('img/logo/concept.svg')}}" alt="Concept Haus">
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-5 col-lg-4 socialIcons text-right">
+
+                <div class="col-sm-12 col-md-9 col-lg-9 navbarTop text-center pd-none">
+
+                    <div class="container hidden-sm-down pd-none">
+                        <div class="row mr-none">
+                            <div class="col align-self-center text-center pd-none">
+                                <a href="{{ url('/crew') }}">CREW</a>
+                                <a href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
+                                <a href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
+                                <a href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
+                                <a href="{{ url('/startups') }}">STARTUPS</a>
+                                <a href="{{ url('/#contact') }}">CONTACTO</a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-sm-up">
+                        <button class="navButtom navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link active" href="{{ url('/crew') }}">CREW</a>
+                                <a class="nav-item nav-link" href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
+                                <a class="nav-item nav-link" href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
+                                <a class="nav-item nav-link disabled" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
+                                <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
+                                <a class="nav-item nav-link disabled" href="{{ url('/#contact') }}">CONTACTO</a>
+                            </div>
+                        </div>
+                    </nav>
+                
+                </div>
+                <div class="col-sm-12 col-md-2 col-lg-2 socialIcons text-right">
                     <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
                         <i class="fa fa-facebook"></i> /</a>
                     <a href="https://www.instagram.com/concepthausmx/" target="_blank">
                         <i class="fa fa-instagram"></i> /</a>
                     <a href="https://www.behance.net/concepthausmx" target="_blank">
                         <i class="fa fa-behance"></i> /</a>
-                    {{-- <a href="http://concepthaus.mx/blog/" target="_blank">BLOG</a> --}}
                     <a href="{{ url('/#contact') }}">
-                        <img class="" src="{{asset('img/elementos/mail.svg')}}" alt="ConceptHaus" width="18"> /
+                        <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
                     <a href="tel:+015552820707">
-                        <img class="" src="{{asset('img/elementos/phone.svg')}}" alt="ConceptHaus" width="17">
+                        <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
                     </a>
                 </div>
             </div>
         </header>
-        <!-- ./ Header -->
-
+        
         <!-- Content -->
         @yield('content')
         <!-- ./ Content -->
@@ -165,13 +190,15 @@
     <script src="{{asset('js/particles.js')}}"></script> 
     <script src="{{asset('js/app-particle.js')}}"></script>
 
+    <script src="{{asset('js/scrollreveal.js')}}"></script>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLGCBXH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Script loading page -->
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(window).load(function() {
             $("#particles-js").fadeOut( 400, function() {
                 $(".content-gif").addClass("loaded");
@@ -179,6 +206,47 @@
                 $("#page").addClass("visible");
             });
         });
+    </script> --}}
+
+    <script>
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+                // Scroll Down
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
     </script>
 
 </body>
