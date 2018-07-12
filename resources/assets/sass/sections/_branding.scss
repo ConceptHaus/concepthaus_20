@@ -138,8 +138,8 @@
 
 @include breakpoint(md-max) {
     #branding {
-        .contact-sem {
-            padding-top: 30%;
+        .contact-branding, .contact-web, .contact-seo, .contact-sem {
+            padding-top: 150px;
         }
         .title-general {
             font-size: 40px;
