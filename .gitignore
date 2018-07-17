@@ -68,3 +68,15 @@ Homestead.json
 .rocketeer/
 
 # End of https://www.gitignore.io/api/laravel
+
+# Created by https://www.gitignore.io/api/vagrant
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.logs
+
+
+# End of https://www.gitignore.io/api/vagrant
