@@ -62,6 +62,7 @@ Route::post('/api/v1/registro/medio_contacto','MediosController@saveNotaAndMedio
 Route::get('/api/v1/registrosLatest','HomeController@getRegistrosLastestAjax');
 Route::get('/api/v1/graficas_semanal','HomeController@getGraficasSemanal');
 Route::get('/api/v1/graficas_mensual','HomeController@getGraficasMensual');
+Route::get('/api/v1/graficas_mensual_proceso','HomeController@getGraficasMensualProceso');
 Route::post('/api/v1/solicitud/filterdata','HomeController@getfilterDataRegistros');
 
 Route::post('/api/v1/registro/update/{id_socio}','HomeController@saveUpdateStatusCompra');

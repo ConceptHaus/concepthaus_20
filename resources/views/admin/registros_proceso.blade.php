@@ -58,7 +58,7 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-header card-chart" data-background-color="grayDark">
-                    <div class="ct-chart" id="emailsSubscriptionChart"></div>
+                    <div class="ct-chart" id="emailsSubscriptionChartProceso"></div>
                 </div>
                 <div class="card-content">
                     <p class="category">Leads por mes</p>

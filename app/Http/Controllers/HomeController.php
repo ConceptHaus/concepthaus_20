@@ -15,6 +15,7 @@ use Telegram\Bot\FileUpload\InputFile;
 use Telegram\Bot\Laravel\Facades\Telegram;
 use Emoji;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 use Validator;
@@ -157,8 +158,17 @@ class HomeController extends Controller {
         $contactos['DaysBefore'] = $lastweek;
         return response()->json($contactos);
     }
+
     public function getGraficasMensual(){
         $contactos = FechaRegistro::all();
+        return response()->json($contactos);
+    }
+
+    public function getGraficasMensualProceso(){
+        $contactos = DB::table('pivot_status')
+                    ->join('fecha_registro', 'pivot_status.id_registro', '=', 'fecha_registro.id_registro')
+                    ->where('pivot_status.id_status','=',1)
+                    ->get();
         return response()->json($contactos);
     }
 
