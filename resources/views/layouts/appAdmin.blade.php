@@ -107,6 +107,19 @@
                         </a>
                     </li>
 
+                    @if (Request::path() === 'registros/recibidos')<li class="active">@else<li>@endif
+                        <a href="{{ url('/registros/recibidos') }}">
+                            <p>
+                                @if (Request::path() === 'registros/recibidos')
+                                    <i class="material-icons txt-gray">playlist_add_check</i>
+                                @else
+                                    <i class="material-icons txt-gray">playlist_add_check</i>
+                                @endif
+                                Recibidos
+                            </p>
+                        </a>
+                    </li>
+
                     @if (Request::path() === 'registros/proceso')<li class="active">@else<li>@endif
                         <a href="{{ url('/registros/proceso') }}">
                             <p>
@@ -115,7 +128,7 @@
                                 @else
                                     <i class="material-icons txt-gray">access_time</i>
                                 @endif
-                                En Proceso
+                                En proceso
                             </p>
                         </a>
                     </li>

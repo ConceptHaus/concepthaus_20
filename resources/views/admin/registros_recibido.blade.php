@@ -12,8 +12,8 @@
         <div class="col-md-12">
             <div class="card card-transparent">
                 <div class="card-header card-title-gral" data-background-color="white">
-                    <h4 class="title">Leads / No viables</h4>
-                    <p class="category">En esta sección se podrán visualizar las solicitudes que se encuentran como no viables.</p>
+                    <h4 class="title">Leads / Recibidos</h4>
+                    <p class="category">En esta sección se podrán visualizar las solicitudes que se encuentran con estatus de recibido.</p>
                     <img src="{{asset('img/logo/concept.svg')}}" class="ajust-top" alt="Concept Haus">
                 </div>
             </div>
@@ -40,25 +40,25 @@
             </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3">
-                <div class="card card-stats">
-                    <div class="card-header" data-background-color="red">
-                        <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="BeGrand®">
-                    </div>
-                    <div class="card-content">
-                        <p class="category">No viable</p>
-                        <h3 class="title">{{count($descartados)}}</h3>
-                    </div>
-                    <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons">local_offer</i>  Total no viables.
-                        </div>
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="gray">
+                    <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="BeGrand®">
+                </div>
+                <div class="card-content">
+                    <p class="category">Recibidos</p>
+                    <h3 class="title">{{count($recibido)}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i>  Total recibidos.
                     </div>
                 </div>
+            </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-header card-chart" data-background-color="grayDark">
-                    <div class="ct-chart" id="emailsSubscriptionChartNoViables"></div>
+                    <div class="ct-chart" id="emailsSubscriptionChartRecibido"></div>
                 </div>
                 <div class="card-content">
                     <p class="category">Leads por mes</p>
@@ -66,6 +66,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-md-12">
@@ -94,7 +95,6 @@
                                             <option value="" disabled selected>Fuente</option>
                                             <option value="Google">Google</option>
                                             <option value="Facebook">Facebook</option>
-                                            <option value="Facebook">Manual</option>
                                             <option value="">Todos</option>
                                         </select>
                                     </div>
@@ -198,8 +198,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                          {{-- dir-paginate="registro in statusClose | itemsPerPage: 15 --}}
-                            <tr ng-repeat="registro in statusClose | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse | limitTo:10">
+                            <tr ng-repeat="registro in statusRecibido | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
                                 <td><% registro.id_registro %></td>
                                 <td>
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
@@ -217,7 +216,7 @@
                                 <td><% registro.empresa %></td>
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
-                                    <i class="material-icons txt-red">close</i>
+                                    <i class="material-icons txt-gray">playlist_add_check</i>
                                 </td>
                                 <td>
                                     <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
@@ -228,17 +227,17 @@
                             </tr>
                         </tbody>
                     </table>
-                    @if(count($descartados) == 0)
-                    <div class="content-msg-empty">
-                        <h5 class="text-center">No hay leads registrados.</h5>
-                    </div>
-                    @endif
                     <div ng-show='show'>
                       <center>
                         <img class="loading-img" src="{{asset('img/loading_concept.gif')}}" alt="loader">
                       </center>
                     </div>
                     <dir-pagination-controls></dir-pagination-controls>
+                    @if(count($recibido) == 0)
+                    <div class="content-msg-empty">
+                        <h5 class="text-center">No hay leads registrados.</h5>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>

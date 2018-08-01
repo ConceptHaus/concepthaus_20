@@ -40,6 +40,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Rutas Administrador
 Route::get('/registros', 'HomeController@getRegistros');
+Route::get('/registros/recibidos', 'HomeController@getRegistrosRecibido');
 Route::get('/registros/proceso', 'HomeController@getRegistrosProceso');
 Route::get('/registros/cotizados', 'HomeController@getRegistrosCotizado');
 Route::get('/registros/cerrados', 'HomeController@getRegistrosCheck');
@@ -62,6 +63,12 @@ Route::post('/api/v1/registro/medio_contacto','MediosController@saveNotaAndMedio
 Route::get('/api/v1/registrosLatest','HomeController@getRegistrosLastestAjax');
 Route::get('/api/v1/graficas_semanal','HomeController@getGraficasSemanal');
 Route::get('/api/v1/graficas_mensual','HomeController@getGraficasMensual');
+Route::get('/api/v1/graficas_mensual_recibidos','HomeController@getGraficasMensualRecibidos');
+Route::get('/api/v1/graficas_mensual_proceso','HomeController@getGraficasMensualProceso');
+Route::get('/api/v1/graficas_mensual_cotizados','HomeController@getGraficasMensualCotizados');
+Route::get('/api/v1/graficas_mensual_cerrados','HomeController@getGraficasMensualCerrados');
+Route::get('/api/v1/graficas_mensual_no_viables','HomeController@getGraficasMensualNoViables');
+
 Route::post('/api/v1/solicitud/filterdata','HomeController@getfilterDataRegistros');
 
 Route::post('/api/v1/registro/update/{id_socio}','HomeController@saveUpdateStatusCompra');

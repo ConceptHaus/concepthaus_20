@@ -14,6 +14,7 @@ use App\MedioContacto;
 use App\CodigoPromo;
 use App\Pivot_Models\PivoteMedios;
 use App\Pivot_Models\PivoteCodPromo;
+use App\Pivot_Models\PivoteStatus;
 
 use Mail;
 
@@ -28,6 +29,7 @@ class MediosController extends Controller{
     public function saveNotaAndMedio(Request $request){
 
         $registro = Registros::where('id_registro','=',$request->id_registro)->first();
+        $statusActual = PivoteStatus::where('id_registro','=',$request->id_registro)->first();
         $cupon = CodigoPromo::where('status','=',0)->first();
 
         if($request->correo == 1){
@@ -36,21 +38,21 @@ class MediosController extends Controller{
             $medio->id_medio_contacto = 1;
             $medio->save();
 
-            $codigoPromocional = new PivoteCodPromo;
-            $codigoPromocional->id_codigo_promo = $cupon['id_codigo_promo'];
-            $codigoPromocional->id_registro = $request->id_registro;
-            $codigoPromocional->save();
+            // $codigoPromocional = new PivoteCodPromo;
+            // $codigoPromocional->id_codigo_promo = $cupon['id_codigo_promo'];
+            // $codigoPromocional->id_registro = $request->id_registro;
+            // $codigoPromocional->save();
 
-            $cupon->status = 1;
-            $cupon->save();
+            // $cupon->status = 1;
+            // $cupon->save();
 
-            $user['correo'] = $registro['correo'];
-            $user['no_cupon'] = $cupon['codigo_promo'];
-            // Mailing envío de cupón usuario
-			Mail::send('emails.promocional.user' ,$user, function ($contact) use ($user) {
-				$contact->from('stcatalogo2@gmail.com', 'Salvaje Tentación');
-				$contact->to($user['correo'], 'Salvaje Tentación')->subject('Salvaje Tentación');
-			});
+            // $user['correo'] = $registro['correo'];
+            // $user['no_cupon'] = $cupon['codigo_promo'];
+            // // Mailing envío de cupón usuario
+			// Mail::send('emails.promocional.user' ,$user, function ($contact) use ($user) {
+			// 	$contact->from('stcatalogo2@gmail.com', 'Salvaje Tentación');
+			// 	$contact->to($user['correo'], 'Salvaje Tentación')->subject('Salvaje Tentación');
+			// });
         }
         if($request->telefono == 1){
             $medio = new PivoteMedios;
@@ -71,6 +73,15 @@ class MediosController extends Controller{
             $nota->save();
         }
         
+        if($request->contacto == 0){
+
+            if($request->status == 1){
+                $statusActual->id_status = 5;
+                $statusActual->save();
+            }
+            
+        }
+
         return response('success',200);
 
     }

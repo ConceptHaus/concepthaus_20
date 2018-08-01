@@ -25,11 +25,12 @@
                   <div class="form-group">
                     <select class="form-control" id="select-type" name="select-type" ng-model="fecha.selectTypeStatus">
                       <option value="" disabled selected>Estatus</option>
-                      <option value="1">En Proceso</option>
-                      <option value="2">Socios</option>
-                      <option value="3">No viable</option>
-                      <option value="4">Cotizados</option>
-                      <option value="">Todos</option>
+                        <option value="1">Recibido</option>
+                        <option value="5">En Proceso</option>
+                        <option value="3">Cerrado</option>
+                        <option value="4">Cotizado</option>
+                        <option value="2">No viable</option>
+                        <option value="">Todos</option>
                     </select>
                   </div>
                 </div>

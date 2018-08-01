@@ -58,7 +58,7 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-header card-chart" data-background-color="grayDark">
-                    <div class="ct-chart" id="emailsSubscriptionChart"></div>
+                    <div class="ct-chart" id="emailsSubscriptionChartCerrado"></div>
                 </div>
                 <div class="card-content">
                     <p class="category">Leads por mes</p>
@@ -79,9 +79,11 @@
                                     <div class="form-group">
                                         <select class="form-control" id="select-type" name="select-type" ng-model="fecha.selectTypeStatus">
                                             <option value="" disabled selected>Estatus</option>
-                                            <option value="1">En Proceso</option>
-                                            <option value="2">Socios</option>
-                                            <option value="3">No viable</option>
+                                            <option value="1">Recibido</option>
+                                            <option value="5">En Proceso</option>
+                                            <option value="3">Cerrado</option>
+                                            <option value="4">Cotizado</option>
+                                            <option value="2">No viable</option>
                                             <option value="">Todos</option>
                                         </select>
                                     </div>
@@ -214,10 +216,7 @@
                                 <td><% registro.empresa %></td>
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
-                                    <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
-                                    <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
-                                    <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
-                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
+                                    <i class="material-icons txt-blue">check</i>
                                 </td>
                                 <td>
                                     <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
