@@ -25,18 +25,18 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
-                <a href="{{ url('/registros/proceso') }}">
+                <a href="{{ url('/registros/recibidos') }}">
                     <div class="card-header" data-background-color="gray">
                         <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="BeGrand®">
                     </div>
                 </a>
                 <div class="card-content">
-                    <p class="category">En proceso</p>
-                    <h3 class="title">{{count($proceso)}}</h3>
+                    <p class="category">Recibidos</p>
+                    <h3 class="title">{{count($recibido)}}</h3>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <i class="material-icons">local_offer</i>  Total en proceso.
+                        <i class="material-icons">local_offer</i>  Total recibidos.
                     </div>
                 </div>
             </div>
@@ -107,9 +107,11 @@
                                     <div class="form-group">
                                         <select class="form-control" id="select-type" name="select-type" ng-model="fecha.selectTypeStatus">
                                             <option value="" disabled selected>Estatus</option>
-                                            <option value="1">En Proceso</option>
-                                            <option value="2">Socios</option>
-                                            <option value="3">No viable</option>
+                                            <option value="1">Recibido</option>
+                                            <option value="5">En Proceso</option>
+                                            <option value="3">Cerrado</option>
+                                            <option value="4">Cotizado</option>
+                                            <option value="2">No viable</option>
                                             <option value="">Todos</option>
                                         </select>
                                     </div>
@@ -182,7 +184,7 @@
                                         <span ng-show="sortType == 'fuente' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a>
                                 </th>
-                                <th scope="col" data-tablesaw-priority="persist">
+                                <th scope="col" data-tablesaw-priority="persist" style="width: 15%!important;">
                                     <a ng-click="sortType = 'proyecto'; sortReverse = !sortReverse">
                                         Proyecto
                                         <span ng-hide="sortType == 'proyecto' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
@@ -190,7 +192,7 @@
                                         <span ng-show="sortType == 'proyecto' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a>
                                 </th>
-                                <th scope="col" data-tablesaw-priority="1">
+                                <th scope="col" data-tablesaw-priority="persist" style="width: 30%!important;">
                                     <a ng-click="sortType = 'empresa'; sortReverse = !sortReverse">
                                         Empresa
                                         <span ng-hide="sortType == 'empresa' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
@@ -198,7 +200,10 @@
                                         <span ng-show="sortType == 'empresa' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a>
                                 </th>
-                                <th scope="col" data-tablesaw-priority="6">
+                                {{-- <th scope="col" data-tablesaw-priority="persist">
+                                    Contacto
+                                </th> --}}
+                                <th scope="col" data-tablesaw-priority="persist">
                                     <a ng-click="sortType = 'fecha_completa'; sortReverse = !sortReverse">
                                         Fecha Registro
                                         <span ng-hide="sortType == 'fecha_completa' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
@@ -206,7 +211,7 @@
                                         <span ng-show="sortType == 'fecha_completa' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a>
                                 </th>
-                                <th scope="col" data-tablesaw-priority="7">
+                                <th scope="col" data-tablesaw-priority="persist">
                                     <a ng-click="sortType = 'id_status'; sortReverse = !sortReverse">
                                         Estatus
                                         <span ng-hide="sortType == 'id_status' && (sortReverse || !sortReverse)" class="fa fa-sort"></span>
@@ -235,12 +240,41 @@
                                   </span>
                                 </td>
                                 <td><% registro.empresa %></td>
+                                {{-- <td> --}}
+                                    {{-- <% registro.pivot_medios.id_medio_contacto %>
+                                    <i ng-class="{'txt-red': medio.id_medio_contacto == 1}" class="far fa-envelope iconos_medios" aria-hidden="true"></i>
+                                    <i ng-class="{'txt-red': medio.id_medio_contacto == 2}"  class="fa fa-phone iconos_medios" aria-hidden="true"></i>
+                                    <i ng-class="{'txt-red': medio.id_medio_contacto == 3}" class="fab fa-facebook-messenger iconos_medios" aria-hidden="true"></i> --}}
+
+                                    {{-- <div ng-repeat="medio in registro.pivot_medios group by medio.id_medio_contacto">
+                                        <% medio.id_medio_contacto %>
+                                    </div> --}}
+
+                                        {{-- 
+                                        <div ng-repeat="medio in registro.pivot_medios">
+                                            <i ng-class="{'txt-red': medio.id_medio_contacto == 1}" class="far fa-envelope iconos_medios" aria-hidden="true"></i>
+
+                                            <i ng-class="{'txt-red': medio.id_medio_contacto == 2}"  class="fa fa-phone iconos_medios" aria-hidden="true"></i>
+
+                                            <i ng-class="{'txt-red': medio.id_medio_contacto == 3}" class="fab fa-facebook-messenger iconos_medios" aria-hidden="true"></i>
+                                        </div> --}}
+
+
+                                    {{-- <ul ng-repeat="(key, value) in registro.pivot_medios | groupBy: 'medios_contacto.id_medio_contacto'">
+                                        Group name: <% key %>
+                                        <li ng-repeat="player in value">
+                                            player: <% player %>
+                                        </li>
+                                    </ul> --}}
+
+                                {{-- </td> --}}
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
-                                    <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
+                                    <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">playlist_add_check</i>
                                     <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
                                     <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
+                                    <i ng-if="registro.pivot_status.id_status == 5" class="material-icons txt-orange">access_time</i>
                                 </td>
                                 <td>
                                     <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>

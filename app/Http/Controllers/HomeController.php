@@ -11,6 +11,7 @@ use App\CodigoRegistro;
 use App\Pivot_Models\PivoteStatus;
 use App\Pivot_Models\PivoteForms;
 use App\Pivot_Models\PivoteServicios;
+use App\Pivot_Models\PivoteMedios;
 use Telegram\Bot\FileUpload\InputFile;
 use Telegram\Bot\Laravel\Facades\Telegram;
 use Emoji;
@@ -50,21 +51,18 @@ class HomeController extends Controller {
      */
     public function index() {
         $dashboard['registros'] = Registros::all();
-        $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
- 
-					
-        
-            
+
         return view('home', $dashboard);
     }
     
     public function getUserLeads() {    
         // $dashboard['registros'] = Registros::where('fuente','=',auth()->user()->name)->get();
         $dashboard['registros'] = Registros::all();        
-        $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
@@ -74,20 +72,31 @@ class HomeController extends Controller {
 
     public function  getRegistros() {
         $dashboard['registros'] = Registros::all();
-        $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
+
+        // $dashboard['contacto'] = DB::table('registros')
+        //                         ->leftJoin('pivot_medios', 'pivot_medios.id_registro', '=', 'registros.id_registro')
+        //                         ->select('registros.id_registro', 'registros.nombre', 'pivot_medios.*')
+        //                         ->get();
+
+        $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();        
         return view('admin/registros', $dashboard);
     }
 
+    public function  getRegistrosRecibido() {
+        $dashboard['registros'] = Registros::all();
+        $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
+        return view('admin/registros_recibido', $dashboard);
+    }
+
     public function  getRegistrosProceso() {
         $dashboard['registros'] = Registros::all();
-        $dashboard['proceso'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['proceso'] = PivoteStatus::where('id_status','=',5)->get();
         return view('admin/registros_proceso', $dashboard);
     }
     
-
     public function  getRegistrosCheck() {
         $dashboard['registros'] = Registros::all();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
@@ -164,7 +173,7 @@ class HomeController extends Controller {
         return response()->json($contactos);
     }
 
-    public function getGraficasMensualProceso(){
+    public function getGraficasMensualRecibidos(){
         $contactos = DB::table('pivot_status')
                     ->join('fecha_registro', 'pivot_status.id_registro', '=', 'fecha_registro.id_registro')
                     ->where('pivot_status.id_status','=',1)
@@ -172,6 +181,37 @@ class HomeController extends Controller {
         return response()->json($contactos);
     }
 
+    public function getGraficasMensualProceso(){
+        $contactos = DB::table('pivot_status')
+                    ->join('fecha_registro', 'pivot_status.id_registro', '=', 'fecha_registro.id_registro')
+                    ->where('pivot_status.id_status','=',5)
+                    ->get();
+        return response()->json($contactos);
+    }
+
+    public function getGraficasMensualCotizados(){
+        $contactos = DB::table('pivot_status')
+                    ->join('fecha_registro', 'pivot_status.id_registro', '=', 'fecha_registro.id_registro')
+                    ->where('pivot_status.id_status','=',4)
+                    ->get();
+        return response()->json($contactos);
+    }
+
+    public function getGraficasMensualCerrados(){
+        $contactos = DB::table('pivot_status')
+                    ->join('fecha_registro', 'pivot_status.id_registro', '=', 'fecha_registro.id_registro')
+                    ->where('pivot_status.id_status','=',2)
+                    ->get();
+        return response()->json($contactos);
+    }
+
+    public function getGraficasMensualNoViables(){
+        $contactos = DB::table('pivot_status')
+                    ->join('fecha_registro', 'pivot_status.id_registro', '=', 'fecha_registro.id_registro')
+                    ->where('pivot_status.id_status','=',3)
+                    ->get();
+        return response()->json($contactos);
+    }
 
     // Función que acompleta los datos de Facebook (Relación con tablas)
     public function saveDataFacebook(){

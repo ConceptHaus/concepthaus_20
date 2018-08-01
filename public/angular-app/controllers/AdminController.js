@@ -23,16 +23,17 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
 
     var getSolicitudes = function(){
         AdminService.getSolicitudes().then(function(res){
-					$scope.show = false;
+			$scope.show = false;
             $scope.registros = res.data;
+            $scope.statusRecibido = [];
             $scope.statusProceso = [];
             $scope.statusCheck = [];
             $scope.statusClose = [];
             $scope.statusCotizado = [];
-						  // console.log(res);
+		    // console.log(res);
             angular.forEach($scope.registros, function(value, key) {
                 if(value.pivot_status.id_status == 1) {
-                    $scope.statusProceso.push(value);
+                    $scope.statusRecibido.push(value);
                 }
                 if(value.pivot_status.id_status == 2){
                     $scope.statusCheck.push(value);
@@ -42,6 +43,9 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 }
                 if(value.pivot_status.id_status == 4){
                     $scope.statusCotizado.push(value);
+                }
+                if(value.pivot_status.id_status == 5){
+                    $scope.statusProceso.push(value);
                 }
             });
 
@@ -177,16 +181,13 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
         })
     }
 
-    // ===================== Gráfica Mensual Proceso ====================
-    var getGraficaMensualProceso = function(){
+    // ===================== Gráfica Mensual Recibidos ====================
+    var getGraficaMensualRecibidos = function(){
         var graficaMes = [];
-        $http.get('/api/v1/graficas_mensual_proceso').then(function(res){
+        $http.get('/api/v1/graficas_mensual_recibidos').then(function(res){
             var contactos = res.data;
-            // console.log(contactos);
             var countContacts = Object.keys(res.data).length;
-            // console.log(countContacts);
-            var countContactMes = (countContacts+10);
-            // console.log(countContactMes);
+            var countContactMes = (countContacts+5);
             var enero = _.filter(contactos,{'mes':'01'});
             var febrero = _.filter(contactos,{'mes':'02'});
             var marzo = _.filter(contactos,{'mes':'03'});
@@ -203,30 +204,99 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
             graficaMes.push(enero.length,febrero.length,marzo.length,abril.length,mayo.length,junio.length,julio.length,
                             agosto.length,septiembre.length,octubre.length,noviembre.length,diciembre.length);
 
-            // console.log('Mes',graficaMes);
             var dataEmailsSubscriptionChart = {
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 series: [
                     graficaMes
-
                 ]
             };
             var optionsEmailsSubscriptionChart = {
                 axisX: {
                     showGrid: false
                 },
+                axisY: {
+                    offset: 50,
+                    scaleMinSpace: 20,
+                    seriesBarDistance: 1,
+                },
                 low: 0,
                 high: countContactMes,
+                height: '200px',
+                seriesBarDistance: 5,
                 chartPadding: {
                     top: 0,
-                    right: 50,
+                    right: 0,
                     bottom: 0,
                     left: 0
                 }
             };
             var responsiveOptions = [
                 ['screen and (max-width: 640px)', {
-                    seriesBarDistance: 10,
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function(value) {
+                            return value[0];
+                        }
+                    }
+                }]
+            ];
+            var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChartRecibido', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
+            //start animation for the Emails Subscription Chart
+            md.startAnimationForBarChart(emailsSubscriptionChart);
+        })
+    }
+    // ===================== Gráfica Mensual En Proceso ====================
+    var getGraficaMensuaEnProceso = function(){
+        var graficaMes = [];
+        $http.get('/api/v1/graficas_mensual_proceso').then(function(res){
+            var contactos = res.data;
+            var countContacts = Object.keys(res.data).length;
+            var countContactMes = (countContacts+5);
+            var enero = _.filter(contactos,{'mes':'01'});
+            var febrero = _.filter(contactos,{'mes':'02'});
+            var marzo = _.filter(contactos,{'mes':'03'});
+            var abril = _.filter(contactos,{'mes':'04'});
+            var mayo = _.filter(contactos,{'mes':'05'});
+            var junio = _.filter(contactos,{'mes':'06'});
+            var julio = _.filter(contactos,{'mes':'07'});
+            var agosto = _.filter(contactos,{'mes':'08'});
+            var septiembre = _.filter(contactos,{'mes':'09'});
+            var octubre = _.filter(contactos,{'mes':'10'});
+            var noviembre = _.filter(contactos,{'mes':'11'});
+            var diciembre = _.filter(contactos,{'mes':'12'});
+
+            graficaMes.push(enero.length,febrero.length,marzo.length,abril.length,mayo.length,junio.length,julio.length,
+                            agosto.length,septiembre.length,octubre.length,noviembre.length,diciembre.length);
+
+            var dataEmailsSubscriptionChart = {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                series: [
+                    graficaMes
+                ]
+            };
+            var optionsEmailsSubscriptionChart = {
+                axisX: {
+                    showGrid: false
+                },
+                axisY: {
+                    offset: 50,
+                    scaleMinSpace: 20,
+                    seriesBarDistance: 1,
+                },
+                low: 0,
+                high: countContactMes,
+                height: '200px',
+                seriesBarDistance: 5,
+                chartPadding: {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                }
+            };
+            var responsiveOptions = [
+                ['screen and (max-width: 640px)', {
+                    seriesBarDistance: 5,
                     axisX: {
                         labelInterpolationFnc: function(value) {
                             return value[0];
@@ -235,15 +305,229 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 }]
             ];
             var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChartProceso', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
-
             //start animation for the Emails Subscription Chart
             md.startAnimationForBarChart(emailsSubscriptionChart);
         })
     }
 
+    // ===================== Gráfica Mensual Cotizados ====================
+    var getGraficaMensuaEnCotizados = function(){
+        var graficaMes = [];
+        $http.get('/api/v1/graficas_mensual_cotizados').then(function(res){
+            var contactos = res.data;
+            var countContacts = Object.keys(res.data).length;
+            var countContactMes = (countContacts+5);
+            var enero = _.filter(contactos,{'mes':'01'});
+            var febrero = _.filter(contactos,{'mes':'02'});
+            var marzo = _.filter(contactos,{'mes':'03'});
+            var abril = _.filter(contactos,{'mes':'04'});
+            var mayo = _.filter(contactos,{'mes':'05'});
+            var junio = _.filter(contactos,{'mes':'06'});
+            var julio = _.filter(contactos,{'mes':'07'});
+            var agosto = _.filter(contactos,{'mes':'08'});
+            var septiembre = _.filter(contactos,{'mes':'09'});
+            var octubre = _.filter(contactos,{'mes':'10'});
+            var noviembre = _.filter(contactos,{'mes':'11'});
+            var diciembre = _.filter(contactos,{'mes':'12'});
+
+            graficaMes.push(enero.length,febrero.length,marzo.length,abril.length,mayo.length,junio.length,julio.length,
+                            agosto.length,septiembre.length,octubre.length,noviembre.length,diciembre.length);
+
+            var dataEmailsSubscriptionChart = {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                series: [
+                    graficaMes
+                ]
+            };
+            var optionsEmailsSubscriptionChart = {
+                axisX: {
+                    showGrid: false
+                },
+                axisY: {
+                    offset: 50,
+                    scaleMinSpace: 20,
+                    seriesBarDistance: 1,
+                },
+                low: 0,
+                high: countContactMes,
+                height: '200px',
+                seriesBarDistance: 5,
+                chartPadding: {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                }
+            };
+            var responsiveOptions = [
+                ['screen and (max-width: 640px)', {
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function(value) {
+                            return value[0];
+                        }
+                    }
+                }]
+            ];
+            var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChartCotizado', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
+            //start animation for the Emails Subscription Chart
+            md.startAnimationForBarChart(emailsSubscriptionChart);
+        })
+    }
+
+    // ===================== Gráfica Mensual Cerrados ====================
+    var getGraficaMensuaEnCerrados = function(){
+        var graficaMes = [];
+        $http.get('/api/v1/graficas_mensual_cerrados').then(function(res){
+            var contactos = res.data;
+            var countContacts = Object.keys(res.data).length;
+            var countContactMes = (countContacts+5);
+            var enero = _.filter(contactos,{'mes':'01'});
+            var febrero = _.filter(contactos,{'mes':'02'});
+            var marzo = _.filter(contactos,{'mes':'03'});
+            var abril = _.filter(contactos,{'mes':'04'});
+            var mayo = _.filter(contactos,{'mes':'05'});
+            var junio = _.filter(contactos,{'mes':'06'});
+            var julio = _.filter(contactos,{'mes':'07'});
+            var agosto = _.filter(contactos,{'mes':'08'});
+            var septiembre = _.filter(contactos,{'mes':'09'});
+            var octubre = _.filter(contactos,{'mes':'10'});
+            var noviembre = _.filter(contactos,{'mes':'11'});
+            var diciembre = _.filter(contactos,{'mes':'12'});
+
+            graficaMes.push(enero.length,febrero.length,marzo.length,abril.length,mayo.length,junio.length,julio.length,
+                            agosto.length,septiembre.length,octubre.length,noviembre.length,diciembre.length);
+
+            var dataEmailsSubscriptionChart = {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                series: [
+                    graficaMes
+                ]
+            };
+            var optionsEmailsSubscriptionChart = {
+                axisX: {
+                    showGrid: false
+                },
+                axisY: {
+                    offset: 50,
+                    scaleMinSpace: 20,
+                    seriesBarDistance: 1,
+                },
+                low: 0,
+                high: countContactMes,
+                height: '200px',
+                seriesBarDistance: 5,
+                chartPadding: {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                }
+            };
+            var responsiveOptions = [
+                ['screen and (max-width: 640px)', {
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function(value) {
+                            return value[0];
+                        }
+                    }
+                }]
+            ];
+            var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChartCerrado', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
+            //start animation for the Emails Subscription Chart
+            md.startAnimationForBarChart(emailsSubscriptionChart);
+        })
+    }
+
+    // ===================== Gráfica Mensual No Viables ====================
+    var getGraficaMensualNoViables = function(){
+        var graficaMes = [];
+        $http.get('/api/v1/graficas_mensual_no_viables').then(function(res){
+            var contactos = res.data;
+            var countContacts = Object.keys(res.data).length;
+            var countContactMes = (countContacts+5);
+            var enero = _.filter(contactos,{'mes':'01'});
+            var febrero = _.filter(contactos,{'mes':'02'});
+            var marzo = _.filter(contactos,{'mes':'03'});
+            var abril = _.filter(contactos,{'mes':'04'});
+            var mayo = _.filter(contactos,{'mes':'05'});
+            var junio = _.filter(contactos,{'mes':'06'});
+            var julio = _.filter(contactos,{'mes':'07'});
+            var agosto = _.filter(contactos,{'mes':'08'});
+            var septiembre = _.filter(contactos,{'mes':'09'});
+            var octubre = _.filter(contactos,{'mes':'10'});
+            var noviembre = _.filter(contactos,{'mes':'11'});
+            var diciembre = _.filter(contactos,{'mes':'12'});
+
+            graficaMes.push(enero.length,febrero.length,marzo.length,abril.length,mayo.length,junio.length,julio.length,
+                            agosto.length,septiembre.length,octubre.length,noviembre.length,diciembre.length);
+
+            var dataEmailsSubscriptionChart = {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                series: [
+                    graficaMes
+                ]
+            };
+            var optionsEmailsSubscriptionChart = {
+                axisX: {
+                    showGrid: false
+                },
+                axisY: {
+                    offset: 50,
+                    scaleMinSpace: 20,
+                    seriesBarDistance: 1,
+                },
+                low: 0,
+                high: countContactMes,
+                height: '200px',
+                seriesBarDistance: 5,
+                chartPadding: {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                }
+            };
+            var responsiveOptions = [
+                ['screen and (max-width: 640px)', {
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function(value) {
+                            return value[0];
+                        }
+                    }
+                }]
+            ];
+            var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChartNoViables', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
+            //start animation for the Emails Subscription Chart
+            md.startAnimationForBarChart(emailsSubscriptionChart);
+        })
+    }
+
+
+
     getGraficaSemanal();
     getGraficaMensual();
-    getGraficaMensualProceso();
+    getGraficaMensualRecibidos();
+    getGraficaMensuaEnProceso();
+    getGraficaMensuaEnCotizados();
+    getGraficaMensuaEnCerrados();
+    getGraficaMensualNoViables();
+
+    $scope.Proceso = function(registro){
+        registro.new_status = 5;
+        console.log(registro);
+        AdminService.postStatus(registro)
+            .then(function(data){
+                console.log(data.data);
+                jQuery('#modalProceso').modal('hide');
+                $window.location.reload();
+
+            }, function(err){
+                console.log(err);
+            });
+    };
 
     $scope.Valued = function(registro){
         registro.new_status = 4;
@@ -260,7 +544,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
     };
 
     $scope.NoViable = function(registro){
-        registro.new_status = 3;
+        registro.new_status = 2;
         AdminService.postStatus(registro)
             .then(function(data){
                 console.log(data.data);
@@ -273,7 +557,7 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
     };
 
     $scope.NewSocio = function(registro){
-        registro.new_status = 2;
+        registro.new_status = 3;
         AdminService.postStatus(registro)
             .then(function(data){
                 console.log(data.data);

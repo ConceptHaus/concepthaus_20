@@ -20,15 +20,19 @@
                                 <img src="{{asset('admin/img/icons/contact-mail.svg')}}" alt="Concept Haus">
                             </div>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 2)
-                            <div class="card-header" data-background-color="blue">
-                                <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
-                            </div>
-                        @elseif($info_user[0]['pivot_status']['id_status'] == 3)
                             <div class="card-header" data-background-color="red">
                                 <img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus">
                             </div>
+                        @elseif($info_user[0]['pivot_status']['id_status'] == 3)
+                            <div class="card-header" data-background-color="blue">
+                                <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
+                            </div>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 4)
                             <div class="card-header" data-background-color="orange">
+                                <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
+                            </div>
+                        @elseif($info_user[0]['pivot_status']['id_status'] == 5)
+                            <div class="card-header" data-background-color="green">
                                 <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
                             </div>
                         @endif
@@ -42,11 +46,13 @@
                         @if($info_user[0]['pivot_status']['id_status'] == 1)
                             <h4 class="title txt-gray">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 2)
-                            <h4 class="title txt-blue">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
-                        @elseif($info_user[0]['pivot_status']['id_status'] == 3)
                             <h4 class="title txt-red">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
+                        @elseif($info_user[0]['pivot_status']['id_status'] == 3)
+                            <h4 class="title txt-blue">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 4)
                             <h4 class="title txt-orange">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
+                        @elseif($info_user[0]['pivot_status']['id_status'] == 5)
+                            <h4 class="title txt-green">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @endif
                     </div>
                 </div>
@@ -166,6 +172,16 @@
                     </div>
                     <div class="card-content text-center">
                         <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> No viable</button>
+                        <button type="button" class="btn btn-orange" data-toggle="modal" data-target=".modalProceso"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> En proceso</button>
+                    </div>
+                </div>
+                @elseif($info_user[0]['pivot_status']['id_status'] == 5)
+                <div class="card edit-status">
+                    <div class="card-header" data-background-color="white">
+                        <p class="category txt-grayDark">Modificación de estatus</p>
+                    </div>
+                    <div class="card-content text-center">
+                        <button type="button" class="btn btn-red" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> No viable</button>
                         <button type="button" class="btn btn-orange" data-toggle="modal" data-target=".modalCotizado"><img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus"> Cotizado</button>
                     </div>
                 </div>
@@ -198,6 +214,8 @@
                     <form>
                         <div class="row">
                             <div class="col-md-4 contact-media">
+                                <input id="medioContacto" name="medioContacto" ng-model="medio.contacto" ng-init="medio.contacto = '{{$info_user[0]['pivot_medios']->count()}}'" hidden>
+                                <input id="medioStatus" name="medioStatus" ng-model="medio.status" ng-init="medio.status = '{{$info_user[0]['pivot_status']['id_status']}}'" hidden>
                                 <div class="form-check" ng-init="medio.id_registro = {{$info_user[0]['id_registro']}}">
                                     <input class="form-check-input" type="checkbox" ng-model="medio.correo" ng-true-value="1" ng-false-value="0" id="checkbox1" value="correo">
                                     <label class="form-check-label" for="checkbox2"><i class="far fa-envelope" aria-hidden="true"></i> Correo</label>
@@ -343,6 +361,28 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-red" ng-click="NoViable(registro)">No viable</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal En proceso -->
+<div class="modal fade modalProceso" id="modalProceso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" ng-init="registro.id_registro = {{$info_user[0]['id_registro']}}">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">SOLICITUD EN PROCESO</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group none-mt">
+                        <p>¿Deseas actualizar el estatus a en proceso?</p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-blue" ng-click="Proceso(registro)">Aceptar</button>
             </div>
         </div>
     </div>
