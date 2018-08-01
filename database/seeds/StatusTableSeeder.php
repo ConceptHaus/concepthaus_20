@@ -14,10 +14,11 @@ class StatusTableSeeder extends Seeder
     public function run(){
 
         $status = [
-            ['status' => 'En Proceso'],
+            ['status' => 'Recibido'],
             ['status' => 'Socio'],
             ['status' => 'No viable'],
             ['status' => 'Cotizado'],
+            ['status' => 'En Proceso'],
         ];
 
         Status::insert($status);

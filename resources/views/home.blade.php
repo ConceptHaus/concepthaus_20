@@ -8,18 +8,18 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
-                    <a href="{{ url('/registros/proceso') }}">
+                    <a href="{{ url('/registros/recibidos') }}">
                         <div class="card-header" data-background-color="gray">
                             <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="Concept Haus">
                         </div>
                     </a>
                     <div class="card-content">
-                        <p class="category">En proceso</p>
-                        <h3 class="title">{{count($proceso)}}</h3>
+                        <p class="category">Recibidos</p>
+                        <h3 class="title">{{count($recibido)}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">local_offer</i>  Total en proceso.
+                            <i class="material-icons">local_offer</i>  Total recibidos.
                         </div>
                     </div>
                 </div>

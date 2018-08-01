@@ -39,29 +39,28 @@ class StatusController extends Controller
         $registro = Registros::where('id_registro','=',$request->id_registro)->first();
         $statusActual = PivoteStatus::where('id_registro','=',$request->id_registro)->first();
 
-
-        if($request->new_status == 2){
-            $statusActual->id_status = 2;
+        if($request->new_status == 3){
+            $statusActual->id_status = 3;
             $nosocio = new NoSocio;
             $nosocio->id_registro = $request->id_registro;
             $nosocio->no_socio = $request->no_socio;
             $nosocio->save();
             $statusActual->save();
 
-            $user['correo'] = $registro['correo'];
-            $user['no_socio'] = $request->no_socio;
-            // Mailing confirmación de registro usuario
-			Mail::send('emails.socio.user' ,$user, function ($contact) use ($user) {
-				$contact->from('stcatalogo2@gmail.com', 'Salvaje Tentación');
-				$contact->to($user['correo'], 'Socio Salvaje Tentación')->subject('Socio Salvaje Tentación');
-			});
+            // $user['correo'] = $registro['correo'];
+            // $user['no_socio'] = $request->no_socio;
+            // // Mailing confirmación de registro usuario
+			// Mail::send('emails.socio.user' ,$user, function ($contact) use ($user) {
+			// 	$contact->from('stcatalogo2@gmail.com', 'Salvaje Tentación');
+			// 	$contact->to($user['correo'], 'Socio Salvaje Tentación')->subject('Socio Salvaje Tentación');
+			// });
 
             return response('success_socio',200);
         }
 
-        if($request->new_status == 3){
+        if($request->new_status == 2){
             
-            $statusActual->id_status = 3;
+            $statusActual->id_status = 2;
             $motivo = new PivoteMotivo;
             $motivo->id_registro = $request->id_registro;
             $motivo->id_motivo = $request->id_motivo;
@@ -86,6 +85,17 @@ class StatusController extends Controller
 
             return response('success_no_viable',200);
         }
+
+
+        if($request->new_status == 5){
+
+            $statusActual->id_status = 5;
+            $statusActual->save();
+
+            return response('success_no_viable',200);
+        }
+
+        
 
 
 

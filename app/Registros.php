@@ -79,7 +79,7 @@ class Registros extends Model {
         ->selectRaw('registros.*, pivot_status.id_status')
         ->get();
     }
-
+    
     public function scopeGetLastestRegistros($query){
         return $query->with('ubicacion')
         ->with('no_socio')
