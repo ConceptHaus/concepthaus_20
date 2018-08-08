@@ -1,7 +1,8 @@
 // GENERAL SETTING
 window.sr = ScrollReveal({ 
     reset   : true,
-    easing  : 'ease-out',
+    // easing  : 'ease-out',
+    easing  : 'ease-in',
     origin  : 'bottom',
 });
 
