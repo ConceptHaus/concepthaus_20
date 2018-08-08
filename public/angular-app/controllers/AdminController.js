@@ -35,10 +35,10 @@ app.controller('AdminController', function AdminController($window, $scope, $fil
                 if(value.pivot_status.id_status == 1) {
                     $scope.statusRecibido.push(value);
                 }
-                if(value.pivot_status.id_status == 2){
+                if(value.pivot_status.id_status == 3){
                     $scope.statusCheck.push(value);
                 }
-                if(value.pivot_status.id_status == 3){
+                if(value.pivot_status.id_status == 2){
                     $scope.statusClose.push(value);
                 }
                 if(value.pivot_status.id_status == 4){

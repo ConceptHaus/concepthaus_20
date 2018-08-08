@@ -197,7 +197,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                          {{-- dir-paginate="registro in statusCheck | itemsPerPage: 15 --}}
                             <tr ng-repeat="registro in statusCheck | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse | limitTo:10">
                                 <td><% registro.id_registro %></td>
                                 <td>
@@ -216,7 +215,11 @@
                                 <td><% registro.empresa %></td>
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
-                                    <i class="material-icons txt-green">check</i>
+                                    <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">playlist_add_check</i>
+                                    <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-green">check</i>
+                                    <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-red">close</i>
+                                    <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
+                                    <i ng-if="registro.pivot_status.id_status == 5" class="material-icons txt-blue">access_time</i>
                                 </td>
                                 <td>
                                     <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
