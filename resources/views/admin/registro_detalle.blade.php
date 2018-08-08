@@ -24,7 +24,7 @@
                                 <img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="Concept Haus">
                             </div>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 3)
-                            <div class="card-header" data-background-color="blue">
+                            <div class="card-header" data-background-color="green">
                                 <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
                             </div>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 4)
@@ -32,7 +32,7 @@
                                 <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
                             </div>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 5)
-                            <div class="card-header" data-background-color="green">
+                            <div class="card-header" data-background-color="blue">
                                 <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="Concept Haus">
                             </div>
                         @endif
@@ -48,11 +48,11 @@
                         @elseif($info_user[0]['pivot_status']['id_status'] == 2)
                             <h4 class="title txt-red">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 3)
-                            <h4 class="title txt-blue">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
+                            <h4 class="title txt-green">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 4)
                             <h4 class="title txt-orange">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @elseif($info_user[0]['pivot_status']['id_status'] == 5)
-                            <h4 class="title txt-green">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
+                            <h4 class="title txt-blue">{{$info_user[0]['pivot_status']['status']['status']}}</h4>
                         @endif
                     </div>
                 </div>

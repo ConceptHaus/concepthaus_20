@@ -45,7 +45,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/cerrados') }}">
-                        <div class="card-header" data-background-color="blue">
+                        <div class="card-header" data-background-color="green">
                             <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="BeGrand®">
                         </div>
                     </a>

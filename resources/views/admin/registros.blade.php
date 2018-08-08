@@ -62,7 +62,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <a href="{{ url('/registros/cerrados') }}">
-                    <div class="card-header" data-background-color="blue">
+                    <div class="card-header" data-background-color="green">
                         <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="BeGrand®">
                     </div>
                 </a>
@@ -271,10 +271,10 @@
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
                                     <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">playlist_add_check</i>
-                                    <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
+                                    <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-green">check</i>
                                     <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
                                     <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
-                                    <i ng-if="registro.pivot_status.id_status == 5" class="material-icons txt-orange">access_time</i>
+                                    <i ng-if="registro.pivot_status.id_status == 5" class="material-icons txt-blue">access_time</i>
                                 </td>
                                 <td>
                                     <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
