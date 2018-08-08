@@ -41,7 +41,7 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3">
             <div class="card card-stats">
-                <div class="card-header" data-background-color="gray">
+                <div class="card-header" data-background-color="blue">
                     <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="BeGrand®">
                 </div>
                 <div class="card-content">
@@ -217,7 +217,7 @@
                                 <td><% registro.empresa %></td>
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
-                                    <i class="material-icons txt-green">access_time</i>
+                                    <i class="material-icons txt-blue">access_time</i>
                                 </td>
                                 <td>
                                     <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
