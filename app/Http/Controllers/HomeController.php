@@ -99,13 +99,13 @@ class HomeController extends Controller {
     
     public function  getRegistrosCheck() {
         $dashboard['registros'] = Registros::all();
-        $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
+        $dashboard['socios'] = PivoteStatus::where('id_status','=',3)->get();
         return view('admin/registros_check', $dashboard);
     }
 
     public function  getRegistrosClose() {
         $dashboard['registros'] = Registros::all();
-        $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
+        $dashboard['descartados'] = PivoteStatus::where('id_status','=',2)->get();
         return view('admin/registros_close', $dashboard);
     }
 

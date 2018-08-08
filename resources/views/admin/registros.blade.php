@@ -271,8 +271,8 @@
                                 <td><% registro.fecha_registro.fecha_completa %></td>
                                 <td>
                                     <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">playlist_add_check</i>
-                                    <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-green">check</i>
-                                    <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
+                                    <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-green">check</i>
+                                    <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-red">close</i>
                                     <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
                                     <i ng-if="registro.pivot_status.id_status == 5" class="material-icons txt-blue">access_time</i>
                                 </td>
