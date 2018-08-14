@@ -74,6 +74,48 @@
     </div>
     </a>
   </section>
+
+
+  {{-- <div class="foo  foo-1" style="min-height: 33vh;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: mediumvioletred;">First
+  </div>
+  
+  <div class="foo  foo-2" style="min-height: 33vh;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: lightskyblue;">Second
+  </div>
+  
+  <div class="foo  foo-3" style="min-height: 33vh;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: mediumvioletred;">Third
+  </div>
+  
+  <div class="foo  foo-4" style="min-height: 33vh;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: lightskyblue;">Fourth
+  </div>
+  
+  <div class="foo  foo-5" style="min-height: 33vh;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: mediumvioletred;">Fifth
+  </div> --}}
+
   <!-- Section | Projects -->
   <section id="homeProjects" class="container-fluid">
     <div class="row">
@@ -86,7 +128,7 @@
 
     <div class="row">          
       <!-- ChilimBalam -->
-      <div class="col-md-6 w50 project-animate">
+      <div class="col-md-6 w50 project-animate foo-1">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'">
           <a class="projectName" href="<% project.url %>" target="_blank">
           <!-- {{ url('/proyecto/<%project.id%>') }} -->
@@ -104,7 +146,7 @@
       </div>
 
       <!-- Discovery Kids && Sistema Eco -->
-      <div class="col-md-3 w25 project-animate-2">
+      <div class="col-md-3 w25 project-animate-2 foo-1">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' || project.id == '56727549'">
             <a class="projectName" href="<% project.url %>" target="_blank">
               <figure class="effect-goliath">
@@ -120,7 +162,7 @@
         </div>
       </div>
       <!-- Clarasol && Fox/Latinoamérica -->
-      <div class="col-md-3 w25 project-animate-3">
+      <div class="col-md-3 w25 project-animate-3 foo-1">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489' || project.id == '56050953'">
             <a class="projectName" href="<% project.url %>" target="_blank">
               <figure class="effect-goliath">
@@ -138,7 +180,7 @@
     </div>
     <div class="row">
       <!-- Zaxic && El Encanto -->
-      <div class="col-md-3 w25 project-animate-3">
+      <div class="col-md-3 w25 project-animate-3 foo-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115' || project.id == '55916457'">
             <a class="projectName" href="<% project.url %>" target="_blank">
               <figure class="effect-goliath">
@@ -154,7 +196,7 @@
         </div>
       </div>
       <!-- The Walking Dead && Zayrik -->
-      <div class="col-md-3 w25 project-animate-2">
+      <div class="col-md-3 w25 project-animate-2 foo-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60762011' || project.id == '56725201'">
             <a class="projectName" href="<% project.url %>" target="_blank">
               <figure class="effect-goliath">
@@ -170,7 +212,7 @@
         </div>
       </div>
       <!-- Petmail -->
-      <div class="col-md-6 w50 project-animate">
+      <div class="col-md-6 w50 project-animate foo-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55918277'">
             <a class="projectName" href="<% project.url %>" target="_blank">
               <figure class="effect-goliath">
