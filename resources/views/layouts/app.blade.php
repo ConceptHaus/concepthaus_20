@@ -388,8 +388,10 @@
     <script src="{{asset('js/isteven-multi-select.js')}}"></script>
     
     <!-- Scripts Particles.js -->
-    <script src="{{asset('js/particles.js')}}"></script> 
-    <script src="{{asset('js/app-particle.js')}}"></script>
+    {{-- 
+        <script src="{{asset('js/particles.js')}}"></script> 
+        <script src="{{asset('js/app-particle.js')}}"></script> 
+    --}}
 
     <script src="{{asset('js/scrollreveal.js')}}"></script>
     
@@ -461,7 +463,6 @@
             lastScrollTop = st;
         }
     </script>
-   
 </body>
 
 </html>
