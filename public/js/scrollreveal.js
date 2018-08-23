@@ -23,23 +23,23 @@
 // // GENERAL SETTING
 // window.sr = ScrollReveal({ 
 //     reset: true,
-//     origin  : 'bottom', 
+//     easing  : 'ease-in',
 // });
 
 // // Custom Settings
 // sr.reveal('.foo-1', { 
-//     duration: 200 
+//     duration: 100
 // });
 
 // sr.reveal('.foo-2', { 
-//     origin: 'right', 
-//     duration: 2000 
+//     // origin: 'right', 
+//     duration: 500 
 // });
 
 // sr.reveal('.foo-3', { 
-//     duration: 1000
+//     // duration: 1000
 // });
 
 // sr.reveal('.foo-4', { 
-//     viewFactor: 0.5
+//     // viewFactor: 0.5
 // });
