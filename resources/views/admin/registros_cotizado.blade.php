@@ -198,7 +198,7 @@
                         </thead>
                         <tbody>
                           {{-- dir-paginate="registro in statusCotizado | itemsPerPage: 15  --}}
-                            <tr ng-repeat="registro in statusCotizado | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse | limitTo:10">
+                            <tr ng-repeat="registro in statusCotizado | filter:search | filter:{id_status:fecha.selectTypeStatus} | filter:{fuente:fecha.selectTypeFuente} | orderBy:sortType:sortReverse">
                                 <td><% registro.id_registro %></td>
                                 <td class="fuente">
                                     <i ng-if="registro.fuente == 'Google'" class="fab fa-google google" aria-hidden="true"></i>
