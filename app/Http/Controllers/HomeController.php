@@ -52,6 +52,7 @@ class HomeController extends Controller {
     public function index() {
         $dashboard['registros'] = Registros::all();
         $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['proceso'] = PivoteStatus::where('id_status','=',5)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
@@ -79,6 +80,7 @@ class HomeController extends Controller {
         //                         ->get();
 
         $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
+        $dashboard['proceso'] = PivoteStatus::where('id_status','=',5)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();        

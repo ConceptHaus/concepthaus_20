@@ -339,8 +339,14 @@ Estilos generales del administrador Be Grand
     width: 25px;
 }
 
-.card-stats .card-content{
-    height: 100px !important;
+.card-stats {
+    .card-content{
+        // height: 100px !important;
+        height: auto!important;
+    }
+    .card-header{
+        margin-right: 0px;
+    }
 }
 
 .dropdown-solicitudes {
@@ -440,6 +446,10 @@ Estilos generales del administrador Be Grand
         top: 30px;
         width: 27px;
     }
+}
+
+.content-estatus {
+    width: 20%!important;
 }
 
 .title-total-white, .title-total-gray {
@@ -625,6 +635,17 @@ Estilos generales del administrador Be Grand
 @media (max-width: 1485px) {
     .cards-count-info .card-stats .card-content {
         min-height: 120px;
+        min-height: auto;
+    }
+}
+@media (max-width: 1440px) {
+    .card-stats {
+        .card-status {
+            margin-top: 70px;
+            padding-bottom: 6px;
+            position: relative;
+            text-align: center;
+        }
     }
 }
 @media (max-width: 1326px) {
@@ -633,6 +654,11 @@ Estilos generales del administrador Be Grand
     }
     .cards-count-info .card-footer {
         min-height: 45px;
+    }
+    .card-stats {
+        .card-status {
+            margin-top: 5px;
+        }
     }
 }
 @media (max-width: 1250px) {
@@ -656,6 +682,11 @@ Estilos generales del administrador Be Grand
         position: relative;
         top: 6px;
         right: 0;
+    }
+    .card-stats {
+        .card-status {
+            margin-top: 70px;
+        }
     }
 }
 @media (min-width: 992px) {
@@ -695,12 +726,19 @@ Estilos generales del administrador Be Grand
     .form-control, .form-group .form-control {
         width: 100%;
     }
+    .content-estatus {
+        display: inline-block;
+        width: 49%!important;
+    }
 }
 
 @media (max-width: 490px) {
     /* ---- Perfil usuario  ---- */
     #profile .btn {
         width: 100%;
+    }
+    .content-estatus {
+        width: 100%!important;
     }
 }
 #map {

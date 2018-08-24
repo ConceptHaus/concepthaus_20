@@ -6,14 +6,14 @@
             <div class="col-lg-12">
                 <h4 class="title-total-gray">Total de leads: {{count($registros)}}</h4>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6 content-estatus">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/recibidos') }}">
                         <div class="card-header" data-background-color="gray">
                             <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="Concept Haus">
                         </div>
                     </a>
-                    <div class="card-content">
+                    <div class="card-content card-status">
                         <p class="category">Recibidos</p>
                         <h3 class="title">{{count($recibido)}}</h3>
                     </div>
@@ -24,14 +24,32 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6 content-estatus">
+                <div class="card card-stats">
+                    <a href="{{ url('/registros/no-viables') }}">
+                        <div class="card-header" data-background-color="blue">
+                            <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="BeGrand®">
+                        </div>
+                    </a>
+                    <div class="card-content card-status">
+                        <p class="category">En proceso</p>
+                        <h3 class="title">{{count($proceso)}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">local_offer</i> Total no viables.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 content-estatus">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/cotizados') }}">
                         <div class="card-header" data-background-color="orange">
                             <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="Concept Haus">
                         </div>
                     </a>
-                    <div class="card-content">
+                    <div class="card-content card-status">
                         <p class="category">Cotizados</p>
                         <h3 class="title">{{count($cotizados)}}</h3>
                     </div>
@@ -42,14 +60,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6 content-estatus">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/cerrados') }}">
                         <div class="card-header" data-background-color="green">
                             <img src="{{asset('admin/img/icons/contact-check.svg')}}" alt="BeGrand®">
                         </div>
                     </a>
-                    <div class="card-content">
+                    <div class="card-content card-status">
                         <p class="category">Cerrados</p>
                         <h3 class="title">{{count($socios)}}</h3>
                     </div>
@@ -60,14 +78,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6 content-estatus">
                 <div class="card card-stats">
                     <a href="{{ url('/registros/no-viables') }}">
                         <div class="card-header" data-background-color="red">
                             <img src="{{asset('admin/img/icons/contact-error.svg')}}" alt="BeGrand®">
                         </div>
                     </a>
-                    <div class="card-content">
+                    <div class="card-content card-status">
                         <p class="category">No viable</p>
                         <h3 class="title">{{count($descartados)}}</h3>
                     </div>
