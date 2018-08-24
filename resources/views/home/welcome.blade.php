@@ -3,11 +3,6 @@
 @section('content')
 
 <div ng-controller="WelcomeController" ng-cloak>
-  <!-- Section | Panorama -->
-  {{-- <div id="panorama">
-    <span class="word p-bottom-left"><% randomWords[0].word %></span>
-    <img src="{{asset('img/backgrounds/panorama-gray.jpg')}}">
-  </div> --}}
   <!-- Section | Home Description -->
   <section id="home-description">
     <div class="row content-description small-gray">
