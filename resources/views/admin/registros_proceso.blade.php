@@ -25,7 +25,7 @@
             <div class="card card-stats">
                 <a href="{{url('/registros')}}">
                     <div class="card-header" data-background-color="grayDark">
-                        <img src="{{asset('admin/img/icons/contact-mail.svg')}}" alt="BeGrand®">
+                        <img src="{{asset('admin/img/icons/contact-mail.svg')}}" alt="ConceptHaus">
                     </div>
                 </a>
                 <div class="card-content">
