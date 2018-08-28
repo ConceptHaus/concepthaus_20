@@ -37,7 +37,21 @@ class WelcomeController extends Controller {
 
     public function viewBranding() {
         return view('home/branding');
-    } 
+    }
+
+
+
+    public function viewBrandingcolombia() {
+        return view('home/branding_colombia');
+    }
+
+    public function viewBrandingusa() {
+        return view('home/branding_usa');
+    }
+
+    public function viewBrandinguk() {
+        return view('home/branding_uk');
+    }
 
     public function viewWeb(){
         return view('home/web');
@@ -54,7 +68,7 @@ class WelcomeController extends Controller {
     // Detalle proyecto
     public function viewDetailProject($id){
 
-        // $client = new \GuzzleHttp\Client(); 
+        // $client = new \GuzzleHttp\Client();
         // $result = $client->request('GET', 'https://www.behance.net/v2/projects/'.$id,  [
         //     'query' => [
         //         'client_id' => 'aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg'

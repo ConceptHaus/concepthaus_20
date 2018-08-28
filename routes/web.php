@@ -20,6 +20,11 @@ Route::get('/inhaus', 'WelcomeController@viewInHaus');
 Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
 Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
+
+Route::get('/colombia/branding', 'WelcomeController@viewBrandingcolombia');
+Route::get('/usa/branding', 'WelcomeController@viewBrandingusa');
+Route::get('/uk/branding', 'WelcomeController@viewBrandinguk');
+
 Route::get('/desarrollo-web', 'WelcomeController@viewWeb');
 Route::get('/posicionamiento-seo', 'WelcomeController@viewSeo');
 Route::get('/googleadwords-publicidadenfacebook', 'WelcomeController@viewAds');
