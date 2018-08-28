@@ -26,7 +26,7 @@
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6 content-estatus">
                 <div class="card card-stats">
-                    <a href="{{ url('/registros/no-viables') }}">
+                    <a href="{{ url('/registros/proceso') }}">
                         <div class="card-header" data-background-color="blue">
                             <img src="{{asset('admin/img/icons/contact-dev.svg')}}" alt="BeGrand®">
                         </div>
