@@ -9540,9 +9540,9 @@ header {
   z-index: 9;
 }
 
-header .content-logo {
-  /*===============*/
-  /*==============*/
+header .content-logo-eng {
+  text-align: center !important;
+  margin-bottom: -24px;
 }
 
 @media (max-width: 767px) {

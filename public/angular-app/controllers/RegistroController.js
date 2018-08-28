@@ -9,7 +9,7 @@ angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], fu
 });
 
 app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveLead, countries, states) {
-    $scope.contacto={}; 
+    $scope.contacto={};
     $scope.saveDataContact  = function(contacto, contactoForm){
         swal({
             // text: "Estamos registrando tus datos.",
@@ -79,7 +79,7 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
         angular.forEach(contacto.outputServicies, function(value, key) {
             $scope.contacto.servicios.push(value.name);
         })
-        
+
         saveLead.post($scope.contacto).then(successRegisterLead, errorRegisterLead);
     }
     var successRegisterLead = function(res){
@@ -138,5 +138,28 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
         { icon: "<img src=../../img/concept.png />", name: "Producción Audiovisual", ticked: false  },
         { icon: "<img src=../../img/concept.png />", name: "Fotografía", ticked: false  },
         { icon: "<img src=../../img/concept.png />", name: "Varios", ticked: false  }
-    ]; 
+    ];
+
+		// Multiple Select Eng
+		$scope.listServicies_en = [
+        { icon: "<img src=../../img/concept.png />", name: "Branding", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Design", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "3D", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Web Development", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "SEO", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Digital Marketing", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "ATL Marketing", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "BTL Marketing", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Event", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Public Relations", ticked: false },
+        { icon: "<img src=../../img/concept.png />", name: "Corporate Social Responsibility", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Interior Design", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "AV Production", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Photography", ticked: false  },
+        { icon: "<img src=../../img/concept.png />", name: "Various", ticked: false  }
+    ];
+
+
+
+
 });
