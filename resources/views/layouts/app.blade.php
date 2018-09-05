@@ -111,6 +111,7 @@
                                 <a href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a href="{{ url('/startups') }}">STARTUPS</a>
                                 <a href="{{ url('/#contact') }}">CONTACTO</a>
+                                <a href="https://concepthaus.mx/blog">BLOG</a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +131,7 @@
                             </div>
                         </div>
                     </nav>
-                
+
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2 socialIcons text-right">
                     <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
@@ -386,15 +387,15 @@
     <script type="text/javascript" src="/js/panorama_viewer/panorama_viewer.js"></script>
 
     <script src="{{asset('js/isteven-multi-select.js')}}"></script>
-    
+
     <!-- Scripts Particles.js -->
-    {{-- 
-        <script src="{{asset('js/particles.js')}}"></script> 
-        <script src="{{asset('js/app-particle.js')}}"></script> 
+    {{--
+        <script src="{{asset('js/particles.js')}}"></script>
+        <script src="{{asset('js/app-particle.js')}}"></script>
     --}}
 
     <script src="{{asset('js/scrollreveal.js')}}"></script>
-    
+
     {{-- <script src="{{asset('plugins/tilt/tilt.jquery.min.js')}}"></script> --}}
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> --}}
@@ -443,11 +444,11 @@
 
         function hasScrolled() {
             var st = $(this).scrollTop();
-            
+
             // Make sure they scroll more than delta
             if(Math.abs(lastScrollTop - st) <= delta)
                 return;
-            
+
             // If they scrolled down and are past the navbar, add class .nav-up.
             // This is necessary so you never see what is "behind" the navbar.
             if (st > lastScrollTop && st > navbarHeight){
@@ -459,7 +460,7 @@
                     $('header').removeClass('nav-up').addClass('nav-down');
                 }
             }
-            
+
             lastScrollTop = st;
         }
     </script>
