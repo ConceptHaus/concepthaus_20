@@ -1,0 +1,1132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tdMinimal\n"
+"POT-Creation-Date: 2013-11-05 17:27-0800\n"
+"PO-Revision-Date: 2013-11-05 17:28-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: ../archive.php:34
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: ../archive.php:42
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: ../archive.php:45
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: ../archive.php:48
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: ../archive.php:51
+msgid "Asides"
+msgstr ""
+
+#: ../archive.php:54
+msgid "Images"
+msgstr ""
+
+#: ../archive.php:57
+msgid "Videos"
+msgstr ""
+
+#: ../archive.php:60
+msgid "Quotes"
+msgstr ""
+
+#: ../archive.php:63
+msgid "Links"
+msgstr ""
+
+#: ../archive.php:66 ../sidebar.php:17
+msgid "Archives"
+msgstr ""
+
+#: ../comments.php:36 ../comments.php:55
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:37 ../comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-audio.php:38 ../content-gallery.php:29 ../content-link.php:30
+#: ../content-page.php:32 ../content-single.php:52 ../content-video.php:29
+#: ../content.php:31 ../image.php:36 ../template-page-archive.php:22
+#: ../blog-alternative/content-gallery.php:27
+#: ../blog-alternative/content-video.php:24 ../blog-alternative/content.php:33
+#: ../inc/template-tags.php:70
+msgid "Edit"
+msgstr ""
+
+#: ../content-audio.php:53 ../content-gallery.php:44 ../content-link.php:45
+#: ../content-video.php:44 ../content.php:46
+msgid "Continue Reading"
+msgstr ""
+
+#: ../content-audio.php:57 ../content-gallery.php:48 ../content-link.php:49
+#: ../content-page.php:25 ../content-single.php:64 ../content-video.php:48
+#: ../content.php:50 ../image.php:63
+msgid "Pages:"
+msgstr ""
+
+#: ../content-audio.php:65 ../content-gallery.php:56 ../content-video.php:56
+#: ../content.php:58
+msgid "Posted by"
+msgstr ""
+
+#: ../content-audio.php:67 ../content-gallery.php:58 ../content-video.php:58
+#: ../content.php:60
+msgid "in"
+msgstr ""
+
+#: ../content-single.php:73 ../content-single.php:76
+msgid ", "
+msgstr ""
+
+#: ../content-single.php:81
+#, php-format
+msgid "This entry was tagged %2$s by %3$s."
+msgstr ""
+
+#: ../content-single.php:83
+#, php-format
+msgid "This entry was posted by %3$s."
+msgstr ""
+
+#: ../content-single.php:89
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s by %3$s"
+msgstr ""
+
+#: ../content-single.php:91
+#, php-format
+msgid "This entry was posted in %1$s by %3$s."
+msgstr ""
+
+#: ../functions.php:48
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:65
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:75
+msgid "Footer #1"
+msgstr ""
+
+#: ../functions.php:84
+msgid "Footer #2"
+msgstr ""
+
+#: ../functions.php:93
+msgid "Footer #3"
+msgstr ""
+
+#: ../functions.php:164
+msgid "Loading the next set of posts"
+msgstr ""
+
+#: ../functions.php:165
+msgid "All posts loaded."
+msgstr ""
+
+#: ../functions.php:248
+msgid "Twitter Username"
+msgstr ""
+
+#: ../functions.php:249
+msgid "Facebook URL"
+msgstr ""
+
+#: ../functions.php:250
+msgid "Google+ URL"
+msgstr ""
+
+#: ../functions.php:262
+msgid "More"
+msgstr ""
+
+#: ../header.php:43
+msgid "Menu"
+msgstr ""
+
+#: ../header.php:54
+msgid "Search..."
+msgstr ""
+
+#: ../image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: ../image.php:41
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: ../image.php:42
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../no-results.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../no-results.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../no-results.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:10 ../searchform.php:11
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../sidebar.php:24
+msgid "Meta"
+msgstr ""
+
+#: ../template-page-archive.php:31
+msgid "Latest Posts"
+msgstr ""
+
+#: ../template-page-archive.php:45
+msgid "Archives by Month"
+msgstr ""
+
+#: ../template-page-archive.php:52
+msgid "Archive By Year"
+msgstr ""
+
+#: ../template-page-archive.php:59
+msgid "Pages"
+msgstr ""
+
+#: ../template-page-archive.php:74
+msgid "Categories"
+msgstr ""
+
+#: ../template-page-archive.php:86
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: ../template-page-archive.php:93
+msgid "Contributors"
+msgstr ""
+
+#: ../admin/classes/class.options_machine.php:557
+msgid "Last Backup : "
+msgstr ""
+
+#: ../admin/front-end/options.php:43 ../admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr ""
+
+#: ../admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:10
+msgid "Blue"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:11
+msgid "Red"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:12
+msgid "Orange"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:13
+msgid "Purple"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:14
+msgid "Brown"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:15
+msgid "Pink"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:16
+msgid "Gray"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:21
+msgid "1 Column"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:22
+msgid "1 Column ( Alternative )"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:23
+msgid "2 Columns"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:24
+msgid "2 Columns ( Alternative )"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:28
+msgid "Thumbnail and Title"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:29
+msgid "Thumbnail Only"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:30
+msgid "Simple List"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:36
+msgid "Home Slider"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:37
+msgid "Recent Posts"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:52
+msgid "General Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:57
+msgid "Smooth Scroll"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:58
+msgid "If left checked then your website will have a Smooth Scroll."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:61
+#: ../admin/functions/functions.options.php:70
+#: ../admin/functions/functions.options.php:160
+#: ../admin/functions/functions.options.php:177
+#: ../admin/functions/functions.options.php:195
+#: ../admin/functions/functions.options.php:204
+#: ../admin/functions/functions.options.php:213
+#: ../admin/functions/functions.options.php:250
+#: ../admin/functions/functions.options.php:278
+#: ../admin/functions/functions.options.php:287
+#: ../admin/functions/functions.options.php:296
+#: ../admin/functions/functions.options.php:451
+#: ../admin/functions/functions.options.php:480
+msgid "On"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:62
+#: ../admin/functions/functions.options.php:71
+#: ../admin/functions/functions.options.php:161
+#: ../admin/functions/functions.options.php:178
+#: ../admin/functions/functions.options.php:196
+#: ../admin/functions/functions.options.php:205
+#: ../admin/functions/functions.options.php:214
+#: ../admin/functions/functions.options.php:251
+#: ../admin/functions/functions.options.php:279
+#: ../admin/functions/functions.options.php:288
+#: ../admin/functions/functions.options.php:297
+#: ../admin/functions/functions.options.php:452
+#: ../admin/functions/functions.options.php:481
+msgid "Off"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:66
+msgid "Fixed Menu"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:67
+msgid "If left checked then your top menu will be fixed."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:75
+msgid "Pre-defined Color Schemes"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:76
+msgid "Select a color scheme for your website."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:85 ../inc/customizer.php:10
+msgid "Header Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:90
+msgid "Use Logo as a Website Title?"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:91
+msgid "If left checked then your Logo will replace the Site Title."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:94
+msgid "Yes"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:95
+msgid "No"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:99
+msgid "Logo Upload"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:100
+msgid "Upload your logo here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:106
+msgid "Favicon Upload"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:107
+msgid ""
+"Upload your favicon here. Make sure that your favicon is 16x16 px and has ."
+"ico format)"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:114
+msgid "Home Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:119
+msgid "Homepage Layout Manager"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:120
+msgid "Organize how you want the layout to appear on the homepage"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:126
+msgid "Featured Slideshow Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:127
+msgid ""
+"<strong>Home Slider Block</strong>. Unlimited slider with drag and drop "
+"sortings."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:133
+msgid "Recent Blog Posts Options"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:134
+msgid ""
+"<strong>Recent Posts Block</strong>. Unlimited blog posts with drag and drop "
+"sortings."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:141
+msgid "Recent Blog Post Summary"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:151
+msgid "Blog Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:156
+msgid "Infinite Scroll"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:157
+msgid "If left checked then Infinite Scroll will be added to your blog posts."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:165
+msgid "Blog Layout"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:166
+msgid "Select layout for your Blog. 2 Columns layout does not have a sidebar."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:173
+msgid "Sidebar Options"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:174
+msgid ""
+"If left checked then a Sidebar will be shown on blog/archive/search pages "
+"This option will not turn off a sidebar on a single post/page."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:182
+msgid "Post/Page Sidebar Options"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:183
+msgid ""
+"If left Disabled then a Sidebar will be hidden on Posts and Pages and this "
+"option will not allow you to change Post/Page template (Full Width Only)."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:186
+msgid "Auto"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:187
+msgid "Disable"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:191
+msgid "Author Section"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:192
+msgid "If left checked then Author section will be shown."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:200
+msgid "Newsletter Section"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:201
+msgid ""
+"If left checked then newsletter section will be shown under the post's "
+"content."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:209
+msgid "Related Posts Section"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:210
+msgid "If left checked then Related Posts section will be shown."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:219
+msgid "Section Title"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:220
+msgid "Enter your Title for the Related Posts Section."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:227
+msgid "Related Posts Section Layout"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:228
+msgid "Select layout for your Related Posts Section."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:236
+msgid "Number of Related Posts to show"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:237
+msgid "Choose a number of Related Posts to show per page. "
+msgstr ""
+
+#: ../admin/functions/functions.options.php:246
+msgid "Auto Post Summary"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:247
+msgid ""
+"If left checked then WordPress will generate an post summary automatically."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:255
+msgid "Auto Summary Length"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:256
+msgid "By default, Auto Summary length is set to 55 words."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:265
+msgid "Share Buttons Style"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:266
+msgid ""
+"If you want to have share/like counter then you should use Default Share "
+"Buttons Style."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:269
+msgid "Custom"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:270
+msgid "Default"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:274
+msgid "Share Buttons (Bottom)"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:275
+msgid ""
+"If left checked then share buttons will be shown (Bottom of the Post Page)"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:283
+msgid "Masonry Layout"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:284
+msgid ""
+"<strong>Warning!</strong> If you turn it Off then it can create some spaces "
+"between your posts ( 2 columns layout ) if images/titles/contents have "
+"different height."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:292
+msgid "Featured Image as a Thumbnail ( Blog/Archive/Search Page )"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:293
+msgid ""
+"<strong>Warning!</strong> Read theme documentation before using this option "
+"( see '<u>How to make a Featured Image looks like a Thumbnail?</u>' )."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:302
+msgid "Social Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:307
+msgid "Facebook Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:308
+msgid "Enter your Facebook link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:314
+msgid "Twitter Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:315
+msgid "Enter your Twitter link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:321
+msgid "Google Plus Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:322
+msgid "Enter your Google Plus link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:328
+msgid "Skype Username"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:329
+msgid "Enter your Skype Username here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:335
+msgid "Flickr Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:336
+msgid "Enter your Flickr link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:342
+msgid "LinkedIn Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:343
+msgid "Enter your LinkedIn link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:349
+msgid "Pinterest Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:350
+msgid "Enter your Pinterest link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:356
+msgid "Dribbble Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:357
+msgid "Enter your Dribbble link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:363
+msgid "RSS Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:364
+msgid "Enter your RSS link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:370
+msgid "Tumblr Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:371
+msgid "Enter your Tumblr link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:377
+msgid "Github Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:378
+msgid "Enter your Github link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:384
+msgid "Instagram Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:385
+msgid "Enter your Instagram link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:391
+msgid "YouTube Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:392
+msgid "Enter your YouTube link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:398
+msgid "Vimeo Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:399
+msgid "Enter your Vimeo link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:405
+msgid "Apple App Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:406
+msgid "Enter your Apple App link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:412
+msgid "Windows App Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:413
+msgid "Enter your Windows App link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:419
+msgid "Android App Link"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:420
+msgid "Enter your Android App link here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:426
+msgid "Newsletter Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:427
+msgid ""
+"Upload your custom newsletter image here. it will be shown above the "
+"newsletter form."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:435
+msgid "Paste your Newsletter HTML code here."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:442
+msgid "Footer Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:447
+msgid "Footer Widget Area"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:448
+msgid ""
+"If left checked then an additional widget area will be shown in your footer "
+"section."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:456
+msgid "Footer Text"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:457
+msgid ""
+"Customize your footer text here.<br> [td_site_copyright] shorcode outputs "
+"'Copyright YOUR_SITE_NAME'."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:463
+msgid "Tracking Code"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:464
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. This will be "
+"added into the footer template of your theme."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:471
+msgid "Other Settings"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:476
+msgid "bbPress Sidebar"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:477
+msgid "If left checked then a sidebar will be shown on bbPress Page."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:486
+msgid "Backup Options"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:491
+msgid "Backup and Restore Options"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:495
+msgid ""
+"You can use the two buttons below to backup your current options, and then "
+"restore it back at a later time. This is useful if you want to experiment on "
+"the options but would like to keep the old settings in case you need it back."
+msgstr ""
+
+#: ../admin/functions/functions.options.php:498
+msgid "Transfer Theme Options Data"
+msgstr ""
+
+#: ../admin/functions/functions.options.php:502
+msgid ""
+"You can tranfer the saved options data between different installs by copying "
+"the text inside the text box. To import data from another install, replace "
+"the data in the text box with the one from another install and click "
+"\"Import Options\"."
+msgstr ""
+
+#: ../inc/customizer.php:20 ../inc/customizer.php:62
+msgid "Background Color"
+msgstr ""
+
+#: ../inc/customizer.php:32
+msgid "Primary Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:44
+msgid "Secondary Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:52
+msgid "Background Settings"
+msgstr ""
+
+#: ../inc/customizer.php:72
+msgid "Background Pattern"
+msgstr ""
+
+#: ../inc/customizer.php:81
+msgid "Background Fixed Image"
+msgstr ""
+
+#: ../inc/extras.php:66
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/extras.php:366
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/extras.php:370
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/extras.php:374
+msgid "Google+"
+msgstr ""
+
+#: ../inc/extras.php:378
+msgid "Skype"
+msgstr ""
+
+#: ../inc/extras.php:382
+msgid "Flickr"
+msgstr ""
+
+#: ../inc/extras.php:386
+msgid "LinkedIn"
+msgstr ""
+
+#: ../inc/extras.php:390
+msgid "Pinterest"
+msgstr ""
+
+#: ../inc/extras.php:394
+msgid "Dribbble"
+msgstr ""
+
+#: ../inc/extras.php:398
+msgid "Tumblr"
+msgstr ""
+
+#: ../inc/extras.php:402
+msgid "Github"
+msgstr ""
+
+#: ../inc/extras.php:406
+msgid "Instagram"
+msgstr ""
+
+#: ../inc/extras.php:410
+msgid "RSS"
+msgstr ""
+
+#: ../inc/extras.php:414
+msgid "YouTube"
+msgstr ""
+
+#: ../inc/extras.php:418
+msgid "Vimeo"
+msgstr ""
+
+#: ../inc/extras.php:422
+msgid "Apple App"
+msgstr ""
+
+#: ../inc/extras.php:426
+msgid "Windows App"
+msgstr ""
+
+#: ../inc/extras.php:430
+msgid "Android App"
+msgstr ""
+
+#: ../inc/extras.php:598
+msgid "About"
+msgstr ""
+
+#: ../inc/extras.php:926 ../inc/extras.php:936
+msgid "View More"
+msgstr ""
+
+#: ../inc/extras.php:949 ../inc/template-tags.php:264
+msgid "Leave a Comment"
+msgstr ""
+
+#: ../inc/extras.php:949 ../inc/template-tags.php:264
+msgid "1 Comment"
+msgstr ""
+
+#: ../inc/extras.php:949 ../inc/template-tags.php:264
+msgid "% Comments"
+msgstr ""
+
+#: ../inc/extras.php:1273 ../inc/extras.php:1286
+msgid "Copyright"
+msgstr ""
+
+#: ../inc/extras.php:1275
+#, php-format
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: ../inc/extras.php:1360
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../inc/extras.php:1361
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../inc/extras.php:1362
+msgid "Full Width"
+msgstr ""
+
+#: ../inc/template-tags.php:37
+msgid "Previous Article"
+msgstr ""
+
+#: ../inc/template-tags.php:38
+msgid "Next Article"
+msgstr ""
+
+#: ../inc/template-tags.php:43
+msgid ""
+"<span class=\"meta-nav\"><i class=\"fa fa-angle-left\"></i></span> <span "
+"class=\"meta-nav-direction\">Older posts</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:47
+msgid ""
+"<span class=\"meta-nav-direction\">Newer posts</span> <span class=\"meta-nav"
+"\"><i class=\"fa fa-angle-right\"></i></i></span>"
+msgstr ""
+
+#: ../inc/template-tags.php:70
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/template-tags.php:83
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../inc/template-tags.php:89
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:175
+#, php-format
+msgid "<span class=\"posted-on\"><i class=\"fa fa-calendar\"></i> %1$s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:228
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../inc/template-tags.php:239
+msgid " "
+msgstr ""
+
+#: ../inc/template-tags.php:241
+msgid "Tags:"
+msgstr ""
+
+#: ../inc/template-tags.php:251
+msgid "<span class=\"comma\">,</span> "
+msgstr ""
+
+#: ../inc/theme-woocommerce.php:51
+msgid "View your shopping cart"
+msgstr ""
+
+#: ../inc/widgets.php:22 ../inc/widgets.php:74 ../inc/widgets.php:141
+#: ../inc/widgets.php:255 ../inc/widgets.php:370 ../inc/widgets.php:458
+msgid "Title"
+msgstr ""
+
+#: ../inc/widgets.php:78
+msgid "Number of comments to show:"
+msgstr ""
+
+#: ../inc/widgets.php:145 ../inc/widgets.php:259 ../inc/widgets.php:374
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../inc/widgets.php:149 ../inc/widgets.php:263
+msgid "Category Name (Optional):"
+msgstr ""
+
+#: ../inc/widgets.php:153 ../inc/widgets.php:267
+msgid "Image Width:"
+msgstr ""
+
+#: ../inc/widgets.php:155 ../inc/widgets.php:269
+msgid "Full Size"
+msgstr ""
+
+#: ../inc/widgets.php:156 ../inc/widgets.php:270
+msgid "Thumbnail"
+msgstr ""
+
+#: ../inc/widgets.php:157 ../inc/widgets.php:271
+msgid "None"
+msgstr ""
+
+#: ../inc/widgets.php:378
+msgid "Sort by:"
+msgstr ""
+
+#: ../inc/widgets.php:380
+msgid "Recent"
+msgstr ""
+
+#: ../inc/widgets.php:381
+msgid "Popular"
+msgstr ""
+
+#: ../inc/widgets.php:382
+msgid "Name"
+msgstr ""
+
+#: ../inc/widgets.php:430
+msgid "View all posts by"
+msgstr ""
+
+#: ../inc/widgets.php:462
+msgid "Gallery Post Title:"
+msgstr ""
+
+#: ../inc/widgets.php:497 ../inc/widgets.php:542
+msgid "Read More"
+msgstr ""
+
+#: ../woocommerce/single-product/related.php:35
+msgid "Related Products"
+msgstr ""

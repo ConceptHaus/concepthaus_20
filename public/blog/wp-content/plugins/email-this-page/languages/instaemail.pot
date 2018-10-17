@@ -1,0 +1,175 @@
+# Copyright (C) 2013 Email This Page
+# This file is distributed under the same license as the Email This Page package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Email This Page 1.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/instaemail\n"
+"POT-Creation-Date: 2013-01-04 16:54:38+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Taylor Norish <support@printfriendly.com>\n"
+"Language-Team: Taylor Norish <support@printfriendly.com>\n"
+
+#: instaemail.php:269
+msgid "The text size you entered is too high, please stay below 25px."
+msgstr ""
+
+#: instaemail.php:277
+msgid ""
+"The color you entered is not valid, it must be a valid hexadecimal RGB font "
+"color."
+msgstr ""
+
+#: instaemail.php:290
+msgid "InstaEmail Options"
+msgstr ""
+
+#: instaemail.php:290
+msgid "InstaEmail"
+msgstr ""
+
+#: instaemail.php:299
+msgid "Need Help?"
+msgstr ""
+
+#: instaemail.php:300
+msgid "Be sure to check out the %s!"
+msgstr ""
+
+#: instaemail.php:300
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: instaemail.php:336
+msgid "Settings"
+msgstr ""
+
+#: instaemail.php:570
+msgid "Email This Button Settings"
+msgstr ""
+
+#: instaemail.php:575
+msgid "Pick Your Button Style"
+msgstr ""
+
+#: instaemail.php:588
+msgid "Custom Button"
+msgstr ""
+
+#: instaemail.php:591
+msgid "Enter Image URL"
+msgstr ""
+
+#: instaemail.php:593
+msgid "Ex: http://www.example.com/<br>Ex: /wp/wp-content/uploads/example.png)"
+msgstr ""
+
+#: instaemail.php:599
+msgid "Text"
+msgstr ""
+
+#: instaemail.php:603
+msgid "Text Color"
+msgstr ""
+
+#: instaemail.php:610
+msgid "Text Size"
+msgstr ""
+
+#: instaemail.php:622
+msgid "Button Placement"
+msgstr ""
+
+#: instaemail.php:629
+msgid "Left Align"
+msgstr ""
+
+#: instaemail.php:630
+msgid "Right Align"
+msgstr ""
+
+#: instaemail.php:631
+msgid "Center"
+msgstr ""
+
+#: instaemail.php:632
+msgid "None"
+msgstr ""
+
+#: instaemail.php:639
+msgid "Above Content"
+msgstr ""
+
+#: instaemail.php:640
+msgid "Below Content"
+msgstr ""
+
+#: instaemail.php:647
+msgid "Margin Left"
+msgstr ""
+
+#: instaemail.php:650
+msgid "Margin Right"
+msgstr ""
+
+#: instaemail.php:653
+msgid "Margin Top"
+msgstr ""
+
+#: instaemail.php:656
+msgid "Margin Bottom"
+msgstr ""
+
+#: instaemail.php:666
+msgid "Uncheck all of the above to use the shortcodes below:"
+msgstr ""
+
+#: instaemail.php:667
+msgid ""
+"Use [email_this_button] inside your page/article or put the following code "
+"in your template:"
+msgstr ""
+
+#: instaemail.php:673
+msgid "Save Options"
+msgstr ""
+
+#: instaemail.php:674
+msgid "Cancel"
+msgstr ""
+
+#: instaemail.php:678
+msgid "Like InstaEmail?"
+msgstr ""
+
+#: instaemail.php:678
+msgid "Give us a rating"
+msgstr ""
+
+#: instaemail.php:678
+msgid "Need help or have suggestions?"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Email This Page"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.instaemail.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Adds an Email this Page button to your post pages. Allow users to share by "
+"email."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "InstaEmail, PrintFriendly"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.instaemail.com"
+msgstr ""
