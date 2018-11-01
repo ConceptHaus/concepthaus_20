@@ -11,7 +11,18 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
     <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
-    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    @if (Request::path() === 'branding')
+        <meta name="description" content="Diseño de marca / Brand Marketing / Agencia de branding y diseño y rebranding corporativo."/>
+    @elseif (Request::path() === 'posicionamiento-seo')
+        <meta name="description" content="Posicionamiento web en buscadores / Seo en México / Agencia Seo."/>
+    @elseif(Request::path() === 'desarrollo-web')
+        <meta name="description" content="Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web."/>
+    @elseif(Request::path() === 'googleadwords-publicidadenfacebook')
+        <meta name="description" content="Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet."/>
+    @else 
+        <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
+    @endif
+    
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
