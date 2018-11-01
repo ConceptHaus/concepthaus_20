@@ -11,15 +11,15 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
     @if (Request::path() === 'branding')
-        <title>ConceptHaus / Diseño de marca / Brand Marketing / Agencia de branding y diseño y rebranding corporativo</title>
+        <title>Diseño de marca / Brand Marketing / Agencia de branding y diseño y rebranding corporativo</title>
     @elseif (Request::path() === 'posicionamiento-seo')
-        <title>ConceptHaus / Posicionamiento web en buscadores / Seo en México / Agencia Seo</title>
+        <title>Posicionamiento web en buscadores / Seo en México / Agencia Seo</title>
     @elseif(Request::path() === 'desarrollo-web')
-        <title>ConceptHaus / Agencia de Publicidad / Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web</title>
+        <title>Agencia de Publicidad / Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web</title>
     @elseif(Request::path() === 'googleadwords-publicidadenfacebook')
-        <title>ConceptHaus / Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet</title>
+        <title>Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet</title>
     @else 
-        <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
+        <title>Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
     @endif
 
     <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
