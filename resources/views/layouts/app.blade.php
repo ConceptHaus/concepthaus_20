@@ -11,7 +11,7 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
     <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
-    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
