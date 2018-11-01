@@ -10,18 +10,19 @@
     <!-- Mobile Internet Explorer ClearType Technology -->
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
-    <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
     @if (Request::path() === 'branding')
-        <meta name="description" content="Diseño de marca / Brand Marketing / Agencia de branding y diseño y rebranding corporativo."/>
+        <title>ConceptHaus / Diseño de marca / Brand Marketing / Agencia de branding y diseño y rebranding corporativo</title>
     @elseif (Request::path() === 'posicionamiento-seo')
-        <meta name="description" content="Posicionamiento web en buscadores / Seo en México / Agencia Seo."/>
+        <title>ConceptHaus / Posicionamiento web en buscadores / Seo en México / Agencia Seo</title>
     @elseif(Request::path() === 'desarrollo-web')
-        <meta name="description" content="Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web."/>
+        <title>ConceptHaus / Agencia de Publicidad / Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web</title>
     @elseif(Request::path() === 'googleadwords-publicidadenfacebook')
-        <meta name="description" content="Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet."/>
+        <title>ConceptHaus / Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet</title>
     @else 
-        <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
+        <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
     @endif
+
+    <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
     
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">

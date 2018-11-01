@@ -10,7 +10,7 @@
     <!-- Mobile Internet Explorer ClearType Technology -->
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
-    <title>ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
+    <title>ConceptHaus / Agencia de publicidad digital / empresa de marketing</title>
     <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
