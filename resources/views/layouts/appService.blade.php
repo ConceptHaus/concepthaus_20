@@ -15,11 +15,11 @@
     @elseif (Request::path() === 'posicionamiento-seo')
         <title>Posicionamiento web en buscadores / Seo en México / Agencia Seo</title>
     @elseif(Request::path() === 'desarrollo-web')
-        <title>Agencia de Publicidad / Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web</title>
+        <title>Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web</title>
     @elseif(Request::path() === 'googleadwords-publicidadenfacebook')
         <title>Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet</title>
     @else 
-        <title>Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX</title>
+        <title>Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX / Polanco</title>
     @endif
 
     <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
