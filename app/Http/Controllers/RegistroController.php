@@ -14,6 +14,7 @@ use App\Pivot_Models\PivoteServicios;
 use Telegram\Bot\FileUpload\InputFile;
 use Telegram\Bot\Laravel\Facades\Telegram;
 use Emoji;
+use PDF;
 
 
 use Illuminate\Http\Request;
@@ -239,10 +240,21 @@ class RegistroController extends Controller {
 		return json_encode($json['errors']);
 	}
 
+  // /**
+  //   * Build the message.
+  //   *
+  //   * @return $this
+  //   */
+  //  public function build($path)
+  //  {
+  //      return $this->attach($path);
+  //  }
+
   public function registroBrief (Request $request) {
     $input = $request->all();
 
     $brief = new Brief;
+    $brief -> nombre = $input['nombre'];
     $brief -> pregunta_uno = $input['pregunta_uno'];
     $brief -> pregunta_dos = $input['pregunta_dos'];
     $brief -> pregunta_tres = $input['pregunta_tres'];
@@ -254,6 +266,21 @@ class RegistroController extends Controller {
     $brief -> pregunta_nueve = $input['pregunta_nueve'];
     $brief -> pregunta_diez = $input['pregunta_diez'];
     $brief -> pregunta_once = $input['pregunta_once'];
+
+    $pdf = PDF::loadView('pdf.pdf', $brief);
+    $pdf->save('../public/briefs/brief_'.$input['nombre'].'.pdf');
+    $pdf->stream();
+
+    $path['path'] = '../public/briefs/brief_'.$input['nombre'].'.pdf';
+    $path['nombre'] = $input['nombre'];
+
+    // $this->build($path);
+
+    Mail::send('emails.brief.brief-mail' ,$path, function ($contact) use ($path) {
+      $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
+      $contact->to('tomas@concepthaus.mx', 'Concept Haus')->subject('Concept Haus Brief Branding');
+      $contact->attach($path['path']);
+    });
 
     if ($brief -> save()) {
       $json['success'] = "Datos Brief guardados.";

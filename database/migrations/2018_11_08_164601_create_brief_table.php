@@ -15,6 +15,7 @@ class CreateBriefTable extends Migration
     {
         Schema::create('brief', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
             $table->string('pregunta_uno');
             $table->string('pregunta_dos');
             $table->string('pregunta_tres');
