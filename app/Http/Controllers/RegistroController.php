@@ -240,16 +240,6 @@ class RegistroController extends Controller {
 		return json_encode($json['errors']);
 	}
 
-  // /**
-  //   * Build the message.
-  //   *
-  //   * @return $this
-  //   */
-  //  public function build($path)
-  //  {
-  //      return $this->attach($path);
-  //  }
-
   public function registroBrief (Request $request) {
     $input = $request->all();
 
@@ -274,7 +264,6 @@ class RegistroController extends Controller {
     $path['path'] = '../public/briefs/brief_'.$input['nombre'].'.pdf';
     $path['nombre'] = $input['nombre'];
 
-    // $this->build($path);
 
     Mail::send('emails.brief.brief-mail' ,$path, function ($contact) use ($path) {
       $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
