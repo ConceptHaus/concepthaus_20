@@ -8727,6 +8727,10 @@ header .row, footer .row {
   .title-general {
     margin-top: 0;
   }
+
+  .title-movil {
+    margin-top: 25%;
+  }
 }
 
 .title-general .img-icon-title {
@@ -8974,6 +8978,31 @@ header .row, footer .row {
 
 #contact .container-iconH {
   padding: 0% 8% 3% 0%;
+}
+
+#formBrief form .btn {
+    border-bottom: 0px;
+    color: #fff;
+    cursor: pointer;
+    background: #e73c30;
+    width: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin-bottom: 9%;
+}
+
+#formBrief form .btn:hover, #formBrief form .btn:focus {
+  background: #cc2418;
+}
+
+#formBrief form textarea {
+  border: 1px solid #d2d2d2;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 10px;
 }
 
 #footer {
