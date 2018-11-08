@@ -8980,7 +8980,7 @@ header .row, footer .row {
   padding: 0% 8% 3% 0%;
 }
 
-#formBrief form .btn {
+form .btn {
     border-bottom: 0px;
     color: #fff;
     cursor: pointer;
@@ -8991,18 +8991,18 @@ header .row, footer .row {
     margin-bottom: 9%;
 }
 
-#formBrief form .btn:hover, #formBrief form .btn:focus {
+form .btn:hover, form .btn:focus {
   background: #cc2418;
 }
 
-#formBrief form textarea {
-  border: 1px solid #d2d2d2;
-  border-radius: 3px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 14px;
-  font-weight: 100;
-  padding: 10px;
+form input,form textarea {
+  border: 1px solid #d2d2d2 !important;
+  border-radius: 3px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 100 !important;
+  padding: 10px !important;
 }
 
 #footer {

@@ -22,6 +22,7 @@ Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/brief', 'WelcomeController@viewBrief');
 
+
 Route::get('/colombia/branding', 'WelcomeController@viewBrandingcolombia');
 Route::get('/usa/branding', 'WelcomeController@viewBrandingusa');
 Route::get('/uk/branding', 'WelcomeController@viewBrandinguk');
@@ -35,7 +36,8 @@ Route::get('/proyecto/{id}', 'WelcomeController@viewDetailProject');
 Route::post('/saveRegistro','RegistroController@saveDataRegistro');
 // Guardar datos formulario de registro Lead Manual
 Route::post('/saveRegistroLead','RegistroController@saveDataRegistroLead');
-
+// Guarda datos de Brief
+Route::post('/brief','RegistroController@registroBrief');
 Auth::routes();
 
 /* ============================================================
