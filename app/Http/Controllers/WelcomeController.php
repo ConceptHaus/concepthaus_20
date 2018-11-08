@@ -65,6 +65,10 @@ class WelcomeController extends Controller {
         return view('home/socialads');
     }
 
+    public function viewBrief(){
+        return view('home/brief');
+    }
+
     // Detalle proyecto
     public function viewDetailProject($id){
 
