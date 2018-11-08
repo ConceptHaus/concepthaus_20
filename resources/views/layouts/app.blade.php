@@ -219,6 +219,7 @@
 
         <!-- Footer -->
         <footer>
+          @if (Request::path() != 'brief')
             <section id="contact" ng-controller="RegistroController as contacto">
                 <h2 class="title-general">
                     <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Contáctanos
@@ -324,7 +325,7 @@
                     </div>
                 </div>
             </section>
-
+          @endif
             <section id="footer">
                 <div class="row text-center">
                     <div class="col-sm-12 first">
