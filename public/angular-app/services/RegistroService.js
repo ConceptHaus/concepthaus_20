@@ -95,15 +95,23 @@ angular.module('RegistroService', [])
     }
 })
 
+.factory('brief', function($http) {
+  return{
+    saveBrief: function(data){
+      return $http({
+        method: 'POST',
+        url: '/brief',
+        data: data
+      })
+    }
+  }
+})
+
 .factory("countries", function($resource) {
     return $resource("https://api.mercadolibre.com/countries/MX");
 })
 
 .factory('states', function($resource,$log){
 	var rsc = $resource('https://api.mercadolibre.com/states/:id', {id:'@id'});
-	return rsc; 
+	return rsc;
 });
-
-
-
-

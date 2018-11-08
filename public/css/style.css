@@ -8727,6 +8727,10 @@ header .row, footer .row {
   .title-general {
     margin-top: 0;
   }
+
+  .title-movil {
+    margin-top: 25%;
+  }
 }
 
 .title-general .img-icon-title {
@@ -8976,6 +8980,31 @@ header .row, footer .row {
   padding: 0% 8% 3% 0%;
 }
 
+form .btn {
+    border-bottom: 0px;
+    color: #fff;
+    cursor: pointer;
+    background: #e73c30;
+    width: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin-bottom: 9%;
+}
+
+form .btn:hover, form .btn:focus {
+  background: #cc2418;
+}
+
+form input,form textarea {
+  border: 1px solid #d2d2d2 !important;
+  border-radius: 3px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 100 !important;
+  padding: 10px !important;
+}
+
 #footer {
   color: #fff;
 }
@@ -9085,6 +9114,11 @@ Section Home | Slider
 
 .small-gray, #contact .contact-info p, #contact .contact-info a {
   color: #8d8e96;
+  font-size: 12px;
+}
+
+.small-gray-brief {
+  color: #4a4f55;
   font-size: 12px;
 }
 

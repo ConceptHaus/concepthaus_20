@@ -8,7 +8,7 @@ angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveLead, countries, states) {
+app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveLead, countries, states, brief) {
     $scope.contacto={};
     $scope.saveDataContact  = function(contacto, contactoForm){
         swal({
@@ -159,6 +159,37 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
         { icon: "<img src=../../img/concept.png />", name: "Various", ticked: false  }
     ];
 
+		$scope.registroBrief = function(form){
+			swal({
+					// text: "Estamos registrando tus datos.",
+					imageUrl: '../img/loader.gif',
+					imageWidth: 150,
+					imageAlt: 'Concept Haus',
+					showConfirmButton: false
+			})
+
+			brief.saveBrief(form).then(function(res){
+				swal({
+						text: "¡Gracias!",
+						imageUrl: '../img/logo/concept.svg',
+						imageWidth: 150,
+						imageAlt: 'Concept Haus',
+						showConfirmButton: true,
+						confirmButtonText: 'Aceptar',
+						confirmButtonColor: '#4a4f55'
+				}).then((result) => {
+					window.location.href = '/';
+				})
+			}, function(err){
+				swal({
+						text: "Ocurrio un error.",
+						imageUrl: '../img/logo/concept.svg',
+						imageWidth: 150,
+						imageAlt: 'Concept Haus',
+						showConfirmButton: false
+				})
+			})
+		}
 
 
 
