@@ -654,7 +654,7 @@
 
 																											<td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FFFFFF;">
 
-																												<h1 style="text-align: center; letter-spacing:2px; font-weight:100">¡Tomas hay un nuevo Brief de Branding de {{$nombre}}!</h1>
+																												<h1 style="text-align: center; letter-spacing:2px; font-weight:100">¡Ventas hay un nuevo Brief de Branding de {{$nombre}}!</h1>
 
 																											</td>
 																										</tr>
