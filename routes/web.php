@@ -20,7 +20,7 @@ Route::get('/inhaus', 'WelcomeController@viewInHaus');
 Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
 Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
-Route::get('/brief', 'WelcomeController@viewBrief');
+Route::get('/brief-branding', 'WelcomeController@viewBrief');
 
 
 Route::get('/colombia/branding', 'WelcomeController@viewBrandingcolombia');
