@@ -257,7 +257,9 @@ class RegistroController extends Controller {
     $brief -> pregunta_diez = $input['pregunta_diez'];
     $brief -> pregunta_once = $input['pregunta_once'];
 
+    // $pdf = new PDF();
     $pdf = PDF::loadView('pdf.pdf', $brief);
+    // $pdf= PDF::setOptions(['dpi' => 150]);
     $pdf->save('../public/briefs/brief_'.$input['nombre'].'.pdf');
     $pdf->stream();
 
