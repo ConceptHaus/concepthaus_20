@@ -131,10 +131,10 @@
                         <img src="{{asset('img/logo/conceptWhite.svg')}}" alt="Concept Haus">
                     </div>
 
-                    <div class="card-content table-responsive">   
+                    <div class="card-content table-responsive">
                         <div class="row">
                             <div class="col-md-8">
-                                <p class="category">Estos son los últimos 10 leads recibidos, filtra por columna o utiliza la funcionalidad de búsqueda.</p>  
+                                <p class="category">Estos son los últimos 10 leads recibidos, filtra por columna o utiliza la funcionalidad de búsqueda.</p>
                             </div>
                             <div class="col-md-4">
                                 <form class="navbar-form navbar-right content-filter-search" role="search">
@@ -219,13 +219,13 @@
                                         <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                                         <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                         <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
-                                        <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                        
+                                        <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
                                     </td>
                                     <td>
-                                        <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>             
+                                        <a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
                                         <button type="button" class="btn btn-gray" ng-click="deleteLead(registro)" style="padding: 12px 20px; margin: 0;"><i class="material-icons">delete_sweep</i></button>
                                     </td>
-                                </tr> 
+                                </tr>
                                 {{--  <tr dir-paginate="registro in registrosLastest | filter:search | orderBy:sortType:sortReverse |itemsPerPage:15">
                                     <td><% registro.id_registro %></td>
                                     <td class="fuente">
@@ -240,7 +240,7 @@
                                         <i ng-if="registro.pivot_status.id_status == 1" class="material-icons txt-gray">access_time</i>
                                         <i ng-if="registro.pivot_status.id_status == 2" class="material-icons txt-blue">check</i>
                                         <i ng-if="registro.pivot_status.id_status == 3" class="material-icons txt-red">close</i>
-                                        <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>                                        
+                                        <i ng-if="registro.pivot_status.id_status == 4" class="material-icons txt-orange">insert_drive_file</i>
                                     </td>
                                     <td><a ng-href="/registro/detalle/<% registro.id_registro %>"><button type="button" class="btn btn-gray" style="margin: 0;"><i class="material-icons">border_color</i> Detalle</button></a></td>
                                 </tr>   --}}

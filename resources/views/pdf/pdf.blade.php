@@ -22,3 +22,16 @@
 <p>{{$pregunta_diez}}</p>
 <p style="font-weight:bold;">Tres palabras que definan tu empresa.</p>
 <p>{{$pregunta_once}}</p>
+<style>
+  .header{
+    display: flex;
+    margin: auto;
+  }
+  .logo{
+    width: 75px;
+    margin: auto;
+  }
+</style>
+<div class="header">
+  <img class="logo" src="{{asset('img/logo/concept.png')}}" alt="Concepthaus">
+</div>

@@ -219,7 +219,7 @@
 
         <!-- Footer -->
         <footer>
-          @if (Request::path() != 'brief')
+          @if (Request::path() != 'brief-branding')
             <section id="contact" ng-controller="RegistroController as contacto">
                 <h2 class="title-general">
                     <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Contáctanos
