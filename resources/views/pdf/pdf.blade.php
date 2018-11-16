@@ -1,37 +1,53 @@
-<p style="font-weight:bold;">¿Cuál es el nombre de tú idea o empresa?</p>
-<p>{{$nombre}}</p>
-<p style="font-weight:bold;">¿Cuál es el propósito del negocio?</p>
-<p>{{$pregunta_uno}}</p>
-<p style="font-weight:bold;">¿Cuáles son tus ventajas competitivas, fuerzas y debilidades?</p>
-<p>{{$pregunta_dos}}</p>
-<p style="font-weight:bold;">¿Primordialmente, a qué público te diriges?</p>
-<p>{{$pregunta_tres}}</p>
-<p style="font-weight:bold;">COMPETENCIA ¿Conoces a empresas similares a la tuya en México o en el extranjero?, ¿qué hace a tu empresa diferente de los demás?</p>
-<p>{{$pregunta_cuatro}}</p>
-<p style="font-weight:bold;">¿Cuáles son las metas (corto y largo plazo) ?, ¿cómo imaginas la evolución del negocio en el tiempo?</p>
-<p>{{$pregunta_cinco}}</p>
-<p style="font-weight:bold;">¿Cómo imaginas la evolución del negocio en el tiempo?</p>
-<p>{{$pregunta_seis}}</p>
-<p style="font-weight:bold;">¿Qué es lo que quisieras comunicar con la identidad?</p>
-<p>{{$pregunta_siete}}</p>
-<p style="font-weight:bold;">¿Cómo te gustaría que tu identidad/marca fuera percibida?, ¿existen atributos específicos con los que te gustaría relacionarla?</p>
-<p>{{$pregunta_ocho}}</p>
-<p style="font-weight:bold;">¿Existe alguna consideración que debamos tomar en cuenta en el diseño, tono, manera o estilo visual?</p>
-<p>{{$pregunta_nueve}}</p>
-<p style="font-weight:bold;">¿Tienes alguna referencia conceptual o formal que te gustaría compartir con nosotros?</p>
-<p>{{$pregunta_diez}}</p>
-<p style="font-weight:bold;">Tres palabras que definan tu empresa.</p>
-<p>{{$pregunta_once}}</p>
 <style>
   .header{
-    display: flex;
-    margin: auto;
+    margin: 5%;
   }
   .logo{
     width: 75px;
     margin: auto;
   }
+  p {
+    color: #707070;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: left;
+  }
+  span {
+    color: #707070 !important;
+    font-family: Poppins, sans-serif;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    line-height: 100%;
+    padding: 18px!important;
+    text-align: left;
+    display: block;
+    border: 1px solid #707070;
+  }
 </style>
 <div class="header">
-  <img class="logo" src="{{asset('img/logo/concept.png')}}" alt="Concepthaus">
+  <p><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tú idea o empresa?</p>
+  <span>{{$nombre}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cuál es el propósito del negocio?</p>
+  <span>{{$pregunta_uno}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cuáles son tus ventajas competitivas, fuerzas y debilidades?</p>
+  <span>{{$pregunta_dos}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Primordialmente, a qué público te diriges?</p>
+  <span>{{$pregunta_tres}}</span>
+  <p><strong style="color: #EE4638">[</strong>COMPETENCIA ¿Conoces a empresas similares a la tuya en México o en el extranjero?, ¿qué hace a tu empresa diferente de los demás?</p>
+  <span>{{$pregunta_cuatro}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cuáles son las metas (corto y largo plazo) ?, ¿cómo imaginas la evolución del negocio en el tiempo?</p>
+  <span>{{$pregunta_cinco}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cómo imaginas la evolución del negocio en el tiempo?</p>
+  <span>{{$pregunta_seis}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Qué es lo que quisieras comunicar con la identidad?</p>
+  <span>{{$pregunta_siete}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cómo te gustaría que tu identidad/marca fuera percibida?, ¿existen atributos específicos con los que te gustaría relacionarla?</p>
+  <span>{{$pregunta_ocho}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, tono, manera o estilo visual?</p>
+  <span>{{$pregunta_nueve}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia conceptual o formal que te gustaría compartir con nosotros?</p>
+  <span>{{$pregunta_diez}}</span>
+  <p><strong style="color: #EE4638">[</strong>Tres palabras que definan tu empresa.</p>
+  <span>{{$pregunta_once}}</span>
 </div>
