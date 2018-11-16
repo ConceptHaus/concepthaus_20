@@ -69,6 +69,10 @@ class WelcomeController extends Controller {
         return view('home/brief-branding');
     }
 
+    public function viewPDF(){
+      return view('pdf/pdf');
+    }
+
     // Detalle proyecto
     public function viewDetailProject($id){
 

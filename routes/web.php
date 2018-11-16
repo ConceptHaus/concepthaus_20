@@ -22,6 +22,8 @@ Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/brief-branding', 'WelcomeController@viewBrief');
 
+Route::get('/pdf', 'WelcomeController@viewPDF');
+
 
 Route::get('/colombia/branding', 'WelcomeController@viewBrandingcolombia');
 Route::get('/usa/branding', 'WelcomeController@viewBrandingusa');
