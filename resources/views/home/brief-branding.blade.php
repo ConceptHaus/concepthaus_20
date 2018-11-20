@@ -6,7 +6,7 @@
   <h2 class="title-general title-movil">
       <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Brief
   </h2>
-  <p class="subtitle-general">Llena este formulario para saber más de tú idea y poder ayudarte.</p>
+  <p class="subtitle-general mt-2">Llena este formulario para saber más de tú idea y poder ayudarte.</p>
   <div class="d-flex justify-content-center">
     {{-- <img class="brief-img" src="{{ asset('img/brief/brief_ch.png')}}" alt="Brief ConceptHaus"> --}}
     {{-- <img class="competencia-img" src="{{asset('img/brief/competencia_ch.png')}}" alt="Competencia Concepthaus"> --}}
