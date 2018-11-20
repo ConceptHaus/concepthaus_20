@@ -26,7 +26,7 @@
   }
 </style>
 <div class="header">
-  <p><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tú idea o empresa?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tu marca o empresa?</p>
   <span>{{$nombre}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Cuál es el propósito del negocio?</p>
   <span>{{$pregunta_uno}}</span>
@@ -34,19 +34,19 @@
   <span>{{$pregunta_dos}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Primordialmente, a qué público te diriges?</p>
   <span>{{$pregunta_tres}}</span>
-  <p><strong style="color: #EE4638">[</strong>COMPETENCIA ¿Conoces a empresas similares a la tuya en México o en el extranjero?, ¿qué hace a tu empresa diferente de los demás?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero? ¿qué hace a tu empresa diferente de los demás?</p>
   <span>{{$pregunta_cuatro}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Cuáles son las metas (corto y largo plazo) ?, ¿cómo imaginas la evolución del negocio en el tiempo?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Cuáles son las metas a corto y largo plazo?</p>
   <span>{{$pregunta_cinco}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Cómo imaginas la evolución del negocio en el tiempo?</p>
   <span>{{$pregunta_seis}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Qué es lo que quisieras comunicar con la identidad?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Qué es lo que quisieras comunicar con su identidad gráfica?</p>
   <span>{{$pregunta_siete}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Cómo te gustaría que tu identidad/marca fuera percibida?, ¿existen atributos específicos con los que te gustaría relacionarla?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Cómo te gustaría que tu identidad sea percibida? ¿Existen atributos específicos con los que te gustaría relacionarla?</p>
   <span>{{$pregunta_ocho}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, tono, manera o estilo visual?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual?</p>
   <span>{{$pregunta_nueve}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia conceptual o formal que te gustaría compartir con nosotros?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia que te gustaría compartir con nosotros?</p>
   <span>{{$pregunta_diez}}</span>
   <p><strong style="color: #EE4638">[</strong>Tres palabras que definan tu empresa.</p>
   <span>{{$pregunta_once}}</span>

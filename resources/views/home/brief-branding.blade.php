@@ -14,7 +14,7 @@
       <form id="formBrief">
         {{ csrf_field() }}
         <div class="form-group">
-          <label for="pregunta_uno" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tú idea o empresa?</label>
+          <label for="pregunta_uno" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tu marca o empresa?</label>
           <textarea class="form-control textarea-brief" rows="1" id="nombre" ng-model="formBrief.nombre" name="nombre"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
@@ -34,12 +34,12 @@
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_cuatro" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero?, ¿Qué hace a tu empresa diferente de los demás?</label>
+          <label for="pregunta_cuatro" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero? ¿Qué hace a tu empresa diferente de los demás?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_cuatro" ng-model="formBrief.pregunta_cuatro" name="pregunta_cuatro"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_cinco" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuáles son las metas (corto y largo plazo) ?, ¿cómo imaginas la evolución del negocio en el tiempo?</label>
+          <label for="pregunta_cinco" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuáles son las metas a corto y largo plazo?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_cinco" ng-model="formBrief.pregunta_cinco" name="pregunta_cinco"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
@@ -49,22 +49,22 @@
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_siete" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Qué es lo que quisieras comunicar con la identidad?</label>
+          <label for="pregunta_siete" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Qué es lo que quisieras comunicar con su identidad gráfica?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_siete" ng-model="formBrief.pregunta_siete" name="pregunta_siete"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_ocho" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cómo te gustaría que tu identidad/marca fuera percibida?, ¿Existen atributos específicos con los que te gustaría relacionarla?</label>
+          <label for="pregunta_ocho" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cómo te gustaría que tu identidad sea percibida? ¿Existen atributos específicos con los que te gustaría relacionarla?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_ocho" ng-model="formBrief.pregunta_ocho" name="pregunta_ocho"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_nueve" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, tono, manera o estilo visual?</label>
+          <label for="pregunta_nueve" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_nueve" ng-model="formBrief.pregunta_nueve" name="pregunta_nueve"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_diez" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia conceptual o formal que te gustaría compartir con nosotros?</label>
+          <label for="pregunta_diez" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia que te gustaría compartir con nosotros?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_diez" ng-model="formBrief.pregunta_diez" name="pregunta_diez"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
