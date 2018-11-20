@@ -9,7 +9,7 @@
   <p class="subtitle-general">Llena este formulario para saber más de tú idea y poder ayudarte.</p>
   <div class="d-flex justify-content-center">
     {{-- <img class="brief-img" src="{{ asset('img/brief/brief_ch.png')}}" alt="Brief ConceptHaus"> --}}
-    <img class="competencia-img" src="{{asset('img/brief/competencia_ch.png')}}" alt="Competencia Concepthaus">
+    {{-- <img class="competencia-img" src="{{asset('img/brief/competencia_ch.png')}}" alt="Competencia Concepthaus"> --}}
     <div class="col-xl-7 col-md-8">
       <form id="formBrief">
         {{ csrf_field() }}
