@@ -258,6 +258,11 @@ class RegistroController extends Controller {
     $brief -> pregunta_nueve = $input['pregunta_nueve'];
     $brief -> pregunta_diez = $input['pregunta_diez'];
     $brief -> pregunta_once = $input['pregunta_once'];
+    if ($input['pregunta_doce']) {
+      $brief -> pregunta_doce = $input['pregunta_doce'];
+    }else {
+      $brief -> pregunta_doce = 'No hay comentarios.';
+    }
 
     // $pdf = new PDF();
     $pdf = PDF::loadView('pdf.pdf', $brief);
