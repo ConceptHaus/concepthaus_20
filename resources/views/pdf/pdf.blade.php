@@ -28,13 +28,17 @@
 <div class="header">
   <p><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tu marca o empresa?</p>
   <span>{{$nombre}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cuál es su página web?</p>
+  <span>{{$pregunta_web}}</span>
+  <p><strong style="color: #EE4638">[</strong>¿Cuáles son sus redes sociales?</p>
+  <span>{{$pregunta_redes}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Cuál es el propósito del negocio?</p>
   <span>{{$pregunta_uno}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Cuáles son tus ventajas competitivas, fuerzas y debilidades?</p>
   <span>{{$pregunta_dos}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Primordialmente, a qué público te diriges?</p>
   <span>{{$pregunta_tres}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero? ¿qué hace a tu empresa diferente de los demás?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero? ¿qué hace a tu empresa diferente de los demás? ¿Cuáles son?</p>
   <span>{{$pregunta_cuatro}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Cuáles son las metas a corto y largo plazo?</p>
   <span>{{$pregunta_cinco}}</span>
@@ -46,8 +50,8 @@
   <span>{{$pregunta_ocho}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual?</p>
   <span>{{$pregunta_nueve}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia que te gustaría compartir con nosotros?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia que te gustaría compartir con nosotros? De ser así compártenos los links.</p>
   <span>{{$pregunta_diez}}</span>
-  <p><strong style="color: #EE4638">[</strong>Tres palabras que definan tu empresa.</p>
+  <p><strong style="color: #EE4638">[</strong>Tres palabras que definan a tu empresa.</p>
   <span>{{$pregunta_once}}</span>
 </div>

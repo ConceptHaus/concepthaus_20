@@ -13,9 +13,20 @@
     <div class="col-xl-7 col-md-8">
       <form id="formBrief">
         {{ csrf_field() }}
+
         <div class="form-group">
           <label for="pregunta_uno" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuál es el nombre de tu marca o empresa?</label>
           <textarea class="form-control textarea-brief" rows="1" id="nombre" ng-model="formBrief.nombre" name="nombre"></textarea>
+          {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+        </div>
+        <div class="form-group">
+          <label for="pregunta_web" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuál es su página web?</label>
+          <textarea class="form-control textarea-brief" rows="1" id="pregunta_web" ng-model="formBrief.pregunta_web" name="pregunta_web"></textarea>
+          {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+        </div>
+        <div class="form-group">
+          <label for="pregunta_redes" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Cuáles son sus redes sociales?</label>
+          <textarea class="form-control textarea-brief" rows="1" id="pregunta_redes" ng-model="formBrief.pregunta_redes" name="pregunta_redes"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
@@ -34,7 +45,7 @@
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_cuatro" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero? ¿Qué hace a tu empresa diferente de los demás?</label>
+          <label for="pregunta_cuatro" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Conoces a empresas similares a la tuya en México o en el extranjero? ¿Qué hace a tu empresa diferente de los demás? ¿Cuáles son?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_cuatro" ng-model="formBrief.pregunta_cuatro" name="pregunta_cuatro"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
@@ -64,17 +75,17 @@
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_diez" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia que te gustaría compartir con nosotros?</label>
+          <label for="pregunta_diez" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Tienes alguna referencia que te gustaría compartir con nosotros? De ser así compártenos los links.</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_diez" ng-model="formBrief.pregunta_diez" name="pregunta_diez"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_once" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>Tres palabras que definan tu empresa.</label>
+          <label for="pregunta_once" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>Tres palabras que definan a tu empresa.</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_once" ng-model="formBrief.pregunta_once" name="pregunta_once"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="d-flex justify-content-center">
-          <button type="submit" ng-click="registroBrief(formBrief)" class="btn" ng-disabled="!(formBrief.nombre) || !(formBrief.pregunta_uno) || !(formBrief.pregunta_dos) || !(formBrief.pregunta_tres) || !(formBrief.pregunta_cuatro) || !(formBrief.pregunta_cinco) || !(formBrief.pregunta_seis) || !(formBrief.pregunta_siete) || !(formBrief.pregunta_ocho) || !(formBrief.pregunta_nueve) || !(formBrief.pregunta_diez) || !(formBrief.pregunta_once)">Enviar</button>
+          <button type="submit" ng-click="registroBrief(formBrief)" class="btn" ng-disabled="!(formBrief.pregunta_web) || !(formBrief.pregunta_redes) || !(formBrief.nombre) || !(formBrief.pregunta_uno) || !(formBrief.pregunta_dos) || !(formBrief.pregunta_tres) || !(formBrief.pregunta_cuatro) || !(formBrief.pregunta_cinco) || !(formBrief.pregunta_seis) || !(formBrief.pregunta_siete) || !(formBrief.pregunta_ocho) || !(formBrief.pregunta_nueve) || !(formBrief.pregunta_diez) || !(formBrief.pregunta_once)">Enviar</button>
         </div>
       </form>
     </div>
