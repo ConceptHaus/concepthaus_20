@@ -22,6 +22,7 @@ class Brief extends Model
       'pregunta_ocho',
       'pregunta_nueve',
       'pregunta_diez',
-      'pregunta_once'
+      'pregunta_once',
+      'pregunta_doce'
     ];
 }
