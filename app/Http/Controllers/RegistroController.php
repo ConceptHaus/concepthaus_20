@@ -245,6 +245,8 @@ class RegistroController extends Controller {
 
     $brief = new Brief;
     $brief -> nombre = $input['nombre'];
+    $brief -> pregunta_web = $input['pregunta_web'];
+    $brief -> pregunta_redes = $input['pregunta_redes'];
     $brief -> pregunta_uno = $input['pregunta_uno'];
     $brief -> pregunta_dos = $input['pregunta_dos'];
     $brief -> pregunta_tres = $input['pregunta_tres'];
