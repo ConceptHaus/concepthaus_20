@@ -165,7 +165,8 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
 					imageUrl: '../img/loader.gif',
 					imageWidth: 150,
 					imageAlt: 'Concept Haus',
-					showConfirmButton: false
+					showConfirmButton: false,
+					allowOutsideClick: false
 			})
 
 			brief.saveBrief(form).then(function(res){
