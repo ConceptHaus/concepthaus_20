@@ -176,7 +176,8 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
 						imageAlt: 'Concept Haus',
 						showConfirmButton: true,
 						confirmButtonText: 'Aceptar',
-						confirmButtonColor: '#4a4f55'
+						confirmButtonColor: '#4a4f55',
+						allowOutsideClick: false
 				}).then((result) => {
 					window.location.href = '/';
 				})
