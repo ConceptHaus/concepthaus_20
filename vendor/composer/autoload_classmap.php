@@ -3482,6 +3482,8 @@ return array(
     'Unicodeveloper\\Emoji\\Exceptions\\UnknownMethod' => $vendorDir . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownMethod.php',
     'Unicodeveloper\\Emoji\\Exceptions\\UnknownUnicode' => $vendorDir . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownUnicode.php',
     'Unicodeveloper\\Emoji\\Facades\\Emoji' => $vendorDir . '/unicodeveloper/laravel-emoji/src/Facades/Emoji.php',
+    'UpdateTable2Brief' => $baseDir . '/database/migrations/2018_11_23_230858_update_table_2_brief.php',
+    'UpdateTableBrief' => $baseDir . '/database/migrations/2018_11_23_230858_update_table_brief.php',
     'UpdateTablePivotMotivos' => $baseDir . '/database/migrations/2018_01_29_224904_update_table_pivot_motivos.php',
     'UpdateTableRegistros' => $baseDir . '/database/migrations/2018_03_05_230858_update_table_registros.php',
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',

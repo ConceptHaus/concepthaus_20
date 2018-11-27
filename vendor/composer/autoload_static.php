@@ -3839,6 +3839,8 @@ class ComposerStaticInita64506a5829153f7179effada05c6a46
         'Unicodeveloper\\Emoji\\Exceptions\\UnknownMethod' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownMethod.php',
         'Unicodeveloper\\Emoji\\Exceptions\\UnknownUnicode' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Exceptions/UnknownUnicode.php',
         'Unicodeveloper\\Emoji\\Facades\\Emoji' => __DIR__ . '/..' . '/unicodeveloper/laravel-emoji/src/Facades/Emoji.php',
+        'UpdateTable2Brief' => __DIR__ . '/../..' . '/database/migrations/2018_11_23_230858_update_table_2_brief.php',
+        'UpdateTableBrief' => __DIR__ . '/../..' . '/database/migrations/2018_11_23_230858_update_table_brief.php',
         'UpdateTablePivotMotivos' => __DIR__ . '/../..' . '/database/migrations/2018_01_29_224904_update_table_pivot_motivos.php',
         'UpdateTableRegistros' => __DIR__ . '/../..' . '/database/migrations/2018_03_05_230858_update_table_registros.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
