@@ -15,7 +15,7 @@ yarn-error.log
 # Created by https://www.gitignore.io/api/macos
 
 ### macOS ###
-*.DS_Store
+.DS_Store
 .AppleDouble
 .LSOverride
 
