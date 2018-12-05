@@ -50,7 +50,7 @@
   <span>{{$pregunta_siete}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Cómo les gustaría que su identidad sea percibida? ¿Existen atributos específicos con los que les gustaría relacionarla?</p>
   <span>{{$pregunta_ocho}}</span>
-  <p><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual? ¿Tienen alguna referencia que quieran compartir con nosotros?</p>
+  <p><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual?</p>
   <span>{{$pregunta_nueve}}</span>
   <p><strong style="color: #EE4638">[</strong>¿Tienen alguna referencia que les gustaría compartir con nosotros? De ser así compártanos los links.</p>
   <span>{{$pregunta_diez}}</span>
