@@ -75,7 +75,7 @@
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
-          <label for="pregunta_nueve" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual? ¿Tienen alguna referencia que quieran compartir con nosotros?</label>
+          <label for="pregunta_nueve" class="description-p small-gray-brief"><strong style="color: #EE4638">[</strong>¿Existe alguna consideración que debamos tomar en cuenta en el diseño, colores, manera o estilo visual?</label>
           <textarea class="form-control textarea-brief" rows="1" id="pregunta_nueve" ng-model="formBrief.pregunta_nueve" name="pregunta_nueve"></textarea>
           {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
