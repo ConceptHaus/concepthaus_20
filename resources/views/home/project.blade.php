@@ -20,7 +20,7 @@
         <div ng-repeat="proy in test">
           <img ng-if="proy.tipo == 'imagen'" class="img-fluid" ng-src="<% proy.url %>" alt="test">
           <div class="container" ng-if="proy.tipo == 'video'">
-            <iframe class="video" type="text/html" ng-src="<%proy.url | trusted %>" allowfullscreen frameBorder=0></iframe>
+            <iframe class="video" width="100%" height="500px" type="text/html" ng-src="<%proy.url | trusted %>" allowfullscreen frameBorder=0></iframe>
           </div>
         </div>
       </div>
