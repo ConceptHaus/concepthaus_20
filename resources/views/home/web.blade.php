@@ -94,7 +94,7 @@
                         <span class="c-grayLight">+ Landing Page.</span>
                         Desarrollamos micrositios enfocados a la captación de clientes potenciales y/o a promocionar productos y servicios a través del marketing directo. Los clientes estarán a un clic de distancia de su oferta.
                     </p>
-                    
+
                 </div>
                 <div class="col-md-6 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
@@ -105,12 +105,12 @@
                         <span class="c-grayLight">+ Desarrollo de apps.</span>
                         Ofrecemos la más alta tecnología en términos de desarrollo de aplicaciones para celular en los sistemas operativos Android y iOS.
                     </p>
-                    
+
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">+ Sitio Informativo.</span>
                         Desarrollamos sitios web que muestran los valores y servicios que ofrece una empresa de manera clara y eficiente, motivando así al contacto y a la generación de leads.
                     </p>
-                    
+
                 </div>
             </div>
         </div>
@@ -124,13 +124,13 @@
             </div>
         </a>
     </section>
-    <section id="gridInterior" class="container-fluid">
+    <section id="gridInterior" class="container-fluid" ng-controller="WelcomeController">
 
         <div class="row">
             <!-- project-animate -->
             <div class="col-md-3 w25" ng-repeat="project in collectionConcept | filter:{ fields: 'Web' }">
                 <div class="containerProject project-effect">
-                    <a class="projectName" href="<% project.url %>" target="_blank">
+                    <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                         <figure class="effect-goliath">
                             <img ng-src="<% project.covers.original %>" />
                             <figcaption>

@@ -533,6 +533,11 @@ mark,
   height: auto;
 }
 
+.video {
+  width: 100% !important;
+height: 38rem !important;
+}
+
 .figure {
   display: inline-block;
 }
