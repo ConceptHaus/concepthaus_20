@@ -11,6 +11,7 @@
 |
 */
 
+
 // Route::get('/registros', 'WelcomeController@home');
 
 Route::get('/', 'WelcomeController@viewHome');

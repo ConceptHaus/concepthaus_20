@@ -75,6 +75,7 @@ class WelcomeController extends Controller {
 
     // Detalle proyecto
     public function viewDetailProject($id){
+      $data['id'] = $id;
 
         // $client = new \GuzzleHttp\Client();
         // $result = $client->request('GET', 'https://www.behance.net/v2/projects/'.$id,  [
@@ -91,19 +92,7 @@ class WelcomeController extends Controller {
 
         // $data['details'] = $result->getBody();
 
-        $client = new Client();
-        $res = $client->request('GET', 'https://www.behance.net/v2/projects/'.$id, [
-            'query' => [
-                'client_id' => 'aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg'
-            ]
-        ]);
-        // echo $res->getStatusCode();
-        // "200"
-        // echo $res->getHeader('content-type');
-        // 'application/json; charset=utf8'
-        // echo $res->getBody();
-        // {"type":"User"...'
-        $data['details'] = $res->getBody();
+
         return view('home/project',$data);
     }
 }

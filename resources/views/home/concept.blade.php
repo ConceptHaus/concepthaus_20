@@ -33,13 +33,13 @@
             </div>
         </a>
     </section>
-    <section id="gridInterior" class="container-fluid">
+    <section id="gridInterior" class="container-fluid" ng-controller="WelcomeController">
 
         <div class="row">
              <!-- project-animate -->
             <div class="col-md-3 w25" ng-repeat="project in collectionConcept">
                 <div class="containerProject project-effect">
-                    <a class="projectName" href="<% project.url %>" target="_blank">
+                    <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                         <figure class="effect-goliath">
                             <img ng-src="<% project.covers.original %>" />
                             <figcaption>
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 </div>
 @endsection

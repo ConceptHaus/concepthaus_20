@@ -308,6 +308,8 @@
         allowClear: true
     });
 </script> --}}
+{{-- Lodash --}}
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 
 
 <!-- Pagination -->

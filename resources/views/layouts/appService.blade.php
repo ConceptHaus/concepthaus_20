@@ -18,12 +18,12 @@
         <title>Desarrollo de paginas Web / Diseño de sitios web / Apps ecommerce y aplicaciones web</title>
     @elseif(Request::path() === 'googleadwords-publicidadenfacebook')
         <title>Google Adwords / Publicidad en Facebook / Sem / Publicidad en internet</title>
-    @else 
+    @else
         <title>Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX / Polanco</title>
     @endif
 
     <meta name="description" content="Agencia de publicidad digital / empresa de marketing."/>
-    
+
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
@@ -32,7 +32,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
-    <!-- Twitter --> 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                     </nav>
-                
+
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2 socialIcons text-right">
                     <a href="https://www.facebook.com/ConceptHausBranding/" target="_blank">
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </header>
-        
+
         <!-- Content -->
         @yield('content')
         <!-- ./ Content -->
@@ -200,7 +200,7 @@
 
     <!-- Scripts Particles.js -->
     <!--
-        <script src="{{asset('js/particles.js')}}"></script> 
+        <script src="{{asset('js/particles.js')}}"></script>
         <script src="{{asset('js/app-particle.js')}}"></script>
     -->
 
@@ -242,11 +242,11 @@
 
         function hasScrolled() {
             var st = $(this).scrollTop();
-            
+
             // Make sure they scroll more than delta
             if(Math.abs(lastScrollTop - st) <= delta)
                 return;
-            
+
             // If they scrolled down and are past the navbar, add class .nav-up.
             // This is necessary so you never see what is "behind" the navbar.
             if (st > lastScrollTop && st > navbarHeight){
@@ -258,10 +258,12 @@
                     $('header').removeClass('nav-up').addClass('nav-down');
                 }
             }
-            
+
             lastScrollTop = st;
         }
     </script>
+    {{-- Lodash --}}
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 
 </body>
 

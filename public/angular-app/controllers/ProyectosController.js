@@ -44,6 +44,6 @@ app.controller('ProyectosController', function ProyectosController($http, $scope
   $http.jsonp('https://www.behance.net/v2/collections/168765137/projects?api_key=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
   .then(function (response) {
     $scope.collectionTreeHaus = response.data.projects;
-  })  
+  })
 
 });

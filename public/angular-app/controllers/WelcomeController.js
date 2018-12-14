@@ -8,13 +8,55 @@ angular.module('WelcomeController', ['app','ngMask', 'isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
+app.filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+}]);
+
 app.controller('WelcomeController', function WelcomeController($http, $scope, $interval, $window) {
-    // Projects 
+    // Projects
     $scope.projects = {};
     $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
     .then(function (response) {
       $scope.projects = response.data.projects;
     })
+
+		$scope.getOneProject = function (id){
+			$scope.project = {};
+			$scope.test = {};
+			$http.jsonp('https://www.behance.net/v2/projects/'+id+'?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
+			.then(function (response){
+				console.log(response.data.project);
+				$scope.nombre = response.data.project.name;
+				$scope.etiquetas = response.data.project.fields;
+				$scope.project = response.data.project.modules;
+				angular.forEach($scope.project, function(value,key){
+
+					if (value.type == 'image') {
+						$scope.test[key] = {
+							'tipo':'imagen',
+							'url':value.sizes.max_1200
+						};
+					}
+					if (value.type == 'text') {
+						$scope.test[key] = {
+							'tipo':'texto',
+							'url':value.text_plain
+						};
+					}
+					if (value.type == 'video') {
+						$scope.test[key] = {
+							'tipo':'video',
+							'url':value.src
+						};
+					}
+				})
+				console.log($scope.test);
+			})
+
+
+		}
 
     // Random Words Home
     $scope.words = [
@@ -111,7 +153,7 @@ app.controller('WelcomeController', function WelcomeController($http, $scope, $i
       {"word" : "Tiendas virtuales"},
       {"word" : "Tiendas online"},
       {"word" : "Sostenibilidad"},
-      
+
     ]
 
     $scope.randomWords = {}
