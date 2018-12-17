@@ -29,7 +29,7 @@ app.controller('WelcomeController', function WelcomeController($http, $scope, $i
 			.then(function (response){
 				console.log(response.data.project);
 				$scope.nombre = response.data.project.name;
-				$scope.etiquetas = response.data.project.fields;
+				$scope.etiquetas = response.data.project.fields[0];
 				$scope.project = response.data.project.modules;
 				angular.forEach($scope.project, function(value,key){
 
@@ -52,7 +52,7 @@ app.controller('WelcomeController', function WelcomeController($http, $scope, $i
 						};
 					}
 				})
-				console.log($scope.test);
+				console.log($scope.etiquetas[0]);
 			})
 
 

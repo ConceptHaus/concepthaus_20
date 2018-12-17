@@ -11,16 +11,16 @@
 
         </div>
     </div> --}}
-    <div class="d-flex" style="margin-top:20%;" ng-controller="WelcomeController">
-      <div class="container" ng-init="getOneProject({{$id}})">
-        <div class="nombre col-lg-8">
-          <p><%nombre%></p><span ng-repeat="etiqueta in etiquetas"><%etiqueta%></span>
+    <div class="d-flex" style="margin-top:10%;" ng-controller="WelcomeController">
+      <div class="container" ng-init="getOneProject({{$id}})" ng-cloak>
+        <div class="nombre row row-flex row-flex-wrap">
+          <p ><%nombre%></p><span><%etiqueta%></span>
         </div>
 
         <div ng-repeat="proy in test">
           <img ng-if="proy.tipo == 'imagen'" class="img-fluid" ng-src="<% proy.url %>" alt="test">
           <div class="container" ng-if="proy.tipo == 'video'">
-            <iframe class="video" width="100%" height="500px" type="text/html" ng-src="<%proy.url | trusted %>" allowfullscreen frameBorder=0></iframe>
+            <iframe class="video" width="100%" type="text/html" ng-src="<%proy.url | trusted %>" allowfullscreen frameBorder=0></iframe>
           </div>
         </div>
       </div>

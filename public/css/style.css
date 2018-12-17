@@ -533,9 +533,12 @@ mark,
   height: auto;
 }
 
-.video {
-  width: 100% !important;
-height: 38rem !important;
+/* ====== Interiores ===== */
+iframe.video {
+    height: 38rem;
+}
+.nombre {
+    
 }
 
 .figure {
@@ -3567,6 +3570,10 @@ tbody.collapse.show {
     padding-right: 0;
     padding-left: 0;
   }
+  /* ---- Video interiores  ---- */
+  iframe.video {
+    height: 12rem !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -3670,6 +3677,9 @@ tbody.collapse.show {
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+  }
+  iframe.video {
+    height: 24rem;
   }
 }
 
