@@ -8601,6 +8601,18 @@ a.text-dark:focus, a.text-dark:hover {
   font-family: AlphabetMedium;
   src: url(../fonts/NewRailAlphabetWhite.ttf) format("truetype");
 }
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(../fonts/font-Poppins/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(../fonts/font-Poppins/Poppins-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url(../fonts/font-Poppins/Poppins-Light.ttf) format("truetype");
+}
 
 /******************************************************************
 
@@ -10408,11 +10420,161 @@ Variables | Generales vista Thanks
 }
 .size-title{
   font-size: 4rem;
+  font-family: Poppins-Bold;
+}
+@media screen and (max-width: 992px) {
+  .size-title{
+    font-size:3.5rem;
+
+  }
+}
+@media screen and (max-width: 360px) {
+  .size-title{
+    font-size:3.5rem;
+
+  }
+}
+@media screen and (max-width: 320px) {
+  .size-title{
+    font-size:3rem;
+
+  }
+}
+
+
+.size-subtitle{
+  font-family: Poppins-Medium;
+}
+.size-hastag{
+
+  font-family: Poppins-Bold;
+}
+.btn-border{
+  border-radius: 0rem!important;
+  font-family: Poppins-Medium;
+  cursor: pointer;
+
+}
+.pr-6 {
+    padding-right: 12rem!important;
+}
+.mb-6{
+  margin-bottom: 2.1rem !important;
+
 }
 .interior-titulo{
 
-    padding: 20px 21%!important;
+  padding: 20px 15.5%!important;
+}
+@media screen and (max-width: 1200px) {
+  .interior-titulo{
+
+    padding: 20px 8.5%!important;
+  }
+  .pr-6 {
+      padding-right: 6.5rem!important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .interior-titulo{
+
+    padding: 20px 13.5%!important;
+  }
+  .pr-6 {
+      padding-right: 9rem!important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .interior-titulo{
+
+    padding: 20px 0.5%!important;
+  }
+  .pr-6 {
+      padding-right: 2rem!important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .interior-titulo{
+
+    padding: 20px 0.5%!important;
+    text-align: center !important;
+  }
+  .pr-6 {
+    padding-right: 2rem!important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+
+}
+
+
+.text-small2 {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 420px) {
+  .text-small2 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 386px) {
+  .text-small2 {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .text-small2 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .text-small2 {
+    font-size: 11px;
+  }
+}
+
+
+.text-small2 span {
+
 }
 /* ----------------------------------
     Fin Textos
 ---------------------------------- */
+/* ----------------------------------
+    Footer Thanks
+---------------------------------- */
+.title-footerthanks{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.title-venuethanks{
+    font-size: 10px;
+    font-weight: 100;
+}
+.text-titlevenue{
+    margin-bottom: 0rem!important;
+}
+.px-6{
+  padding-right: 6rem !important;
+    padding-left: 6rem !important;
+}
+@media screen and (max-width: 600px) {
+  .px-6{
+    padding-right: 0rem !important;
+      padding-left: 0rem !important;
+  }
+}
+
+/* ----------------------------------
+    Fin Footer Thanks
+---------------------------------- */
+
+
+/******************************************************************
+
+Termina vista Thanks
+
+******************************************************************/
