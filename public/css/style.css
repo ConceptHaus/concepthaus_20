@@ -538,7 +538,7 @@ iframe.video {
     height: 38rem;
 }
 .nombre {
-    
+
 }
 
 .figure {
@@ -10387,3 +10387,32 @@ figure.effect-goliath:hover p {
 #clients .client-brand-servicie.brand6-2 {
   width: 30%;
 }
+
+/******************************************************************
+
+Variables | Generales vista Thanks
+
+******************************************************************/
+/* ----------------------------------
+    Textos
+---------------------------------- */
+.c-red {
+  color: #E63C2F;
+}
+.c-gray {
+  color: #707070;
+}
+
+.body-thanks{
+  height: 100vh!important;
+}
+.size-title{
+  font-size: 4rem;
+}
+.interior-titulo{
+
+    padding: 20px 21%!important;
+}
+/* ----------------------------------
+    Fin Textos
+---------------------------------- */

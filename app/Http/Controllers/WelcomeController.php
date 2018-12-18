@@ -72,6 +72,10 @@ class WelcomeController extends Controller {
     public function viewPDF(){
       return view('pdf/pdf');
     }
+    // Landing page thanks
+    public function viewThanks() {
+        return view('home/thanks');
+    }
 
     // Detalle proyecto
     public function viewDetailProject($id){
