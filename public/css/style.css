@@ -10402,7 +10402,7 @@ figure.effect-goliath:hover p {
 
 /******************************************************************
 
-Variables | Generales vista Thanks
+Variables | Generales vista Thanks & Oops
 
 ******************************************************************/
 /* ----------------------------------
@@ -10415,6 +10415,11 @@ Variables | Generales vista Thanks
   color: #707070;
 }
 
+.c-white{
+color: #FFFFFF;
+text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.981584px 0px, rgb(112, 112, 112) 2.35766px 1.85511px 0px, rgb(112, 112, 112) 1.62091px 2.52441px 0px, rgb(112, 112, 112) 0.705713px 2.91581px 0px, rgb(112, 112, 112) -0.287171px 2.98622px 0px, rgb(112, 112, 112) -1.24844px 2.72789px 0px, rgb(112, 112, 112) -2.07227px 2.16926px 0px, rgb(112, 112, 112) -2.66798px 1.37182px 0px, rgb(112, 112, 112) -2.96998px 0.42336px 0px, rgb(112, 112, 112) -2.94502px -0.571704px 0px, rgb(112, 112, 112) -2.59586px -1.50383px 0px, rgb(112, 112, 112) -1.96093px -2.27041px 0px, rgb(112, 112, 112) -1.11013px -2.78704px 0px, rgb(112, 112, 112) -0.137119px -2.99686px 0px, rgb(112, 112, 112) 0.850987px -2.87677px 0px, rgb(112, 112, 112) 1.74541px -2.43999px 0px, rgb(112, 112, 112) 2.44769px -1.73459px 0px, rgb(112, 112, 112) 2.88051px -0.838247px 0px;
+}
+
 .body-thanks{
   height: 100vh!important;
 }
@@ -10422,8 +10427,16 @@ Variables | Generales vista Thanks
   font-size: 4rem;
   font-family: Poppins-Bold;
 }
+.size-titleoops{
+  font-size: 15rem;
+  font-family: Poppins-Bold;
+}
 @media screen and (max-width: 992px) {
   .size-title{
+    font-size:3.5rem;
+
+  }
+  .size-titleoops{
     font-size:3.5rem;
 
   }
@@ -10433,16 +10446,28 @@ Variables | Generales vista Thanks
     font-size:3rem;
 
   }
+  .size-titleoops{
+    font-size:3.5rem;
+
+  }
 }
 @media screen and (max-width: 360px) {
   .size-title{
     font-size:2.7rem;
 
   }
+  .size-titleoops{
+    font-size:3.5rem;
+
+  }
 }
 @media screen and (max-width: 320px) {
   .size-title{
     font-size:2.5rem;
+
+  }
+  .size-titleoops{
+    font-size:3.5rem;
 
   }
 }
@@ -10464,6 +10489,9 @@ Variables | Generales vista Thanks
 .pr-6 {
     padding-right: 12rem!important;
 }
+.pr-7 {
+    padding-right: 26.5rem!important;
+}
 .mb-6{
   margin-bottom: 2.1rem !important;
 
@@ -10472,12 +10500,19 @@ Variables | Generales vista Thanks
 
   padding: 20px 15.5%!important;
 }
+.interior-titulooops{
+
+  padding: 20px 0%!important;
+}
 @media screen and (max-width: 1200px) {
   .interior-titulo{
 
     padding: 20px 8.5%!important;
   }
   .pr-6 {
+      padding-right: 6.5rem!important;
+  }
+  .pr-7 {
       padding-right: 6.5rem!important;
   }
 }
@@ -10489,6 +10524,9 @@ Variables | Generales vista Thanks
   .pr-6 {
       padding-right: 9rem!important;
   }
+  .pr-7 {
+      padding-right: 9rem!important;
+  }
 }
 @media screen and (max-width: 991px) {
   .interior-titulo{
@@ -10496,6 +10534,9 @@ Variables | Generales vista Thanks
     padding: 20px 0.5%!important;
   }
   .pr-6 {
+      padding-right: 2rem!important;
+  }
+  .pr-7 {
       padding-right: 2rem!important;
   }
 }
@@ -10511,6 +10552,12 @@ Variables | Generales vista Thanks
     -ms-flex-pack: center !important;
     justify-content: center !important;
   }
+  .pr-7 {
+    padding-right: 2rem!important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
 
 }
 
@@ -10518,6 +10565,7 @@ Variables | Generales vista Thanks
 .text-small2 {
   font-size: 17px;
   font-weight: 100;
+
 }
 
 @media screen and (max-width: 420px) {
@@ -10545,6 +10593,40 @@ Variables | Generales vista Thanks
 .text-small2 span {
 
 }
+.text-small3 {
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: Poppins-Bold;
+
+}
+
+@media screen and (max-width: 420px) {
+  .text-small3 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 386px) {
+  .text-small3 {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .text-small3 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .text-small3 {
+    font-size: 11px;
+  }
+}
+
+
+.text-small3 span {
+  font-size: 1.5rem;
+  font-family: Poppins-Medium;
+}
+
 /* ----------------------------------
     Fin Textos
 ---------------------------------- */
@@ -10581,6 +10663,6 @@ Variables | Generales vista Thanks
 
 /******************************************************************
 
-Termina vista Thanks
+Termina vista Thanks & Oops
 
 ******************************************************************/

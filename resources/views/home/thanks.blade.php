@@ -16,7 +16,7 @@
 
                 </div>
                 <div class="col-md-12 d-flex justify-content-end align-items-center pr-6">
-                  <a href="/" class="btn btn-outline-danger px-4 py-1 btn-border" role="button" aria-pressed="true">Regresar</a>
+                  <a href="{{url('/')}}" class="btn btn-outline-danger px-4 py-1 btn-border" role="button" aria-pressed="true">Regresar</a>
                 </div>
             </div>
         </div>
