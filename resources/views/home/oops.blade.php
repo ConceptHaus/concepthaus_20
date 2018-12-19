@@ -3,9 +3,9 @@
 
 <div ng-controller="ProyectosController" class="body-thanks">
     <section id="" class="container-fluid d-flex justify-content-center align-items-center h-100">
-        <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="container-fluid d-flex justify-content-center align-items-center m-auto">
             <div class="row col-md-12 px-0">
-                <div class="col-md-12 text-center interiorPuerta">
+                <div class="col-md-12 text-center">
                   <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap">
                     <div class="col-lg-6 align-textoops">
                       <img class="c-white size-titleoops px-31 img-fluid" src="{{asset('img/oops/oops.png')}}" alt="">
