@@ -6,13 +6,13 @@
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <div class="row col-md-12 px-0">
                 <div class="col-md-12 text-center interiorPuerta">
-                  <div class="col-md-12 d-flex justify-content-center align-items-center">
-                    <div class="col-md-6">
+                  <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="col-lg-6">
                       <h1 class="c-white size-titleoops mb-6">OOPS!</h1>
 
                     </div>
-                    <div class="col-md-3">
-                      <p class="interior-titulooops col-md-12 text-small3 text-left c-red">
+                    <div class="col-lg-3">
+                      <p class="interior-titulooops col-md-12 text-small3 text-lg-left c-red">
                           Algo salió mal :(
                           <br>
                           <span class="c-gray">Error inesperado,

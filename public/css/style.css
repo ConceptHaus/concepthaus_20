@@ -10437,7 +10437,13 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
 
   }
   .size-titleoops{
-    font-size:3.5rem;
+    font-size:10rem;
+
+  }
+}
+@media screen and (max-width: 620px) {
+  .size-titleoops{
+    font-size:8.5rem;
 
   }
 }
@@ -10447,7 +10453,13 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
 
   }
   .size-titleoops{
-    font-size:3.5rem;
+    font-size:7rem;
+
+  }
+}
+@media screen and (max-width: 480px) {
+  .size-titleoops{
+    font-size:5rem;
 
   }
 }
@@ -10457,7 +10469,7 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
 
   }
   .size-titleoops{
-    font-size:3.5rem;
+    font-size:4rem;
 
   }
 }
@@ -10467,7 +10479,7 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
 
   }
   .size-titleoops{
-    font-size:3.5rem;
+    font-size:3rem;
 
   }
 }
@@ -10599,33 +10611,46 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
   font-family: Poppins-Bold;
 
 }
-
-@media screen and (max-width: 420px) {
-  .text-small3 {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 386px) {
-  .text-small3 {
-    font-size: 13px;
-  }
-}
-@media screen and (max-width: 365px) {
-  .text-small3 {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 340px) {
-  .text-small3 {
-    font-size: 11px;
-  }
-}
-
-
 .text-small3 span {
   font-size: 1.5rem;
   font-family: Poppins-Medium;
 }
+@media screen and (max-width: 420px) {
+  .text-small3 {
+    font-size: 1.7rem;
+  }
+  .text-small3 span{
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 386px) {
+  .text-small3 {
+    font-size: 1.5rem;
+  }
+  .text-small3 span{
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 365px) {
+  .text-small3 {
+    font-size: 1.3rem;
+  }
+  .text-small3 span{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .text-small3 {
+    font-size: 1.2rem;
+  }
+  .text-small3 span{
+    font-size: 1rem;
+  }
+}
+
+
+
+
 
 /* ----------------------------------
     Fin Textos
