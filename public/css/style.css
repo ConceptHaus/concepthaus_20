@@ -10428,15 +10428,21 @@ Variables | Generales vista Thanks
 
   }
 }
+@media screen and (max-width: 560px) {
+  .size-title{
+    font-size:3rem;
+
+  }
+}
 @media screen and (max-width: 360px) {
   .size-title{
-    font-size:3.5rem;
+    font-size:2.7rem;
 
   }
 }
 @media screen and (max-width: 320px) {
   .size-title{
-    font-size:3rem;
+    font-size:2.5rem;
 
   }
 }

@@ -23,6 +23,8 @@ Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/brief-branding', 'WelcomeController@viewBrief');
 Route::get('/thanks', 'WelcomeController@viewThanks');
+Route::get('/oops', 'WelcomeController@viewOops');
+
 
 Route::get('/pdf', 'WelcomeController@viewPDF');
 

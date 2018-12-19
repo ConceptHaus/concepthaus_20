@@ -76,6 +76,10 @@ class WelcomeController extends Controller {
     public function viewThanks() {
         return view('home/thanks');
     }
+    // Landing page Oops
+    public function viewOops() {
+        return view('home/oops');
+    }
 
     // Detalle proyecto
     public function viewDetailProject($id){
