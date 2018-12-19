@@ -8,7 +8,7 @@
                 <div class="col-md-12 text-center">
                   <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap">
                     <div class="col-lg-6 align-textoops">
-                      <img class="c-white size-titleoops px-31 img-fluid" src="{{asset('img/oops/oops.png')}}" alt="">
+                      <img class="c-white size-titleoops px-31 img-fluid" draggable="false" src="{{asset('img/oops/oops.png')}}" alt="">
                         <!-- <h1 class="c-white size-titleoops px-31">OOPS!</h1>-->
 
                     </div>
