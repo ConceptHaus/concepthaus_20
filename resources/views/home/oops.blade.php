@@ -8,7 +8,8 @@
                 <div class="col-md-12 text-center interiorPuerta">
                   <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap">
                     <div class="col-lg-6 align-textoops">
-                      <h1 class="c-white size-titleoops px-3">OOPS!</h1>
+                      <img class="c-white size-titleoops px-31" src="{{asset('img/oops/oops.png')}}" alt="">
+                        <!-- <h1 class="c-white size-titleoops px-31">OOPS!</h1>-->
 
                     </div>
                     <div class="col-lg-ex border-leftoops">
