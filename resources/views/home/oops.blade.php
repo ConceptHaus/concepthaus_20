@@ -7,12 +7,12 @@
             <div class="row col-md-12 px-0">
                 <div class="col-md-12 text-center interiorPuerta">
                   <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap">
-                    <div class="col-lg-6">
-                      <h1 class="c-white size-titleoops mb-6">OOPS!</h1>
+                    <div class="col-lg-6 align-textoops">
+                      <h1 class="c-white size-titleoops px-3">OOPS!</h1>
 
                     </div>
-                    <div class="col-lg-3">
-                      <p class="interior-titulooops col-md-12 text-small3 text-lg-left c-red">
+                    <div class="col-lg-ex border-leftoops">
+                      <p class="interior-titulooops col-md-12 text-small3 text-xl-left c-red">
                           Algo salió mal :(
                           <br>
                           <span class="c-gray">Error inesperado,
