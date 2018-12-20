@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
+class ComposerStaticInitaef94cc544bd464db1da15fb29d86e43
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -363,6 +363,7 @@ class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
     );
 
     public static $classMap = array (
+        'App\\Areas' => __DIR__ . '/../..' . '/app/Areas.php',
         'App\\Brief' => __DIR__ . '/../..' . '/app/Brief.php',
         'App\\CodigoPromo' => __DIR__ . '/../..' . '/app/CodigoPromo.php',
         'App\\CodigoRegistro' => __DIR__ . '/../..' . '/app/CodigoRegistro.php',
@@ -397,6 +398,7 @@ class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
         'App\\Pivot_Models\\PivoteMotivo' => __DIR__ . '/../..' . '/app/Pivot_Models/PivoteMotivo.php',
         'App\\Pivot_Models\\PivoteServicios' => __DIR__ . '/../..' . '/app/Pivot_Models/PivoteServicios.php',
         'App\\Pivot_Models\\PivoteStatus' => __DIR__ . '/../..' . '/app/Pivot_Models/PivoteStatus.php',
+        'App\\Postulados' => __DIR__ . '/../..' . '/app/Postulados.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -406,6 +408,7 @@ class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
         'App\\Status' => __DIR__ . '/../..' . '/app/Status.php',
         'App\\Ubicacion' => __DIR__ . '/../..' . '/app/Ubicacion.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Vacantes' => __DIR__ . '/../..' . '/app/Vacantes.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
@@ -418,8 +421,10 @@ class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
         'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'CreateAreasTable' => __DIR__ . '/../..' . '/database/migrations/2018_12_20_172158_create_areas_table.php',
         'CreateBriefTable' => __DIR__ . '/../..' . '/database/migrations/2018_11_08_164601_create_brief_table.php',
         'CreatePivotFormsTable' => __DIR__ . '/../..' . '/database/migrations/2018_03_01_011216_create_pivot_forms_table.php',
+        'CreatePostuladosTable' => __DIR__ . '/../..' . '/database/migrations/2018_12_20_172423_create_postulados_table.php',
         'CreateRegistrosTable' => __DIR__ . '/../..' . '/database/migrations/2017_12_02_024729_create_registros_table.php',
         'CreateTableCodigosPromo' => __DIR__ . '/../..' . '/database/migrations/2018_01_24_230149_create_table_codigos_promo.php',
         'CreateTableCodigosRegistros' => __DIR__ . '/../..' . '/database/migrations/2018_01_23_174109_create_table_codigos_registros.php',
@@ -438,6 +443,7 @@ class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
         'CreateTableStatus' => __DIR__ . '/../..' . '/database/migrations/2018_01_24_230459_create_table_status.php',
         'CreateTableUbicaciones' => __DIR__ . '/../..' . '/database/migrations/2018_01_24_231723_create_table_ubicaciones.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_12_02_024727_create_users_table.php',
+        'CreateVacantesTable' => __DIR__ . '/../..' . '/database/migrations/2018_12_20_172412_create_vacantes_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
@@ -3918,11 +3924,11 @@ class ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit6e5daf886b031d1e541fc3bbcf347f42::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitaef94cc544bd464db1da15fb29d86e43::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitaef94cc544bd464db1da15fb29d86e43::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitaef94cc544bd464db1da15fb29d86e43::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitaef94cc544bd464db1da15fb29d86e43::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitaef94cc544bd464db1da15fb29d86e43::$classMap;
 
         }, null, ClassLoader::class);
     }

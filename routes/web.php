@@ -22,6 +22,9 @@ Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
 Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/brief-branding', 'WelcomeController@viewBrief');
+Route::get('/gracias', 'WelcomeController@viewGracias');
+Route::get('/error', 'WelcomeController@viewError');
+
 
 Route::get('/pdf', 'WelcomeController@viewPDF');
 

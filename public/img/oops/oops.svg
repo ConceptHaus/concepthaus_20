@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 889 391">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #707070;
+        stroke-width: 2px;
+        font-size: 276px;
+        font-family: Poppins-Bold, Poppins;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="OOPS_" data-name="OOPS!" class="cls-1" transform="translate(2 292)"><tspan x="0" y="0">OOPS!</tspan></text>
+</svg>
