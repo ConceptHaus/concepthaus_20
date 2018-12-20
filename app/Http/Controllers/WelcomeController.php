@@ -73,11 +73,11 @@ class WelcomeController extends Controller {
       return view('pdf/pdf');
     }
     // Landing page thanks
-    public function viewThanks() {
+    public function viewGracias() {
         return view('home/gracias');
     }
     // Landing page Oops
-    public function viewOops() {
+    public function viewError() {
         return view('home/error');
     }
 
