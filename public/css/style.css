@@ -10692,17 +10692,10 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
     font-size: 1.5rem;
   }
   .text-small3 span{
-    font-size: 1.45rem;
-  }
-}
-@media screen and (max-width: 420px) {
-  .text-small3 {
-    font-size: 1.5rem;
-  }
-  .text-small3 span{
     font-size: 1.3rem;
   }
 }
+
 @media screen and (max-width: 386px) {
   .text-small3 {
     font-size: 1.3rem;
