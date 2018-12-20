@@ -9,5 +9,5 @@ angular.module('VacantesController', ['app','ngMask','isteven-multi-select'], fu
 });
 
 app.controller('VacantesController', function VacantesController($scope, vacantes) {
-	
+
 });

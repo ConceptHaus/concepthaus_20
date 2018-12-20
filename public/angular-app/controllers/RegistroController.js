@@ -8,7 +8,7 @@ angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveLead, countries, states, brief) {
+app.controller('RegistroController', function RegistroController($scope,$window, saveRegistro, saveLead, countries, states, brief) {
     $scope.contacto={};
     $scope.saveDataContact  = function(contacto, contactoForm){
         swal({
@@ -50,10 +50,12 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
             //     confirmButtonColor: '#4a4f55',
             //     closeOnConfirm:false
             // })
-						$window.location.href = '/gracias';
+
             $scope.contacto = {};
             $scope.contactoForm.$setUntouched();
             $scope.contactoForm.$setPristine();
+						console.log('Registro');
+						$window.location.href = '/gracias';
         }
     }
     var errorRegister = function(errors){

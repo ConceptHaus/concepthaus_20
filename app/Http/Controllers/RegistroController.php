@@ -13,6 +13,8 @@ use App\Pivot_Models\PivoteForms;
 use App\Pivot_Models\PivoteServicios;
 use Telegram\Bot\FileUpload\InputFile;
 use Telegram\Bot\Laravel\Facades\Telegram;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 use Emoji;
 use PDF;
 
@@ -124,30 +126,32 @@ class RegistroController extends Controller {
 				$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 				$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 			});
-			$chatsid =  array('-275252761','5711355','217972718');
+			//$chatsid =  array('-275252761','5711355','217972718');
 			//$chatsid = array('5711355');
-			foreach($chatsid as $id){
-                Telegram::sendMessage([
-						'chat_id' => $id,
-						'parse_mode' => 'HTML',
-                        'text' =>'<b>Nuevo lead '. $formulario -> tipo.'</b> '.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
-
-<b>Nombre: </b>'.$registro -> nombre.'
-<b>Empresa: </b>'.$registro -> empresa.'
-<b>Correo: </b>'.$registro -> correo.'
-<b>Tel: </b>'.$registro -> telefono.'
-<b>Formulario: </b>'.$formulario -> tipo .'
-<b>Nota: </b>'.$registro -> mensaje,
-						'reply_markup'=>json_encode([
-                                'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))),
-                                'resize_keyboard' => true,
-                                'one_time_keyboard' => true
-                            ]),
-
-
-					]);
-
-            }
+// 			foreach($chatsid as $id){
+//                 Telegram::sendMessage([
+// 						'chat_id' => $id,
+// 						'parse_mode' => 'HTML',
+//                         'text' =>'<b>Nuevo lead '. $formulario -> tipo.'</b> '
+//                         //.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
+//                         .'
+//
+// <b>Nombre: </b>'.$registro -> nombre.'
+// <b>Empresa: </b>'.$registro -> empresa.'
+// <b>Correo: </b>'.$registro -> correo.'
+// <b>Tel: </b>'.$registro -> telefono.'
+// <b>Formulario: </b>'.$formulario -> tipo .'
+// <b>Nota: </b>'.$registro -> mensaje,
+// 						'reply_markup'=>json_encode([
+//                                 'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))),
+//                                 'resize_keyboard' => true,
+//                                 'one_time_keyboard' => true
+//                             ]),
+//
+//
+// 					]);
+//
+//             }
 
 			// Mailing Administrador nuevo registro
 			// Mail::send('emails.registro.admin', $user, function($contact) use ($user){
@@ -155,6 +159,23 @@ class RegistroController extends Controller {
 			// 	$contact->to('contacto@concepthaus.mx','Concept Haus')->subject('Nuevo Concept Haus');
 			// });
 
+    //Post al nuevo Kiper
+
+      $datosKiper = explode(" ", $registro->nombre);
+      var_dump($datosKiper);
+      var_dump($datosKiper[0]);
+      var_dump($datosKiper[1]);
+      $datos = [
+          'nombre' => $datosKiper[0],
+          'apellido' => $datosKiper[1],
+          'empresa' => $registro -> empresa,
+          'correo' => $registro -> correo,
+          'telefono' => $registro -> telefono,
+          'mensaje' => $registro -> mensaje
+
+        ];
+      $client = new Client(); //GuzzleHttp\Client
+      $result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
 
 			$json['success'] = "Datos guardados";
 			return json_encode($json['success']);
