@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Areas' => $baseDir . '/app/Areas.php',
     'App\\Brief' => $baseDir . '/app/Brief.php',
     'App\\CodigoPromo' => $baseDir . '/app/CodigoPromo.php',
     'App\\CodigoRegistro' => $baseDir . '/app/CodigoRegistro.php',
@@ -40,6 +41,7 @@ return array(
     'App\\Pivot_Models\\PivoteMotivo' => $baseDir . '/app/Pivot_Models/PivoteMotivo.php',
     'App\\Pivot_Models\\PivoteServicios' => $baseDir . '/app/Pivot_Models/PivoteServicios.php',
     'App\\Pivot_Models\\PivoteStatus' => $baseDir . '/app/Pivot_Models/PivoteStatus.php',
+    'App\\Postulados' => $baseDir . '/app/Postulados.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
@@ -49,6 +51,7 @@ return array(
     'App\\Status' => $baseDir . '/app/Status.php',
     'App\\Ubicacion' => $baseDir . '/app/Ubicacion.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\Vacantes' => $baseDir . '/app/Vacantes.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Facade.php',
@@ -61,8 +64,10 @@ return array(
     'Carbon\\Laravel\\ServiceProvider' => $vendorDir . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
+    'CreateAreasTable' => $baseDir . '/database/migrations/2018_12_20_172158_create_areas_table.php',
     'CreateBriefTable' => $baseDir . '/database/migrations/2018_11_08_164601_create_brief_table.php',
     'CreatePivotFormsTable' => $baseDir . '/database/migrations/2018_03_01_011216_create_pivot_forms_table.php',
+    'CreatePostuladosTable' => $baseDir . '/database/migrations/2018_12_20_172423_create_postulados_table.php',
     'CreateRegistrosTable' => $baseDir . '/database/migrations/2017_12_02_024729_create_registros_table.php',
     'CreateTableCodigosPromo' => $baseDir . '/database/migrations/2018_01_24_230149_create_table_codigos_promo.php',
     'CreateTableCodigosRegistros' => $baseDir . '/database/migrations/2018_01_23_174109_create_table_codigos_registros.php',
@@ -81,6 +86,7 @@ return array(
     'CreateTableStatus' => $baseDir . '/database/migrations/2018_01_24_230459_create_table_status.php',
     'CreateTableUbicaciones' => $baseDir . '/database/migrations/2018_01_24_231723_create_table_ubicaciones.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2017_12_02_024727_create_users_table.php',
+    'CreateVacantesTable' => $baseDir . '/database/migrations/2018_12_20_172412_create_vacantes_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',

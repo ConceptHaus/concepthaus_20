@@ -40,31 +40,33 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
                 closeOnConfirm:false
             })
         } else {
-            swal({
-                text:'Gracias, tu mensaje fue recibido, pronto nos pondremos en contacto contigo.',
-                imageUrl: '../img/logo/concepthaus.svg',
-                imageWidth: 210,
-                imageAlt: 'Concept Haus',
-                icon: "success",
-                confirmButtonText:'Cerrar',
-                confirmButtonColor: '#4a4f55',
-                closeOnConfirm:false
-            })
+            // swal({
+            //     text:'Gracias, tu mensaje fue recibido, pronto nos pondremos en contacto contigo.',
+            //     imageUrl: '../img/logo/concepthaus.svg',
+            //     imageWidth: 210,
+            //     imageAlt: 'Concept Haus',
+            //     icon: "success",
+            //     confirmButtonText:'Cerrar',
+            //     confirmButtonColor: '#4a4f55',
+            //     closeOnConfirm:false
+            // })
+						$window.location.href = '/gracias';
             $scope.contacto = {};
             $scope.contactoForm.$setUntouched();
             $scope.contactoForm.$setPristine();
         }
     }
     var errorRegister = function(errors){
-        swal({
-            text:'Algo salió mal en el envío de tu información de contacto.',
-            imageUrl: '../img/logo/concepthaus.svg',
-            imageWidth: 210,
-            imageAlt: 'Concept Haus',
-            confirmButtonText:'Cerrar',
-            confirmButtonColor: '#4a4f55',
-            closeOnConfirm:false
-        })
+        // swal({
+        //     text:'Algo salió mal en el envío de tu información de contacto.',
+        //     imageUrl: '../img/logo/concepthaus.svg',
+        //     imageWidth: 210,
+        //     imageAlt: 'Concept Haus',
+        //     confirmButtonText:'Cerrar',
+        //     confirmButtonColor: '#4a4f55',
+        //     closeOnConfirm:false
+        // })
+				$window.location.href = '/error';
     }
 
     $scope.saveDataLead  = function(contacto, contactoForm){
