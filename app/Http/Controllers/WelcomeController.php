@@ -74,11 +74,11 @@ class WelcomeController extends Controller {
     }
     // Landing page thanks
     public function viewThanks() {
-        return view('home/thanks');
+        return view('home/gracias');
     }
     // Landing page Oops
     public function viewOops() {
-        return view('home/oops');
+        return view('home/error');
     }
 
     // Detalle proyecto
