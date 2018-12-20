@@ -10514,7 +10514,7 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
   height   : 70%;  /* or 100px */
   background: red;
       }
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1387px) {
   .border-leftoops{
     border-left: 0px solid #E63C2F;
 
@@ -10670,7 +10670,7 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
   font-size: 1.5rem;
   font-family: Poppins-Medium;
 }
-@media screen and (max-width: 1447px) {
+@media screen and (max-width: 1473px) {
   .text-small3 {
     font-size: 1.8rem;
   }
@@ -10678,12 +10678,21 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 1324px) {
+
+@media screen and (max-width: 1350px) {
+  .text-small3 {
+    font-size: 1.7rem;
+  }
+  .text-small3 span{
+    font-size: 1.45rem;
+  }
+}
+@media screen and (max-width: 1288px) {
   .text-small3 {
     font-size: 1.5rem;
   }
   .text-small3 span{
-    font-size: 1.3rem;
+    font-size: 1.45rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -10726,6 +10735,11 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
 @media screen and (max-width: 992px) {
   .align-textoops{
     text-align: center;
+  }
+}
+@media screen and (max-width: 1387px) {
+  .btn-justify{
+        justify-content: center !important;
   }
 }
 
@@ -10789,6 +10803,18 @@ text-shadow: rgb(112, 112, 112) 3px 0px 0px, rgb(112, 112, 112) 2.83487px 0.9815
     flex: 0 0 25%;
     max-width: 25%;
 }
+}
+
+.img-fluidoops {
+    height: auto;
+    width: auto;
+}
+@media (max-width: 1191px){
+  .img-fluidoops {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+  }
 }
 /******************************************************************
 

@@ -7,8 +7,8 @@
             <div class="row col-md-12 px-0">
                 <div class="col-md-12 text-center">
                   <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap">
-                    <div class="col-lg-6 align-textoops">
-                      <img class="c-white size-titleoops px-31 img-fluid" draggable="false" src="{{asset('img/oops/oops.png')}}" alt="">
+                    <div class="col-sm-6 align-textoops">
+                      <img class="c-white size-titleoops px-31 img-fluidoops" draggable="false" src="{{asset('img/oops/oops.png')}}" alt="">
                         <!-- <h1 class="c-white size-titleoops px-31">OOPS!</h1>-->
 
                     </div>
@@ -25,9 +25,16 @@
                   </div>
 
                 </div>
-                <div class="col-md-12 d-flex justify-content-end align-items-center pr-7">
-                  <a href="{{url('/')}}" class="btn btn-outline-danger px-4 py-1 btn-border" role="button" aria-pressed="true">Regresar</a>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end align-items-center btn-justify">
+                        <a href="{{url('/')}}" class="btn btn-outline-danger px-4 py-1 btn-border" role="button" aria-pressed="true">Regresar</a>
+
+                    </div>
+
+                  </div>
                 </div>
+
             </div>
         </div>
 
