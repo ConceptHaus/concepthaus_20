@@ -65,14 +65,15 @@
                   <label for="exampleFormControlTextarea1">Selecciona los requerimientos que deberá poner el aspirante:</label>
                 </div>
               </div>
+              <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="from-group d-flex align-items-center justify-content-center">
-                  <div class="form-check form-check-inline col-6 d-flex align-items-center justify-content-center">
-                    <label class="form-check-label" for="inlineRadio1">CV</label>
+                  <div class="from-group d-flex align-items-center justify-content-start">
+                  <div class="form-check form-check-inline col-6 d-flex align-items-center justify-content-start">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">CV</label>
                     </div>
-                    <div class="form-check form-check-inline col-6 d-flex align-items-center justify-content-center">
+                    <div class="form-check form-check-inline col-6 d-flex align-items-center justify-content-start">
                       <label class="form-check-label" for="inlineRadio2">Portafolio</label>
                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                     </div>
@@ -81,6 +82,8 @@
               </div>
 
                   </div>
+                </div>
+                
             </form>
 
         </div>
