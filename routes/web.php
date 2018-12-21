@@ -65,6 +65,8 @@ Route::get('/registros/no-viables', 'HomeController@getRegistrosClose');
 Route::get('/registro/detalle/{id}', 'HomeController@getRegistroDetalle');
 Route::get('/registroLead', 'HomeController@getUserData');
 Route::get('/ownLeads', 'HomeController@getUserLeads');
+Route::get('/getVacantes', 'HomeController@getVacantes');
+Route::get('/getAreas', 'HomeController@getAreas');
 
 Route::post('/api/v1/registro/delete','HomeController@deleteDataRegistroLead');
 Route::post('/api/v1/registro/edit','HomeController@editDataRegistroLead');

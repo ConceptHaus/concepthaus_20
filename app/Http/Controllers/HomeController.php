@@ -366,7 +366,7 @@ class HomeController extends Controller {
 		}
     }
 
-    // ===================== Crear Vacante ====================
+    // ===================== Funciones Vacante ====================
     public function createVacante(Request $request){
       try {
         DB::beginTransaction();
@@ -389,6 +389,19 @@ class HomeController extends Controller {
         return json_encode($json['errors']);
       }
 
+    }
 
+    public function getVacantes(){
+
+      $vacantes = DB::table('vacantes')->get();
+
+      return $vacantes;
+    }
+
+    public function getAreas(){
+
+      $areas = DB::table('areas')->get();
+
+      return $areas;
     }
 }

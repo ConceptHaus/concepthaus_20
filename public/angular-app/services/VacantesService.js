@@ -21,11 +21,23 @@ angular.module('VacantesService', [])
             data: area
           })
         },
-        createPostulado : function(postulado){
+        createPostulado: function(postulado){
           return $http({
             method: 'POST',
             url: '/createPostulado',
             data: postulado
+          })
+        },
+        getVacantes: function(){
+          return $http({
+            method: 'GET',
+            url: 'getVacantes'
+          })
+        },
+        getAreas: function(){
+          return $http({
+            method: 'GET',
+            url: '/getAreas'
           })
         }
     }

@@ -9,6 +9,9 @@ angular.module('VacantesController', ['app','ngMask','isteven-multi-select'], fu
 });
 
 app.controller('VacantesController', function VacantesController($scope, vacantes) {
+	$scope.areas = {};
+	$scope.vacantes = {};
+
 	$scope.savePostulado = function(postulado){
 		swal({
 				imageUrl: '../img/loader.gif',
@@ -67,4 +70,23 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 			})
 		})
 	}
+
+	$scope.getVacantes = function(){
+		vacantes.getVacantes().then(function(res){
+			$scope.vacantes = res.data;
+			console.log($scope.vacantes);
+		}, function (err){
+			console.log(err);
+		})
+	}
+
+	$scope.getAreas = function(){
+		vacantes.getAreas().then(function(res){
+			$scope.areas = res.data;
+			console.log($scope.areas);
+		}, function (err){
+			console.log(err);
+		})
+	}
+
 });
