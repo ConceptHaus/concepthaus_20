@@ -22,6 +22,9 @@ use Illuminate\Http\Request;
 use Validator;
 use Mail;
 
+use App\Vacantes;
+use App\Areas;
+
 class HomeController extends Controller {
     /**
      * Create a new controller instance.
@@ -59,15 +62,15 @@ class HomeController extends Controller {
 
         return view('home', $dashboard);
     }
-    
-    public function getUserLeads() {    
+
+    public function getUserLeads() {
         // $dashboard['registros'] = Registros::where('fuente','=',auth()->user()->name)->get();
-        $dashboard['registros'] = Registros::all();        
+        $dashboard['registros'] = Registros::all();
         $dashboard['recibido'] = PivoteStatus::where('id_status','=',1)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
         $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
-        
+
         return view('admin/registros_user', $dashboard);
     }
 
@@ -83,7 +86,7 @@ class HomeController extends Controller {
         $dashboard['proceso'] = PivoteStatus::where('id_status','=',5)->get();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',2)->get();
         $dashboard['descartados'] = PivoteStatus::where('id_status','=',3)->get();
-        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();        
+        $dashboard['cotizados'] = PivoteStatus::where('id_status','=',4)->get();
         return view('admin/registros', $dashboard);
     }
 
@@ -98,7 +101,7 @@ class HomeController extends Controller {
         $dashboard['proceso'] = PivoteStatus::where('id_status','=',5)->get();
         return view('admin/registros_proceso', $dashboard);
     }
-    
+
     public function  getRegistrosCheck() {
         $dashboard['registros'] = Registros::all();
         $dashboard['socios'] = PivoteStatus::where('id_status','=',3)->get();
@@ -122,7 +125,7 @@ class HomeController extends Controller {
         return view('admin/registro_detalle',$data);
         //return response()->json($data);
     }
-    
+
     public function getUserData() {
         // $data['info_user'] = Auth::id();
         return view('admin/registro_lead');
@@ -132,13 +135,13 @@ class HomeController extends Controller {
 	public function getRegistrosAjax(){
         $registros = Registros::GetAllRegistros();
         return response()->json($registros);
-    }   
-    
+    }
+
     public function getRegistrosLastestAjax(){
         $registros = Registros::GetLastestRegistros();
         return response()->json($registros);
     }
-    
+
     public function getfilterDataRegistros(Request $data){
         $fecha_inicial = new Carbon($data->fecha_inicial);
         $fecha_inicial = $fecha_inicial->format('Y/m/d');
@@ -147,7 +150,7 @@ class HomeController extends Controller {
         $fecha_final = $fecha_final->format('Y/m/d');
         $data->fecha_final = $fecha_final;
 
-        $registros = Registros::GetFilterDate($fecha_inicial ,$fecha_final);     
+        $registros = Registros::GetFilterDate($fecha_inicial ,$fecha_final);
         return response()->json($registros);
     }
 
@@ -159,7 +162,7 @@ class HomeController extends Controller {
         $json['success'] = 'Datos guardados';
         return json_encode($json);
     }
-    
+
     // ===================== Gráficas ====================
     public function getGraficasSemanal(){
         $now = date('Y/m/d');
@@ -227,18 +230,18 @@ class HomeController extends Controller {
             $ubicacion -> ciudad      = $valor['city_fb'];
             $ubicacion -> estado      = '';
             $ubicacion -> save();
-            
+
             $status = new PivoteStatus;
 			$status -> id_status   =  1;
 			$status -> id_registro =  $valor['id_registro'];
             $status -> save();
-            
+
             // Formatos fecha
             $fecha  = $valor['fecha_fb'];
             $array1 = explode("T", $fecha);
             $array2 = explode("-", $array1[0]);
             $array3 = explode("+", $array1[1]);
-            $array4 = explode(":", $array3[0]);            
+            $array4 = explode(":", $array3[0]);
 
             $year = $array2[0];
             $month = $array2[1];
@@ -264,7 +267,7 @@ class HomeController extends Controller {
 
         }
         echo ('Datos guardados');
-    } 
+    }
 
 
     // ===================== Elimina datos registro ====================
@@ -292,7 +295,7 @@ class HomeController extends Controller {
 			return json_encode($json['errors']);
 		}
     }
-    
+
     // ===================== Editar datos registro ====================
     public function editDataRegistroLead(Request $data) {
 		$input = $data->all();
@@ -339,7 +342,7 @@ class HomeController extends Controller {
 		            $servicios -> save();
                 }
             }
-			
+
 			$json['success'] = "Datos guardados";
 			return json_encode($json['success']);
 		}
@@ -362,7 +365,30 @@ class HomeController extends Controller {
 			return json_encode($json['errors']);
 		}
     }
-    
 
-    
+    // ===================== Crear Vacante ====================
+    public function createVacante(Request $request){
+      try {
+        DB::beginTransaction();
+        $vacante = new Vacantes;
+        $vacante->id_area = $request->id_area;
+        $vacante->titulo = $request->titulo;
+        $vacante->descripcion = $request->descripcion;
+        $vacante->save();
+        DB::commit();
+
+        $json['success'] = "Vacante creada correctamente.";
+
+        return json_encode($json['success']);
+
+      } catch (Exception $e) {
+        DB::rollBack();
+
+        $json['errors'] = "Datos incorrectos.";
+
+        return json_encode($json['errors']);
+      }
+
+
+    }
 }

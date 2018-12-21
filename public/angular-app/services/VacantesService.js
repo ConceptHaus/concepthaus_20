@@ -11,13 +11,21 @@ angular.module('VacantesService', [])
             return $http({
                 method: 'POST',
                 url: '/saveVacante',
-                data: vacante,
+                data: vacante
             })
         },
         createArea: function(area){
           return $http({
             method: 'POST',
-            url: '/'
+            url: '/createArea',
+            data: area
+          })
+        },
+        createPostulado : function(postulado){
+          return $http({
+            method: 'POST',
+            url: '/createPostulado',
+            data: postulado
           })
         }
     }

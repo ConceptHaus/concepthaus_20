@@ -45,6 +45,8 @@ Route::post('/saveRegistro','RegistroController@saveDataRegistro');
 Route::post('/saveRegistroLead','RegistroController@saveDataRegistroLead');
 // Guarda datos de Brief
 Route::post('/brief','RegistroController@registroBrief');
+//Guardado de Postulado
+Route::post('/createPostulado', 'RegistroController@createPostulado');
 Auth::routes();
 
 /* ============================================================
@@ -67,6 +69,8 @@ Route::get('/ownLeads', 'HomeController@getUserLeads');
 Route::post('/api/v1/registro/delete','HomeController@deleteDataRegistroLead');
 Route::post('/api/v1/registro/edit','HomeController@editDataRegistroLead');
 Route::post('/api/v1/registro/deleteServicie','HomeController@deleteServicieRegistroLead');
+// Crear Vacantes
+Route::post('/createVacante', 'HomeController@createVacante');
 
 // API
 Route::get('/api/v1/registros','HomeController@getRegistrosAjax');
