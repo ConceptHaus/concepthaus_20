@@ -11074,6 +11074,29 @@ font-size: 12px!important;
 
   }
 }
+.m0{
+  margin: 0px!important;
+  font-size: 15px!important;
+  font-weight: 400!important;
+  padding: 3px 22px!important;
+}
+.m0:hover{
+  margin: 0px!important;
+}
+.c-maxred{
+      color: #E63C2F;
+}
+.text-area{
+    background-color: #49505738;
+    border: 1px solid #707070b3!important;
+    border-radius: 0px !important;
+    padding: 15px 10px!important;
+}
+.form-check-input2 {
+    position: absolute;
+    margin-top: 0.25rem;
+    margin-left: 1.55rem;
+}
 /* ----------------------------------
     Fin Title de Trabajo
 ---------------------------------- */
