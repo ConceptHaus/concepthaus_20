@@ -80,7 +80,10 @@ class WelcomeController extends Controller {
     public function viewError() {
         return view('home/error');
     }
-
+    // vista 2 bolsa de trabajo
+    public function viewBolsadetrabajo() {
+        return view('home/bolsa_de_trabajo');
+    }
     // Detalle proyecto
     public function viewDetailProject($id){
       $data['id'] = $id;
