@@ -22,9 +22,6 @@ use Illuminate\Http\Request;
 use Validator;
 use Mail;
 
-use App\Vacantes;
-use App\Areas;
-
 class HomeController extends Controller {
     /**
      * Create a new controller instance.
@@ -366,42 +363,4 @@ class HomeController extends Controller {
 		}
     }
 
-    // ===================== Funciones Vacante ====================
-    public function createVacante(Request $request){
-      try {
-        DB::beginTransaction();
-        $vacante = new Vacantes;
-        $vacante->id_area = $request->id_area;
-        $vacante->titulo = $request->titulo;
-        $vacante->descripcion = $request->descripcion;
-        $vacante->save();
-        DB::commit();
-
-        $json['success'] = "Vacante creada correctamente.";
-
-        return json_encode($json['success']);
-
-      } catch (Exception $e) {
-        DB::rollBack();
-
-        $json['errors'] = "Datos incorrectos.";
-
-        return json_encode($json['errors']);
-      }
-
-    }
-
-    public function getVacantes(){
-
-      $vacantes = DB::table('vacantes')->get();
-
-      return $vacantes;
-    }
-
-    public function getAreas(){
-
-      $areas = DB::table('areas')->get();
-
-      return $areas;
-    }
 }

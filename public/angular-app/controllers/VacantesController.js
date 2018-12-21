@@ -8,37 +8,43 @@ angular.module('VacantesController', ['app','ngMask','isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('VacantesController', function VacantesController($scope, vacantes) {
+app.controller('VacantesController', function VacantesController($scope, vacantes, Upload) {
 	$scope.areas = {};
 	$scope.vacantes = {};
 
 	$scope.savePostulado = function(postulado){
+		console.log(postulado);
 		swal({
 				imageUrl: '../img/loader.gif',
 				imageWidth: 150,
 				imageAlt: 'Concept Haus',
 				showConfirmButton: false
-		})
-	vacantes.createPostulado(postulado).then(function (res){
-			swal({
-	            title:"Enviado exitosamente",
-	            text:"Tu mensaje ha sido enviado exitosamenete"
-	            // confirmButtonText: 'Regresar a mi cuenta',
-	            // showCancelButton: true,
-	            // cancelButtonText: 'Subir otro ticket'
-	        }).then((result)=>{
-	            if(result.value){
-	                $window.location.href="/";
-	            }
-	        })
-	        console.log(res.data);
-			}, function (err) {
+		});
+		Upload.upload({
+            url: '/createPostulado',
+            data: postulado
+        }).then(function(res){
 					swal({
-	            type:'error',
-	            title:'Oh no!, Algo salió mal.',
-	            text: err.data.error
-	        })
-			})
+                title: "¡Todo bien!",
+                text: "Tu ticket se ha registrado con éxito",
+                confirmButtonText: 'Regresar a mi cuenta',
+                showCancelButton: true,
+                cancelButtonText: 'Subir otro ticket'
+            }).then(function (result) {
+                if (result.value) {
+                    $window.location.href = "/home";
+                }
+            });
+            console.log(res.data);
+            $postulado = null;
+				},function (err){
+					swal({
+                type: 'error',
+                title: 'Oh no!, Algo salió mal.',
+                text: err.data.error
+            });
+            console.log(err.data);
+				})
 	}
 
 	$scope.saveVacante = function(vacante){
@@ -88,5 +94,6 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 			console.log(err);
 		})
 	}
-
+ $scope.getVacantes();
+ $scope.getAreas();
 });

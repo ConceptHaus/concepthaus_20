@@ -21,13 +21,6 @@ angular.module('VacantesService', [])
             data: area
           })
         },
-        createPostulado: function(postulado){
-          return $http({
-            method: 'POST',
-            url: '/createPostulado',
-            data: postulado
-          })
-        },
         getVacantes: function(){
           return $http({
             method: 'GET',

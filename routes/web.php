@@ -46,7 +46,7 @@ Route::post('/saveRegistroLead','RegistroController@saveDataRegistroLead');
 // Guarda datos de Brief
 Route::post('/brief','RegistroController@registroBrief');
 //Guardado de Postulado
-Route::post('/createPostulado', 'RegistroController@createPostulado');
+Route::post('/createPostulado', 'VacantesController@createPostulado');
 Auth::routes();
 
 /* ============================================================
@@ -65,8 +65,8 @@ Route::get('/registros/no-viables', 'HomeController@getRegistrosClose');
 Route::get('/registro/detalle/{id}', 'HomeController@getRegistroDetalle');
 Route::get('/registroLead', 'HomeController@getUserData');
 Route::get('/ownLeads', 'HomeController@getUserLeads');
-Route::get('/getVacantes', 'HomeController@getVacantes');
-Route::get('/getAreas', 'HomeController@getAreas');
+Route::get('/getVacantes', 'VacantesController@getVacantes');
+Route::get('/getAreas', 'VacantesController@getAreas');
 
 Route::post('/api/v1/registro/delete','HomeController@deleteDataRegistroLead');
 Route::post('/api/v1/registro/edit','HomeController@editDataRegistroLead');

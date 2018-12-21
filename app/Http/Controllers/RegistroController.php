@@ -53,15 +53,6 @@ class RegistroController extends Controller {
         ]);
 	}
 
-  protected function validatorPostulado(array $data){
-      return Validator::make($data, [
-        'nombre' => 'required | string',
-        'apellido' => 'required | string',
-        'correo' => 'email',
-        'id_vacante' => 'exists:vacantes,id_vacante'
-      ]);
-  }
-
 	// ===================== Generador de código ====================
 	public  function quickRandom($length = 6){
         $pool = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -330,49 +321,6 @@ class RegistroController extends Controller {
     }
   }
 
-  // ===================== Registro de Postulado ====================
-  public function createPostulado (Request $request){
 
-    $validator = $this->validatorPostulado($request->all);
-
-    if ($validator->passes()) {
-      try {
-          DB::beginTransaction();
-          $postulado = new Postulados();
-          $postulado->id_vacante = $request->id_vacante;
-          $postulado->nombre = $request->nombre;
-          $postulado->apellido = $request->apellido;
-          $postulado->correo = $request->correo;
-          $postulado->url_cv = $this->uploadFilesS3($request->cv,$postulado->nombre);
-          $postulado->url_portafolio = $request->url_portafolio;
-          $postulado->save();
-          DB::commit();
-
-          $json['success'] = "Registo correcto.";
-
-        return json_encode($json['success']);
-
-      } catch (Exception $e) {
-
-        DB::rollBack();
-
-          $json['error'] = $e;
-
-        return json_encode($json['error']);
-      }
-    }
-
-    $json['error'] = $validator->errors();
-
-    return json_encode($json['error']);
-  }
-
-  public function uploadTicketS3($file,$user){
-        //Sube tickets a bucket de Amazon
-        $disk = Storage::disk('s3');
-        $path = $file->store('concepthaus/cv'.$user,'s3');
-        return $path;
-
-    }
 
 }
