@@ -11060,16 +11060,19 @@ font-size: 12px!important;
   padding-right: 1rem !important;
   padding-left: 0rem !important;
 }
-.col-1hr{
 
--webkit-box-flex: 0;
--ms-flex: 0 0 8.33333333%;
-flex: 0 0 15.333333%;
-max-width: 15.333333%;
-position: relative;
-width: 100%;
-min-height: 1px;
+@media screen and (min-width: 992px){
+  .col-1hr{
 
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 8.33333333%;
+  flex: 0 0 15.333333%;
+  max-width: 15.333333%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+
+  }
 }
 /* ----------------------------------
     Fin Title de Trabajo

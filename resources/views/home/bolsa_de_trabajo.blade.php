@@ -23,7 +23,7 @@
   <!--hr -->
   <div class="container-fluid">
     <div class="row px-hr">
-      <div class="col-1hr px-hrcol">
+      <div class="col-12 col-1hr px-hrcol">
         <hr class="hr-gray">
       </div>
     </div>
@@ -218,7 +218,7 @@
   <!--hr -->
   <div class="container-fluid">
     <div class="row px-hr">
-      <div class="col-1hr px-hrcol">
+      <div class="col-12 col-1hr px-hrcol">
         <hr class="hr-gray">
       </div>
     </div>
@@ -355,7 +355,7 @@
   <!--hr -->
   <div class="container-fluid">
     <div class="row px-hr">
-      <div class="col-1hr px-hrcol">
+      <div class="col-12 col-1hr px-hrcol">
         <hr class="hr-gray">
       </div>
     </div>
