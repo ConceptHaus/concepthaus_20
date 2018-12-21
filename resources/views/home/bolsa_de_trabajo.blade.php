@@ -5,11 +5,11 @@
 <div ng-controller="VacantesController" ng-cloak>
   <!-- Section |  Bolsa de Trabajo Title -->
   <section id="home-description" class="style-mp">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-8 text-alignstitle">
-          <h2 class="title-general mb-4 mt-0">Bolsa de Trabajo</h2>
-          <p class="subtitle-general px-auto">Oportunidades que te esperan.</p>
+          <h2 class="title-general mb-4 mt-0 px-titlegeneral">Bolsa de Trabajo</h2>
+          <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
           <p ng-repeat="area in areas"><% area.area %></p>
@@ -19,9 +19,9 @@
     </div>
   </section>
   <!--hr -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12 d-flex justify-content-start">
+  <div class="container-fluid">
+    <div class="row px-hr">
+      <div class="col-12 col-1hr px-hrcol">
         <hr class="hr-gray">
       </div>
     </div>

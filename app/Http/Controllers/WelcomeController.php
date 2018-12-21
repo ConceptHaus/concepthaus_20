@@ -84,6 +84,10 @@ class WelcomeController extends Controller {
     public function viewBolsadetrabajo() {
         return view('home/bolsa_de_trabajo');
     }
+    // vista final bolsa de trabajo creacion de oportunidades
+    public function viewBolsadetrabajocreacionoportunidades() {
+        return view('home/bolsa_de_trabajo_creacion_oportunidades');
+    }
     // Detalle proyecto
     public function viewDetailProject($id){
       $data['id'] = $id;
