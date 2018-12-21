@@ -5,11 +5,11 @@
 <div ng-controller="WelcomeController" ng-cloak>
   <!-- Section |  Bolsa de Trabajo Title -->
   <section id="home-description" class="style-mp">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-8 text-alignstitle">
-          <h2 class="title-general mb-4 mt-0">Bolsa de Trabajo</h2>
-          <p class="subtitle-general px-auto">Oportunidades que te esperan.</p>
+          <h2 class="title-general mb-4 mt-0 px-titlegeneral">Bolsa de Trabajo</h2>
+          <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
           <p>Diseño Desarrollo Web</p>
@@ -21,20 +21,21 @@
     </div>
   </section>
   <!--hr -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12 d-flex justify-content-start">
+  <div class="container-fluid">
+    <div class="row px-hr">
+      <div class="col-1hr px-hrcol">
         <hr class="hr-gray">
       </div>
     </div>
   </div>
 
   <!-- Section | Bolsa de Trabajo Publicidad -->
-  <section id="Home-doors" class="home-doorsmb">
-    <div class="container">
+  <section class="home-doorsmb">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
-          <p class="publicidad-title mb-0 px-5 border-leftbt"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus">Publicidad</p>
+
+        <div class="col-8 col-lg-8 text-alignstitle px-3 d-flex align-items-end">
+          <p class="publicidad-title mb-0 px-0 border-leftbt"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus">Publicidad</p>
         </div>
         <div class="col-4 col-lg-4 text-aligns">
           <p>3 Vacantes</p>
@@ -214,14 +215,21 @@
       </div>
     </div>
   </section>
-
+  <!--hr -->
+  <div class="container-fluid">
+    <div class="row px-hr">
+      <div class="col-1hr px-hrcol">
+        <hr class="hr-gray">
+      </div>
+    </div>
+  </div>
 
   <!-- Section | Bolsa de Trabajo Audiovisual -->
-  <section id="Home-doors" class="home-doorsmb">
-    <div class="container">
+  <section class="home-doorsmb">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
-          <p class="publicidad-title mb-0 px-5"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus">Audiovisual</p>
+        <div class="col-8 col-lg-8 text-alignstitle px-3 d-flex align-items-end">
+          <p class="publicidad-title mb-0 px-0"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus">Audiovisual</p>
         </div>
         <div class="col-4 col-lg-4 text-aligns">
           <p>2 Vacantes</p>
@@ -344,13 +352,20 @@
       </div>
     </div>
   </section>
-
-  <!-- Section | Bolsa de Trabajo Recussos Humanos -->
-  <section id="Home-doors" class="home-doorsmb">
-    <div class="container">
+  <!--hr -->
+  <div class="container-fluid">
+    <div class="row px-hr">
+      <div class="col-1hr px-hrcol">
+        <hr class="hr-gray">
+      </div>
+    </div>
+  </div>
+  <!-- Section | Bolsa de Trabajo Recursos Humanos -->
+  <section class="home-doorsmb">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
-          <p class="publicidad-title mb-0 px-5"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus">Recursos Humanos</p>
+        <div class="col-8 col-lg-8 text-alignstitle px-3 d-flex align-items-end">
+          <p class="publicidad-title mb-0 px-0"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus">Recursos Humanos</p>
         </div>
         <div class="col-4 col-lg-4 text-aligns">
           <p>2 Vacantes</p>

@@ -10834,24 +10834,27 @@ Variables | Generales vista Bolsa de Trabajo
 /* ----------------------------------
     Title de Trabajo
 ---------------------------------- */
+.px-titlegeneral{
+      padding: 0px 0px!important;
+}
 .style-mp{
       margin-bottom: 15px!important;
 }
 .px-auto{
-  padding: 0px 50px!important;
+  padding: 0px 0px!important;
   font-size: 1.6rem;
   letter-spacing: 3px;
 }
 @media (max-width: 576px){
   .px-auto{
-    padding: 0px 50px!important;
+    padding: 0px 0px!important;
     font-size: 1rem;
     letter-spacing: 3px;
   }
 }
 @media (max-width: 576px){
   .px-auto{
-    padding: 0px 50px!important;
+    padding: 0px 0px!important;
     font-size: 0.8rem;
     letter-spacing: 3px;
   }
@@ -10894,6 +10897,7 @@ Variables | Generales vista Bolsa de Trabajo
 
   .home-doorsmb{
     margin-bottom: 4rem;
+    padding: 0% 7%;
   }
 
   .title-form{
@@ -10958,6 +10962,20 @@ border-color: #4a4f55!important;
 
 font-size: 12px!important;
 }
+.btn-gray:hover{
+  padding: 3px 12px!important;
+border-bottom: 1px solid #4a4f55!important;
+color: #fff!important;
+cursor: pointer!important;
+background: #4a4f55!important;
+-webkit-transition: all .5s ease-in-out!important;
+transition: all .5s ease-in-out!important;
+margin-bottom: 9%!important;
+margin-top: 9%!important;
+border-color: #4a4f55!important;
+
+font-size: 12px!important;
+}
 .btn-red{
   padding: 3px 12px!important;
 border-bottom: 1px solid #E63C2F!important;
@@ -10969,6 +10987,21 @@ transition: all .5s ease-in-out!important;
 margin-bottom: 9%!important;
 margin-top: 9%!important;
 border-color: #E63C2F!important;
+
+font-size: 12px!important;
+}
+
+.btn-red:hover{
+  padding: 3px 12px!important;
+border-bottom: 1px solid #E63C2F!important;
+color: #fff!important;
+cursor: pointer!important;
+background: #E63C2F!important;
+-webkit-transition: all .5s ease-in-out!important;
+transition: all .5s ease-in-out!important;
+margin-bottom: 9%!important;
+margin-top: 9%!important;
+border-color: #4a4f55!important;
 
 font-size: 12px!important;
 }
@@ -11018,6 +11051,25 @@ font-size: 12px!important;
       /* Dotted gray border */
 .hr-gray {
   border-top: 2px solid #707070;
+}
+.px-hr{
+  padding-right: 9.5rem !important;
+  padding-left: 9.5rem !important;
+}
+.px-hrcol{
+  padding-right: 1rem !important;
+  padding-left: 0rem !important;
+}
+.col-1hr{
+
+-webkit-box-flex: 0;
+-ms-flex: 0 0 8.33333333%;
+flex: 0 0 15.333333%;
+max-width: 15.333333%;
+position: relative;
+width: 100%;
+min-height: 1px;
+
 }
 /* ----------------------------------
     Fin Title de Trabajo
