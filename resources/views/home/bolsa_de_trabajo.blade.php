@@ -83,7 +83,7 @@
                     <div class="col-3 my-1">
                       <button type="submit" class="btn btn-gray">SUBIR</button>
                     </div> --}}
-                    <div class="form-group">
+                    <div class="form-group" ng-if="vacante.cv == 1">
                             <div class="col-md-10 pointer">
                                     {{-- <a class='btn-submit-upload pointer' href='javascript:;'> --}}
                                       <input ng-model="postulado.cv" ngf-select ngf-pattern="'image/*,application/pdf'" ngf-max-size="20MB" type="file" id="cv" class="inputfile" name="cv" onchange='$("#upload-file-info").html($(this).val());'>
@@ -94,7 +94,7 @@
                                 <small>Formatos .jpg, .png o .pdf</small>
                             </div>
                         </div>
-                    <div class="col-6 my-1">
+                    <div class="col-6 my-1" ng-if="vacante.portafolio == 1">
                       <input ng-model="postulado.portafolio" name="portafolio" type="url" class="form-control background-gray" placeholder="Portafolio">
                       <small id="passwordHelpBlock" class="form-text text-muted subtitle-url">
                             *Url Portafolio

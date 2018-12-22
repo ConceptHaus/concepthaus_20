@@ -48,6 +48,7 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 	}
 
 	$scope.saveVacante = function(vacante){
+		console.log(vacante);
 		swal({
 				imageUrl: '../img/loader.gif',
 				imageWidth: 150,

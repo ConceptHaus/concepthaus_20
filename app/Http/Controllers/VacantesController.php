@@ -31,6 +31,8 @@ class VacantesController extends Controller
       $vacante->id_area = $request->id_area;
       $vacante->titulo = $request->titulo;
       $vacante->descripcion = $request->descripcion;
+      $vacante->cv = $request->cv;
+      $vacante->portafolio = $request->portafolio;
       $vacante->save();
       DB::commit();
 

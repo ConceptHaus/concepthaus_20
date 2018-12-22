@@ -74,7 +74,7 @@ Route::post('/api/v1/registro/delete','HomeController@deleteDataRegistroLead');
 Route::post('/api/v1/registro/edit','HomeController@editDataRegistroLead');
 Route::post('/api/v1/registro/deleteServicie','HomeController@deleteServicieRegistroLead');
 // Crear Vacantes
-Route::post('/createVacante', 'HomeController@createVacante');
+Route::post('/saveVacante', 'VacantesController@createVacante');
 
 // API
 Route::get('/api/v1/registros','HomeController@getRegistrosAjax');
