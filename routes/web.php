@@ -24,6 +24,9 @@ Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/brief-branding', 'WelcomeController@viewBrief');
 Route::get('/gracias', 'WelcomeController@viewGracias');
 Route::get('/error', 'WelcomeController@viewError');
+Route::get('/bolsa-de-trabajo', 'WelcomeController@viewBolsadetrabajo');
+Route::get('/bolsa-de-trabajo-vacante', 'WelcomeController@viewBolsadetrabajocreacionoportunidades');
+
 
 
 Route::get('/pdf', 'WelcomeController@viewPDF');
@@ -44,6 +47,8 @@ Route::post('/saveRegistro','RegistroController@saveDataRegistro');
 Route::post('/saveRegistroLead','RegistroController@saveDataRegistroLead');
 // Guarda datos de Brief
 Route::post('/brief','RegistroController@registroBrief');
+//Guardado de Postulado
+Route::post('/createPostulado', 'VacantesController@createPostulado');
 Auth::routes();
 
 /* ============================================================
@@ -62,10 +67,14 @@ Route::get('/registros/no-viables', 'HomeController@getRegistrosClose');
 Route::get('/registro/detalle/{id}', 'HomeController@getRegistroDetalle');
 Route::get('/registroLead', 'HomeController@getUserData');
 Route::get('/ownLeads', 'HomeController@getUserLeads');
+Route::get('/getVacantes', 'VacantesController@getVacantes');
+Route::get('/getAreas', 'VacantesController@getAreas');
 
 Route::post('/api/v1/registro/delete','HomeController@deleteDataRegistroLead');
 Route::post('/api/v1/registro/edit','HomeController@editDataRegistroLead');
 Route::post('/api/v1/registro/deleteServicie','HomeController@deleteServicieRegistroLead');
+// Crear Vacantes
+Route::post('/saveVacante', 'VacantesController@createVacante');
 
 // API
 Route::get('/api/v1/registros','HomeController@getRegistrosAjax');

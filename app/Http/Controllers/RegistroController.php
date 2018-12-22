@@ -18,6 +18,13 @@ use GuzzleHttp\Client;
 use Emoji;
 use PDF;
 
+use App\Vacantes;
+use App\Postulados;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\UploadFile;
+use DB;
+
 
 use Illuminate\Http\Request;
 
@@ -261,6 +268,7 @@ class RegistroController extends Controller {
 		return json_encode($json['errors']);
 	}
 
+// ===================== Registro de Brief ====================
   public function registroBrief (Request $request) {
     $input = $request->all();
 
@@ -312,5 +320,7 @@ class RegistroController extends Controller {
       return json_encode($json['errors']);
     }
   }
+
+
 
 }

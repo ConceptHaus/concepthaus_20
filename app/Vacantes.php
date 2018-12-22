@@ -23,4 +23,10 @@ class Vacantes extends Model
   public function areas(){
     return $this->hasOne('App\Areas','id_area','id_area');
   }
+
+  public function scopeGetAllVacantes($query){
+    return $query->with('areas')
+                 // ->select('vacantes.id_vacante as id', 'vacantes.titulo', 'vacantes.descripcion','areas.area as area')
+                 ->get();
+  }
 }
