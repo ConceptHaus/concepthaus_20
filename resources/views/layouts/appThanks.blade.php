@@ -261,6 +261,7 @@
     <!-- Angular -->
     <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.3.15/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.js"></script>
 
@@ -271,6 +272,8 @@
     <script src="/angular-app/controllers/WelcomeController.js"></script>
     <script src="/angular-app/controllers/ProyectosController.js"></script>
     <script src="/angular-app/controllers/CrewController.js"></script>
+    <script src="/angular-app/controllers/VacantesController.js"></script>
+    <script src="/angular-app/services/VacantesService.js"></script>
 
     <!-- ./ Angular -->
 
