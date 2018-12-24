@@ -24,7 +24,7 @@ Route::get('/branding', 'WelcomeController@viewBranding');
 Route::get('/brief-branding', 'WelcomeController@viewBrief');
 Route::get('/gracias', 'WelcomeController@viewGracias');
 Route::get('/error', 'WelcomeController@viewError');
-Route::get('/bolsa-de-trabajo', 'WelcomeController@viewBolsadetrabajo');
+Route::get('/jobs', 'WelcomeController@viewBolsadetrabajo');
 Route::get('/bolsa-de-trabajo-vacante', 'WelcomeController@viewBolsadetrabajocreacionoportunidades');
 
 

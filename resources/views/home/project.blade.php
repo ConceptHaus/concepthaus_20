@@ -13,8 +13,13 @@
     </div> --}}
     <div class="d-flex" style="margin-top:10%;" ng-controller="WelcomeController">
       <div class="container" ng-init="getOneProject({{$id}})" ng-cloak>
-        <div class="nombre row row-flex row-flex-wrap">
-          <p ><%nombre%></p><span><%etiqueta%></span>
+        <div class="nombre row row-flex row-flex-wrap c-gray">
+          <div class="col-md-6">
+            <p><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"><%nombre%></p>
+          </div>
+          <div class="col-md-6 text-right">
+            <span ng-repeat="etiqueta in etiquetas"><%etiqueta%>&nbsp</span>
+          </div>
         </div>
 
         <div ng-repeat="proy in test">
