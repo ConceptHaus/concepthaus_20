@@ -12,7 +12,7 @@
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
-          <p ng-repeat="area in areas"><% area.area %></p>
+          <a ng-repeat="area in areas" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
 
   <!-- Section | Bolsa de Trabajo Publicidad -->
   <div ng-repeat="areav in areas">
-    <section id="Home-doors" class="home-doorsmb">
+    <section id="<%areav.area%>" class="home-doorsmb">
       <div class="container">
         <div class="row">
           <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
