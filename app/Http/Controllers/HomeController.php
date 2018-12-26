@@ -388,4 +388,21 @@ class HomeController extends Controller {
       return view('/admin/detalleVacante',$detalle);
     }
 
+    public function deleteVacante($id){
+      $vacante = Vacantes::where('id_vacante', $id)->first();
+
+      try {
+        DB::beginTransaction();
+        $vacante->delete();
+        DB::commit();
+        $json['success'] = 'Vacante Borrada correctamente';
+        return json_encode($json['success']);
+      } catch (Exception $e) {
+        DB::rollBack();
+        $json['errors'] = $e;
+        return json_encode($json['errors']);
+      }
+
+    }
+
 }
