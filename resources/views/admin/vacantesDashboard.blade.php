@@ -196,7 +196,7 @@
                                         <span ng-show="sortType == 'id_status' && sortReverse" class="fa fa-sort-desc"></span>
                                     </a> --}}
                                 {{-- </th> --}}
-                                <th scope="col">Detalle</th>
+                                <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -227,7 +227,7 @@
                                     <i class="material-icons txt-orange">insert_drive_file</i>
                                 </td> --}}
                                 <td>
-                                    <a ng-if="vacante.postulados.length != 0" ng-href="/vacantes/detalle/<% vacante.id_vacante %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">border_color</i></button></a>
+                                    <a ng-if="vacante.postulados.length != 0" ng-href="/vacantes/detalle/<% vacante.id_vacante %>"><button type="button" class="btn btn-gray btn-table-action" style="padding: 12px 20px; margin-right: 5px;"><i class="material-icons">more_vert</i></button></a>
                                     <input ng-model="delete.id_vacante" ng-init="delete.id_vacante = vacante.id_vacante" type="text" name="id_vacante" value="vacante.id_vacante" placeholder="<%delete.id_vacante%>" hidden>
                                     <button type="button" class="btn btn-gray btn-table-action" ng-click="deleteVacante(delete.id_vacante)" style="padding: 12px 20px; margin: 0;"><i class="material-icons">delete_sweep</i></button>
                                     {{-- <a href="mailto:<% registro.correo %>?&subject=ConceptHaus&body=Hola,%20gracias%20por%20contactarnos,%20hemos%20recibido%20tu%20solicitud%20de%20información.%20En%20breve%20nuestro%20equipo%20de%20ventas%20se%20pondrá%20en%20contacto%20contigo.%20ConceptHaus…%20#AccentingEverything."><button type="button" class="btn btn-gray btn-table-action btn-mail"><i class="far fa-envelope" aria-hidden="true"></i></button></a>
