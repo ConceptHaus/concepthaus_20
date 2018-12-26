@@ -8,7 +8,7 @@ angular.module('VacantesController', ['app','ngMask','isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('VacantesController', function VacantesController($scope, vacantes, Upload) {
+app.controller('VacantesController', function VacantesController($scope, $window, vacantes, Upload) {
 	$scope.areas = {};
 	$scope.vacantes = {};
 
@@ -26,13 +26,15 @@ app.controller('VacantesController', function VacantesController($scope, vacante
         }).then(function(res){
 					swal({
                 title: "¡Todo bien!",
-                text: "Tu ticket se ha registrado con éxito",
-                confirmButtonText: 'Regresar a mi cuenta',
-                showCancelButton: true,
-                cancelButtonText: 'Subir otro ticket'
+                text: "Gracias por tu interes",
+                confirmButtonText: 'Cerrar',
+								confirmButtonColor: '#e73c30'
+                // showCancelButton: true,
+                // cancelButtonText: 'Subir otro ticket'
             }).then(function (result) {
-                if (result.value) {
-                    $window.location.href = "/home";
+							console.log(result);
+                if (result) {
+                    $window.location.href = "/";
                 }
             });
             console.log(res.data);
@@ -47,7 +49,7 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 				})
 	}
 
-	$scope.saveVacante = function(vacante){
+	$scope.saveVacante = function(vacante,vacantesForm){
 		console.log(vacante);
 		swal({
 				imageUrl: '../img/loader.gif',
@@ -57,17 +59,23 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 		})
 		vacantes.saveVacante(vacante).then(function(res){
 			swal({
-							title:"Enviado exitosamente",
-							text:"Tu mensaje ha sido enviado exitosamenete",
-							confirmButtonText: 'Cerrar',
+							title:"Vacante creada correctamente",
+							// text:"",
+							confirmButtonText: 'Publicar otra vacante',
+							confirmButtonColor: '#e73c30',
 							showCancelButton: true,
-							cancelButtonText: 'Publicar otra vacante'
+							cancelButtonText: 'Cerrar'
 					})
-					// .then((result)=>{
-					// 		if(result.value){
-					// 				$window.location.href="/";
-					// 		}
-					// })
+					.then((result)=>{
+						console.log(result);
+							if(result){
+								$scope.vacantesForm.$setPristine();
+		            $scope.vacantesForm.$setUntouched();
+								$window.location.reload();
+							}
+					},(dismiss)=>{
+						$window.location.href = '/vacantes';
+					})
 					console.log(res.data);
 		}, function(err){
 			swal({
@@ -95,6 +103,17 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 			console.log(err);
 		})
 	}
+
+	$scope.getVacantesPostulados = function(){
+		vacantes.getVacantesPostulados().then(function(res){
+			$scope.vacantesPostulados = res.data;
+			console.log($scope.vacantesPostulados);
+		},function (err){
+			console.log(err);
+		})
+	}
+
+ $scope.getVacantesPostulados();
  $scope.getVacantes();
  $scope.getAreas();
 });

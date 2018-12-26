@@ -12,7 +12,7 @@
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
-          <p ng-repeat="area in areas"><% area.area %></p>
+          <a class="subtitle-description" ng-repeat="area in areas" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
 
   <!-- Section | Bolsa de Trabajo Publicidad -->
   <div ng-repeat="areav in areas">
-    <section id="Home-doors" class="home-doorsmb">
+    <section id="<%areav.area%>" class="home-doorsmb">
       <div class="container">
         <div class="row">
           <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
@@ -55,6 +55,7 @@
             <p class="subtitle-description p-22">Descripción <br>
               <% vacante.descripcion %>
             </p>
+            <p ng-if="!"></p>
           </div>
           <div class="col-lg-6 py-3 px-5">
             <form id="form-postulante">
@@ -72,7 +73,7 @@
                     <div class="form-group col-md-12">
                       <input ng-model="postulado.correo" name="correo" type="email" class="form-control background-gray" id="inputEmail4" placeholder="Correo">
                     </div>
-                  </div>
+
                   <div class="form-row align-items-center">
                     {{-- <div class="col-3 my-1">
                       <div class="custom-control custom-checkbox mr-sm-2">
@@ -83,24 +84,25 @@
                     <div class="col-3 my-1">
                       <button type="submit" class="btn btn-gray">SUBIR</button>
                     </div> --}}
-                    <div class="form-group" ng-if="vacante.cv == 1">
-                            <div class="col-md-10 pointer">
+                    <div class="form-group" >
+                            <div class="col-12 pointer" ng-if="vacante.cv == 1">
                                     {{-- <a class='btn-submit-upload pointer' href='javascript:;'> --}}
-                                      <input ng-model="postulado.cv" ngf-select ngf-pattern="'image/*,application/pdf'" ngf-max-size="20MB" type="file" id="cv" class="inputfile" name="cv" onchange='$("#upload-file-info").html($(this).val());'>
+                                      <input class="form-control background-gray" ng-model="postulado.cv" ngf-select ngf-pattern="'image/*,application/pdf'" ngf-max-size="20MB" type="file" id="cv" name="cv" onchange='$("#upload-file-info").html($(this).val());'>
                                     {{-- </a> --}}
                                     <span class='label label-info' id="upload-file-info"></span>
 
-                                <h5 class="blanco mt-2">Sube tu CV</h5>
-                                <small>Formatos .jpg, .png o .pdf</small>
+                                <p class="subtitle-description p-22">Sube tu CV</p>
+                                <small class="subtitle-description p-22">Formatos .jpg, .png o .pdf</small>
                             </div>
-                        </div>
-                    <div class="col-6 my-1" ng-if="vacante.portafolio == 1">
+
+                    <div class="col-12 my-1" ng-if="vacante.portafolio == 1">
                       <input ng-model="postulado.portafolio" name="portafolio" type="url" class="form-control background-gray" placeholder="Portafolio">
                       <small id="passwordHelpBlock" class="form-text text-muted subtitle-url">
                             *Url Portafolio
                       </small>
                     </div>
-
+                  </div>
+                  </div>
 
                   </div>
                   <div class="col-12 d-flex justify-content-center align-items-center">

@@ -14,6 +14,9 @@ use App\Pivot_Models\PivoteServicios;
 use App\Pivot_Models\PivoteMedios;
 use Telegram\Bot\FileUpload\InputFile;
 use Telegram\Bot\Laravel\Facades\Telegram;
+use App\Vacantes;
+use App\Postulados;
+use App\Areas;
 use Emoji;
 
 use Illuminate\Support\Facades\DB;
@@ -361,6 +364,28 @@ class HomeController extends Controller {
 			$json['errors'] = "Datos no eliminados";
 			return json_encode($json['errors']);
 		}
+    }
+
+    // vista final bolsa de trabajo creacion de oportunidades
+    public function getVacantesAdmin() {
+        return view('admin/vacantes');
+    }
+
+    public function getVacantesPostulados(){
+      $vacantes = Vacantes::getVacantesPostulados();
+
+      return $vacantes;
+    }
+
+    public function vacantesDashboard(){
+      return view('admin/vacantesDashboard');
+    }
+
+    public function detalleVacantes($id){
+      $vacante = Vacantes::getOneVacante($id);
+      $detalle['vacante'] = $vacante;
+      $detalle['postulados'] = $vacante->postulados;
+      return view('/admin/detalleVacante',$detalle);
     }
 
 }

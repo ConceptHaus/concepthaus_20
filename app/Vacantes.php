@@ -17,7 +17,7 @@ class Vacantes extends Model
   ];
 
   public function postulados(){
-    return $this->belongsTo('App\Postulados','id_vacante','id_vacante');
+    return $this->hasMany('App\Postulados','id_vacante','id_vacante');
   }
 
   public function areas(){
@@ -28,5 +28,16 @@ class Vacantes extends Model
     return $query->with('areas')
                  // ->select('vacantes.id_vacante as id', 'vacantes.titulo', 'vacantes.descripcion','areas.area as area')
                  ->get();
+  }
+
+  public function scopeGetVacantesPostulados($query){
+    return $query->with('postulados')->with('areas')->get();
+  }
+
+  public function scopeGetOneVacante($query, $id){
+    return $query->where('id_vacante',$id)
+                 ->with('postulados')
+                 ->with('areas')
+                 ->first();
   }
 }

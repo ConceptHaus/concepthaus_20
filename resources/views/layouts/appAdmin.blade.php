@@ -172,17 +172,18 @@
                         </a>
                     </li>
 
-                    {{--  <li class="active-pro">
-                        <a href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i>
-                            <p>Cerrar Sesión</p>
+                    @if (Request::path() === 'createJob' || Request::path() === 'vacantes')<li class="active">@else<li>@endif
+                        <a href="{{ url('/vacantes') }}">
+                            <p>
+                                @if (Request::path() === 'createJob' || Request::path() === 'vacantes')
+                                    <i class="material-icons txt-red">work</i>
+                                @else
+                                    <i class="material-icons txt-red">work</i>
+                                @endif
+                                Vacantes
+                            </p>
                         </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </li>  --}}
+                    </li>
                 </ul>
             </div>
         </div>

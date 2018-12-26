@@ -32,6 +32,18 @@ angular.module('VacantesService', [])
             method: 'GET',
             url: '/getAreas'
           })
+        },
+        getVacantesPostulados : function(){
+          return $http({
+            method: 'GET',
+            url: '/vacantesPostulados'
+          })
+        },
+        deleteVacante: function(id){
+          return $http({
+            method: 'DELETE',
+            url: 'deleteVacante/'+id
+          })
         }
     }
 });
