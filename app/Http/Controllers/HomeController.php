@@ -363,4 +363,9 @@ class HomeController extends Controller {
 		}
     }
 
+    // vista final bolsa de trabajo creacion de oportunidades
+    public function getVacantesAdmin() {
+        return view('admin/vacantes');
+    }
+
 }

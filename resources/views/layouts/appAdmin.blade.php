@@ -172,6 +172,19 @@
                         </a>
                     </li>
 
+                    @if (Request::path() === 'createJob')<li class="active">@else<li>@endif
+                        <a href="{{ url('/createJob') }}">
+                            <p>
+                                @if (Request::path() === 'createJob')
+                                    <i class="material-icons txt-red">work</i>
+                                @else
+                                    <i class="material-icons txt-red">work</i>
+                                @endif
+                                Vacantes
+                            </p>
+                        </a>
+                    </li>
+
                     {{--  <li class="active-pro">
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();

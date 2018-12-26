@@ -47,7 +47,7 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 				})
 	}
 
-	$scope.saveVacante = function(vacante){
+	$scope.saveVacante = function(vacante,vacantesForm){
 		console.log(vacante);
 		swal({
 				imageUrl: '../img/loader.gif',
@@ -57,17 +57,20 @@ app.controller('VacantesController', function VacantesController($scope, vacante
 		})
 		vacantes.saveVacante(vacante).then(function(res){
 			swal({
-							title:"Enviado exitosamente",
-							text:"Tu mensaje ha sido enviado exitosamenete",
-							confirmButtonText: 'Cerrar',
+							title:"Vacante creada correctamente",
+							// text:"",
+							confirmButtonText: 'Publicar otra vacante',
+							confirmButtonColor: '#4a4f55',
 							showCancelButton: true,
-							cancelButtonText: 'Publicar otra vacante'
+							cancelButtonText: 'Cerrar'
 					})
-					// .then((result)=>{
-					// 		if(result.value){
-					// 				$window.location.href="/";
-					// 		}
-					// })
+					.then((result)=>{
+						console.log(result);
+							if(result){
+								$scope.vacantesForm.$setPristine();
+		            $scope.vacantesForm.$setUntouched();
+							}
+					})
 					console.log(res.data);
 		}, function(err){
 			swal({

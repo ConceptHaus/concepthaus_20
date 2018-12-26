@@ -25,9 +25,6 @@ Route::get('/brief-branding', 'WelcomeController@viewBrief');
 Route::get('/gracias', 'WelcomeController@viewGracias');
 Route::get('/error', 'WelcomeController@viewError');
 Route::get('/jobs', 'WelcomeController@viewBolsadetrabajo');
-Route::get('/bolsa-de-trabajo-vacante', 'WelcomeController@viewBolsadetrabajocreacionoportunidades');
-
-
 
 Route::get('/pdf', 'WelcomeController@viewPDF');
 
@@ -69,6 +66,7 @@ Route::get('/registroLead', 'HomeController@getUserData');
 Route::get('/ownLeads', 'HomeController@getUserLeads');
 Route::get('/getVacantes', 'VacantesController@getVacantes');
 Route::get('/getAreas', 'VacantesController@getAreas');
+Route::get('/createJob', 'HomeController@getVacantesAdmin');
 
 Route::post('/api/v1/registro/delete','HomeController@deleteDataRegistroLead');
 Route::post('/api/v1/registro/edit','HomeController@editDataRegistroLead');
