@@ -12,7 +12,7 @@
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
-          <a ng-repeat="area in areas" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
+          <a class="subtitle-description" ng-repeat="area in areas" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
         </div>
       </div>
 
@@ -73,7 +73,7 @@
                     <div class="form-group col-md-12">
                       <input ng-model="postulado.correo" name="correo" type="email" class="form-control background-gray" id="inputEmail4" placeholder="Correo">
                     </div>
-                  </div>
+
                   <div class="form-row align-items-center">
                     {{-- <div class="col-3 my-1">
                       <div class="custom-control custom-checkbox mr-sm-2">
@@ -101,6 +101,7 @@
                             *Url Portafolio
                       </small>
                     </div>
+                  </div>
                   </div>
 
                   </div>

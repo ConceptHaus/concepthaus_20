@@ -128,6 +128,7 @@
                                 <a class="nav-item nav-link disabled" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
                                 <a class="nav-item nav-link disabled" href="{{ url('/#contact') }}">CONTACTO</a>
+                                <a href="https://concepthaus.mx/blog">BLOG</a>
                             </div>
                         </div>
                     </nav>

@@ -80,9 +80,9 @@ class VacantesController extends Controller
           if ($request->cv) {
             $postulado->url_cv = $this->uploadFilesS3($request->cv,$postulado->nombre);
           }else {
-            $postulado->url_cv = '';
+            $postulado->url_cv = 'no cv';
           }
-          $postulado->url_portafolio = $request->url_portafolio;
+          $postulado->url_portafolio = $request->portafolio;
           $postulado->save();
           DB::commit();
 
@@ -98,7 +98,10 @@ class VacantesController extends Controller
             $contact->to('steph@concepthaus.mx','Stepahie Micha');
             $contact->to('paola@concepthaus.mx','Paola Mercado');
             $contact->subject('Concept Haus Brief Branding');
-            $contact->attach($datos['cv']);
+            if ($datos['cv'] != 'no cv') {
+              $contact->attach($datos['cv']);
+            }
+
           });
           $json['success'] = "Registo correcto.";
 
@@ -122,7 +125,7 @@ class VacantesController extends Controller
   public function uploadFilesS3($file,$user){
         //Sube tickets a bucket de Amazon
         $disk = Storage::disk('s3');
-        $path = $file->store('concepthaus/cv'.$user,'s3');
+        $path = $file->store('concepthaus/cv_'.$user,'s3');
         Storage::setVisibility($path,'public');
         return $disk->url($path);
     }
