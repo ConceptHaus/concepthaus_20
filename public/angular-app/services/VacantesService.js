@@ -42,7 +42,7 @@ angular.module('VacantesService', [])
         deleteVacante: function(id){
           return $http({
             method: 'DELETE',
-            url: 'deleteVacante/'+id
+            url: '/deleteVacante/'+id
           })
         }
     }

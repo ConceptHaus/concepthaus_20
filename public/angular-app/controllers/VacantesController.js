@@ -113,6 +113,36 @@ app.controller('VacantesController', function VacantesController($scope, $window
 		})
 	}
 
+	$scope.deleteVacante = function(id){
+		console.log(id);
+		swal({
+				imageUrl: '../img/loader.gif',
+				imageWidth: 150,
+				imageAlt: 'Concept Haus',
+				showConfirmButton: false
+		})
+		vacantes.deleteVacante(id).then(function(res){
+			swal({
+							title:"Vacante borrada correctamente",
+							// text:"",
+							confirmButtonText: 'Cerrar',
+							confirmButtonColor: '#e73c30'
+					})
+					.then((result)=>{
+						if(result){
+							$window.location.reload();
+						}
+					})
+		}, function(err){
+			swal({
+					type:'error',
+					title:'Oh no!, Algo salió mal.',
+					confirmButtonText: 'Cerrar',
+					confirmButtonColor: '#e73c30',
+			})
+		})
+	}
+
  $scope.getVacantesPostulados();
  $scope.getVacantes();
  $scope.getAreas();
