@@ -112,6 +112,7 @@
                                 <a href="{{ url('/startups') }}">STARTUPS</a>
                                 <a href="{{ url('/#contact') }}">CONTACTO</a>
                                 <a href="https://concepthaus.mx/blog">BLOG</a>
+                                <a href="{{ url('/jobs') }}">JOBS</a>
                             </div>
                         </div>
                     </div>
@@ -129,6 +130,7 @@
                                 <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
                                 <a class="nav-item nav-link disabled" href="{{ url('/#contact') }}">CONTACTO</a>
                                 <a href="https://concepthaus.mx/blog">BLOG</a>
+                                <a href="{{ url('/jobs') }}">JOBS</a>
                             </div>
                         </div>
                     </nav>
