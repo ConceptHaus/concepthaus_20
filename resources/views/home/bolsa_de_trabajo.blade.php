@@ -12,7 +12,7 @@
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
-          <a class="subtitle-description" ng-repeat="area in areas" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
+          <a class="subtitle-description" ng-repeat="area in areas" ng-if="area.vacantes != null" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
 
   <!-- Section | Bolsa de Trabajo Publicidad -->
   <div ng-repeat="areav in areas">
-    <section id="<%areav.area%>" class="home-doorsmb">
+    <section id="<%areav.area%>" ng-if="areav.vacantes != null" class="home-doorsmb">
       <div class="container">
         <div class="row">
           <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
@@ -55,7 +55,7 @@
             <p class="subtitle-description p-22">Descripción <br>
               <% vacante.descripcion %>
             </p>
-            <p ng-if="!"></p>
+            {{-- <p ng-if="!"></p> --}}
           </div>
           <div class="col-lg-6 py-3 px-5">
             <form id="form-postulante">
@@ -64,51 +64,39 @@
               <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Aplicar</label>
-                      <input ng-model="postulado.nombre" name="nombre" type="text" class="form-control  background-gray" placeholder="Nombre">
+                      <input ng-model="postulado.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputEmail4" class="color-transparent">Apellido</label>
-                      <input ng-model="postulado.apellido" name="apellido" type="text" class="form-control background-gray" placeholder="Apellido">
+                      <input ng-model="postulado.apellido" name="apellido" type="text" class="form-control" placeholder="Apellido">
                     </div>
                     <div class="form-group col-md-12">
-                      <input ng-model="postulado.correo" name="correo" type="email" class="form-control background-gray" id="inputEmail4" placeholder="Correo">
+                      <input ng-model="postulado.correo" name="correo" type="email" class="form-control" id="inputEmail4" placeholder="Correo">
                     </div>
-
-                  <div class="form-row align-items-center">
-                    {{-- <div class="col-3 my-1">
-                      <div class="custom-control custom-checkbox mr-sm-2">
-                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                        <label class="custom-control-label cv-style" for="customControlAutosizing">CV</label>
-                      </div>
-                    </div>
-                    <div class="col-3 my-1">
-                      <button type="submit" class="btn btn-gray">SUBIR</button>
-                    </div> --}}
-                    <div class="form-group" >
-                            <div class="col-12 pointer" ng-if="vacante.cv == 1">
+                    <div class="form-group col-md-12" >
+                            <div class="pointer" ng-if="vacante.cv == 1">
                                     {{-- <a class='btn-submit-upload pointer' href='javascript:;'> --}}
-                                      <input class="form-control background-gray" ng-model="postulado.cv" ngf-select ngf-pattern="'image/*,application/pdf'" ngf-max-size="20MB" type="file" id="cv" name="cv" onchange='$("#upload-file-info").html($(this).val());'>
+                                      <input class="form-control" ng-model="postulado.cv" ngf-select ngf-pattern="'image/*,application/pdf'" ngf-max-size="20MB" type="file" id="cv" name="cv" onchange='$("#upload-file-info").html($(this).val());'>
                                     {{-- </a> --}}
                                     <span class='label label-info' id="upload-file-info"></span>
 
-                                <p class="subtitle-description p-22">Sube tu CV</p>
-                                <small class="subtitle-description p-22">Formatos .jpg, .png o .pdf</small>
+                                <p class="subtitle-description" style="margin:0;">Sube tu CV</p>
+                                <small class="subtitle-description">Formatos .jpg, .png o .pdf</small>
                             </div>
 
-                    <div class="col-12 my-1" ng-if="vacante.portafolio == 1">
-                      <input ng-model="postulado.portafolio" name="portafolio" type="url" class="form-control background-gray" placeholder="Portafolio">
+                    <div ng-if="vacante.portafolio == 1">
+                      <input ng-model="postulado.portafolio" name="portafolio" type="url" class="form-control" placeholder="Portafolio">
                       <small id="passwordHelpBlock" class="form-text text-muted subtitle-url">
                             *Url Portafolio
                       </small>
                     </div>
+                  {{-- </div> --}}
                   </div>
-                  </div>
-
-                  </div>
-                  <div class="col-12 d-flex justify-content-center align-items-center">
-                    <button type="submit" class="btn btn-red" ng-click="savePostulado(postulado)">ENVIAR</button>
+                  <div class="col-sm-12">
+                    <button ng-disabled="!(postulado.nombre) || !(postulado.apellido) || !(postulado.correo)" style="width:100%;" type="submit" class="btn" ng-click="savePostulado(postulado)">ENVIAR</button>
                   </div>
             </form>
+            </div>
           </div>
 
 

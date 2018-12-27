@@ -124,7 +124,6 @@ app.controller('VacantesController', function VacantesController($scope, $window
 		vacantes.deleteVacante(id).then(function(res){
 			swal({
 							title:"Vacante borrada correctamente",
-							// text:"",
 							confirmButtonText: 'Cerrar',
 							confirmButtonColor: '#e73c30'
 					})
@@ -146,4 +145,5 @@ app.controller('VacantesController', function VacantesController($scope, $window
  $scope.getVacantesPostulados();
  $scope.getVacantes();
  $scope.getAreas();
+ 
 });
