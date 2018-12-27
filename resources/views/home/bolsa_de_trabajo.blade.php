@@ -33,7 +33,7 @@
       <div class="container">
         <div class="row">
           <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
-            <p class="publicidad-title mb-0 px-5 border-leftbt"><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"><% areav.area %></p>
+            <h2 class="title-proyecto mb-0 px-5 border-leftbt"><img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"><% areav.area %> </h2>
           </div>
           <div class="col-4 col-lg-4 text-aligns">
             <p></p>
