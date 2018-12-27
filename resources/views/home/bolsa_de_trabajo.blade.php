@@ -12,7 +12,7 @@
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         <div class="col-lg-4 text-aligns">
-          <a class="subtitle-description" ng-repeat="area in areas" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
+          <a class="subtitle-description" ng-repeat="area in areas" ng-if="area.vacantes != null" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
 
   <!-- Section | Bolsa de Trabajo Publicidad -->
   <div ng-repeat="areav in areas">
-    <section id="<%areav.area%>" class="home-doorsmb">
+    <section id="<%areav.area%>" ng-if="areav.vacantes != null" class="home-doorsmb">
       <div class="container">
         <div class="row">
           <div class="col-8 col-lg-8 text-alignstitle px-4 d-flex align-items-end">
@@ -55,7 +55,7 @@
             <p class="subtitle-description p-22">Descripción <br>
               <% vacante.descripcion %>
             </p>
-            <p ng-if="!"></p>
+            {{-- <p ng-if="!"></p> --}}
           </div>
           <div class="col-lg-6 py-3 px-5">
             <form id="form-postulante">
@@ -73,17 +73,6 @@
                     <div class="form-group col-md-12">
                       <input ng-model="postulado.correo" name="correo" type="email" class="form-control" id="inputEmail4" placeholder="Correo">
                     </div>
-
-                  {{-- <div class="form-row align-items-center"> --}}
-                    {{-- <div class="col-3 my-1">
-                      <div class="custom-control custom-checkbox mr-sm-2">
-                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                        <label class="custom-control-label cv-style" for="customControlAutosizing">CV</label>
-                      </div>
-                    </div>
-                    <div class="col-3 my-1">
-                      <button type="submit" class="btn btn-gray">SUBIR</button>
-                    </div> --}}
                     <div class="form-group col-md-12" >
                             <div class="pointer" ng-if="vacante.cv == 1">
                                     {{-- <a class='btn-submit-upload pointer' href='javascript:;'> --}}

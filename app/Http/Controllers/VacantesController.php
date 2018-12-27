@@ -59,7 +59,7 @@ class VacantesController extends Controller
 
   public function getAreas(){
 
-    $areas = DB::table('areas')->get();
+    $areas = Areas::getAllAreas();
 
     return $areas;
   }
