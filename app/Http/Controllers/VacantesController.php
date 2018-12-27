@@ -93,10 +93,10 @@ class VacantesController extends Controller
           $datos['vacante'] = Vacantes::where('id_vacante', $postulado->id_vacante)->first();
 
           Mail::send('emails.brief.brief-mail' ,$datos, function ($contact) use ($datos) {
-            $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
-            $contact->to('tomas@concepthaus.mx','Tomas Valles');
-            $contact->to('steph@concepthaus.mx','Stepahie Micha');
-            $contact->to('paola@concepthaus.mx','Paola Mercado');
+            $contact->from('contacto@concepthaus.mx', 'Concept Haus Vacante');
+            $contact->to('jobs@concepthaus.mx','Jobs ConceptHaus');
+            // $contact->to('steph@concepthaus.mx','Stepahie Micha');
+            // $contact->to('paola@concepthaus.mx','Paola Mercado');
             $contact->subject('Concept Haus Brief Branding');
             if ($datos['cv'] != 'no cv') {
               $contact->attach($datos['cv']);
@@ -123,7 +123,7 @@ class VacantesController extends Controller
   }
 
   public function uploadFilesS3($file,$user){
-        //Sube tickets a bucket de Amazon
+        //Sube cv a bucket de Amazon
         $disk = Storage::disk('s3');
         $path = $file->store('concepthaus/cv_'.$user,'s3');
         Storage::setVisibility($path,'public');
