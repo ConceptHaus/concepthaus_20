@@ -82,22 +82,26 @@ class VacantesController extends Controller
           }else {
             $postulado->url_cv = 'no cv';
           }
-          $postulado->url_portafolio = $request->portafolio;
+          if ($request->portafolio) {
+            $postulado->url_portafolio = $request->portafolio;
+          }else {
+            $postulado->url_portafolio = 'No cuenta con Portafolio';
+          }
           $postulado->save();
           DB::commit();
-
+          $vacante = Vacantes::where('id_vacante', $postulado->id_vacante)->first();
           $datos['cv'] = $postulado->url_cv;
           $datos['portafolio'] = $postulado->url_portafolio;
           $datos['nombre'] = $postulado->nombre;
           $datos['apellido'] = $postulado->apellido;
-          $datos['vacante'] = Vacantes::where('id_vacante', $postulado->id_vacante)->first();
+          $datos['vacante'] = $vacante->titulo;
 
-          Mail::send('emails.brief.brief-mail' ,$datos, function ($contact) use ($datos) {
-            $contact->from('contacto@concepthaus.mx', 'Concept Haus Vacante');
+          Mail::send('emails.vacante.vacante' ,$datos, function ($contact) use ($datos) {
+            $contact->from('contacto@concepthaus.mx', 'ConceptHaus Vacante');
             $contact->to('jobs@concepthaus.mx','Jobs ConceptHaus');
             // $contact->to('steph@concepthaus.mx','Stepahie Micha');
             // $contact->to('paola@concepthaus.mx','Paola Mercado');
-            $contact->subject('Concept Haus Brief Branding');
+            $contact->subject('ConceptHaus Nuevo Postulado');
             if ($datos['cv'] != 'no cv') {
               $contact->attach($datos['cv']);
             }
