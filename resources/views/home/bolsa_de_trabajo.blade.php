@@ -11,9 +11,9 @@
           <h2 class="title-general mb-4 mt-0 px-titlegeneral">Bolsa de Trabajo</h2>
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
-        <div class="col-lg-4 text-aligns">
+        {{-- <div class="col-lg-4 text-aligns">
           <a class="subtitle-description" ng-repeat="area in areas" ng-if="area.vacantes != null" href="#<%area.area%>"><span><% area.area %>&nbsp</span></a>
-        </div>
+        </div> --}}
       </div>
 
     </div>
