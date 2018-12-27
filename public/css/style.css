@@ -533,6 +533,15 @@ mark,
   height: auto;
 }
 
+.tag {
+    color: #5D757F;
+    background: #f4f5fb;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 5px;
+    padding: 2px 14px;
+}
+
 /* ====== Interiores ===== */
 iframe.video {
     height: 39rem;

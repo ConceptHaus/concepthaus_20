@@ -6,8 +6,8 @@
           <div class="col-md-6">
             <h2 class="title-proyecto"><img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"><%nombre%>&nbsp</h2>
           </div>
-          <div class="col-md-6 text-right">
-            <span ng-repeat="etiqueta in etiquetas"><%etiqueta%>&nbsp</span>
+          <div class="col-md-6 text-right" style="align-self: center;">
+            <span class="tag" ng-repeat="etiqueta in etiquetas"><%etiqueta%>&nbsp</span>
           </div>
         </div>
 
