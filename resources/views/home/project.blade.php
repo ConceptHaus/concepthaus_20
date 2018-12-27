@@ -15,7 +15,7 @@
       <div class="container" ng-init="getOneProject({{$id}})" ng-cloak>
         <div class="nombre row row-flex row-flex-wrap c-gray">
           <div class="col-md-6">
-            <p><img class="img-icon-publicidad" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"><%nombre%></p>
+            <h2 class="title-proyecto"><img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"><%nombre%>&nbsp</h2>
           </div>
           <div class="col-md-6 text-right">
             <span ng-repeat="etiqueta in etiquetas"><%etiqueta%>&nbsp</span>
