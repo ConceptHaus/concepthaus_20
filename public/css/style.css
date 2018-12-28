@@ -8738,7 +8738,7 @@ header .row, footer .row {
 }
 
 .title-proyecto{
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: 700;
   color: #4a4f55;
 }
@@ -8937,9 +8937,18 @@ header .row, footer .row {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
   #contact .title-general {
     font-size: 35px;
+  }
+  .nombre{
+    margin-top: 80px;
+  }
+  .title-proyecto{
+    font-size: 35px;
+  }
+  .tag{
+    margin-bottom: 5px;
   }
 }
 
