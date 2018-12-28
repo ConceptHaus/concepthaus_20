@@ -9882,7 +9882,7 @@ header .socialIcons a {
     display: none;
   }
   header .socialIcons {
-    margin-top: -10px;
+    margin-top: 5px;
     padding-top: 0px;
     padding-right: 0;
   }
