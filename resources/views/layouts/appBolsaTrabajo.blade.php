@@ -123,14 +123,14 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-item nav-link active" href="{{ url('/crew') }}">CREW</a>
+                                <a class="nav-item nav-link" href="{{ url('/crew') }}">CREW</a>
                                 <a class="nav-item nav-link" href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
                                 <a class="nav-item nav-link" href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
-                                <a class="nav-item nav-link disabled" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
+                                <a class="nav-item nav-link" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
-                                <a class="nav-item nav-link disabled" href="{{ url('/#contact') }}">CONTACTO</a>
-                                <a href="https://concepthaus.mx/blog">BLOG</a>
-                                <a href="{{ url('/jobs') }}">JOBS</a>
+                                <a class="nav-item nav-link" href="{{ url('/#contact') }}">CONTACTO</a>
+                                <a class="nav-item nav-link" href="https://concepthaus.mx/blog">BLOG</a>
+                                <a class="nav-item nav-link" href="{{ url('/jobs') }}">JOBS</a>
                             </div>
                         </div>
                     </nav>
