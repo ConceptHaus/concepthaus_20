@@ -307,7 +307,9 @@ class RegistroController extends Controller {
       $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
       $contact->to('tomas@concepthaus.mx','Tomas Valles');
       $contact->to('steph@concepthaus.mx','Stepahie Micha');
-      $contact->to('paola@concepthaus.mx','Paola Mercado');
+      $contact->to('lolita@concepthaus.mx','Lolita Davis');
+      $contact->to('estefani@concepthaus.mx','Estefani Nava');
+      $contact->to('regina@treehaus.mx','Regina Hugues');
       $contact->subject('Concept Haus Brief Branding');
       $contact->attach($path['path']);
     });
