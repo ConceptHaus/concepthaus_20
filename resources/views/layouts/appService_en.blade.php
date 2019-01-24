@@ -77,7 +77,7 @@
                         <div class="row mr-none">
                             <div class="col align-self-center text-center pd-none">
                                 {{-- <a href="{{ url('/crew') }}">CREW</a>
-                                <a href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
+                                <a href="{{ url('/conceptHaus') }}">BRANDING & MKT</a>
                                 <a href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
                                 <a href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a href="{{ url('/startups') }}">STARTUPS</a>
@@ -93,7 +93,7 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 {{-- <a class="nav-item nav-link active" href="{{ url('/crew') }}">CREW</a>
-                                <a class="nav-item nav-link" href="{{ url('/conceptHaus') }}">PUBLICIDAD</a>
+                                <a class="nav-item nav-link" href="{{ url('/conceptHaus') }}">BRANDING & MKT</a>
                                 <a class="nav-item nav-link" href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
                                 <a class="nav-item nav-link disabled" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
