@@ -12,6 +12,8 @@ yarn-error.log
 .env
 .vagrant
 /public/briefs
+composer.json
+composer.lock
 
 # Created by https://www.gitignore.io/api/macos
 
