@@ -139,7 +139,7 @@ class RegistroController extends Controller {
                 Telegram::sendMessage([
 						'chat_id' => $id,
 						'parse_mode' => 'HTML',
-                        'text' =>'<b>Nuevo lead '. $formulario -> tipo.'</b> '
+                        'text' =>'<b>Nuevo lead '. $formulario -> tipo.' 🎉 🎊 😎</b>' 
                         //.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
                         .'
 
@@ -148,7 +148,9 @@ class RegistroController extends Controller {
 <b>Correo: </b>'.$registro -> correo.'
 <b>Tel: </b>'.$registro -> telefono.'
 <b>Formulario: </b>'.$formulario -> tipo .'
-<b>Nota: </b>'.$registro -> mensaje,
+<b>Nota: </b>'.$registro -> mensaje .'
+<b>Keyword: </b>'.$request -> utm_term .'
+<b>Campaign: </b>'.$request -> utm_campaign,
 						'reply_markup'=>json_encode([
                                 'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))),
                                 'resize_keyboard' => true,
@@ -163,15 +165,17 @@ class RegistroController extends Controller {
 			// Mailing Administrador nuevo registro
 			Mail::send('emails.registro.admin', $user, function($contact) use ($user){
 				$contact->from('contacto@concepthaus.mx','Concept Haus');
-				$contact->to('tomas@concepthaus.mx','Tomas Valles')->subject('Nuevo Lead ConceptHaus');
+				$contact->to('tomas@concepthaus.mx','Tomas Valles')
+				->cc('steph@concepthaus.mx','Stephanie Micha')
+				->subject('Nuevo Lead ConceptHaus');
 			});
 
     //Post al nuevo Kiper
 
       $datosKiper = explode(" ", $registro->nombre);
-      var_dump($datosKiper);
-      var_dump($datosKiper[0]);
-      var_dump($datosKiper[1]);
+      // var_dump($datosKiper);
+      // var_dump($datosKiper[0]);
+      // var_dump($datosKiper[1]);
       $datos = [
           'nombre' => $datosKiper[0],
           'apellido' => $datosKiper[1],

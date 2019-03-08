@@ -3,14 +3,23 @@
 *
 * Description
 */
-angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], function($interpolateProvider) {
+angular.module('RegistroController', ['app', 'ngMask', 'isteven-multi-select', 'ngCookies'], function ($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('RegistroController', function RegistroController($scope,$window, saveRegistro, saveLead, countries, states, brief) {
+app.controller('RegistroController', function RegistroController($scope, $window, saveRegistro, saveLead, countries, states, brief, $cookies) {
+    const urlParams = new URLSearchParams(window.location.search);
+    $scope.utm_term = urlParams.get('utm_term');
+    $cookies.put("__utm_term", $scope.utm_term);
+
+    $scope.utm_campaign = urlParams.get('utm_campaign');
+    $cookies.put("__utm_campaign", $scope.utm_campaign);
+
+    console.log($scope.utm_term, $scope.utm_campaign);
     $scope.contacto={};
     $scope.saveDataContact  = function(contacto, contactoForm){
+        
         swal({
             // text: "Estamos registrando tus datos.",
             imageUrl: '../img/loader.gif',
@@ -18,9 +27,11 @@ app.controller('RegistroController', function RegistroController($scope,$window,
             imageAlt: 'Concept Haus',
             showConfirmButton: false
         })
+        $scope.contacto.utm_term = $scope.utm_term;
+        $scope.contacto.utm_campaign = $scope.utm_campaign;
         // $scope.contacto.ciudad = $scope.contacto.ciudad.name;
         // $scope.contacto.estado = $scope.contacto.estado.name;
-        // console.log($scope.contacto);
+        console.log($scope.contacto);
         $scope.contacto.servicios = [];
         angular.forEach(contacto.outputServicies, function(value, key) {
             $scope.contacto.servicios.push(value.name);
@@ -28,6 +39,7 @@ app.controller('RegistroController', function RegistroController($scope,$window,
         saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
     var successRegister = function(res){
+        $window.location.href = '/gracias';
         // console.log(res.data);
         if (angular.isDefined(res.data.correo)) {
             swal({
@@ -68,7 +80,7 @@ app.controller('RegistroController', function RegistroController($scope,$window,
         //     confirmButtonColor: '#4a4f55',
         //     closeOnConfirm:false
         // })
-				$window.location.href = '/error';
+				$window.location.href = '/gracias';
     }
 
     $scope.saveDataLead  = function(contacto, contactoForm){
