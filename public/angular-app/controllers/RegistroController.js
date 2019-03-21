@@ -44,7 +44,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
         angular.forEach(contacto.outputServicies, function(value, key) {
             $scope.contacto.servicios.push(value.name);
         })
-        //saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
+        saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
     var successRegister = function(res){
         $window.location.href = '/gracias';
