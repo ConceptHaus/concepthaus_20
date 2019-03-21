@@ -5,16 +5,24 @@
 */
 angular.module('RegistroController', ['app', 'ngMask', 'isteven-multi-select', 'ngCookies'], function ($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
-	$interpolateProvider.endSymbol('%>');
+    $interpolateProvider.endSymbol('%>');
+    
 });
 
 app.controller('RegistroController', function RegistroController($scope, $window, saveRegistro, saveLead, countries, states, brief, $cookies) {
     const urlParams = new URLSearchParams(window.location.search);
-    $scope.utm_term = urlParams.get('utm_term');
-    $cookies.put("__utm_term", $scope.utm_term);
-
-    $scope.utm_campaign = urlParams.get('utm_campaign');
-    $cookies.put("__utm_campaign", $scope.utm_campaign);
+    if (urlParams.get('utm_term')) {
+        $scope.utm_term = urlParams.get('utm_term');
+        $cookies.put("__utm_term", $scope.utm_term);
+    }else{
+        $scope.utm_term = $cookies.get('__utm_term');
+    }
+    if (urlParams.get("utm_campaign")) {
+        $scope.utm_campaign = urlParams.get('utm_campaign');
+        $cookies.put("__utm_campaign", $scope.utm_campaign);
+    }else{
+        $scope.utm_campaign = $cookies.get("__utm_campaign");
+    }
 
     console.log($scope.utm_term, $scope.utm_campaign);
     $scope.contacto={};
@@ -36,7 +44,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
         angular.forEach(contacto.outputServicies, function(value, key) {
             $scope.contacto.servicios.push(value.name);
         })
-        saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
+        //saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
     var successRegister = function(res){
         $window.location.href = '/gracias';

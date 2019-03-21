@@ -2,4 +2,8 @@ var app = angular.module('app', ['ngMessages', 'ngResource', 'ngFileUpload', 'Re
 // 'angularUtils.directives.dirPagination','ngSanitize'
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
+	console.log('Inicia Angular');
+	
+	
 });
+

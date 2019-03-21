@@ -17,9 +17,16 @@ app.filter('trusted', ['$sce', function ($sce) {
 app.controller('WelcomeController', function WelcomeController($http, $scope, $interval, $window) {
     // Projects
     $scope.projects = {};
+    $scope.other_projects = {};
+    $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?page=2&client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
+    .then(function(response){
+      $scope.other_projects = response.data.projects;
+    })
     $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
     .then(function (response) {
       $scope.projects = response.data.projects;
+      $scope.projects = $scope.projects.concat($scope.other_projects);
+      console.log('Concatenados ',$scope.projects);
     })
 
 		$scope.getOneProject = function (id){
