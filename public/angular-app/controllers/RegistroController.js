@@ -47,8 +47,8 @@ app.controller('RegistroController', function RegistroController($scope, $window
         saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
     var successRegister = function(res){
-        $window.location.href = '/gracias';
-        // console.log(res.data);
+        //$window.location.href = '/gracias';
+         console.log(res.data);
         if (angular.isDefined(res.data.correo)) {
             swal({
                 text:'El correo que proporcionaste ya se encuentra registrado, verifícalo o intenta con otro.',
@@ -79,6 +79,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
         }
     }
     var errorRegister = function(errors){
+        console.log(errors);
         // swal({
         //     text:'Algo salió mal en el envío de tu información de contacto.',
         //     imageUrl: '../img/logo/concepthaus.svg',

@@ -182,7 +182,9 @@ class RegistroController extends Controller {
           'empresa' => $registro -> empresa,
           'correo' => $registro -> correo,
           'telefono' => $registro -> telefono,
-          'mensaje' => $registro -> mensaje
+					'mensaje' => $registro -> mensaje,
+					'utm_campaign' => $request -> utm_campaign,
+					'utm_term' => $request -> utm_term
 
         ];
       $client = new Client(); //GuzzleHttp\Client
