@@ -31,7 +31,7 @@ Section Home | Slider
         height: 300px !important;
     }
 }
-
+.llamada{display: none;}
 .small-gray {
     color: #8d8e96;
     font-size: 12px;
@@ -293,6 +293,7 @@ Section Home | Slider
 @media only screen and (min-width : 320px) and (max-width : 480px) {
         /* Styles */
         .llamada {
+            display: block;
             width: 100%;
             position: fixed;
             height: 50px;

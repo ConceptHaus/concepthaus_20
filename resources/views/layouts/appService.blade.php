@@ -125,7 +125,7 @@
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
-                    <a href="tel:+5552820707">
+                    <a href="tel:+525546240265">
                         <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
                     </a>
                 </div>
@@ -137,6 +137,9 @@
         <!-- ./ Content -->
 
         <!-- Footer -->
+        <div class="llamada">
+            <p><a href="tel:+525546240265"><i class="fa fa-phone"></i> Contáctanos</a></p>
+        </div>
         <footer>
             {{--  <section id="contact" ng-controller="RegistroController as contacto">
                 <h2 class="title-general c-gray">Contáctanos</h2>

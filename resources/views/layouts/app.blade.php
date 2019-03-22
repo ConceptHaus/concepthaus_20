@@ -146,7 +146,7 @@
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
-                    <a href="tel:+5552820707">
+                    <a href="tel:+525546240265">
                         <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
                     </a>
                 </div>
