@@ -221,6 +221,9 @@
         <!-- ./ Content -->
 
         <!-- Footer -->
+        <div class="llamada">
+            <p><a href="tel:+525546240265"><i class="fa fa-phone"></i> Contáctanos</a></p>
+        </div>
         <footer>
           @if (Request::path() != 'brief-branding')
             <section id="contact" ng-controller="RegistroController as contacto">
@@ -232,8 +235,8 @@
                     <div class="row">
                         <div class="col-sm">
                             <h5>CDMX</h5>
-                            <a href="tel:+5552820707">(55) 52820707</a>
-                            <p class="p-address">contacto@concepthaus.mx</p>
+                            <a href="tel:+525546240265">(55) 46240265</a>
+                            <p class="p-address">ventas@concepthaus.mx</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
                         </div>
                         <div class="col-sm">

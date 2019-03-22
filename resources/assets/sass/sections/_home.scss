@@ -288,3 +288,31 @@ Section Home | Slider
         }
     }
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+        /* Styles */
+        .llamada {
+            width: 100%;
+            position: fixed;
+            height: 50px;
+            background: #e34228;
+            bottom: 0;
+            z-index:100;
+            >p{
+                
+                text-align: center;
+                margin-top: 10px;
+                font-size: 19px;
+                >a {
+                    color: #fff;
+                    
+                    >i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        
+}
+
