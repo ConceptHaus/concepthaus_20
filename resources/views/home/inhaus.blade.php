@@ -12,7 +12,7 @@
       <section id="home-doors-interior">
           <div class="container">
               <div class="text-center">
-                <img src="{{asset('img/logo/concept.svg')}}" alt="InHaus Films + Post" width="40">
+                <img src="{{asset('img/concepthaus-bullet.gif')}}" alt="InHaus Films + Post" width="100">
               </div>
               <div class="row">
                   <div class="col-md-12 text-center interiorPuerta">
