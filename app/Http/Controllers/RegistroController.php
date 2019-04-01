@@ -163,12 +163,12 @@ class RegistroController extends Controller {
             }
 
 			// Mailing Administrador nuevo registro
-			Mail::send('emails.registro.admin', $user, function($contact) use ($user){
-				$contact->from('contacto@concepthaus.mx','Concept Haus');
-				$contact->to('tomas@concepthaus.mx','Tomas Valles')
-				->cc('steph@concepthaus.mx','Stephanie Micha')
-				->subject('Nuevo Lead ConceptHaus');
-			});
+			// Mail::send('emails.registro.admin', $user, function($contact) use ($user){
+			// 	$contact->from('contacto@concepthaus.mx','Concept Haus');
+			// 	$contact->to('tomas@concepthaus.mx','Tomas Valles')
+			// 	->cc('steph@concepthaus.mx','Stephanie Micha')
+			// 	->subject('Nuevo Lead ConceptHaus');
+			// });
 
     //Post al nuevo Kiper
 
@@ -186,12 +186,19 @@ class RegistroController extends Controller {
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
 
-        ];
-      $client = new Client(); //GuzzleHttp\Client
-      $result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
+				];
+			try{
+				$client = new Client(); //GuzzleHttp\Client
+				$result = $client->request('POST','http://apikiper.test/api/v1/forms/register?token=xn46004Ep6UIh53NcHyI8fpsk6x1mzdL', ['form_params'=> $datos]);
 
-			$json['success'] = "Datos guardados";
-			return json_encode($json['success']);
+				$json['success'] = "Datos guardados";
+				return json_encode($json['success']);
+			
+			}catch(Exception $e){
+			
+				return json_encode($e,500);
+			}
+      
 		}
 
 		// dd($Validator->errors());
