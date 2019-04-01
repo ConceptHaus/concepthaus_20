@@ -189,7 +189,7 @@ class RegistroController extends Controller {
 				];
 			try{
 				$client = new Client(); //GuzzleHttp\Client
-				$result = $client->request('POST','http://apikiper.test/api/v1/forms/register?token=xn46004Ep6UIh53NcHyI8fpsk6x1mzdL', ['form_params'=> $datos]);
+				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
 
 				$json['success'] = "Datos guardados";
 				return json_encode($json['success']);
