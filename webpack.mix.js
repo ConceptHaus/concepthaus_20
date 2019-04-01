@@ -16,4 +16,4 @@ mix.sass('resources/assets/sass/style.scss', 'public/css')
 .options({
   processCssUrls: false
 })
-mix.browserSync('server.test');
+mix.browserSync('concepthaus_20.test');

@@ -29,15 +29,15 @@ Estilos a tipografías Salvaje Tentación
 
 /* -------------------------------------------------------------
 Estilos generales del administrador Be Grand
-    1. Variables
+    1. Variables 
     2. Estilos generales
         2.1 Botones
         2.2 Inputs
         2.3 Dropdown
         2.4 Tablas Tablesaw
-        2.5 Form Búsqueda
+        2.5 Form Búsqueda 
         2.6 Angular Cloak
-        2.7 Mensajes
+        2.7 Mensajes 
         2.8 Modal
     3. Login
     4. Dashboard
@@ -183,6 +183,7 @@ Estilos generales del administrador Be Grand
 .btn-whatsapp i {
   font-size: 18px !important;
 }
+
 /* --------------------- 2.2 Inputs  --------------------- */
 .form-control, .form-group .form-control {
   font-weight: 100;
@@ -933,9 +934,4 @@ Estilos generales del administrador Be Grand
 
 .tim-row h3 {
   margin-top: 0;
-}
-
-.img-icon-publicidad{
-  margin-right: 10px !important;
-  width: 10px !important;
 }
