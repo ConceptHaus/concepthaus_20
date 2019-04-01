@@ -3,8 +3,17 @@
   @section('content')
 
   <div ng-controller="ProyectosController">
+    <section id="header-video">
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" 
+            style="">
+            <source src="{{asset('video/reel_inhaus.mp4')}}" type="video/mp4">
+        </video>
+    </section>
       <section id="home-doors-interior">
           <div class="container">
+              <div class="text-center">
+                <img src="{{asset('img/concepthaus-bullet.gif')}}" alt="InHaus Films + Post" width="100">
+              </div>
               <div class="row">
                   <div class="col-md-12 text-center interiorPuerta">
                       <img class="puerta" src="{{asset('img/home-elements/doors/inhaus.png')}}">

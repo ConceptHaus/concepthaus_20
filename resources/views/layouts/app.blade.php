@@ -480,6 +480,9 @@
         }
     </script>
     <script src="//scripts.iconnode.com/67912.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
