@@ -10444,3 +10444,742 @@ img.competencia-img {
 #clients .client-brand-servicie.brand6-2 {
   width: 30%;
 }
+
+/******************************************************************
+Variables | Generales vista Thanks & Oops
+******************************************************************/
+/* ----------------------------------
+    Textos
+---------------------------------- */
+.c-red, #plug .plug-content {
+  color: #E63C2F;
+}
+
+.c-gray {
+  color: #707070;
+}
+
+.c-white {
+  color: #FFFFFF;
+  text-shadow: #707070 3px 0px 0px, #707070 2.83487px 0.981584px 0px, #707070 2.35766px 1.85511px 0px, #707070 1.62091px 2.52441px 0px, #707070 0.705713px 2.91581px 0px, #707070 -0.287171px 2.98622px 0px, #707070 -1.24844px 2.72789px 0px, #707070 -2.07227px 2.16926px 0px, #707070 -2.66798px 1.37182px 0px, #707070 -2.96998px 0.42336px 0px, #707070 -2.94502px -0.571704px 0px, #707070 -2.59586px -1.50383px 0px, #707070 -1.96093px -2.27041px 0px, #707070 -1.11013px -2.78704px 0px, #707070 -0.137119px -2.99686px 0px, #707070 0.850987px -2.87677px 0px, #707070 1.74541px -2.43999px 0px, #707070 2.44769px -1.73459px 0px, #707070 2.88051px -0.838247px 0px;
+}
+
+.body-thanks {
+  height: 100vh !important;
+}
+
+.size-title {
+  font-size: 4rem;
+  font-family: Poppins-Bold;
+}
+
+.size-titleoops {
+  font-size: 15rem;
+  font-family: Poppins-Bold;
+}
+
+@media screen and (max-width: 992px) {
+  .size-title {
+    font-size: 3.5rem;
+  }
+  .size-titleoops {
+    font-size: 10rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .size-titleoops {
+    font-size: 8.5rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .size-title {
+    font-size: 3rem;
+  }
+  .size-titleoops {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .size-titleoops {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .size-title {
+    font-size: 2.7rem;
+  }
+  .size-titleoops {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .size-title {
+    font-size: 2.5rem;
+  }
+  .size-titleoops {
+    font-size: 3rem;
+  }
+}
+
+.size-subtitle {
+  font-family: Poppins-Medium;
+}
+
+.size-hastag {
+  font-family: Poppins-Bold;
+}
+
+.btn-border {
+  border-radius: 0rem !important;
+  font-family: Poppins-Medium;
+  cursor: pointer;
+}
+
+.border-leftoops {
+  border-left: 0px solid #E63C2F;
+  position: relative;
+}
+
+.border-leftoops:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  top: 20px;
+  width: 2px;
+  height: 70%;
+  /* or 100px */
+  background: red;
+}
+
+@media screen and (max-width: 1387px) {
+  .border-leftoops {
+    border-left: 0px solid #E63C2F;
+  }
+  .border-leftoops:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    top: 20px;
+    width: 0px;
+    height: 0%;
+    /* or 100px */
+    background: red;
+  }
+}
+
+.pr-6 {
+  padding-right: 12rem !important;
+}
+
+.pr-7 {
+  padding-right: 24.5rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 2.1rem !important;
+}
+
+.interior-titulo {
+  padding: 20px 15.5% !important;
+}
+
+.interior-titulooops {
+  padding: 20px 8% !important;
+}
+
+@media screen and (max-width: 1560px) {
+  .pr-7 {
+    padding-right: 13.5rem !important;
+  }
+}
+
+@media screen and (max-width: 1265px) {
+  .pr-7 {
+    padding-right: 6.5rem !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .interior-titulo {
+    padding: 20px 8.5% !important;
+  }
+  .pr-6 {
+    padding-right: 6.5rem !important;
+  }
+  .pr-7 {
+    padding-right: 6.5rem !important;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  .pr-7 {
+    padding-right: 2rem !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .interior-titulo {
+    padding: 20px 13.5% !important;
+  }
+  .pr-6 {
+    padding-right: 9rem !important;
+  }
+  .pr-7 {
+    padding-right: 2rem !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .interior-titulo {
+    padding: 20px 0.5% !important;
+  }
+  .pr-6 {
+    padding-right: 2rem !important;
+  }
+  .pr-7 {
+    padding-right: 2rem !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .interior-titulo {
+    padding: 20px 0.5% !important;
+    text-align: center !important;
+  }
+  .pr-6 {
+    padding-right: 2rem !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  .pr-7 {
+    padding-right: 2rem !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+}
+
+.text-small2 {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 420px) {
+  .text-small2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .text-small2 {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .text-small2 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .text-small2 {
+    font-size: 11px;
+  }
+}
+
+.text-small3 {
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: Poppins-Bold;
+}
+
+.text-small3 span {
+  font-size: 1.5rem;
+  font-family: Poppins-Medium;
+}
+
+@media screen and (max-width: 1473px) {
+  .text-small3 {
+    font-size: 1.8rem;
+  }
+  .text-small3 span {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .text-small3 {
+    font-size: 1.7rem;
+  }
+  .text-small3 span {
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (max-width: 1288px) {
+  .text-small3 {
+    font-size: 1.5rem;
+  }
+  .text-small3 span {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .text-small3 {
+    font-size: 1.3rem;
+  }
+  .text-small3 span {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .text-small3 {
+    font-size: 1.1rem;
+  }
+  .text-small3 span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .text-small3 {
+    font-size: 1rem;
+  }
+  .text-small3 span {
+    font-size: 0.8rem;
+  }
+}
+
+.align-textoops {
+  text-align: end;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 992px) {
+  .align-textoops {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1387px) {
+  .btn-justify {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
+/* ----------------------------------
+      Fin Textos
+  ---------------------------------- */
+/* ----------------------------------
+      Footer Thanks
+  ---------------------------------- */
+.title-footerthanks {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title-venuethanks {
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.text-titlevenue {
+  margin-bottom: 0rem !important;
+}
+
+.px-6 {
+  padding-right: 6rem !important;
+  padding-left: 6rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .px-6 {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+}
+
+.px-31 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+@media screen and (max-width: 1190px) {
+  .px-31 {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+}
+
+/* ----------------------------------
+      Col css exclusivo
+  ---------------------------------- */
+.col-lg-ex {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 1191px) {
+  .col-lg-ex {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.img-fluidoops {
+  height: auto;
+  width: auto;
+}
+
+@media (max-width: 1191px) {
+  .img-fluidoops {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/******************************************************************
+  Termina col css exclusivo
+  ******************************************************************/
+/* ----------------------------------
+      Fin Footer Thanks
+  ---------------------------------- */
+/******************************************************************
+  Termina vista Thanks & Oops
+  ******************************************************************/
+/******************************************************************
+  Variables | Generales vista Bolsa de Trabajo
+  ******************************************************************/
+/* ----------------------------------
+      Title de Trabajo
+  ---------------------------------- */
+.px-titlegeneral {
+  padding: 0px 0px !important;
+}
+
+.style-mp {
+  margin-bottom: 15px !important;
+}
+
+.px-auto {
+  padding: 0px 0px !important;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 576px) {
+  .px-auto {
+    padding: 0px 0px !important;
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .px-auto {
+    padding: 0px 0px !important;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+}
+
+.text-aligns {
+  text-align: right;
+  font-size: 12px;
+}
+
+@media (max-width: 992px) {
+  .text-aligns {
+    text-align: center;
+    font-size: 12px;
+  }
+  .text-alignstitle {
+    text-align: center;
+  }
+}
+
+.style-row {
+  border: 1px solid #56565629;
+  border-radius: 10px;
+}
+
+.img-icon-publicidad {
+  margin-right: 10px;
+  width: 10px;
+}
+
+.publicidad-title {
+  font-size: 18px;
+  color: #4a4f55;
+}
+
+@media (max-width: 992px) {
+  .publicidad-title {
+    font-size: 13px;
+  }
+}
+
+.home-doorsmb {
+  margin-bottom: 4rem;
+  padding: 0% 7%;
+}
+
+.title-form {
+  font-size: 15px;
+  font-weight: 300;
+  color: #4a4f55;
+  letter-spacing: 2px;
+}
+
+.subtitle-red {
+  font-size: 13px;
+  font-weight: 600;
+  color: #E63C2F;
+  letter-spacing: 0px;
+}
+
+.subtitle-description {
+  font-size: 11px;
+  color: #8d8e96;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  .title-form {
+    font-size: 26px;
+    font-weight: 300;
+    color: #4a4f55;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .title-form {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-form {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .title-form {
+    font-size: 26px;
+  }
+}
+
+.btn-gray {
+  padding: 3px 12px !important;
+  border-bottom: 1px solid #4a4f55 !important;
+  color: #4a4f55 !important;
+  cursor: pointer !important;
+  background: #fff !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
+  margin-bottom: 9% !important;
+  margin-top: 9% !important;
+  border-color: #4a4f55 !important;
+  font-size: 12px !important;
+}
+
+.btn-gray:hover {
+  padding: 3px 12px !important;
+  border-bottom: 1px solid #4a4f55 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  background: #4a4f55 !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
+  margin-bottom: 9% !important;
+  margin-top: 9% !important;
+  border-color: #4a4f55 !important;
+  font-size: 12px !important;
+}
+
+.btn-red {
+  padding: 3px 12px !important;
+  border-bottom: 1px solid #E63C2F !important;
+  color: #4a4f55 !important;
+  cursor: pointer !important;
+  background: #fff !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
+  margin-bottom: 9% !important;
+  margin-top: 9% !important;
+  border-color: #E63C2F !important;
+  font-size: 12px !important;
+}
+
+.btn-red:hover {
+  padding: 3px 12px !important;
+  border-bottom: 1px solid #E63C2F !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  background: #E63C2F !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
+  margin-bottom: 9% !important;
+  margin-top: 9% !important;
+  border-color: #4a4f55 !important;
+  font-size: 12px !important;
+}
+
+.cv-style {
+  font-size: 12px;
+}
+
+.color-transparent {
+  color: transparent;
+}
+
+.background-gray {
+  background-color: #49505738;
+  border: 1px solid #707070b3 !important;
+  border-radius: 0px !important;
+  padding: 5px !important;
+}
+
+.subtitle-url {
+  color: #E63C2F !important;
+  font-family: Poppins-Medium !important;
+  font-weight: 500 !important;
+}
+
+.p-22 {
+  padding: 0.5rem !important;
+}
+
+@media screen and (max-width: 992px) {
+  .p-22 {
+    padding: 0rem !important;
+  }
+}
+
+.border-topbt {
+  border-left: 0px solid #E63C2F;
+  position: relative;
+}
+
+.border-topbt:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  top: 20px;
+  width: 2px;
+  height: 70%;
+  /* or 100px */
+  background: red;
+}
+
+/* Dotted gray border */
+.hr-gray {
+  border-top: 2px solid #707070;
+}
+
+.px-hr {
+  padding-right: 9.5rem !important;
+  padding-left: 9.5rem !important;
+}
+
+.px-hrcol {
+  padding-right: 1rem !important;
+  padding-left: 0rem !important;
+}
+
+@media screen and (min-width: 992px) {
+  .col-1hr {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333333%;
+    flex: 0 0 15.333333%;
+    max-width: 15.333333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+  }
+}
+
+.m0 {
+  margin: 0px !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  padding: 3px 22px !important;
+}
+
+.m0:hover {
+  margin: 0px !important;
+}
+
+.c-maxred {
+  color: #E63C2F;
+}
+
+.text-area {
+  background-color: #49505738;
+  border: 1px solid #707070b3 !important;
+  border-radius: 0px !important;
+  padding: 15px 10px !important;
+}
+
+.form-check-input2 {
+  position: absolute;
+  margin-top: 0.25rem;
+  margin-left: 1.55rem;
+}
+
+/* ----------------------------------
+      Fin Title de Trabajo
+  ---------------------------------- */
+/******************************************************************
+  Termina vista Bolsa de Trabajo
+  ******************************************************************/
+textarea.textarea-brief {
+  color: #707070 !important;
+  font-family: Poppins, sans-serif;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  line-height: 100%;
+  padding: 22px 18px !important;
+  text-align: left;
+}
+
+.small-gray-brief {
+  color: #707070;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+  padding: 18px 0;
+}
