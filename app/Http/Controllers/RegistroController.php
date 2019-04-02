@@ -197,7 +197,7 @@ class RegistroController extends Controller {
 			
 			}catch(Exception $e){
 			
-				return json_encode($e,500);
+				return json_encode('Error',400);
 			}
       
 		}
