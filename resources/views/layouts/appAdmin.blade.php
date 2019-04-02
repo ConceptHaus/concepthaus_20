@@ -10,19 +10,19 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <title>ConceptHaus / Administrador</title>
-    <meta name="description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="description" content="Somos un clúster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
 
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta property="og:image" content="{{asset('img/image-meta.png')}}"/>
-    <meta property="og:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta property="og:description" content="Somos un clúster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Somos un cluster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
+    <meta name="twitter:description" content="Somos un clúster especializado en la creación, desarrollo y fortalecimiento de marcas."/>
     <meta name="twitter:title" content="ConceptHaus / Agencia de Publicidad / Desarrollo Web / SEO y Marketing Digital en CDMX"/>
     <meta name="twitter:domain" content="Concept Haus" />
 
