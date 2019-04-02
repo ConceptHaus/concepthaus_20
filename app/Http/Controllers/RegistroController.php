@@ -148,6 +148,7 @@ class RegistroController extends Controller {
 <b>Correo: </b>'.$registro -> correo.'
 <b>Tel: </b>'.$registro -> telefono.'
 <b>Formulario: </b>'.$formulario -> tipo .'
+<b>Servicios:</b>'.$serviciosArray.'
 <b>Nota: </b>'.$registro -> mensaje .'
 <b>Keyword: </b>'.$request -> utm_term .'
 <b>Campaign: </b>'.$request -> utm_campaign,
@@ -182,7 +183,7 @@ class RegistroController extends Controller {
           'empresa' => $registro -> empresa,
           'correo' => $registro -> correo,
           'telefono' => $registro -> telefono,
-					'mensaje' => $registro -> mensaje,
+					'mensaje' => $registro -> mensaje.' Lista de servicios: '.$serviciosArray,
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
 
