@@ -147,9 +147,9 @@ class RegistroController extends Controller {
 <b>Empresa: </b>'.$registro -> empresa.'
 <b>Correo: </b>'.$registro -> correo.'
 <b>Tel: </b>'.$registro -> telefono.'
-<b>Formulario: </b>'.$formulario -> tipo .'
-<b>Servicios:</b>'.$serviciosArray.'
+<b>Formulario: </b>'.$formulario -> tipo.'
 <b>Nota: </b>'.$registro -> mensaje .'
+<b>Servicios: </b>'.implode(", ",$serviciosArray).'
 <b>Keyword: </b>'.$request -> utm_term .'
 <b>Campaign: </b>'.$request -> utm_campaign,
 						'reply_markup'=>json_encode([
@@ -183,7 +183,7 @@ class RegistroController extends Controller {
           'empresa' => $registro -> empresa,
           'correo' => $registro -> correo,
           'telefono' => $registro -> telefono,
-					'mensaje' => $registro -> mensaje.' Lista de servicios: '.$serviciosArray,
+					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
 
