@@ -3,11 +3,12 @@
   @section('content')
 
   <div ng-controller="ProyectosController">
-    <section id="header-video">
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" 
+    <section id="videoin">
+     <script src="https://fast.wistia.com/embed/medias/eaio699r6w.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_eaio699r6w videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+        {{-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" 
             style="">
             <source src="{{asset('video/reel_inhaus.mp4')}}" type="video/mp4">
-        </video>
+        </video> --}}
     </section>
       <section id="home-doors-interior">
           <div class="container">
