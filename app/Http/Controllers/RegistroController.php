@@ -163,21 +163,13 @@ class RegistroController extends Controller {
 
             }
 
-			// Mailing Administrador nuevo registro
-			// Mail::send('emails.registro.admin', $user, function($contact) use ($user){
-			// 	$contact->from('contacto@concepthaus.mx','Concept Haus');
-			// 	$contact->to('tomas@concepthaus.mx','Tomas Valles')
-			// 	->cc('steph@concepthaus.mx','Stephanie Micha')
-			// 	->subject('Nuevo Lead ConceptHaus');
-			// });
+			
 
     //Post al nuevo Kiper
 
       $datosKiper = explode(" ", $registro->nombre);
-      // var_dump($datosKiper);
-      // var_dump($datosKiper[0]);
-      // var_dump($datosKiper[1]);
-      $datos = [
+      if(count($datosKiper)>1){
+				$datos = [
           'nombre' => $datosKiper[0],
           'apellido' => $datosKiper[1],
           'empresa' => $registro -> empresa,
@@ -188,6 +180,20 @@ class RegistroController extends Controller {
 					'utm_term' => $request -> utm_term
 
 				];
+			}else{
+				$datos = [
+          'nombre' => $datosKiper[0],
+          'apellido' => 'N',
+          'empresa' => $registro -> empresa,
+          'correo' => $registro -> correo,
+          'telefono' => $registro -> telefono,
+					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
+					'utm_campaign' => $request -> utm_campaign,
+					'utm_term' => $request -> utm_term
+
+				];
+			}
+      
 			try{
 				$client = new Client(); //GuzzleHttp\Client
 				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
