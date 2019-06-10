@@ -8,8 +8,9 @@
     <div class="row content-description small-gray">
       <div class="col-sm-12 col-md-6" style="padding-top: 9px;">
         {{-- <img class="acentoHome" src="{{asset('img/concept.svg')}}" alt="" width="100"> --}}
-        <span class="word p-bottom-left"><% randomWords[0].word %></span>
-        <p class="description-p c-gray">Somos un clúster creativo especializado en la creación, desarrollo y fortalecimiento de marca compuesto
+        {{-- <span class="word p-bottom-left"><% randomWords[0].word %></span> --}}
+        {{-- <span class="word p-bottom-left">Concepthaus</span> --}}
+        <p class="description-p c-gray">Somos un clúster creativo especializado en la conceptualización, desarrollo y fortalecimiento de marca compuesto
           por tres empresas hermanas. ConceptHaus: <b>agencia de branding, publicidad, marketing e interiorismo</b>, InHaus Films: <b>casa productora</b> y TreeHaus:
           consultoría de responsabilidad social y empresarial a favor de la <b>sustentabilidad</b>.</p>
       </div>
@@ -18,7 +19,7 @@
           <span class="c-gray">Accenting </span>
           <span class="c-red">everything</span>
         </h2>
-        <p>
+        {{-- <p>
           Concepthaus Creative Agency. Estrategia creativa, Estrategia de marketing, Identidad corporativa, publicidad
           (ATL / Digital) Compra de medios, Desarrollo Web, Desarrollo de aplicaciones, Marketing Digital, Producción de contenido,
           posicionamiento SEO, SEM, Relaciones Públicas, Influencer marketing, eventos.
@@ -30,7 +31,7 @@
         <p>
           Treehaus Sustainability. Campañas y proyectos de corte social y/o ecológico, Proyectos digitales en pro
           de la sustentabilidad.
-        </p>
+        </p> --}}
       </div>
     </div>
   </section>
