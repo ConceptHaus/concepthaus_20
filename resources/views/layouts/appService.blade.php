@@ -156,8 +156,6 @@
                         </p>
                         <p class="title-footer">CDMX</p>
                         <p>MIGUEL HIDALGO, CDMX</p>
-                        <p class="title-footer">Puebla</p>
-                        <p>SONATA TOWERS, WORK CENTER L.21, LOMAS DE ANGELÓPOLIS</p>
                         <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
                         <p class="powered">Powered & Copyright by Concepthaus</p>
                     </div>
