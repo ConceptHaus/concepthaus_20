@@ -157,6 +157,7 @@
                         <p class="title-footer">CDMX</p>
                         <p>MIGUEL HIDALGO, CDMX</p>
                         <img src="{{asset('img/googlepartner.svg')}}" class="partner" alt="Google Partners" width="160">
+                        <p class="ch-company">a <img src="{{asset('img/logo/concept_logo.svg')}}" alt=""> company.</p> 
                         <p class="powered">Powered & Copyright by Concepthaus</p>
                     </div>
                     <div class="col-sm-12 second">

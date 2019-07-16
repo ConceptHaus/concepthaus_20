@@ -125,7 +125,14 @@
         background-color: #efefef;
     }
 }
-
+.ch-company{
+    position: absolute;
+    left: 30px;
+    font-size: 14px !important;
+    img{
+        width: 100px;
+    }
+}
 // Media jQuerys
 @include breakpoint(lg-max) {
     #branding {
