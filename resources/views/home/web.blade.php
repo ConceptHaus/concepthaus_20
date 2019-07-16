@@ -83,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center interiorPuerta">
-                    <img class="logo" src="{{asset('img/logo/concepthaus.svg')}}">
+                    <img class="logo" src="{{asset('img/logo/dev_rojo.png')}}">
                 </div>
                 <div class="col-md-6 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
