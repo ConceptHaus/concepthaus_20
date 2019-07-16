@@ -9067,6 +9067,15 @@ header .row, footer .row {
     right: 0;
     top: 14px;
   }
+  #footer .ch-company {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    top: 14px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 /******************************************************************
@@ -10402,6 +10411,16 @@ img.competencia-img {
 
 #branding .form-control {
   background-color: #efefef;
+}
+
+.ch-company {
+  position: absolute;
+  left: 30px;
+  font-size: 14px !important;
+}
+
+.ch-company img {
+  width: 100px;
 }
 
 /*===============*/
