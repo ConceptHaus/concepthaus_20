@@ -86,7 +86,7 @@ header .row, footer .row{
   font-weight: 700;
   color: $grayDark;
   padding: 0px 50px;
-  margin-top: 100px;
+  margin-top: 80px;
   @include breakpoint(md-max) {
     margin-top: 0;
   }

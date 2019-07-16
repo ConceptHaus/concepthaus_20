@@ -18,9 +18,8 @@
         background-position: center right;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 5%;
+        padding:0% 5%;
         padding-top: 8%;
-        padding-bottom: 7%;
         p {
             color: $white;
             font-size: 12px;
@@ -83,7 +82,7 @@
      }
     .title-general {
         color: #FFF;
-        font-size: 60px;
+        font-size: 50px;
         padding-left: 0;
         &::after {
             content: "■";
