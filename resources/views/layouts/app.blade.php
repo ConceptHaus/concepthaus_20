@@ -11,19 +11,19 @@
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
     <title>Agencia de publicidad, Branding y Marketing digital.</title>
-    <meta name="description" content="Agencia de publicidad, Branding y Marketing digital."/>
+    <meta name="description" content="Agencia de publicidad, Branding y Marketing digital. / Polanco"/>
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Agencia de publicidad, Branding y Marketing digital."/>
     <meta property="og:image" content="{{asset('img/image-meta.png')}}" />
-    <meta property="og:description" content="Somos expertos en la creación, desarrollo y fortalecimiento de marca. Más de 200 marcas creadas a nivel global."/>
+    <meta property="og:description" content="Somos expertos en la creación, desarrollo y fortalecimiento de marca. Más de 200 marcas creadas a nivel global. / Polanco"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://concepthaus.mx/" />
     <meta property="og:site_name" content="Concept Haus" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description" content="Somos expertos en la creación, desarrollo y fortalecimiento de marca. Más de 200 marcas creadas a nivel global."/>
-    <meta name="twitter:title" content="Agencia de publicidad, Branding y Marketing digital."/>
+    <meta name="twitter:title" content="Agencia de publicidad, Branding y Marketing digital. / Polanco"/>
     <meta name="twitter:domain" content="Concept Haus" />
     <!-- SEO -->
     <meta name="google-site-verification" content="Jjq4yB7AU7iMqXWs12A8VPnopI3ubrcNKQ-6oLRAZ0s" />
