@@ -10,7 +10,7 @@
     <!-- Mobile Internet Explorer ClearType Technology -->
     <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
     <link rel="shortcut icon" href="/img/faviconanimation.gif" type="image/gif">
-    <title>Agencia de publicidad, Branding y Marketing digital.</title>
+    <title>Agencia de publicidad, Branding y Marketing digital / Polanco</title>
     <meta name="description" content="Agencia de publicidad, Branding y Marketing digital / Polanco"/>
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
