@@ -243,7 +243,7 @@
                             <h5>Puebla</h5>
                             <a href="tel:+2222954243">(222) 2954243</a>
                             <p class="p-address">contactopuebla@concepthaus.mx</p>
-                            <p class="p-address">Sonata Towers, Work Center L.21, Lomas de Angelópolis</p>
+                            <p class="p-address">Las Ánimas, Puebla</p>
                         </div>
                     </div>
                     <div class="row">
