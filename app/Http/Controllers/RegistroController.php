@@ -326,10 +326,11 @@ class RegistroController extends Controller {
     Mail::send('emails.brief.brief-mail' ,$path, function ($contact) use ($path) {
       $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
       $contact->to('tomas@concepthaus.mx','Tomas Valles');
-      $contact->to('steph@concepthaus.mx','Stepahie Micha');
-      $contact->to('lolita@concepthaus.mx','Lolita Davis');
-      $contact->to('estefani@concepthaus.mx','Estefani Nava');
-      $contact->to('regina@treehaus.mx','Regina Hugues');
+	  $contact->to('lolita@concepthaus.mx','Lolita Davis');
+	  $contact->to('gabriela@concepthaus.mx','Gabriela Arriancho');
+	  $contact->to('andrea@treehaus.mx','Andrea Delgado');
+	  $contact->to('patricio@concepthaus.mx','Patricio Zenteno');
+	  $contact->to('darian@concepthaus.mx','Darian Davison');
       $contact->subject('Concept Haus Brief Branding');
       $contact->attach($path['path']);
     });
