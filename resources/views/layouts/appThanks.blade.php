@@ -105,7 +105,7 @@
                     <div class="container hidden-sm-down pd-none">
                         <div class="row mr-none">
                             <div class="col align-self-center text-center pd-none">
-                                <a href="{{ url('/crew') }}">CREW</a>
+                                {{-- <a href="{{ url('/crew') }}">CREW</a> --}}
                                 <a href="{{ url('/conceptHaus') }}">BRANDING & MKT</a>
                                 <a href="{{ url('/inhaus') }}">AUDIOVISUAL</a>
                                 <a href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>

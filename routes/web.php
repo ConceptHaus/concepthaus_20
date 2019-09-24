@@ -15,7 +15,7 @@
 // Route::get('/registros', 'WelcomeController@home');
 
 Route::get('/', 'WelcomeController@viewHome');
-Route::get('/crew', 'WelcomeController@viewCrew');
+//Route::get('/crew', 'WelcomeController@viewCrew');
 Route::get('/conceptHaus', 'WelcomeController@viewConceptHaus');
 Route::get('/inhaus', 'WelcomeController@viewInHaus');
 Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
