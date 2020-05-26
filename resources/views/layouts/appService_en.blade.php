@@ -138,7 +138,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12 first">
                         <p class="privacity">
-                            <a href="{{asset('aviso_privacidad_concept_haus.pdf')}}" target="_blank">Aviso de privacidad</a>
+                            <a href="/aviso" target="_blank">Aviso de privacidad</a>
                         </p>
                         <p class="title-footer">CDMX</p>
                         <p>MIGUEL HIDALGO, CDMX</p>

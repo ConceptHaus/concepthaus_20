@@ -38,6 +38,9 @@ class WelcomeController extends Controller {
     public function viewBranding() {
         return view('home/branding');
     }
+    public function viewAviso(){
+        return view('home/aviso');
+    }
 
 
 

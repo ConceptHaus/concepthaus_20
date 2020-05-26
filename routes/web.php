@@ -25,6 +25,7 @@ Route::get('/brief-branding', 'WelcomeController@viewBrief');
 Route::get('/gracias', 'WelcomeController@viewGracias');
 Route::get('/error', 'WelcomeController@viewError');
 Route::get('/jobs', 'WelcomeController@viewBolsadetrabajo');
+Route::get('/aviso','WelcomeController@viewAviso');
 
 Route::get('/pdf', 'WelcomeController@viewPDF');
 
