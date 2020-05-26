@@ -2,7 +2,7 @@
 @section('content')
 
 <section>
-    <div class="container">
+    <div id="home-description" class="container">
         <div class="row">
             <div class="col-12">
                 <h1>Aviso de Privacidad</h1>
