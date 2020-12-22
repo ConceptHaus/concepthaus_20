@@ -133,70 +133,67 @@ class RegistroController extends Controller {
 				$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 				$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 			});
+			
 			$chatsid =  array('-275252761','5711355','217972718');
 			//$chatsid = array('5711355');
 			foreach($chatsid as $id){
                 Telegram::sendMessage([
-						'chat_id' => $id,
-						'parse_mode' => 'HTML',
-                        'text' =>'<b>Nuevo lead '. $formulario -> tipo.' 🎉 🎊 😎</b>' 
-                        //.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
-                        .'
+					'chat_id' => $id,
+					'parse_mode' => 'HTML',
+					'text' =>'<b>Nuevo lead '. $formulario -> tipo.' 🎉 🎊 😎</b>' 
+					//.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
+					.'
 
-<b>Nombre: </b>'.$registro -> nombre.'
-<b>Empresa: </b>'.$registro -> empresa.'
-<b>Correo: </b>'.$registro -> correo.'
-<b>Tel: </b>'.$registro -> telefono.'
-<b>Formulario: </b>'.$formulario -> tipo.'
-<b>Nota: </b>'.$registro -> mensaje .'
-<b>Servicios: </b>'.implode(", ",$serviciosArray).'
-<b>Keyword: </b>'.$request -> utm_term .'
-<b>Campaign: </b>'.$request -> utm_campaign,
-						'reply_markup'=>json_encode([
-                                'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))),
-                                'resize_keyboard' => true,
-                                'one_time_keyboard' => true
-                            ]),
+					<b>Nombre: </b>'.$registro -> nombre.'
+					<b>Empresa: </b>'.$registro -> empresa.'
+					<b>Correo: </b>'.$registro -> correo.'
+					<b>Tel: </b>'.$registro -> telefono.'
+					<b>Formulario: </b>'.$formulario -> tipo.'
+					<b>Nota: </b>'.$registro -> mensaje .'
+					<b>Servicios: </b>'.implode(", ",$serviciosArray).'
+					<b>Keyword: </b>'.$request -> utm_term .'
+					<b>Campaign: </b>'.$request -> utm_campaign,
+											'reply_markup'=>json_encode([
+													'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))),
+													'resize_keyboard' => true,
+													'one_time_keyboard' => true
+												]),
+				]);
 
+        	}
 
-					]);
-
-            }
-
-			
-
-    //Post al nuevo Kiper
-
-      $datosKiper = explode(" ", $registro->nombre);
-      if(count($datosKiper)>1){
+			//Post al nuevo Kiper
+			$datosKiper = explode(" ", $registro->nombre);
+			if(count($datosKiper)>1) {
 				$datos = [
-          'nombre' => $datosKiper[0],
-          'apellido' => $datosKiper[1],
-          'empresa' => $registro -> empresa,
-          'correo' => $registro -> correo,
-          'telefono' => $registro -> telefono,
+					'nombre' => $datosKiper[0],
+					'apellido' => $datosKiper[1],
+					'empresa' => $registro -> empresa,
+					'correo' => $registro -> correo,
+					'telefono' => $registro -> telefono,
 					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
 
 				];
-			}else{
+			} else {
 				$datos = [
-          'nombre' => $datosKiper[0],
-          'apellido' => 'N',
-          'empresa' => $registro -> empresa,
-          'correo' => $registro -> correo,
-          'telefono' => $registro -> telefono,
+					'nombre' => $datosKiper[0],
+					'apellido' => 'N',
+					'empresa' => $registro -> empresa,
+					'correo' => $registro -> correo,
+					'telefono' => $registro -> telefono,
 					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
-
 				];
 			}
-      
+	  
 			try{
 				$client = new Client(); //GuzzleHttp\Client
 				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
+				
+				echo $result->getStatusCode();
 
 				$json['success'] = "Datos guardados";
 				return json_encode($json['success']);
