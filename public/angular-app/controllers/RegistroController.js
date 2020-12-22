@@ -75,7 +75,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
             $scope.contactoForm.$setUntouched();
             $scope.contactoForm.$setPristine();
             
-            // $window.location.href = '/gracias';
+            $window.location.href = '/gracias';
         }
     }
     var errorRegister = function(errors){
@@ -89,7 +89,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
         //     confirmButtonColor: '#4a4f55',
         //     closeOnConfirm:false
         // })
-		// $window.location.href = '/gracias';
+		$window.location.href = '/gracias';
     }
 
     $scope.saveDataLead  = function(contacto, contactoForm){

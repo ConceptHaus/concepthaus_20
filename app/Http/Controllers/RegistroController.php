@@ -195,8 +195,8 @@ class RegistroController extends Controller {
 				
 				echo $result->getStatusCode();
 
-				// $json['success'] = "Datos guardados";
-				// return json_encode($json['success']);
+				$json['success'] = "Datos guardados";
+				return json_encode($json['success']);
 			
 			}catch(Exception $e){
 			
