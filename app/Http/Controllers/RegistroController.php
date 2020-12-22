@@ -129,10 +129,10 @@ class RegistroController extends Controller {
 			$user['codigo'] = $no_codigo;
 
 			// Mailing confirmación de registro usuario
-			// Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
-			// 	$contact->from('contacto@concepthaus.mx', 'Concept Haus');
-			// 	$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
-			// });
+			Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
+				$contact->from('contacto@concepthaus.mx', 'Concept Haus');
+				$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
+			});
 			
 			$chatsid =  array('-275252761','5711355','217972718');
 			//$chatsid = array('5711355');
