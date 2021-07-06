@@ -239,12 +239,12 @@
                             <p class="p-address">ventas@concepthaus.mx</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
                         </div>
-                        <div class="col-sm">
+                        <!--<div class="col-sm">
                             <h5>Puebla</h5>
                             <a href="tel:+2222954243">(222) 2954243</a>
                             <p class="p-address">contactopuebla@concepthaus.mx</p>
                             <p class="p-address">Las Ánimas, Puebla</p>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-6 content-form-contact">
