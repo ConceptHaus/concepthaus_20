@@ -237,7 +237,7 @@
                             <h5>CDMX</h5>
                             <a href="tel:+525546240265">(55) 46240265</a>
                             <p class="p-address">ventas@concepthaus.mx</p>
-                            <p class="p-address">Campos Elíseos.</p>
+                            <p class="p-address">Campos Elíseos</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
                         </div>
                         <!--<div class="col-sm">
