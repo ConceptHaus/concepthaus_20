@@ -217,7 +217,9 @@
         <!-- ./ Header -->
 
         <!-- Content -->
+
         @yield('content')
+        <a href="https://api.whatsapp.com/send?phone=5570092934" class="btn-flotante" target="_blank"><img src="{{'img/Boton_WA_Ch.svg'}}"></a>
         <!-- ./ Content -->
 
         <!-- Footer -->
