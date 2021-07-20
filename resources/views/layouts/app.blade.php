@@ -64,7 +64,7 @@
     <!-- View Home -->
     <!-- id="page" -->
     <div>
-        <!-- Botones de contacto flotantes -->
+        <!-- Botones de contacto flotantes 
         <script>
             window.fbAsyncInit = function () {
                 FB.init({
@@ -87,7 +87,7 @@
         </script>
         <div class="fb-customerchat" page_id="120208024724588" theme_color="#e73c30" logged_in_greeting="¡Hola! ¿cómo podemos ayudarte?"
             logged_out_greeting="¡Hola! ¿cómo podemos ayudarte?">
-        </div>
+        </div> -->
         <!-- ../ Botones de contacto flotantes -->
 
         <!-- Header -->
