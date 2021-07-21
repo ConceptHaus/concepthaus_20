@@ -64,7 +64,7 @@
     <!-- View Home -->
     <!-- id="page" -->
     <div>
-        <!-- Botones de contacto flotantes -->
+        <!-- Botones de contacto flotantes 
         <script>
             window.fbAsyncInit = function () {
                 FB.init({
@@ -87,7 +87,7 @@
         </script>
         <div class="fb-customerchat" page_id="120208024724588" theme_color="#e73c30" logged_in_greeting="¡Hola! ¿cómo podemos ayudarte?"
             logged_out_greeting="¡Hola! ¿cómo podemos ayudarte?">
-        </div>
+        </div> -->
         <!-- ../ Botones de contacto flotantes -->
 
         <!-- Header -->
@@ -219,7 +219,7 @@
         <!-- Content -->
 
         @yield('content')
-        <a href="https://api.whatsapp.com/send?phone=525570092934" class="btn-flotante" target="_blank"><img src="{{'img/Boton_WA_Ch.svg'}}"></a>
+        <a href="https://api.whatsapp.com/send?phone=525570092934" class="btn-flotante" target="_blank"><img src="{{'img/Floating_Whatsap.png'}}"></a>
         <!-- ./ Content -->
 
         <!-- Footer -->

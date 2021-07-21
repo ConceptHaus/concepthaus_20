@@ -11212,7 +11212,7 @@ textarea.textarea-brief {
   text-transform: uppercase; /* Texto en mayusculas */
   font-weight: bold; /* Fuente en negrita o bold */
   color: #ffffff; /* Color del texto */
-  border-radius: 5px; /* Borde del boton */
+  border-radius:  50%; /* Borde del boton */
   letter-spacing: 2px; /* Espacio entre letras */
   padding: 18px 30px; /* Relleno del boton */
   position: fixed;
@@ -11244,5 +11244,3 @@ textarea.textarea-brief {
     right: 0px;
   }
 } 
-style.css
-Mostrando style.css.
