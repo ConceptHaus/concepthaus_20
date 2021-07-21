@@ -297,7 +297,7 @@
         <img src="{{asset('img/clients/baco.svg')}}" class="client-brand brand2" alt="Concept Haus / Baco">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="{{asset('img/clients/soulcore.svg')}}" class="client-brand brand3" alt="Concept Haus / Soulcore">
+        <img src="{{asset('img/clients/metlife.svg')}}" class="client-brand brand3" alt="Concept Haus / Soulcore">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
         <img src="{{asset('img/clients/fox.svg')}}" class="client-brand brand4" alt="Concept Haus / Fox">
@@ -306,25 +306,45 @@
         <img src="{{asset('img/clients/nationalgeo.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="{{asset('img/clients/walkingdead.svg')}}" class="client-brand brand6" alt="Concept Haus / The Walking Dead">
+        <img src="{{asset('img/clients/quickbooks.svg')}}" class="client-brand brand6" alt="Concept Haus / The Walking Dead">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="{{asset('img/clients/foxSports.svg')}}" class="client-brand brand7" alt="Concept Haus / Fox Sports">
+        <img src="{{asset('img/clients/begrand.svg')}}" class="client-brand brand7" alt="Concept Haus / Fox Sports">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
         <img src="{{asset('img/clients/discovery.svg')}}" class="client-brand brand8" alt="Concept Haus / Discovery">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="{{asset('img/clients/hidalgo.svg')}}" class="client-brand brand9" alt="Concept Haus / Hidalgo">
+        <img src="{{asset('img/clients/continental-tyres-logo.svg')}}" class="client-brand brand9" alt="Concept Haus / Hidalgo">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
         <img src="{{asset('img/clients/roberts.svg')}}" class="client-brand brand10" alt="Concept Haus / Roberts">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="{{asset('img/clients/clarasol.svg')}}" class="client-brand brand11" alt="Concept Haus / Clarasol">
+        <img src="{{asset('img/clients/Grupo 195.svg')}}" class="client-brand brand11" alt="Concept Haus / Clarasol">
       </div>
       <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="{{asset('img/clients/chilimbalam.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+        <img src="{{asset('img/clients/lomalinda.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+
+
+      <div class="col-sm-6 col-md-3 col-lg-2">
+        <img src="{{asset('img/clients/wordvision.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-2">
+        <img src="{{asset('img/clients/foodin.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-2">
+        <img src="{{asset('img/clients/stack.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-2">
+        <img src="{{asset('img/clients/zaxic.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-2">
+        <img src="{{asset('img/clients/montesori.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-2">
+        <img src="{{asset('img/clients/yiuppi.svg')}}" class="client-brand brand12" alt="Concept Haus / Chilim Balam">
       </div>
     </div>
   </section>
