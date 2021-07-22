@@ -9397,6 +9397,24 @@ Section Home | Slider
   #home-doors .door {
     width: 35%;
   }
+  #clients {
+    visibility: hidden;
+    height:0px;
+  }
+  #clients_movil {
+    visibility: visible;
+    height:50vw;
+  }
+}
+
+@media (min-width: 767px) {
+  #clients {
+    visibility: visible;
+  }
+  .clients_movil {
+    visibility: hidden;
+    height:0;
+  }
 }
 
 #home-doors .logo {

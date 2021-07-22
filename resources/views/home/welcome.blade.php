@@ -348,6 +348,86 @@
       </div>
     </div>
   </section>
+  <section id="clients_movil" class="clients_movil">
+    <h2 class="title-general">
+      <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Clientes
+    </h2>
+      <div class="carouselContent_medios">
+
+                        <div id="carouselmedios" class="carousel slidepo" data-ride="carousel">
+                            <div class="carousel-inner_medios">
+                                <div id="slider1_medios" class="carousel-item active">
+                                   
+                                    <img class="citibanamex" src="{{asset('img/clients/citibanamex.svg')}}" class="client-brand brand1" alt="Concept Haus / Citibanamex">
+                                 
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                   <img class="baco" src="{{asset('img/clients/baco.svg')}}" class="client-brand brand2" alt="Concept Haus / Baco">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                   <img class="metlife" src="{{asset('img/clients/metlife.svg')}}" class="client-brand brand3" alt="Concept Haus / Soulcore">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                    <img class="fox" src="{{asset('img/clients/fox.svg')}}" class="client-brand brand4" alt="Concept Haus / Fox">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="nationalgeo" src="{{asset('img/clients/nationalgeo.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="quickbooks" src="{{asset('img/clients/quickbooks.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="begrand" src="{{asset('img/clients/begrand.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="discovery" src="{{asset('img/clients/discovery.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="continental" src="{{asset('img/clients/continental-tyres-logo.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="roberts" src="{{asset('img/clients/roberts.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="hbo" src="{{asset('img/clients/Grupo 195.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="lomalinda" src="{{asset('img/clients/lomalinda.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="wordvision" src="{{asset('img/clients/wordvision.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="foodin" src="{{asset('img/clients/foodin.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="stack" src="{{asset('img/clients/stack.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="zaxic" src="{{asset('img/clients/zaxic.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="montesori" src="{{asset('img/clients/montesori.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                <div id="slider1_medios" class="carousel-item">
+                                     <img class="yiuppi" src="{{asset('img/clients/yiuppi.svg')}}" class="client-brand brand5" alt="Concept Haus / National Geography">
+                                </div>
+                                
+                               
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselmedios" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon_medios" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselmedios" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon_medios" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+            </div>
+    </section>
 </div>
 
 @endsection

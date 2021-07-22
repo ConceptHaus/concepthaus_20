@@ -13,6 +13,7 @@
     <title>Agencia de publicidad, Branding y Marketing digital / Polanco</title>
     <meta name="description" content="Agencia de publicidad, Branding y Marketing digital / Polanco"/>
     <!-- Facebook -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Agencia de publicidad, Branding y Marketing digital / Polanco"/>
     <meta property="og:image" content="{{asset('img/image-meta.png')}}" />
@@ -34,6 +35,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/carousel.css">
     {{-- <link rel="stylesheet" href="/css/panorama_viewer.min.css">  --}}
 
     <link href="{{asset('css/isteven-multi-select.css')}}" rel="stylesheet" />
