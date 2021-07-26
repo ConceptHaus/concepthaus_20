@@ -52,8 +52,11 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body ng-app="app">
-
+<body ng-app="app" class="body_prim">
+    <div class="center">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="contenido_load">
     <!-- Particles | Loader -->
     <!-- <div id="particles-js">
         <div class="content-gif">
@@ -359,7 +362,7 @@
         </footer>
 
     </div>
-
+    </div>
     <!-- ./ Footer -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script> --}}
@@ -432,15 +435,29 @@
 
     <!-- Script loading page -->
     {{-- <script type="text/javascript">
+
         $(window).load(function() {
+            alert("hola");
             $("#particles-js").fadeOut( 400, function() {
                 $(".content-gif").addClass("loaded");
                 $(".content-img").addClass("loaded-img");
                 $("#page").addClass("visible");
             });
         });
+        window.onload=function(){
+            alert("hola");
+        }
     </script> --}}
-
+    <script type="text/javascript">
+        
+        
+        window.onload=function(){
+            $(".center").fadeOut();
+            $(".contenido_load").css("visibility","visible");
+            $(".center").css("visibility","hidden");
+            $("body").removeClass('body_prim');
+        }
+    </script> 
 
     <script>
         // Hide Header on on scroll down
