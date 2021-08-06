@@ -113,7 +113,7 @@
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
-                    <a href="https://api.whatsapp.com/send?phone=5215570092934" target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=5215522567552" target="_blank">
                       <i class="fa fa-whatsapp" aria-hidden="true"></i>
                         {{-- <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14"> --}}
                     </a>
