@@ -80,6 +80,47 @@
       </div>
     </div>
 
+
+    <div class="container-fluid">
+  
+  <div class="container-fluid">
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+      <div class="col-sm-6" style="background-color:pink;">50%</div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm" style="background-color:yellow;">25%</div>
+          <div class="col-sm" style="background-color:green;">25%</div>
+        </div>
+        <div class="row">
+          <div class="col-sm" style="background-color:red;">25%</div>
+          <div class="col-sm" style="background-color:blue;">25%</div>
+        </div>
+      </div>      
+    </div>
+    
+    <div class="row">
+      
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm" style="background-color:pink;">25%</div>
+          <div class="col-sm" style="background-color:green;">25%</div>
+        </div>
+        <div class="row">
+          <div class="col-sm" style="background-color:red;">25%</div>
+          <div class="col-sm" style="background-color:blue;">25%</div>
+        </div>
+      </div>  
+      <div class="col-sm-6" style="background-color:yellow;">50%</div>
+    </div>
+    
+    
+  </div>
+  <br>
+    
+    
+</div>
+
     <div class="row foo-1">
       <!-- ChilimBalam -->
       <div class="col-md-6 w50 project-animate">
