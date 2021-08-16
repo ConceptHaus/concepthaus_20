@@ -98,7 +98,7 @@
           </a>
         </div>
       </div>
-      
+      <!-- Zaxic -->
       <div class="col-md-3 w25 project-animate-3">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -132,9 +132,9 @@
         </div>
       </div>
 
-      <!-- Sistema Eco -->
+      <!-- Clarasol -->
       <div class="col-md-3 w25 project-animate-2">
-        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '55916489'">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '82735133'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
               <figure class="effect-goliath">
                 <img ng-src="<% project.covers.original %>"/>
