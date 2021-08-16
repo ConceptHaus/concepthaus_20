@@ -99,25 +99,9 @@
         </div>
       </div>
 
-      <!-- Discovery Kids -->
-      <div class="col-md-3 w25 project-animate-2">
-        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187'">
-            <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
-              <figure class="effect-goliath">
-                <img ng-src="<% project.covers.original %>"/>
-                <figcaption>
-                  <p class="projectCliente">
-                    <span class="title"><% project.name %></span> <br>
-                    <span ng-repeat="field in project.fields"><% field %></span>
-                  </p>
-                </figcaption>
-              </figure>
-            </a>
-        </div>
-      </div>
 
       <!-- Discovery Kids && Sistema Eco -->
-     <!-- <div class="col-md-3 w25 project-animate-2">
+      <div class="col-md-3 w25 project-animate-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' || project.id == '56727549'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
               <figure class="effect-goliath">
@@ -131,11 +115,11 @@
               </figure>
             </a>
         </div>
-      </div>-->
+      </div>
       
       
       <!-- Clarasol && Fox/Latinoamérica -->
-      <div class="col-md-3 w25 project-animate-3">
+      <!--<div class="col-md-3 w25 project-animate-3">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489' || project.id == '56050953'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
               <figure class="effect-goliath">
@@ -150,7 +134,10 @@
             </a>
         </div>
       </div>
-    </div>
+    </div>-->
+    
+    
+    
     <div class="row foo-2">
       <!-- Zaxic && El Encanto -->
       <div class="col-md-3 w25 project-animate-3">
