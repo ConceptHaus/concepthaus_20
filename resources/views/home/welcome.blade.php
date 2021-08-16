@@ -81,7 +81,6 @@
     </div>
 
 
-    <div class="container-fluid">
   
   <div class="container-fluid">
     <!-- Control the column width, and how they should appear on different devices -->
@@ -118,8 +117,6 @@
   </div>
   <br>
     
-    
-</div>
 
     <div class="row foo-1">
       <!-- ChilimBalam -->
