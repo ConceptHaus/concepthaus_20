@@ -80,9 +80,7 @@
       </div>
     </div>
 
-
-
-         <div class="container-fluid">
+    <div class="container-fluid">
       <!-- Control the column width, and how they should appear on different devices -->
       <div class="row">
         <div class="col-sm-6" >
@@ -127,8 +125,8 @@
             </div>
             <div class="col-sm">
               
-              <!-- Sistema Eco -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489'">
+             <!-- Fox Life-->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if=" project.id == '62568375'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"/>
@@ -141,7 +139,7 @@
                     </figure>
                   </a>
               </div>
-              <!-- End Ssitema Eco -->
+              <!-- End Fox Life-->
 
             </div>
           </div>
@@ -271,6 +269,7 @@
             </div>
           </div>
         </div>  
+
         <div class="col-sm-6">
           
           <!-- Petmail -->
@@ -291,30 +290,124 @@
         <!-- End Petmail -->
 
         </div>
-      </div> 
+      
 
 
      <div class="row">
-        <div class="col-sm-6" >50%</div>
+        <div class="col-sm-6" >
+          
+             <!-- Sistema Eco -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!-- End Ssitema Eco -->
+
+        </div>
         <div class="col-sm-6">
           <div class="row">
-            <div class="col-sm">25%</div>
-            <div class="col-sm">25%</div>
+            <div class="col-sm">
+              
+                <!-- Myst -->
+                <div class="col-md-6 w50 project-animate">
+                  <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917031'">
+                      <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                        <figure class="effect-goliath">
+                          <img ng-src="<% project.covers.original %>"/>
+                          <figcaption>
+                            <p class="projectCliente">
+                              <span class="title"><% project.name %></span> <br>
+                              <span ng-repeat="field in project.fields"><% field %></span>
+                            </p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                  </div>
+                </div>
+                <!-- End Myst -->
+
+            </div>
+            <div class="col-sm">
+
+              <!-- Orígenes Orgánicos -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61222067'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!--End Orígenes Orgánicos -->
+            </div>
           </div>
           <div class="row">
-            <div class="col-sm">25%</div>
-            <div class="col-sm">25%</div>
+            <div class="col-sm">
+              
+
+                <!-- La aldea-->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011457'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!-- End La aldea -->
+
+            </div>
+            <div class="col-sm">
+              
+              <!-- Harlekin-->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568395'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!--End Harlekin-->
+
+            </div>
           </div>
         </div>      
       </div>
 
     </div>
     <br>
-  
-  
 
+
+  
+  
+<!--
     <div class="row foo-1">
-      <!-- ChilimBalam -->
+      <!-- ChilimBalam -- >
       <div class="col-md-6 w50 project-animate">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'">
           <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -331,7 +424,7 @@
           </a>
         </div>
       </div>
-      <!-- Zaxic -->
+      <!-- Zaxic -- >
       <div class="col-md-3 w25 project-animate-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -348,7 +441,7 @@
         </div>
       </div>
       
-      <!-- Discovery Kids-->
+      <!-- Discovery Kids-- >
       <div class="col-md-3 w25 project-animate-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' ">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -365,7 +458,7 @@
         </div>
       </div>
 
-      <!-- Clarasol -->
+      <!-- Clarasol -- >
       <div class="col-md-3 w25 project-animate-3">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '82735133'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -385,7 +478,7 @@
       
       
       
-      <!-- Clarasol && Fox/Latinoamérica -->
+      <!-- Clarasol && Fox/Latinoamérica -- >
       <!--<div class="col-md-3 w25 project-animate-3">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489' || project.id == '56050953'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -401,12 +494,12 @@
             </a>
         </div>
       </div>
-    </div>-->
+    </div>-- >
     
     
     
     <div class="row foo-2">
-      <!-- Zaxic && El Encanto -->
+      <!-- Zaxic && El Encanto -- >
       <div class="col-md-3 w25 project-animate-3">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115' || project.id == '55916457'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -422,7 +515,7 @@
             </a>
         </div>
       </div>
-      <!-- The Walking Dead && Zayrik -->
+      <!-- The Walking Dead && Zayrik -- >
       <div class="col-md-3 w25 project-animate-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60762011' || project.id == '56725201'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -438,7 +531,7 @@
             </a>
         </div>
       </div>
-      <!-- Petmail -->
+      <!-- Petmail -- >
       <div class="col-md-6 w50 project-animate">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55918277'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -457,7 +550,7 @@
     </div>
 
     <div class="row foo-3">
-        <!-- Myst -->
+        <!-- Myst -- >
         <div class="col-md-6 w50 project-animate">
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917031'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
@@ -474,7 +567,7 @@
           </div>
         </div>
         <div class="col-md-3 w25 project-animate-2">
-          <!-- La aldea &&  Orígenes Orgánicos -->
+          <!-- La aldea &&  Orígenes Orgánicos -- >
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011457' || project.id == '61222067'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                 <figure class="effect-goliath">
@@ -490,7 +583,7 @@
           </div>
         </div>
         <div class="col-md-3 w25 project-animate-3">
-          <!-- Harlekin &&  Portamar -->
+          <!-- Harlekin &&  Portamar -- >
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568395' || project.id == '62011497'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                 <figure class="effect-goliath">
@@ -508,7 +601,7 @@
       </div>
       <div class="row">
         <div class="col-md-3 w25 project-animate-3">
-          <!-- Fox Life && Querametik -->
+          <!-- Fox Life && Querametik -- >
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56049371' || project.id == '62568375'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                 <figure class="effect-goliath">
@@ -524,7 +617,7 @@
           </div>
         </div>
         <div class="col-md-3 w25 project-animate-2">
-          <!-- Equo && NFL -->
+          <!-- Equo && NFL -- >
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011409' || project.id == '56724979'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                 <figure class="effect-goliath">
@@ -540,7 +633,7 @@
           </div>
         </div>
         <div class="col-md-6 w50 project-animate">
-          <!-- Baco -->
+          <!-- Baco -- >
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179151'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                 <figure class="effect-goliath">
@@ -555,7 +648,7 @@
               </a>
           </div>
         </div>
-      </div>
+      </div>-->
   </section>
   {{-- clientsServicies --}}
   <section id="clients">
