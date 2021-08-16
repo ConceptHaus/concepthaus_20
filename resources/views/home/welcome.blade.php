@@ -251,7 +251,7 @@
             <div class="col-sm">
               
                 <!-- Querametik -->
-                <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568375'">
+                <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '99016327'">
                     <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                       <figure class="effect-goliath">
                         <img ng-src="<% project.covers.original %>"/>
@@ -296,7 +296,7 @@
      <div class="row">
         <div class="col-sm-6" >
           
-             <!-- Sistema Eco -->
+             <!-- Continental -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '112732337'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
@@ -310,7 +310,7 @@
                     </figure>
                   </a>
               </div>
-              <!-- End Ssitema Eco -->
+              <!-- End Continental -->
 
         </div>
         <div class="col-sm-6">
