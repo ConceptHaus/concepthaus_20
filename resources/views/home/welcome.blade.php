@@ -241,7 +241,7 @@
             <div class="col-sm customDiv">
               
               <!-- El Encanto -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '87112959'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"/>
