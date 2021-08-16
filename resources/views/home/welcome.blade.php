@@ -128,7 +128,7 @@
             <div class="col-sm">
               
               <!-- Sistema Eco -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '55916489'">
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916489'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"/>
