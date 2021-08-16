@@ -82,7 +82,7 @@
 
 
 
-        <div class="container-fluid">
+         <div class="container-fluid">
       <!-- Control the column width, and how they should appear on different devices -->
       <div class="row">
         <div class="col-sm-6" >
@@ -127,8 +127,8 @@
             </div>
             <div class="col-sm">
               
-              <!-- Clarasol -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '82735133'">
+              <!-- Sistema Eco -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '55916489'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"/>
@@ -141,7 +141,7 @@
                     </figure>
                   </a>
               </div>
-              <!-- End Clarasol -->
+              <!-- End Ssitema Eco -->
 
             </div>
           </div>
@@ -191,15 +191,106 @@
       <div class="row">        
         <div class="col-sm-6">
           <div class="row">
-            <div class="col-sm">25%</div>
-            <div class="col-sm">25%</div>
+            <div class="col-sm">
+              
+              <!--  Zayrik -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60762011'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!--End Zayrik -->
+
+            </div>
+            <div class="col-sm">
+              
+              <!-- The Walking Dead -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56725201'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!-- End The Walking Dead -->
+
+            </div>
           </div>
           <div class="row">
-            <div class="col-sm">25%</div>
-            <div class="col-sm">25%</div>
+            <div class="col-sm">
+              
+              <!-- El Encanto -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
+                  <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                    <figure class="effect-goliath">
+                      <img ng-src="<% project.covers.original %>"/>
+                      <figcaption>
+                        <p class="projectCliente">
+                          <span class="title"><% project.name %></span> <br>
+                          <span ng-repeat="field in project.fields"><% field %></span>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <!-- End El Encanto -->
+
+            </div>
+            <div class="col-sm">
+              
+                <!-- Querametik -->
+                <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568375'">
+                    <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                      <figure class="effect-goliath">
+                        <img ng-src="<% project.covers.original %>"/>
+                        <figcaption>
+                          <p class="projectCliente">
+                            <span class="title"><% project.name %></span> <br>
+                            <span ng-repeat="field in project.fields"><% field %></span>
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                </div>
+                <!-- End Querametik -->
+
+            </div>
           </div>
         </div>  
-        <div class="col-sm-6">50%</div>
+        <div class="col-sm-6">
+          
+          <!-- Petmail -->
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55918277'">
+              <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+                <figure class="effect-goliath">
+                  <img ng-src="<% project.covers.original %>"/>
+                  <figcaption>
+                    <p class="projectCliente">
+                      <span class="title"><% project.name %></span> <br>
+                      <span ng-repeat="field in project.fields"><% field %></span>
+                    </p>
+                  </figcaption>
+                </figure>
+              </a>
+          </div>
+        </div>
+        <!-- End Petmail -->
+
+        </div>
       </div> 
 
 
