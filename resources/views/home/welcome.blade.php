@@ -98,11 +98,9 @@
           </a>
         </div>
       </div>
-
-
-      <!-- Sistema Eco -->
-      <div class="col-md-3 w25 project-animate-2">
-        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '55916489'">
+      
+      <div class="col-md-3 w25 project-animate-3">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
               <figure class="effect-goliath">
                 <img ng-src="<% project.covers.original %>"/>
@@ -133,6 +131,25 @@
             </a>
         </div>
       </div>
+
+      <!-- Sistema Eco -->
+      <div class="col-md-3 w25 project-animate-2">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '55916489'">
+            <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+        </div>
+      </div>
+      
+      
       
       
       <!-- Clarasol && Fox/Latinoamérica -->
