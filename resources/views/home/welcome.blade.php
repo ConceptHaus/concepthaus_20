@@ -210,8 +210,8 @@
             </div>
             <div class="col-sm">
               
-              <!-- The Walking Dead -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '87112959'">
+             <!-- El Encanto -->
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"/>
@@ -224,7 +224,7 @@
                     </figure>
                   </a>
               </div>
-              <!-- End The Walking Dead -->
+              <!-- End El Encanto -->
 
             </div>
           </div>
