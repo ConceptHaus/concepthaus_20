@@ -80,31 +80,37 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+  <style> 
+  .customDiv{
+    padding: 0% !important;
+    margin: 0% !important;
+  }
+</style>
+    <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
-      <div class="row">
-        <div class="col-sm-6" >
+      <div class="row customDiv">
+        <div class="col-sm-6 customDiv" >
           <!--ChilimBalam -->
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'">
-          <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
-          <!-- {{ url('/proyecto/<%project.id%>') }} -->
-            <figure class="effect-goliath">
-              <img ng-src="<% project.covers.original %>"/>
-              <figcaption>
-                <p class="projectCliente">
-                  <span class="title"><% project.name %></span> <br>
-                  <span ng-repeat="field in project.fields"><% field %></span>
-                </p>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-        <!-- End chilimBalam -->
+            <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
+            <!-- {{ url('/proyecto/<%project.id%>') }} -->
+              <figure class="effect-goliath">
+                <img ng-src="<% project.covers.original %>"/>
+                <figcaption>
+                  <p class="projectCliente">
+                    <span class="title"><% project.name %></span> <br>
+                    <span ng-repeat="field in project.fields"><% field %></span>
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+          <!-- End chilimBalam -->
         </div>
 
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm">
+        <div class="col-sm-6 customDiv">
+          <div class="row customDiv">
+            <div class="col-sm customDiv">
               
               <!-- Discovery Kids-->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' ">
@@ -123,7 +129,7 @@
               <!-- End Discovery Kids-->
 
             </div>
-            <div class="col-sm">
+            <div class="col-sm customDiv">
               
              <!-- Fox Life-->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if=" project.id == '62568375'">
@@ -143,8 +149,9 @@
 
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm">
+
+          <div class="row customDiv">
+            <div class="col-sm customDiv">
               
               <!-- Zaxic -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115'">
@@ -163,7 +170,7 @@
               <!-- End Zaxic -->
 
             </div>
-            <div class="col-sm">
+            <div class="col-sm customDiv">
               
               <!--Fox/Latinoamérica -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56050953'">
@@ -182,14 +189,14 @@
             </div>
           <!-- End  Fox/Latinoamérica -->
 
-            </div>
+          </div>
         </div>
       </div>  
       
-      <div class="row">        
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm">
+      <div class="row customDiv">        
+        <div class="col-sm-6 customDiv">
+          <div class="row customDiv">
+            <div class="col-sm customDiv">
               
               <!--  Zayrik -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60762011'">
@@ -208,7 +215,8 @@
               <!--End Zayrik -->
 
             </div>
-            <div class="col-sm">
+
+            <div class="col-sm customDiv">
               
              <!-- El Encanto -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
@@ -228,8 +236,9 @@
 
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm">
+
+          <div class="row customDiv">
+            <div class="col-sm customDiv">
               
               <!-- El Encanto -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
@@ -248,7 +257,7 @@
               <!-- End El Encanto -->
 
             </div>
-            <div class="col-sm">
+            <div class="col-sm customDiv">
               
                 <!-- Vivir es increible -->
                 <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '99016327'">
@@ -270,7 +279,7 @@
           </div>
         </div>  
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 customDiv">
           
           <!-- Petmail -->
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55918277'">
@@ -289,12 +298,12 @@
         </div>
         <!-- End Petmail -->
 
-        </div>
+      </div>
       
 
 
-     <div class="row">
-        <div class="col-sm-6" >
+     <div class="row customDiv">
+        <div class="col-sm-6 customDiv" >
           
              <!-- Continental -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '112732337'">
@@ -314,8 +323,8 @@
 
         </div>
         <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm">
+          <div class="row customDiv">
+            <div class="col-sm customDiv">
               
                 <!-- Myst -->
                 <div class="col-md-6 w50 project-animate">
@@ -336,7 +345,7 @@
                 <!-- End Myst -->
 
             </div>
-            <div class="col-sm">
+            <div class="col-sm customDiv">
 
               <!-- Orígenes Orgánicos -->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61222067'">
@@ -355,8 +364,8 @@
               <!--End Orígenes Orgánicos -->
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm">
+          <div class="row customDiv">
+            <div class="col-sm customDiv">
               
 
                 <!-- La aldea-->
@@ -376,7 +385,7 @@
               <!-- End La aldea -->
 
             </div>
-            <div class="col-sm">
+            <div class="col-sm customDiv">
               
               <!-- Harlekin-->
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568395'">
@@ -401,6 +410,7 @@
 
     </div>
     <br>
+
 
 
   
