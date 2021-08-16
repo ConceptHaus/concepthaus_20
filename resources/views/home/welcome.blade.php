@@ -83,6 +83,7 @@
 
   
   
+   
     <div class="container-fluid">
       <!-- Control the column width, and how they should appear on different devices -->
       <div class="row">
@@ -186,9 +187,8 @@
           <!-- End  Fox/Latinoamérica -->
 
             </div>
-          </div>
-        </div>      
-      </div>
+        </div>
+      </div>  
       
       <div class="row">        
         <div class="col-sm-6">
