@@ -80,10 +80,24 @@
       </div>
     </div>
 
-  <style> 
+ <style> 
   .customDiv{
     padding: 0% !important;
     margin: 0% !important;
+
+    .imgBig{
+      width: 657px;
+      height: 516px;
+      min-height: 516px;
+      max-height: 516px;
+    }
+
+    .imgShort{
+      width: 328px;
+      height: 267px;
+      min-height: 267px;
+      max-height: 267px;
+    }
   }
 </style>
     <div class="container-fluid customDiv">
@@ -95,7 +109,7 @@
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
             <!-- {{ url('/proyecto/<%project.id%>') }} -->
               <figure class="effect-goliath">
-                <img ng-src="<% project.covers.original %>"/>
+                <img ng-src="<% project.covers.original %>" class="imgBig"/>
                 <figcaption>
                   <p class="projectCliente">
                     <span class="title"><% project.name %></span> <br>
@@ -116,7 +130,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' ">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -135,7 +149,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if=" project.id == '62568375'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>"  class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -157,7 +171,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917115'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -176,7 +190,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56050953'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -202,7 +216,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60762011'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -222,7 +236,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -241,10 +255,10 @@
             <div class="col-sm customDiv">
               
               <!-- El Encanto -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '87112959'">
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55916457'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -263,7 +277,7 @@
                 <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '99016327'">
                     <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                       <figure class="effect-goliath">
-                        <img ng-src="<% project.covers.original %>"/>
+                        <img ng-src="<% project.covers.original %>" class="imgShort"/>
                         <figcaption>
                           <p class="projectCliente">
                             <span class="title"><% project.name %></span> <br>
@@ -285,7 +299,7 @@
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55918277'">
               <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                 <figure class="effect-goliath">
-                  <img ng-src="<% project.covers.original %>"/>
+                  <img ng-src="<% project.covers.original %>"  class="imgBig"/>
                   <figcaption>
                     <p class="projectCliente">
                       <span class="title"><% project.name %></span> <br>
@@ -309,7 +323,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '112732337'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>"  class="imgBig"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -331,7 +345,7 @@
                   <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '55917031'">
                       <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                         <figure class="effect-goliath">
-                          <img ng-src="<% project.covers.original %>"/>
+                          <img ng-src="<% project.covers.original %>" class="imgShort"/>
                           <figcaption>
                             <p class="projectCliente">
                               <span class="title"><% project.name %></span> <br>
@@ -351,7 +365,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61222067'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -372,7 +386,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011457'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
@@ -391,7 +405,7 @@
               <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62568395'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
-                      <img ng-src="<% project.covers.original %>"/>
+                      <img ng-src="<% project.covers.original %>" class="imgShort"/>
                       <figcaption>
                         <p class="projectCliente">
                           <span class="title"><% project.name %></span> <br>
