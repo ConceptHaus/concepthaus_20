@@ -100,9 +100,9 @@
       </div>
 
 
-      <!-- Discovery Kids && Sistema Eco -->
+      <!-- Sistema Eco -->
       <div class="col-md-3 w25 project-animate-2">
-        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '56727549'">
+        <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == project.id == '55916489'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
               <figure class="effect-goliath">
                 <img ng-src="<% project.covers.original %>"/>
@@ -117,7 +117,7 @@
         </div>
       </div>
       
-      <!-- Discovery Kids && Sistema Eco -->
+      <!-- Discovery Kids-->
       <div class="col-md-3 w25 project-animate-2">
         <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179187' ">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
