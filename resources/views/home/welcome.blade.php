@@ -211,7 +211,7 @@
             <div class="col-sm">
               
               <!-- The Walking Dead -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56725201'">
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '87112959'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"/>
@@ -250,7 +250,7 @@
             </div>
             <div class="col-sm">
               
-                <!-- Querametik -->
+                <!-- Vivir es increible -->
                 <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '99016327'">
                     <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                       <figure class="effect-goliath">
@@ -264,7 +264,7 @@
                       </figure>
                     </a>
                 </div>
-                <!-- End Querametik -->
+                <!-- End Vivir es increible -->
 
             </div>
           </div>
