@@ -85,22 +85,33 @@
     margin: 0% !important;
   }
 
+  .imgProject{
+      display: none;
+  }
+
   .contentImg{
     background-size: cover;
     background-repeat: no-repeat;
   }
 </style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var item = $(".imgProject");
+    var src = item.attr("src");
+    $(".customDiv-"-item..attr("for")).css("background","url('"+src+"')");
+  });
+</script>
     <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
       <div class="row customDiv">
-        <div class="col-sm-6 customDiv" >
+        <div class="col-sm-6 customDiv-60761857 contentImg" >
           <!--ChilimBalam -->
-          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'" 
-          style="background: {{url('proyecto/<%project.id%>')}}">
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
             <!-- {{ url('/proyecto/<%project.id%>') }} -->
               <figure class="effect-goliath">
-                <!--<img ng-src="<% project.covers.original %>" class="imgBig"/>-->
+                <img ng-src="<% project.covers.original %>" class="imgBig imgProject" for="60761857"/>
                 <figcaption>
                   <p class="projectCliente">
                     <span class="title"><% project.name %></span> <br>
