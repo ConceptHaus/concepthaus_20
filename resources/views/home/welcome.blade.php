@@ -85,16 +85,7 @@
     margin: 0% !important;
   }
 
-  .imgProject{
-      display: none;
-  }
-
-  .contentImg{
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 </style>
-
 
     <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
@@ -113,15 +104,6 @@
                   </p>
                 </figcaption>
               </figure>
-              <script type="text/javascript">
-                $(document).ready(function(){
-                  var item = $(".imgProject");
-                  var src = {{<% project.covers.original %>}};
-                  console.log(src);
-                  $(".customDiv-"+item.attr("for")).css("background","url('"+src+"')");
-                  $(".customDiv-"+item.attr("for")).attr("style", "background: url('"+src+"');");
-                });
-              </script>
             </a>
           </div>
           <!-- End chilimBalam -->
