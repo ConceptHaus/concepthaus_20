@@ -255,7 +255,7 @@
             <div class="col-sm customDiv">
               
               <!-- Baco -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '61179151'">
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56049371'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>" class="imgShort"/>
