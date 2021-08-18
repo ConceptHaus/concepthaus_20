@@ -99,7 +99,9 @@
   $(document).ready(function(){
     var item = $(".imgProject");
     var src = item.attr("src");
+    console.log(src);
     $(".customDiv-"+item.attr("for")).css("background","url('"+src+"')");
+    $(".customDiv-"+item.attr("for")).attr("style", "background: url('"+src+"');");
   });
 </script>
     <div class="container-fluid customDiv">
