@@ -96,7 +96,7 @@
         <div class="col-sm-6 customDiv" >
           <!--ChilimBalam -->
           <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'" 
-          style="background-image: {{ng-src='<% project.covers.original %>}}">
+          style="background: {{url('proyecto/<%project.id%>')}}">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
             <!-- {{ url('/proyecto/<%project.id%>') }} -->
               <figure class="effect-goliath">
