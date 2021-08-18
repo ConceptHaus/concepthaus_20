@@ -79,13 +79,13 @@
       </h2>
       </div>
     </div>
-
- <style> 
+<style> 
   .customDiv{
     padding: 0% !important;
     margin: 0% !important;
+  }
 
-    .imgBig{
+  .imgBig{
       width: 657px;
       height: 516px;
       min-height: 516px;
@@ -98,7 +98,6 @@
       min-height: 267px;
       max-height: 267px;
     }
-  }
 </style>
     <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
