@@ -232,7 +232,7 @@
             <div class="col-sm customDiv">
               
              <!-- Fox Live coaches -->
-              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '56049371'">
+              <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '112732337'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>" class="imgShort"/>
