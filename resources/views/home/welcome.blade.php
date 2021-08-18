@@ -318,7 +318,7 @@
         <div class="col-sm-6 customDiv" >
           
              <!-- Continental -->
-              <div class="customDiv containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '112732337'">
+              <div class="customDiv containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '115735971'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"  class="imgBig"/>
@@ -381,7 +381,7 @@
               
 
                 <!-- La aldea-->
-              <div class="customDiv containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '62011457'">
+              <div class="customDiv containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '80960229'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>" class="imgShort"/>
