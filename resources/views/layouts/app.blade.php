@@ -224,8 +224,7 @@
         <!-- Content -->
         
         @yield('content')
-        {{--
-        <a href="https://api.whatsapp.com/send?phone=525522567552" class="btn-flotante" target="_blank"><img src="{{asset('img/Floating_Whatsap.png')}}"></a>--}}
+        <a href="https://api.whatsapp.com/send?phone=525522567552" class="btn-flotante" target="_blank"><img src="{{asset('img/Floating_Whatsap.png')}}"></a>
         <!-- ./ Content -->
 
         <!-- Footer -->
