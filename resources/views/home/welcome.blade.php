@@ -85,30 +85,22 @@
     margin: 0% !important;
   }
 
-  .imgBig{
-      width: 657px;
-      height: 516px;
-      min-height: 516px;
-      max-height: 516px;
-    }
-
-    .imgShort{
-      width: 328px;
-      height: 267px;
-      min-height: 267px;
-      max-height: 267px;
-    }
+  .contentImg{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 </style>
     <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
       <div class="row customDiv">
         <div class="col-sm-6 customDiv" >
           <!--ChilimBalam -->
-          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'">
+          <div class="containerProject project-effect" ng-repeat="project in projects" ng-if="project.id == '60761857'" 
+          style="background: {{url('proyecto/<%project.id%>')}}">
             <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
             <!-- {{ url('/proyecto/<%project.id%>') }} -->
               <figure class="effect-goliath">
-                <img ng-src="<% project.covers.original %>" class="imgBig"/>
+                <!--<img ng-src="<% project.covers.original %>" class="imgBig"/>-->
                 <figcaption>
                   <p class="projectCliente">
                     <span class="title"><% project.name %></span> <br>
