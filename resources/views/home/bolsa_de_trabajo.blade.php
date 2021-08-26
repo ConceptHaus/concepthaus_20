@@ -8,7 +8,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-8 text-alignstitle">
-          <h2 class="title-general mb-4 mt-0 px-titlegeneral">Bolsa de Trabajo</h2>
+          <h2 class="title-general mb-4 mt-0 px-titlegeneral sinAfter">Bolsa de Trabajo</h2>
           <p class="subtitle-general px-auto px-titlegeneral">Oportunidades que te esperan.</p>
         </div>
         {{-- <div class="col-lg-4 text-aligns">
