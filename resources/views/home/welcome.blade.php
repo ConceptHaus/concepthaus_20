@@ -230,7 +230,7 @@
             <div class="col-sm customDiv">
               
              <!-- Fox city banamex-->
-              <div class="customDiv containerProject project-effect" ng-repeat="project in projects" ng-if=" project.id == '115735971'">
+              <div class="customDiv containerProject project-effect" ng-repeat="project in projects" ng-if=" project.id == '81493573'">
                   <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                     <figure class="effect-goliath">
                       <img ng-src="<% project.covers.original %>"  class="imgShort"/>
