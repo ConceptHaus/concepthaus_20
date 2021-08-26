@@ -27,7 +27,7 @@
                           comerciales de televisión, video marketing, videos corporativos, videos musicales, fotografía de producto
                           y cobertura de eventos.
                           <br><br>
-                          <span class="c-grayLight">Contamos con la más alta calidad de trabajo para cualquier tamaño de producción audiovisual.</span>
+                          <span class="c-grayLight">Contamos con la más alta calidad para cualquier tamaño de producción audiovisual.</span>
                           {{--  Branded Content, Producción cinematográfica, Producción audiovisual, Fotografía profesional, Postproducción.  --}}
                       </p>
                   </div>
