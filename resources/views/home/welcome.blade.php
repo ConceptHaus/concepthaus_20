@@ -15,7 +15,7 @@
 
           <br/>
 
-          <ul>
+          <ul class="listEmpresas">
             <li><p>ConceptHaus: <b>agencia de branding, publicidad, marketing e interiorismo</b></p></li>
             <li><p>InHaus Films: <b>casa productora</b></p></li>
             <li><p>TreeHaus: consultoría de responsabilidad social y empresarial a favor de la <b>sustentabilidad</b>.</p></li>
@@ -87,22 +87,7 @@
       </div>
     </div>
 
-<style> 
-  .customDiv{
-    padding: 0% !important;
-    margin: 0% !important;
-    .imgBig{
-      height: auto;
-      width: 105%;
-      min-height: 105% !important;
-    }
-    .imgShort{
-      height: auto !important;
-      width: 105% !important;
-      min-height: 153% !important;
-    }
-  }
-</style>
+
     <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
       <div class="row customDiv">
