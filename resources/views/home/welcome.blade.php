@@ -11,8 +11,15 @@
         {{-- <span class="word p-bottom-left"><% randomWords[0].word %></span> --}}
         {{-- <span class="word p-bottom-left">Concepthaus</span> --}}
         <p class="description-p c-gray">Somos un clúster creativo especializado en la conceptualización, desarrollo y fortalecimiento de marca compuesto
-          por tres empresas hermanas. ConceptHaus: <b>agencia de branding, publicidad, marketing e interiorismo</b>, InHaus Films: <b>casa productora</b> y TreeHaus:
-          consultoría de responsabilidad social y empresarial a favor de la <b>sustentabilidad</b>.</p>
+          por tres empresas hermanas</p>
+
+          <br/>
+
+          <ul>
+            <li><p>ConceptHaus: <b>agencia de branding, publicidad, marketing e interiorismo</b></p></li>
+            <li><p>InHaus Films: <b>casa productora</b></p></li>
+            <li><p>TreeHaus: consultoría de responsabilidad social y empresarial a favor de la <b>sustentabilidad</b>.</p></li>
+          </ul>
       </div>
       <div class="col-sm-12 col-md-6 text-right c-gray">
         <h2 class="accenting first">
