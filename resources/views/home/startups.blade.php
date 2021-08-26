@@ -2,7 +2,7 @@
 @section('content')
 
 <section id="startup" ng-controller="WelcomeController">
-<h2 class="title-general">
+<h2 class="title-general mt-4">
                     <img class="img-icon-title" src="{{asset('img/conceptRight.svg')}}" alt="ConceptHaus"> Our startups
                 </h2>
     <div class="container-fluid gridStartups">
