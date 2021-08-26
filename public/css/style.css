@@ -11356,3 +11356,10 @@ textarea.textarea-brief {
       min-height: 153% !important;
     }
   }
+.project-effect figure img {
+    position: relative;
+    display: block;
+    min-height: 310px;
+    max-width: 100%;
+    min-width: 103%;
+}
