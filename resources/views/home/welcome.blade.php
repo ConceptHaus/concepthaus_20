@@ -90,8 +90,8 @@
       min-height: 105% !important;
     }
     .imgShort{
-      height: auto;
-      max-width: 105%;
+      height: auto !important;
+      width: 105% !important;
       min-height: 153% !important;
     }
   }
