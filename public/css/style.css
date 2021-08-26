@@ -11368,3 +11368,8 @@ textarea.textarea-brief {
  text-align: center;
   font-size: 1.8em;
 }
+
+ .sinAfter::after {
+   content: inherit;
+ }
+
