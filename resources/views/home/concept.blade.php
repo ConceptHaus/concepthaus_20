@@ -11,11 +11,11 @@
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">Concepthaus Creative Agency.</span>
                         Es una casa creativa especializada en estrategias de marketing, branding, campañas publicitarias,
-                        creación de identidad corporativa, diseño gráfico, motion graphics,diseño de empaque, programación y
+                        creación de identidad corporativa, diseño gráfico, motion graphics, diseño de empaque, programación y
                         diseño de páginas web; e-commerce, desarrollo de aplicaciones, posicionamiento web SEO & SEM, así como la
                         implementación de estrategias de marketing digital, content management y relaciones públicas.
                         <br><br>
-                        <span class="c-grayLight" >Amamos a los que se atreven y por eso contamos con un plan de apoyo a emprendedores.</span>
+                        <span class="c-grayLight" >Amamos a los que se atreven y por eso contamos con un plan de apoyo para emprendedores.</span>
                         <!-- Estrategia creativa, Estrategia de marketing, Identidad corporativa, Diseño gráfico, publicidad (ATL / Digital) Compra
                         de medios, Desarrollo Web, Desarrollo de aplicaciones, Marketing Digital, Producción de contenido, posicionamiento
                         SEO, SEM, Relaciones Públicas, Influencer marketing, eventos corporativos.     font-weight: 800; -->
