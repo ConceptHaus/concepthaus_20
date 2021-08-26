@@ -84,18 +84,17 @@
   .customDiv{
     padding: 0% !important;
     margin: 0% !important;
-    }
     .imgBig{
-      height: 600px !important;
-      min-height: 600px !important;
-      max-height: 600px !important;
+      height: auto;
+      width: 105%;
+      min-height: 105% !important;
     }
     .imgShort{
-      height: 300px !important;
-      min-height: 300px !important;
-      max-height: 300px !important;
+      height: auto;
+      max-width: 105%;
+      min-height: 153% !important;
     }
-  
+  }
 </style>
     <div class="container-fluid customDiv">
       <!-- Control the column width, and how they should appear on different devices -->
