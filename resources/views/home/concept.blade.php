@@ -41,7 +41,7 @@
                 <div class="containerProject project-effect">
                     <a class="projectName" href="{{url('proyecto/<%project.id%>')}}" target="_self">
                         <figure class="effect-goliath">
-                            <img ng-src="<% project.covers.original %>" />
+                            <img class="imgShort" ng-src="<% project.covers.original %>" />
                             <figcaption>
                                 <p class="projectCliente">
                                     <span class="title">
