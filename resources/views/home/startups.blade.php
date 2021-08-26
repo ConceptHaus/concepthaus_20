@@ -2,7 +2,7 @@
 @section('content')
 
 <section id="startup" ng-controller="WelcomeController">
-    <h2 class=" c-gray">Our startups</h2>
+    <h2 class="title-general c-gray sinAfter">Our startups</h2>
     <div class="container-fluid gridStartups">
 
         <div class="row">
