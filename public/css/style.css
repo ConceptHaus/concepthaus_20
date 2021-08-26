@@ -11336,3 +11336,23 @@ textarea.textarea-brief {
   overflow: hidden;
 }
 
+.listEmpresas{
+  list-style: disclosure-closed;
+  margin-left: 0% !important;
+  padding-left: 2%;
+}
+
+.customDiv{
+    padding: 0% !important;
+    margin: 0% !important;
+    .imgBig{
+      height: auto;
+      width: 105%;
+      min-height: 105% !important;
+    }
+    .imgShort{
+      height: auto;
+      max-width: 105%;
+      min-height: 153% !important;
+    }
+  }
