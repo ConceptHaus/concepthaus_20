@@ -9,7 +9,7 @@
                     <img class="puerta" src="{{asset('img/home-elements/doors/treehaus.png')}}">
                     <img class="logo" src="{{asset('img/logo/treehaus.svg')}}">
                     <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">Treehaus Sustainability.</span>
+                        <span class="c-grayLight">TreeHaus Sustainability.</span>
                         Es una casa enfocada en el desarrollo de conceptos y estrategias que pretendan tener un impacto positivo a nivel económico, social y/o ambiental (Green Marketing).
                         {{--  Campañas y proyectos de corte social y/o ecológico, Proyectos digitales en pro de la sustentabilidad.   --}}
                     </p>
@@ -21,8 +21,8 @@
                         concientización ecológica e impacto ambiental.</li>
                         <li class="list">Desarrollamos estrategias de crowdfunding para promover causas sociales y ambientales.</li>
                     </ul>
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">Unimos marcas con causas</span>
+                    <p class="text-small small-gray text-center">
+                        <span class="c-grayLight customLabel">Unimos marcas con causas</span>
                     </p>
                 </div>
             </div>
