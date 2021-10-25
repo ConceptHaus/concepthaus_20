@@ -695,12 +695,12 @@
 																															<td valign="top" class="mcnTextContent" style="padding: 18px;color: #258093;font-family: Helvetica;font-size: 14px;font-style: normal;font-weight: normal;text-align: center;">
 																																<h1 class="mc-toc-title" style="text-align: left;">
 																																	
-					<span>Nos da mucho gusto que te hayas puesto en contacto con nosotros. Hemos recibido tu solicitud. Muy pronto, nuestro gerente comercial Tomás Valles, se pondrá en contacto contigo. <br> <br>
+					<span>Nos da mucho gusto que te hayas puesto en contacto con nosotros. Hemos recibido tu solicitud. Muy pronto, nuestro equipo comercial se pondrá en contacto contigo. <br> <br>
 
 
 
 
-Mientras tanto, te compartimos algunos de nuestros proyectos en Behance (link) para que puedas conocer más de nuestro trabajo.
+Mientras tanto, te compartimos algunos de nuestros proyectos en <a href="https://www.behance.net/concepthaus.mx" target="_blank">Behance</a> para que puedas conocer más de nuestro trabajo.
 
 <br><br>
 
