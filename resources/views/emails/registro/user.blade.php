@@ -654,7 +654,7 @@
 																											<td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FFFFFF;">
 
 																												<h1 style="text-align: center; letter-spacing:2px; font-weight:100">
-																													Hola {{$nombre}}<br/>¡GRACIAS POR ESCRIBIRNOS!</h1>
+																													Hola <br/>¡GRACIAS POR ESCRIBIRNOS!</h1>
 
 																											</td>
 																										</tr>
