@@ -612,15 +612,14 @@
 								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
 									<tr>
 										<td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
-											<table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+											<table border="0" cellpadding="0" cellspacing="0" width="80%" class="templateContainer">
 												<tr>
 													<td align="center" height="10" valign="top" width="10">
 														<img src="https://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/d4042106-8117-4b79-b76b-91f8d64c5dff.gif" height="10"
 														    width="10" style="display:block; line-height:0px;">
 													</td>
 													<td align="center" height="10" valign="top" class="headerRearBackground" style="opacity:0.5;">
-														<img src="https://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/640a7ee0-db88-4905-a550-89e571c94697.png" class="mcnImage"
-														    height="10" width="580" style="display:block; line-height:0px;">
+														
 													</td>
 													<td align="center" height="10" valign="top" width="10">
 														<img src="https://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/d4042106-8117-4b79-b76b-91f8d64c5dff.gif" height="10"
@@ -654,7 +653,8 @@
 
 																											<td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FFFFFF;">
 
-																												<h1 style="text-align: center; letter-spacing:2px; font-weight:100">¡GRACIAS POR ESCRIBIRNOS!</h1>
+																												<h1 style="text-align: center; letter-spacing:2px; font-weight:100">
+																													Hola {{$nombre}}<br/>¡GRACIAS POR ESCRIBIRNOS!</h1>
 
 																											</td>
 																										</tr>
@@ -693,12 +693,24 @@
 																													<tbody>
 																														<tr>
 																															<td valign="top" class="mcnTextContent" style="padding: 18px;color: #258093;font-family: Helvetica;font-size: 14px;font-style: normal;font-weight: normal;text-align: center;">
-																																<h1 class="mc-toc-title" style="text-align: center;">
-																																	<span style="font-family:helvetica neue,helvetica,arial,verdana,sans-serif">
-																																		<span style="font-size:24px">
-																																			<span class="mc-toc-title">Pronto te llamamos para invitarte un café</span>
-																																		</span>
-																																	</span>
+																																<h1 class="mc-toc-title" style="text-align: left;">
+																																	
+					<span>Nos da mucho gusto que te hayas puesto en contacto con nosotros. Hemos recibido tu solicitud. Muy pronto, nuestro gerente comercial Tomás Valles, se pondrá en contacto contigo. <br> <br>
+
+
+
+
+Mientras tanto, te compartimos algunos de nuestros proyectos en Behance (link) para que puedas conocer más de nuestro trabajo.
+
+<br><br>
+
+
+Que tengas un excelente día.
+
+
+<br><br>
+
+ConceptHaus Creative Cluster.<span>
 																																</h1>
 
 																															</td>
@@ -766,7 +778,7 @@
 								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
 									<tr>
 										<td align="center" valign="top">
-											<table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+											<table border="0" cellpadding="0" cellspacing="0" width="80%" class="templateContainer">
 												<tr>
 													<td valign="top" class="bodyContainer" style="padding-top:10px; padding-bottom:10px;">
 														<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
