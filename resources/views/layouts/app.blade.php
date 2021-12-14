@@ -345,7 +345,8 @@
                 <div class="row text-center">
                     <div class="col-sm-12 first">
                         <p class="privacity">
-                            <a href="/aviso" target="_blank">Aviso de privacidad</a>
+                            <a href="/aviso" target="_blank">Aviso de privacidad</a><br><br>
+                            <a href="/politica-de-seguridad-y-privacidad" target="_blank">Política de seguridad y privacidad</a>
                         </p>
                         <p class="title-footer">CDMX</p>
                         <p>MIGUEL HIDALGO, CDMX</p>
