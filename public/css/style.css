@@ -6,6 +6,74 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+.justify-text{
+      text-align: justify;
+}
+ .ref-list-aviso{
+    text-decoration: none;
+    color: #000;
+    line-height: 1.1vw;
+    font-size: .8vw;
+ }
+ .list_aviso{
+    line-height: 1.5vw;
+    position: relative;
+    /* top: 2vw; */
+    margin: revert;
+ }
+ .ref-list-aviso:hover{
+    text-decoration: none;
+    color: #000;
+ }
+ .title-aviso{
+     margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+ }
+ .text-aviso{
+     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: .8vw;
+    font-weight: normal;
+    line-height: 1.4vw;
+    color: #212529;
+    background-color: #fff;
+ }
+ .text-aviso-dos{
+
+   margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: .8vw;
+    font-weight: normal;
+    line-height: 1.4vw;
+    color: #212529;
+    background-color: #fff;
+
+ }
+ .bold-text{
+    font-family: inherit;
+    font-weight: 500;
+    line-height: .5;
+    font-size: .8vw;
+ }
+.roman li{
+  list-style-type:upper-roman!important;
+}
+.latin li{
+  list-style-type:upper-latin!important;
+}
+@media (max-width: 760px) {
+ .ref-list-aviso{font-size: 4vw;}
+ .list_aviso{line-height: 6vw;}
+ .title-aviso{font-size: 5vw;}
+ .text-aviso{font-size: 4vw;}
+ .text-aviso-dos{font-size: 4vw;}
+ .bold-text{font-size: 4vw;}
+}
 @media print {
   *,
   *::before,

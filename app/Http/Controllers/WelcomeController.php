@@ -42,6 +42,10 @@ class WelcomeController extends Controller {
         return view('home/aviso');
     }
 
+    public function viewpoliticas(){
+        return view('home/politica-de-seguridad-y-privacidad');
+    }
+
 
 
     public function viewBrandingcolombia() {

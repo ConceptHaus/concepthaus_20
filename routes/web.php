@@ -26,6 +26,7 @@ Route::get('/gracias', 'WelcomeController@viewGracias');
 Route::get('/error', 'WelcomeController@viewError');
 Route::get('/jobs', 'WelcomeController@viewBolsadetrabajo');
 Route::get('/aviso','WelcomeController@viewAviso');
+Route::get('/politica-de-seguridad-y-privacidad','WelcomeController@viewpoliticas');
 
 Route::get('/pdf', 'WelcomeController@viewPDF');
 
