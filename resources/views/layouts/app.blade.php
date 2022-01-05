@@ -280,7 +280,7 @@
                                         </span>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
-                                        <input type="text" class="form-control" id="telefono" name="telefono" mask="9999999999" ng-model="contacto.telefono" ng-minlength="8"
+                                        <input type="text" class="form-control" id="telefono" name="telefono" mask="999999999999999" ng-model="contacto.telefono" ng-minlength="15"
                                             placeholder="Teléfono" required>
                                         <span class="msg-error" ng-messages="contactoForm.telefono.$error" ng-if="contactoForm.telefono.$touched">
                                             <div ng-messages-include="/messages_error.html"></div>
