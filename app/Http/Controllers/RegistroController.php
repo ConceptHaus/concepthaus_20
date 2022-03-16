@@ -137,7 +137,7 @@ class RegistroController extends Controller {
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 					$contact->bcc('tomas@concepthaus.mx',"CH");
-					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
+					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
 			}catch(\Exception $e){
