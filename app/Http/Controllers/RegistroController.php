@@ -127,18 +127,22 @@ class RegistroController extends Controller {
 			// $user['ciudad'] = $request->ciudad;
 			// $user['estado'] = $request->estado;
 			$user['codigo'] = $no_codigo;
-
 			// Mailing confirmación de registro usuario
-			Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
-				$contact->from('contacto@concepthaus.mx', 'Concept Haus');
-				$contact->bcc('tomas@concepthaus.mx',"CH");
-				$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
-				
-			});
-			
-			
+			try{
+				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
+					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
+					$contact->bcc('tomas@concepthaus.mx',"CH");
+					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
+					
+				});
+			}catch(\Exception $e){
+				  print_r("errror");
+					print_r($e->getMessage());
+			} 
 			$chatsid =  array('-275252761','5711355','217972718');
 			//$chatsid = array('5711355');
+			try{
+				//print_r("mandando telegram");
 			foreach($chatsid as $id){
                 Telegram::sendMessage([
 					'chat_id' => $id,
@@ -164,7 +168,12 @@ class RegistroController extends Controller {
 				]);
 
         	}
-
+      }catch(\Exception $e){
+				 // print_r("errror");
+					//print_r($e->getMessage());
+      	json_encode('Error',400);
+			} 
+			try{
 			//Post al nuevo Kiper
 			$datosKiper = explode(" ", $registro->nombre);
 			if(count($datosKiper)>1) {
@@ -191,18 +200,21 @@ class RegistroController extends Controller {
 					'utm_term' => $request -> utm_term
 				];
 			}
-	  
+	     }catch(\Exception $e){
+				 print_r("errror ss");
+				print_r($e->getMessage());
+      	json_encode('Error',400);
+			} 
 			try{
 				$client = new Client(); //GuzzleHttp\Client
 				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
-				
-				echo $result->getStatusCode();
-
+				//echo $result->getStatusCode();
 				$json['success'] = "Datos guardados";
 				return json_encode($json['success']);
 			
-			}catch(Exception $e){
-			
+			}catch(\Exception $e){
+			   print_r("errror api kiper");
+				print_r($e->getMessage());
 				return json_encode('Error',400);
 			}
       
