@@ -6,9 +6,18 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
+/* latin */
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(../fonts/font-Poppins/Poppins-Bold.ttf) format("truetype");
+}
+
 .justify-text{
       text-align: justify;
 }
+
  .ref-list-aviso{
     text-decoration: none;
     color: #000;
@@ -11403,4 +11412,12 @@ textarea.textarea-brief {
 .body_prim{
   overflow: hidden;
 }
+
+
+@media only screen and (min-width : 720px) {
+  .image-style {
+      height: 26vw!important;
+  }
+  }
+  
 

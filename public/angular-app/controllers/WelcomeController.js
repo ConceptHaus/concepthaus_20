@@ -21,13 +21,14 @@ app.controller('WelcomeController', function WelcomeController($http, $scope, $i
     $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?page=2&client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
     .then(function(response){
       $scope.other_projects = response.data.projects;
-    })
-    $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
+      $http.jsonp('https://api.behance.net/v2/users/concepthausmx/projects?client_id=aeyWwVoxxS9DxTLvJ0W6scIauKj3Bpbg&callback=JSON_CALLBACK')
     .then(function (response) {
       $scope.projects = response.data.projects;
       $scope.projects = $scope.projects.concat($scope.other_projects);
       console.log('Concatenados ',$scope.projects);
     })
+    })
+    
 
 		$scope.getOneProject = function (id){
 			$scope.project = {};

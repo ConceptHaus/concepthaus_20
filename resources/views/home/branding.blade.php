@@ -4,7 +4,7 @@
     <section class="contact-branding" ng-controller="RegistroController as contacto">
         <div class="row">
             <div class="col-md-6">
-                <h4 class="title-general c-gray">Naming e Indentidad Corporativa</h4>
+                <h4 class="title-general c-gray">Indentidad Corporativa</h4>
             </div>
             <div class="col-md-6">
                 <form id="contactoForm" name="contactoForm">

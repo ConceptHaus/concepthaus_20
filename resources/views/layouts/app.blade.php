@@ -366,7 +366,9 @@
     </div>
     </div>
     <!-- ./ Footer -->
+    <script src="/js/popper.js?1"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script> --}}
     {{--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script> --}} {{--
