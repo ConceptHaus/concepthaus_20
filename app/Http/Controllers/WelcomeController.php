@@ -40,7 +40,7 @@ class WelcomeController extends Controller {
     }
 
     public function viewBrandingCancun() {
-        return view('home/brandingCancun');
+        return view('home/brandingcancun');
     }
     public function viewAviso(){
         return view('home/aviso');
