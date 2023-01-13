@@ -311,7 +311,7 @@ class RegistroController extends Controller {
 				print_r('primer enviado');
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
-					$contact->bcc('feralucard@gmail.com',"CH");
+					$contact->bcc('dolores@concepthaus.mx',"CH");
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
