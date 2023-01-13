@@ -8,7 +8,7 @@ angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], fu
 	$interpolateProvider.endSymbol('%>');
 });
 
-app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveLead, countries, states) {
+app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveRegistroCancun, saveLead, countries, states) {
     $scope.contacto={};
     $scope.saveDataContact  = function(contacto, contactoForm){
         swal({
@@ -27,6 +27,25 @@ app.controller('RegistroController', function RegistroController($scope, saveReg
         })
         saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
+
+    $scope.saveDataContactCancun  = function(contacto, contactoForm){
+        swal({
+            // text: "Estamos registrando tus datos.",
+            imageUrl: '../img/loader.gif',
+            imageWidth: 150,
+            imageAlt: 'Concept Haus',
+            showConfirmButton: false
+        })
+        // $scope.contacto.ciudad = $scope.contacto.ciudad.name;
+        // $scope.contacto.estado = $scope.contacto.estado.name;
+        // console.log($scope.contacto);
+        $scope.contacto.servicios = [];
+        angular.forEach(contacto.outputServicies, function(value, key) {
+            $scope.contacto.servicios.push(value.name);
+        })
+        saveRegistroCancun.post($scope.contacto).then(successRegister, errorRegister);
+    }
+
     var successRegister = function(res){
         // console.log(res.data);
         if (angular.isDefined(res.data.correo)) {

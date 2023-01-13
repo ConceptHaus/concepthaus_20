@@ -9,7 +9,7 @@ angular.module('RegistroController', ['app', 'ngMask', 'isteven-multi-select', '
     
 });
 
-app.controller('RegistroController', function RegistroController($scope, $window, saveRegistro, saveLead, countries, states, brief, $cookies) {
+app.controller('RegistroController', function RegistroController($scope, $window , saveRegistroCancun, saveRegistro, saveLead, countries, states, brief, $cookies) {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('utm_term')) {
         $scope.utm_term = urlParams.get('utm_term');
@@ -46,6 +46,28 @@ app.controller('RegistroController', function RegistroController($scope, $window
         })
         saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
+
+    $scope.saveDataContactCancun  = function(contacto, contactoForm){
+        
+        swal({
+            // text: "Estamos registrando tus datos.",
+            imageUrl: '../img/loader.gif',
+            imageWidth: 150,
+            imageAlt: 'Concept Haus',
+            showConfirmButton: false
+        })
+        $scope.contacto.utm_term = $scope.utm_term;
+        $scope.contacto.utm_campaign = $scope.utm_campaign;
+        // $scope.contacto.ciudad = $scope.contacto.ciudad.name;
+        // $scope.contacto.estado = $scope.contacto.estado.name;
+        console.log($scope.contacto);
+        $scope.contacto.servicios = [];
+        angular.forEach(contacto.outputServicies, function(value, key) {
+            $scope.contacto.servicios.push(value.name);
+        })
+        saveRegistroCancun.post($scope.contacto).then(successRegister, errorRegister);
+    }
+
     var successRegister = function(res){
         //$window.location.href = '/gracias';
          console.log(res.data);
@@ -75,7 +97,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
             $scope.contactoForm.$setUntouched();
             $scope.contactoForm.$setPristine();
             
-            $window.location.href = '/gracias';
+            //$window.location.href = '/gracias';
         }
     }
     var errorRegister = function(errors){
@@ -89,7 +111,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
         //     confirmButtonColor: '#4a4f55',
         //     closeOnConfirm:false
         // })
-		$window.location.href = '/gracias';
+		//$window.location.href = '/gracias';
     }
 
     $scope.saveDataLead  = function(contacto, contactoForm){

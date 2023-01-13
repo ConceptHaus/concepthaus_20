@@ -5,7 +5,21 @@
 */
 angular.module('RegistroService', [])
 
-.factory('saveRegistro', function($http, $log){
+
+.factory('saveRegistroCancun', function($http, $log){ 
+    return {
+        post: function(contacto){
+            return $http({
+                method: 'POST',
+                url: '/saveRegistroCancun',
+                data: contacto,
+            })
+        }
+    }
+})
+
+
+.factory('saveRegistro', function($http, $log){ 
     return {
         post: function(contacto){
             return $http({

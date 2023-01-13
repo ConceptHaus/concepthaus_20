@@ -21,6 +21,7 @@ Route::get('/inhaus', 'WelcomeController@viewInHaus');
 Route::get('/treehaus', 'WelcomeController@viewTreeHaus');
 Route::get('/startups', 'WelcomeController@viewStartups');
 Route::get('/branding', 'WelcomeController@viewBranding');
+Route::get('/brandingcancun', 'WelcomeController@viewBrandingCancun');
 Route::get('/brief-branding', 'WelcomeController@viewBrief');
 Route::get('/gracias', 'WelcomeController@viewGracias');
 Route::get('/error', 'WelcomeController@viewError');
@@ -42,6 +43,8 @@ Route::get('/proyecto/{id}', 'WelcomeController@viewDetailProject');
 
 // Guardar datos formulario de registro
 Route::post('/saveRegistro','RegistroController@saveDataRegistro');
+// Guardar datos formulario de registro cancun
+Route::post('/saveRegistroCancun','RegistroController@saveDataRegistroCancun');
 // Guardar datos formulario de registro Lead Manual
 Route::post('/saveRegistroLead','RegistroController@saveDataRegistroLead');
 // Guarda datos de Brief

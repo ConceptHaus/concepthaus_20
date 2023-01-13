@@ -55,7 +55,7 @@ class RegistroController extends Controller {
 
 	// ===================== Generador de código ====================
 	public  function quickRandom($length = 6){
-        $pool = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $pool = '0123456789abcdefghijklmnopqrstuvwxyz'; 
         return substr(str_shuffle(str_repeat($pool, $length)), 0, $length);
     }
 
@@ -140,6 +140,182 @@ class RegistroController extends Controller {
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
+			}catch(\Exception $e){
+				  print_r("errror");
+					print_r($e->getMessage());
+			} 
+			$chatsid =  array('-275252761','5711355','217972718');
+			//$chatsid = array('5711355');
+			try{
+				//print_r("mandando telegram");
+			foreach($chatsid as $id){
+                Telegram::sendMessage([
+					'chat_id' => $id,
+					'parse_mode' => 'HTML',
+					'text' =>'<b>Nuevo lead '. $formulario -> tipo.' 🎉 🎊 😎</b>' 
+					//.Emoji::findByName("sunglasses").''.Emoji::findByName("celebration").''.Emoji::findByName("confetti_ball").'
+					.'
+
+					<b>Nombre: </b>'.$registro -> nombre.'
+					<b>Empresa: </b>'.$registro -> empresa.'
+					<b>Correo: </b>'.$registro -> correo.'
+					<b>Tel: </b>'.$registro -> telefono.'
+					<b>Formulario: </b>'.$formulario -> tipo.'
+					<b>Nota: </b>'.$registro -> mensaje .'
+					<b>Servicios: </b>'.implode(", ",$serviciosArray).'
+					<b>Keyword: </b>'.$request -> utm_term .'
+					<b>Campaign: </b>'.$request -> utm_campaign,
+											'reply_markup'=>json_encode([
+													'inline_keyboard' =>array(array(array("text" => "Ver lead", "url" => "https://concepthaus.mx/registro/detalle/".$registro->id_registro))),
+													'resize_keyboard' => true,
+													'one_time_keyboard' => true
+												]),
+				]);
+
+        	}
+      }catch(\Exception $e){
+				 // print_r("errror");
+					//print_r($e->getMessage());
+      	json_encode('Error',400);
+			} 
+			try{
+			//Post al nuevo Kiper
+			$datosKiper = explode(" ", $registro->nombre);
+			if(count($datosKiper)>1) {
+				$datos = [
+					'nombre' => $datosKiper[0],
+					'apellido' => $datosKiper[1],
+					'empresa' => $registro -> empresa,
+					'correo' => $registro -> correo,
+					'telefono' => $registro -> telefono,
+					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
+					'utm_campaign' => $request -> utm_campaign,
+					'utm_term' => $request -> utm_term
+
+				];
+			} else {
+				$datos = [
+					'nombre' => $datosKiper[0],
+					'apellido' => 'N',
+					'empresa' => $registro -> empresa,
+					'correo' => $registro -> correo,
+					'telefono' => $registro -> telefono,
+					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
+					'utm_campaign' => $request -> utm_campaign,
+					'utm_term' => $request -> utm_term
+				];
+			}
+	     }catch(\Exception $e){
+				 print_r("errror ss");
+				print_r($e->getMessage());
+      	json_encode('Error',400);
+			} 
+			try{
+				$client = new Client(); //GuzzleHttp\Client
+				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
+				//echo $result->getStatusCode();
+				$json['success'] = "Datos guardados";
+				return json_encode($json['success']);
+			
+			}catch(\Exception $e){
+			   print_r("errror api kiper");
+				print_r($e->getMessage());
+				return json_encode('Error',400);
+			}
+      
+		}
+
+		// dd($Validator->errors());
+		$json['errors'] = $Validator->errors();
+		return json_encode($json['errors']);
+	}
+
+	// ===================== Almacena datos registro Cancun ====================
+    public function saveDataRegistroCancun(Request $request) {
+		date_default_timezone_set('America/Mexico_City');
+		$input = $request->all();
+		$Validator = $this->validatorRegistro($input);
+		$no_codigo = self::quickRandom();
+		if($Validator->passes()){
+			// Formatos fecha
+			$dia = new Carbon();
+			$dia = $dia->format('l');
+
+			$mes = new Carbon();
+			$mes = $mes->format('m');
+
+			$hora = new Carbon();
+			$hora = $hora->format('H:i');
+
+			$fecha = new Carbon();
+			$fecha = $fecha->format('Y/m/d');
+			$registro = new Registros;
+			$registro -> nombre     = $request -> nombre;
+			$registro -> correo     = $request -> correo;
+			$registro -> telefono   = $request -> telefono;
+			$registro -> empresa    = $request -> empresa;
+			$registro -> mensaje   	= $request -> mensaje;
+			$registro -> fuente   	= $request -> fuente;
+			$registro -> save();
+			$user = $registro->toArray();
+
+			$fechas_registro =  new FechaRegistro;
+			$fechas_registro -> id_registro 	= $user['id_registro'];
+			$fechas_registro -> dia      		= $dia;
+			$fechas_registro -> mes      		= $mes;
+			$fechas_registro -> hora      		= $hora;
+			$fechas_registro -> fecha_completa  = $fecha;
+			$fechas_registro -> save();
+
+			$status = new PivoteStatus;
+			$status -> id_status   =  1;
+			$status -> id_registro =  $user['id_registro'];
+			$status -> save();
+
+			$codigo = new CodigoRegistro;
+			$codigo -> id_registro   	=  $user['id_registro'];
+			$codigo -> codigo_registro 	=  $no_codigo;
+			$codigo -> save();
+			
+			try{
+				$formulario = new PivoteForms;
+				$formulario -> id_registro =  $user['id_registro'];
+				$formulario -> tipo 	   =  'BrandingCancun';
+				$formulario -> save();
+			}catch(\Exception $e){
+				  print_r("errror");
+					print_r($e->getMessage());
+			} 
+			//print_r('mandando codsfsdfrreo');
+			$serviciosArray = $request->servicios;
+			foreach ($serviciosArray as $servicio) {
+				$servicios = new PivoteServicios;
+				$servicios -> id_registro =  $user['id_registro'];
+				$servicios -> servicio    =  $servicio;
+				$servicios -> save();
+			}
+
+			$user['correo'] = $request -> correo;
+			// $user['ciudad'] = $request->ciudad;
+			// $user['estado'] = $request->estado;
+			$user['codigo'] = $no_codigo;
+			//echo "<script>console.log('antes de amiling'  );</script>";
+			// Mailing confirmación de registro usuario
+			try{
+				print_r('mandando correo');
+				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
+					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
+					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
+					
+				});
+				print_r('primer enviado');
+				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
+					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
+					$contact->bcc('feralucard@gmail.com',"CH");
+					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
+					
+				});
+				print_r('segundo enviado');
 			}catch(\Exception $e){
 				  print_r("errror");
 					print_r($e->getMessage());
