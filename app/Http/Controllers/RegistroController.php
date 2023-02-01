@@ -137,6 +137,7 @@ class RegistroController extends Controller {
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 					$contact->bcc('tomas@concepthaus.mx',"CH");
+					$contact->bcc('leslye@concepthaus.mx',"CH");
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
@@ -206,22 +207,22 @@ class RegistroController extends Controller {
 				];
 			}
 	     }catch(\Exception $e){
-				 print_r("errror ss");
+				print_r("errror ss");
 				print_r($e->getMessage());
-      	json_encode('Error',400);
+      			json_encode('Error',400);
 			} 
-			try{
-				$client = new Client(); //GuzzleHttp\Client
-				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
-				//echo $result->getStatusCode();
-				$json['success'] = "Datos guardados";
-				return json_encode($json['success']);
+			// try{
+			// 	$client = new Client(); //GuzzleHttp\Client
+			// 	$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
+			// 	//echo $result->getStatusCode();
+			// 	$json['success'] = "Datos guardados";
+			// 	return json_encode($json['success']);
 			
-			}catch(\Exception $e){
-			   print_r("errror api kiper");
-				print_r($e->getMessage());
-				return json_encode('Error',400);
-			}
+			// }catch(\Exception $e){
+			//    print_r("errror api kiper");
+			// 	print_r($e->getMessage());
+			// 	return json_encode('Error',400);
+			// }
       
 		}
 
@@ -312,6 +313,7 @@ class RegistroController extends Controller {
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 					$contact->bcc('dolores@concepthaus.mx',"CH");
+					$contact->bcc('leslye@concepthaus.mx',"CH");
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
@@ -386,18 +388,18 @@ class RegistroController extends Controller {
 				print_r($e->getMessage());
       	json_encode('Error',400);
 			} 
-			try{
-				$client = new Client(); //GuzzleHttp\Client
-				$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
-				//echo $result->getStatusCode();
-				$json['success'] = "Datos guardados";
-				return json_encode($json['success']);
+			// try{
+			// 	$client = new Client(); //GuzzleHttp\Client
+			// 	$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
+			// 	//echo $result->getStatusCode();
+			// 	$json['success'] = "Datos guardados";
+			// 	return json_encode($json['success']);
 			
-			}catch(\Exception $e){
-			   print_r("errror api kiper");
-				print_r($e->getMessage());
-				return json_encode('Error',400);
-			}
+			// }catch(\Exception $e){
+			//    print_r("errror api kiper");
+			// 	print_r($e->getMessage());
+			// 	return json_encode('Error',400);
+			// }
       
 		}
 
