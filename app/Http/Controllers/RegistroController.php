@@ -116,17 +116,20 @@ class RegistroController extends Controller {
 			$formulario -> save();
 
 			$serviciosArray = $request->servicios;
+			$_servicios = "";
 			foreach ($serviciosArray as $servicio) {
 				$servicios = new PivoteServicios;
 				$servicios -> id_registro =  $user['id_registro'];
 				$servicios -> servicio    =  $servicio;
 				$servicios -> save();
+				$_servicios .= $servicio.", ";
 			}
 
 			$user['correo'] = $request -> correo;
 			// $user['ciudad'] = $request->ciudad;
 			// $user['estado'] = $request->estado;
 			$user['codigo'] = $no_codigo;
+			$user["servicios"] = $_servicios;
 			// Mailing confirmación de registro usuario
 			try{
 				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
