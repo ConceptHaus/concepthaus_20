@@ -806,7 +806,7 @@
 																															<tr>
 																																<td valign="top" class="mcnTextContent" style="padding: 18px;color: #258093;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;">
 																																	<span style="font-size:16px color="#ffffff" face="lato, helvetica neue, helvetica, arial, sans-serif">SERVICIO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-																																		<span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$servicio}}</span>
+																																		<span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$servicios}}</span>
 																																	</span>
 																																</td>
 																															</tr>
