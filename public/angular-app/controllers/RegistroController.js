@@ -69,7 +69,7 @@ app.controller('RegistroController', function RegistroController($scope, $window
     }
 
     var successRegister = function(res){
-        //$window.location.href = '/gracias';
+        $window.location.href = '/gracias';
          console.log(res.data);
         if (angular.isDefined(res.data.correo)) {
             swal({
