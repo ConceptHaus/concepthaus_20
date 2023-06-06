@@ -395,8 +395,8 @@ class RegistroController extends Controller {
 			// 	$client = new Client(); //GuzzleHttp\Client
 			// 	$result = $client->request('POST','https://concepthaus.kiper.io/api/v1/forms/register?token=zW81zjUm6w858ig89dy4C448Fgyil8P3', ['form_params'=> $datos]);
 			// 	//echo $result->getStatusCode();
-			// 	$json['success'] = "Datos guardados";
-			// 	return json_encode($json['success']);
+			$json['success'] = "Datos guardados";
+			return json_encode($json['success']);
 			
 			// }catch(\Exception $e){
 			//    print_r("errror api kiper");
