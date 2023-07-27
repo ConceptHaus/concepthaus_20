@@ -1,6 +1,6 @@
-@extends('layouts.appService') @section('content')
+@extends('layouts.appServiceBranding') @section('content')
 
-<div id="branding" ng-controller="ProyectosController">
+<div id="branding" ng-controller="ProyectosController"> 
     <section class="contact-branding" ng-controller="RegistroController as contacto">
         <div class="row">
             <div class="col-md-6">
