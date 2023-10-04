@@ -138,8 +138,7 @@ class RegistroController extends Controller {
 					
 				});
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
-					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
-					$contact->bcc('tomas@concepthaus.mx',"CH");
+					$contact->from('dolores@concepthaus.mx', 'Concept Haus');
 					$contact->bcc('leslye@concepthaus.mx',"CH");
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
@@ -523,12 +522,13 @@ class RegistroController extends Controller {
 
     Mail::send('emails.brief.brief-mail' ,$path, function ($contact) use ($path) {
       $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
-      $contact->to('tomas@concepthaus.mx','Tomas Valles');
+      $contact->to('dolores@concepthaus.mx','Tomas Valles');
 	  $contact->to('lolita@concepthaus.mx','Lolita Davis');
-	  $contact->to('gabriela@concepthaus.mx','Gabriela Arriancho');
-	  $contact->to('andrea@treehaus.mx','Andrea Delgado');
-	  $contact->to('patricio@concepthaus.mx','Patricio Zenteno');
-	  $contact->to('darian@concepthaus.mx','Darian Davison');
+	  $contact->bcc('leslye@concepthaus.mx','Lolita Davis');
+	#  $contact->to('gabriela@concepthaus.mx','Gabriela Arriancho');
+	#  $contact->to('andrea@treehaus.mx','Andrea Delgado');
+	#  $contact->to('patricio@concepthaus.mx','Patricio Zenteno');
+	#  $contact->to('darian@concepthaus.mx','Darian Davison');
       $contact->subject('Concept Haus Brief Branding');
       $contact->attach($path['path']);
     });
