@@ -700,7 +700,7 @@
 
 
 
-Mientras tanto, te compartimos algunos de nuestros proyectos en <a href="https://www.behance.net/concepthaus.mx" target="_blank">Behance</a> para que puedas conocer más de nuestro trabajo.
+Mientras tanto, te compartimos algunos de nuestros proyectos en <a href="https://www.behance.net/concepthausmx" target="_blank">Behance</a> para que puedas conocer más de nuestro trabajo.
 
 <br><br>
 
