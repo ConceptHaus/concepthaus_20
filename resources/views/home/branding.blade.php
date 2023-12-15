@@ -15,7 +15,7 @@
                         hidden required>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" placeholder="Nombre" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" ng-model="contacto.nombre" placeholder="Nombre Persona" required>
                             <span class="msg-error" ng-messages="contactoForm.nombre.$error" ng-if="contactoForm.nombre.$touched">
                                 <div ng-messages-include="/messages_error.html"></div>
                             </span>
