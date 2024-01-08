@@ -83,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center interiorPuerta">
-                    <img class="logo" src="{{asset('img/branding_rojo.png')}}">
+                    <img class="logo" src="{{asset('img/concept-haus.png')}}">
                 </div>
                 <div class="col-md-6 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
@@ -98,12 +98,12 @@
                         <span class="c-grayLight">+ Concepto creativo.</span>
                         Creamos un concepto que refleje el core del negocio, los elementos visuales que aluden al nombre y los valores a comunicar.
                     </p>
-                </div>
-                <div class="col-md-6 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">+ Propuestas de identidad corporativa.</span>
                         Se generan 3 diferentes caminos gráficos justificados creativamente; a partir de la versión seleccionada por el cliente se realizan las diferentes aplicaciones gráficas previamente acordadas.
                     </p>
+                </div>
+                <div class="col-md-6 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">+ Manual de identidad.</span>
                         Construimos un manual de identidad en donde definimos la forma en que se comporta gráficamente nuestra identidad en sus diferentes aplicaciones on y offline. Sus usos y restricciones, pantones, patronajes, tipografías, áreas de protección, etc.
