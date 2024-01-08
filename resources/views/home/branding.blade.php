@@ -5,9 +5,6 @@
     <section id="home-doors-interior">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center interiorPuerta">
-                    <img class="logo" src="{{asset('img/concept-haus.png')}}">
-                </div>
                 <div class="col-md-6 text-center info-descripBranding">
                     <p class="text-small small-gray text-left">
                         <span class="c-grayLight">+ Benchmarking.</span>
@@ -45,6 +42,9 @@
     </section>
     <!--Formulario-->
     <section class="contact-branding" ng-controller="RegistroController as contacto">
+        <div class="col-md-12 text-center interiorPuerta">
+            <img class="logo" src="{{asset('img/concept-haus.png')}}">
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <h4 class="title-general c-gray">Identidad Corporativa</h4>
