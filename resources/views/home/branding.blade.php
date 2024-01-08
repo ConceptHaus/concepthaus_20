@@ -1,52 +1,6 @@
 @extends('layouts.appServiceBranding') @section('content')
 
 <div id="branding" ng-controller="ProyectosController"> 
-    <!--Servicios-->
-    <br>
-    <br>
-    <section id="home-doors-interior">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center info-descripBranding">
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Benchmarking.</span>
-                        Realizamos un análisis de la competencia.
-                    </p>
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Naming.</span>
-                        Creamos propuestas únicas y creativas de posibles nombres hasta llegar al nombre ideal para el negocio; siempre tomando en cuenta su viabilidad de registro ante el IMPI.
-                    </p>
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Concepto creativo.</span>
-                        Creamos un concepto que refleje el core del negocio, los elementos visuales que aluden al nombre y los valores a comunicar.
-                    </p>
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Propuestas de identidad corporativa.</span>
-                        Se generan 3 diferentes caminos gráficos justificados creativamente; a partir de la versión seleccionada por el cliente se realizan las diferentes aplicaciones gráficas previamente acordadas.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center info-descripBranding">
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Manual de identidad.</span>
-                        Construimos un manual de identidad en donde definimos la forma en que se comporta gráficamente nuestra identidad en sus diferentes aplicaciones on y offline. Sus usos y restricciones, pantones, patronajes, tipografías, áreas de protección, etc.
-                    </p>
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Slogan.</span>
-                        Cuando la marca lo requiere, se propone una frase a través de la cual se comunica de manera puntual, amigable y atractiva los valores principales de la marca.
-                    </p>
-                    <p class="text-small small-gray text-left">
-                        <span class="c-grayLight">+ Registro de marca.</span>
-                        Realizamos el proceso de registro en la clase correspondiente ante el Instituto Mexicano de Propiedad Intelectual, por sus siglas IMPI.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="col-md-12 text-center interiorPuerta">
-        <img class="logo" src="{{asset('img/concept-haus.png')}}">
-    </div>
-    <!--Formulario-->
     <section class="contact-branding" ng-controller="RegistroController as contacto">
         <div class="row">
             <div class="col-md-6">
@@ -125,6 +79,48 @@
             <div class="col-sm"></div>
         </div>
     </section>
+    <section id="home-doors-interior">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center interiorPuerta">
+                    <img class="logo" src="{{asset('img/branding_rojo.png')}}">
+                </div>
+                <div class="col-md-6 text-center info-descripBranding">
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Benchmarking.</span>
+                        Realizamos un análisis de la competencia.
+                    </p>
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Naming.</span>
+                        Creamos propuestas únicas y creativas de posibles nombres hasta llegar al nombre ideal para el negocio; siempre tomando en cuenta su viabilidad de registro ante el IMPI.
+                    </p>
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Concepto creativo.</span>
+                        Creamos un concepto que refleje el core del negocio, los elementos visuales que aluden al nombre y los valores a comunicar.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center info-descripBranding">
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Propuestas de identidad corporativa.</span>
+                        Se generan 3 diferentes caminos gráficos justificados creativamente; a partir de la versión seleccionada por el cliente se realizan las diferentes aplicaciones gráficas previamente acordadas.
+                    </p>
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Manual de identidad.</span>
+                        Construimos un manual de identidad en donde definimos la forma en que se comporta gráficamente nuestra identidad en sus diferentes aplicaciones on y offline. Sus usos y restricciones, pantones, patronajes, tipografías, áreas de protección, etc.
+                    </p>
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Slogan.</span>
+                        Cuando la marca lo requiere, se propone una frase a través de la cual se comunica de manera puntual, amigable y atractiva los valores principales de la marca.
+                    </p>
+                    <p class="text-small small-gray text-left">
+                        <span class="c-grayLight">+ Registro de marca.</span>
+                        Realizamos el proceso de registro en la clase correspondiente ante el Instituto Mexicano de Propiedad Intelectual, por sus siglas IMPI.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="plug">
         <a href="{{ url('/branding/#contact') }}">
             <div class="plug-content text-center">
