@@ -2,6 +2,8 @@
 
 <div id="branding" ng-controller="ProyectosController"> 
     <!--Servicios-->
+    <br>
+    <br>
     <section id="home-doors-interior">
         <div class="container">
             <div class="row">
@@ -40,7 +42,7 @@
             </div>
         </div>
     </section>
-    
+
     <div class="col-md-12 text-center interiorPuerta">
         <img class="logo" src="{{asset('img/concept-haus.png')}}">
     </div>
