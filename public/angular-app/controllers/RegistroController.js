@@ -11,6 +11,7 @@ angular.module('RegistroController', ['app', 'ngMask', 'isteven-multi-select', '
 
 app.controller('RegistroController', function RegistroController($scope, $window , saveRegistroCancun, saveRegistro, saveLead, countries, states, brief, $cookies) {
     const urlParams = new URLSearchParams(window.location.search);
+    console.log('Entro a esta funcion');
     if (urlParams.get('utm_term')) {
         $scope.utm_term = urlParams.get('utm_term');
         $cookies.put("__utm_term", $scope.utm_term);
@@ -40,10 +41,6 @@ app.controller('RegistroController', function RegistroController($scope, $window
         // $scope.contacto.ciudad = $scope.contacto.ciudad.name;
         // $scope.contacto.estado = $scope.contacto.estado.name;
         console.log($scope.contacto);
-        $scope.contacto.servicios = [];
-        angular.forEach(contacto.outputServicies, function(value, key) {
-            $scope.contacto.servicios.push(value.name);
-        })
         saveRegistro.post($scope.contacto).then(successRegister, errorRegister);
     }
 
