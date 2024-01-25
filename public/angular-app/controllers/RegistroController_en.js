@@ -9,6 +9,8 @@ angular.module('RegistroController', ['app','ngMask','isteven-multi-select'], fu
 });
 
 app.controller('RegistroController', function RegistroController($scope, saveRegistro, saveRegistroCancun, saveLead, countries, states) {
+    console.log('Entro a registor controller');
+    //esta en la funcion que entra
     $scope.contacto={};
     $scope.saveDataContact  = function(contacto, contactoForm){
         swal({

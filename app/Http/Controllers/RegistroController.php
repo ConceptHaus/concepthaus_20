@@ -88,6 +88,7 @@ class RegistroController extends Controller {
 			$registro -> empresa    = $request -> empresa;
 			$registro -> mensaje   	= $request -> mensaje;
 			$registro -> fuente   	= $request -> fuente;
+			$registro -> medio   	= $request -> medio;
 			$registro -> save();
 
 			$user = $registro->toArray();
@@ -139,7 +140,7 @@ class RegistroController extends Controller {
 				});
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('dolores@concepthaus.mx', 'Concept Haus');
-					$contact->bcc('leslye@concepthaus.mx',"CH");
+					$contact->bcc('victor.martinez@99degrees.tech',"CH");
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});

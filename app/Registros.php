@@ -16,6 +16,7 @@ class Registros extends Model {
         'proyecto',
         'mensaje',
         'fuente',
+        'medio'
     ];
 
     public function pivot_motivos(){
