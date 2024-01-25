@@ -1,4 +1,4 @@
-//@extends('layouts.appServiceBranding') @section('content')
+@extends('layouts.appServiceBranding') @section('content')
 
 <style>
         /* Estilos para el contenedor del textarea */
@@ -67,7 +67,7 @@
         <br>
         <!--Imagen CH-->
         <div class="col-md-12 text-center interiorPuerta">
-            <img class="logo" src="{{asset('img/concept_haus.png')}}">
+            <img class="logo" src="{{asset('img/concept_haus-origin.png')}}">
         </div>
         <!--Texto-->
         <section id="home-doors-interior">
