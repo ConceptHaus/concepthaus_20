@@ -229,7 +229,7 @@
 
                     <div class="form-group row text-center">
                         <div class="col-sm-12">
-                            <button class="btn" id="FormBranding" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.empresa) || !(contacto.servicios) || !(contacto.medio)">
+                            <button class="btn" id="FormBranding" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono)|| !(contacto.medio)">
                                 <span style="display: flex;
                                             flex-direction: row;
                                             align-content: center;
