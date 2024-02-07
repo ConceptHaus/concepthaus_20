@@ -116,7 +116,7 @@ class RegistroController extends Controller {
 			$formulario -> tipo 	   =  $request->tipo;
 			$formulario -> save();
 
-			$serviciosArray = $request->servicios;
+			/* $serviciosArray = $request->servicios;
 			$_servicios = "";
 			foreach ($serviciosArray as $servicio) {
 				$servicios = new PivoteServicios;
@@ -124,23 +124,23 @@ class RegistroController extends Controller {
 				$servicios -> servicio    =  $servicio;
 				$servicios -> save();
 				$_servicios .= $servicio.", ";
-			}
+			} */
 
 			$user['correo'] = $request -> correo;
 			// $user['ciudad'] = $request->ciudad;
 			// $user['estado'] = $request->estado;
 			$user['codigo'] = $no_codigo;
-			$user["servicios"] = $_servicios;
+			//$user["servicios"] = $_servicios;
 			// Mailing confirmación de registro usuario
 			try{
 				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
-					
+					$contact->bcc('itsupport@concepthaus.mx',"CH");
 				});
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('dolores@concepthaus.mx', 'Concept Haus');
-					$contact->bcc('victor.martinez@99degrees.tech',"CH");
+					$contact->bcc('itsupport@concepthaus.mx',"CH");
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
@@ -166,7 +166,7 @@ class RegistroController extends Controller {
 					<b>Tel: </b>'.$registro -> telefono.'
 					<b>Formulario: </b>'.$formulario -> tipo.'
 					<b>Nota: </b>'.$registro -> mensaje .'
-					<b>Servicios: </b>'.implode(", ",$serviciosArray).'
+					
 					<b>Keyword: </b>'.$request -> utm_term .'
 					<b>Campaign: </b>'.$request -> utm_campaign,
 											'reply_markup'=>json_encode([
@@ -192,7 +192,7 @@ class RegistroController extends Controller {
 					'empresa' => $registro -> empresa,
 					'correo' => $registro -> correo,
 					'telefono' => $registro -> telefono,
-					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
+					'mensaje' => $registro -> mensaje,
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
 
@@ -204,7 +204,7 @@ class RegistroController extends Controller {
 					'empresa' => $registro -> empresa,
 					'correo' => $registro -> correo,
 					'telefono' => $registro -> telefono,
-					'mensaje' => $registro -> mensaje.'. Lista de servicios: '.implode(", ",$serviciosArray),
+					'mensaje' => $registro -> mensaje,
 					'utm_campaign' => $request -> utm_campaign,
 					'utm_term' => $request -> utm_term
 				];
@@ -308,16 +308,16 @@ class RegistroController extends Controller {
 			try{
 				print_r('mandando correo');
 				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
-					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
+					$contact->from('itsupport@concepthaus.mx', 'Concept Haus');
 					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
 				print_r('primer enviado');
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
-					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
+					$contact->from('itsupport@concepthaus.mx', 'Concept Haus');
 					$contact->bcc('dolores@concepthaus.mx',"CH");
-					$contact->bcc('leslye@concepthaus.mx',"CH");
-					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
+					//$contact->bcc('leslye@concepthaus.mx',"CH");
+					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
 				print_r('segundo enviado');
@@ -440,7 +440,7 @@ class RegistroController extends Controller {
 			$registro -> empresa   = $request -> empresa;
 			$registro -> mensaje   = $request -> mensaje;
 			$registro -> fuente    = $request -> fuente;
-			$registro -> proyecto  = $request -> proyecto;
+			//$registro -> proyecto  = $request -> proyecto;
 			$registro -> save();
 
 			$user = $registro->toArray();
@@ -468,13 +468,13 @@ class RegistroController extends Controller {
 			$formulario -> tipo 	   =  $request->tipo;
 			$formulario -> save();
 
-			$serviciosArray = $request->servicios;
+			/* $serviciosArray = $request->servicios;
 			foreach ($serviciosArray as $servicio) {
 				$servicios = new PivoteServicios;
 				$servicios -> id_registro =  $user['id_registro'];
 				$servicios -> servicio    =  $servicio;
 				$servicios -> save();
-			}
+			} */
 
 			$json['success'] = "Datos lead manual guardados.";
 			return json_encode($json['success']);
@@ -522,10 +522,10 @@ class RegistroController extends Controller {
 
 
     Mail::send('emails.brief.brief-mail' ,$path, function ($contact) use ($path) {
-      $contact->from('contacto@concepthaus.mx', 'Concept Haus Brief Branding');
+      $contact->from('itsupport@concepthaus.mx', 'Concept Haus Brief Branding');
       $contact->to('dolores@concepthaus.mx','Tomas Valles');
 	  $contact->to('lolita@concepthaus.mx','Lolita Davis');
-	  $contact->bcc('leslye@concepthaus.mx','Lolita Davis');
+	#  $contact->bcc('leslye@concepthaus.mx','Lolita Davis');
 	#  $contact->to('gabriela@concepthaus.mx','Gabriela Arriancho');
 	#  $contact->to('andrea@treehaus.mx','Andrea Delgado');
 	#  $contact->to('patricio@concepthaus.mx','Patricio Zenteno');
