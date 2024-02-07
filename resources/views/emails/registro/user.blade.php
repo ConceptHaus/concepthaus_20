@@ -841,7 +841,7 @@ ConceptHaus Creative Cluster.<span>
 																					<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
 
 																						<span style="font-size:14px">
-																							<em>Copyright © Concept Haus 2018</em>
+																							<em>Copyright © Concept Haus 2024</em>
 																						</span>
 																					</td>
 																				</tr>
