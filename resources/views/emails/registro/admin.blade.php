@@ -793,7 +793,7 @@
 																							</tr>
 																						</tbody>
 																					</table>
-																					<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextBlock" style="min-width:100%;">
+																					<!-- <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextBlock" style="min-width:100%;">
 																						<tbody class="mcnBoxedTextBlockOuter">
 																							<tr>
 																								<td valign="top" class="mcnBoxedTextBlockInner">
@@ -806,7 +806,7 @@
 																															<tr>
 																																<td valign="top" class="mcnTextContent" style="padding: 18px;color: #258093;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;">
 																																	<span style="font-size:16px color="#ffffff" face="lato, helvetica neue, helvetica, arial, sans-serif">SERVICIO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-																																		<span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$servicios}}</span>
+																																		<span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">Esto es una prueba</span>
 																																	</span>
 																																</td>
 																															</tr>
@@ -819,7 +819,7 @@
 																								</td>
 																							</tr>
 																						</tbody>
-																					</table>
+																					</table> -->
 																				</td>
 																			</tr>
 																		</table>

@@ -136,11 +136,19 @@ class RegistroController extends Controller {
 				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus');
 					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
-					$contact->bcc('itsupport@concepthaus.mx',"CH");
+					/* $contact->bcc('itsupport@concepthaus.mx',"CH"); */
+					$contact->bcc([
+						'itsupport@concepthaus.mx' => "CH",
+						//'dolores@concepthaus.mx' => "Concept Haus",
+					]);
 				});
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
-					$contact->from('dolores@concepthaus.mx', 'Concept Haus');
-					$contact->bcc('itsupport@concepthaus.mx',"CH");
+					$contact->from('contacto@concepthaus.mx', 'Concept Haus')->subject('Nuevo Lead');
+					$contact->bcc([
+						'itsupport@concepthaus.mx' => "CH",
+						//'mafer@concepthaus.mx' => "Concept Haus",
+						'dolores@concepthaus.mx' => "Concept Haus"
+					]);
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
@@ -309,6 +317,7 @@ class RegistroController extends Controller {
 				print_r('mandando correo');
 				Mail::send('emails.registro.user' ,$user, function ($contact) use ($user) {
 					$contact->from('itsupport@concepthaus.mx', 'Concept Haus');
+					$contact->bcc('dolores@concepthaus.mx',"CH");
 					$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
 					
 				});
