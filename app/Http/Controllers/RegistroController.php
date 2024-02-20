@@ -139,14 +139,13 @@ class RegistroController extends Controller {
 					/* $contact->bcc('itsupport@concepthaus.mx',"CH"); */
 					$contact->bcc([
 						'itsupport@concepthaus.mx' => "CH",
-						//'dolores@concepthaus.mx' => "Concept Haus",
 					]);
 				});
 				Mail::send('emails.registro.admin' ,$user, function ($contact) use ($user) {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus')->subject('Nuevo Lead');
 					$contact->bcc([
 						'itsupport@concepthaus.mx' => "CH",
-						//'mafer@concepthaus.mx' => "Concept Haus",
+						'mafer@concepthaus.mx' => "Concept Haus",
 						'dolores@concepthaus.mx' => "Concept Haus"
 					]);
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
