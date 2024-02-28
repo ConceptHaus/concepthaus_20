@@ -37,7 +37,7 @@ class RegistroController extends Controller {
     protected function validatorRegistro(array $data){
         return Validator::make($data, [
             'nombre'     => 'required',
-			'correo'     => 'required|email|unique:registros',
+			'correo'     => 'required',
             'telefono'   => 'required',
 			'empresa'     => 'required',
 			'mensaje'     => 'required',
@@ -146,7 +146,7 @@ class RegistroController extends Controller {
 					$contact->from('contacto@concepthaus.mx', 'Concept Haus')->subject('Nuevo Lead');
 					$contact->bcc([
 						'itsupport@concepthaus.mx' => "CH",
-						//'mafer@concepthaus.mx' => "Concept Haus",
+						'mafer@concepthaus.mx' => "Concept Haus",
 						'dolores@concepthaus.mx' => "Concept Haus"
 					]);
 					//$contact->to($user['correo'], 'Concept Haus')->subject('Concept Haus');
