@@ -10590,6 +10590,21 @@ Variables | Generales vista Thanks & Oops
   font-family: Poppins-Bold;
 }
 
+.size-title-v2{
+  font-size: 5rem !important;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .size-title-v2 {
+    font-size: 5rem !important;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+}
+
+
 .size-titleoops {
   font-size: 15rem;
   font-family: Poppins-Bold;
@@ -10647,13 +10662,27 @@ Variables | Generales vista Thanks & Oops
   font-family: Poppins-Medium;
 }
 
+.size-subtitle-v2{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 .size-hastag {
   font-family: Poppins-Bold;
 }
 
+.size-hastag-v2{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+}
 .btn-border {
   border-radius: 0rem !important;
   font-family: Poppins-Medium;
+  cursor: pointer;
+}
+
+.btn-border-v2{
+  border-radius: 0rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   cursor: pointer;
 }
 

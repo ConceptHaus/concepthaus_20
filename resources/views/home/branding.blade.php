@@ -137,10 +137,19 @@
                             </span>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="telefono" name="telefono" mask="9999999999" ng-model="contacto.telefono" ng-minlength="8"
-                                placeholder="Teléfono" required>
+                            <!-- <input type="text" class="form-control" id="telefono" name="telefono" mask="9999999999" ng-model="contacto.telefono" ng-minlength="8"
+                                placeholder="Teléfono" required> -->
+                                <input type="number" class="form-control" id="telefono" name="telefono" 
+                                    ng-model="contacto.telefono" ng-minlength="10" ng-maxlength="10"
+                                    pattern="[0-9]{10}"
+                                    maxlength="10"
+                                    placeholder="Teléfono" required>
                             <span class="msg-error" ng-messages="contactoForm.telefono.$error" ng-if="contactoForm.telefono.$touched">
-                                <div ng-messages-include="/messages_error.html"></div>
+                                <div ng-message="required"> <p class="ng-scope">Este campo es obligatorio.</p></div>
+                                <div ng-message="minlength"><p class="ng-scope">El teléfono debe ser de 10 dígitos.</p></div>
+                                <div ng-message="maxlength"><p class="ng-scope">El teléfono debe ser de 10 dígitos.</p></div>
+                                <div ng-message="pattern"> <p class="ng-scope">El teléfono debe contener solo números y ser de 10 dígitos.</p></div>
+                                <!-- <div ng-messages-include="/messages_error.html"></div> -->
                             </span>
                         </div>
                     </div>
@@ -172,7 +181,7 @@
                     </div> -->
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="empresa" name="empresa" ng-model="contacto.empresa" placeholder="Empresa" required>
+                            <input type="text" class="form-control" id="empresa" name="empresa" ng-model="contacto.empresa" placeholder="Empresa">
                             <!-- <span class="msg-error" ng-messages="contactoForm.empresa.$error" ng-if="contactoForm.empresa.$touched">
                                 <div ng-messages-include="/messages_error.html"></div>
                             </span> -->

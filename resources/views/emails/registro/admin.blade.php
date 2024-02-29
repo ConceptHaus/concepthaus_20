@@ -753,7 +753,12 @@
 																															<tr>
 																																<td valign="top" class="mcnTextContent" style="padding: 18px;color: #258093;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;">
 																																	<span style="font-size:16px color="#ffffff" face="lato, helvetica neue, helvetica, arial, sans-serif">EMPRESA&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-																																	<span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$empresa}}</span>
+																																	<!-- <span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$empresa}}</span> -->
+																																	@if(!empty($empresa))
+																																		<span style="color:#ffffff; font-size: 15px; letter-spacing: 1px;">{{ $empresa }}</span>
+																																	@else
+																																		<span style="color:#ffffff; font-size: 15px; letter-spacing: 1px;"> </span>
+																																	@endif
 																																</td>
 																															</tr>
 																														</tbody>
@@ -779,7 +784,12 @@
 																															<tr>
 																																<td valign="top" class="mcnTextContent" style="padding: 18px;color: #258093;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;">
 																																	<span style="font-size:16px color="#ffffff" face="lato, helvetica neue, helvetica, arial, sans-serif">MENSAJE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-																																		<span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$mensaje}}</span>
+																																		<!-- <span style="color:#fffff; font-size: 15px; letter-spacing: 1px;">{{$mensaje}}</span> -->
+																																		@if(!empty($mensaje))
+																																			<span style="color:#ffffff; font-size: 15px; letter-spacing: 1px;">{{ $mensaje }}</span>
+																																		@else
+																																			<span style="color:#ffffff; font-size: 15px; letter-spacing: 1px;"> </span>
+																																		@endif
 																																	</span>
 																																</td>
 																															</tr>
