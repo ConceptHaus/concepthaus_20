@@ -58,6 +58,16 @@
     })(window,document,'script','dataLayer','GTM-TLGCBXH');</script> -->
     <!-- End Google Tag Manager -->
 </head>
+<style>
+    select option[disabled] {
+        color: #FFFFFF !important;
+    }
+    select{
+        color: #8f9194 !important;
+        font-size: 14px !important;
+        font-weight: 300 !important;
+    }
+</style>
 
 <body ng-app="app" class="body_prim">
     <!-- Google Tag Manager (noscript) -->
@@ -128,8 +138,8 @@
                                 <a href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a href="{{ url('/startups') }}">STARTUPS</a>
                                 <a href="{{ url('/#contact') }}">CONTACTO</a>
-                                <a href="https://concepthaus.mx/blog">BLOG</a>
-                                <a href="{{ url('/jobs') }}">JOBS</a>
+                                <!-- <a href="https://concepthaus.mx/blog">BLOG</a>
+                                <a href="{{ url('/jobs') }}">JOBS</a> -->
                             </div>
                         </div>
                     </div>
@@ -146,8 +156,8 @@
                                 <a class="nav-item nav-link" href="{{ url('/treehaus') }}">SUSTENTABILIDAD</a>
                                 <a class="nav-item nav-link" href="{{ url('/startups') }}">STARTUPS</a>
                                 <a class="nav-item nav-link" href="{{ url('/#contact') }}">CONTACTO</a>
-                                <a class="nav-item nav-link" href="https://concepthaus.mx/blog">BLOG</a>
-                                <a class="nav-item nav-link" href="{{ url('/jobs') }}">JOBS</a>
+                                <!-- <a class="nav-item nav-link" href="https://concepthaus.mx/blog">BLOG</a>
+                                <a class="nav-item nav-link" href="{{ url('/jobs') }}">JOBS</a> -->
                             </div>
                         </div>
                     </nav>
@@ -236,7 +246,7 @@
         <!-- Content -->
         
         @yield('content')
-         <a href="https://api.whatsapp.com/send?phone=525541323689" class="btn-flotante" target="_blank"><img src="{{asset('img/Floating_Whatsap.png')}}"></a>
+         <a href="https://api.whatsapp.com/send?phone=529982402112" class="btn-flotante" target="_blank"><img src="{{asset('img/Floating_Whatsap.png')}}"></a>
         
         <!-- ./ Content -->
 
@@ -283,6 +293,7 @@
                                         </span>
                                     </div>
                                 </div>
+
                                 <div class="form-group row">
                                     <div class="col-sm-12 col-md-6">
                                         <input type="email" class="form-control input-ajust" id="correo" name="correo" ng-model="contacto.correo" placeholder="Correo"
@@ -299,7 +310,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <div class="col-sm-12">
                                         <div isteven-multi-select
                                             input-model="listServicies"
@@ -313,27 +324,38 @@
                                             <div ng-messages-include="/messages_error.html"></div>
                                         </span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" id="empresa" name="empresa" ng-model="contacto.empresa" placeholder="Empresa" required>
-                                        <span class="msg-error" ng-messages="contactoForm.empresa.$error" ng-if="contactoForm.empresa.$touched">
+                                        <!-- <span class="msg-error" ng-messages="contactoForm.empresa.$error" ng-if="contactoForm.empresa.$touched">
                                             <div ng-messages-include="/messages_error.html"></div>
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
                                         <textarea class="form-control" id="mensaje" name="mensaje" ng-model="contacto.mensaje" placeholder="Mensaje" rows="4" required></textarea>
-                                        <span class="msg-error" ng-messages="contactoForm.mensaje.$error" ng-if="contactoForm.mensaje.$touched">
+                                        <!-- <span class="msg-error" ng-messages="contactoForm.mensaje.$error" ng-if="contactoForm.mensaje.$touched">
                                             <div ng-messages-include="/messages_error.html"></div>
-                                        </span>
+                                        </span> -->
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <!-- <label for="medio">Medio de contacto preferido</label> -->
+                                        <select name="Medio de contacto" class="formNewSelectServicio form-control" id="medio" name="medio" ng-model="contacto.medio" required>
+                                        <option value="" disabled selected>Medio de contacto preferido</option>
+                                            <option value="Whatsapp" selected>Whatsapp</option>
+                                            <option value="Correo">Correo</option>
+                                            <option value="Teléfono">Teléfono</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group row text-center">
                                     <div class="col-sm-12">
-                                        <button class="btn" id="FormHome" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono) || !(contacto.outputServicies) || !(contacto.empresa) || !(contacto.mensaje)">Enviar</button>
+                                        <button class="btn" id="FormHome" ng-click="saveDataContact(contacto, contactoForm)" ng-disabled="!(contacto.nombre) || !(contacto.correo) || !(contacto.telefono)|| !(contacto.medio)">Enviar</button>
                                     </div>
                                 </div>
                             </form>
