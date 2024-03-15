@@ -48,7 +48,7 @@ class RegistroController extends Controller {
         return Validator::make($data, [
             'nombre'     => 'required',
 			'correo'     => 'email',
-			/* 'empresa'    => 'required',
+			/* 'empresa'    => ' required',
 			'mensaje'    => 'required', */
         ]);
 	}
