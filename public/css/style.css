@@ -9976,6 +9976,7 @@ header .socialIcons a {
   text-align: center;
   cursor: pointer;
   margin: 0;
+  height: 312.5px !important;
 }
 
 .project-effect figure img {
@@ -10088,6 +10089,7 @@ figure.effect-goliath:hover p {
     float: none;
     margin: 10px auto;
     width: 100%;
+    height: 312.5px !important;
   }
 }
 
