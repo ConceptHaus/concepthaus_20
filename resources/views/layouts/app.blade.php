@@ -173,7 +173,7 @@
                     <a href="{{ url('/#contact') }}">
                         <img class="" src="{{asset('img/elementos/mail-red.svg')}}" alt="ConceptHaus" width="16"> /
                     </a>
-                    <a href="tel:+525546240265">
+                    <a href="tel:+529982402112">
                         <img class="" src="{{asset('img/elementos/phone-red.svg')}}" alt="ConceptHaus" width="14">
                     </a>
                 </div>
@@ -252,7 +252,7 @@
 
         <!-- Footer -->
         <div class="llamada">
-            <p><a href="tel:+525546240265"><i class="fa fa-phone"></i> Contáctanos</a></p>
+            <p><a href="tel:+529982402112"><i class="fa fa-phone"></i> Contáctanos</a></p>
         </div>
         <footer>
           @if (Request::path() != 'brief-branding')
@@ -265,7 +265,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <h5>CDMX</h5>
-                            <a href="tel:+525546240265">(55) 52820707</a>
+                            <a href="tel:+529982402112">(55) 9982402112</a>
                             <p class="p-address">ventas@concepthaus.mx</p>
                             <p class="p-address">Campos Elíseos</p>
                             <p class="p-address">Miguel Hidalgo, CDMX</p>
